@@ -69,7 +69,7 @@ Include example test files and yarn scripts for running tests. Create a test str
 
 **CursorAI Prompt**:
 ```
-Configure Next.js 14 for static export to GitHub Pages with these requirements:
+Configure Next.js 14 for static export to GitHub Pages with these requirements, first please check which one is needed and which one already done:
 - Update next.config.js for static export
 - Configure proper asset prefix and base path
 - Handle routing for static sites
