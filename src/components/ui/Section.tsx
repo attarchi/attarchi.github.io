@@ -28,17 +28,24 @@ const sectionVariants = cva('w-full', {
       center: 'text-center',
       right: 'text-right',
     },
+    variant: {
+      default: 'bg-background',
+      surface: 'bg-surface',
+      accent: 'bg-accent text-background',
+    },
   },
   defaultVariants: {
     spacing: 'md',
     maxWidth: '7xl',
     align: 'left',
+    variant: 'default',
   },
 });
 
 export type SectionSpacing = NonNullable<VariantProps<typeof sectionVariants>['spacing']>;
 export type SectionMaxWidth = NonNullable<VariantProps<typeof sectionVariants>['maxWidth']>;
 export type SectionAlign = NonNullable<VariantProps<typeof sectionVariants>['align']>;
+export type SectionVariant = NonNullable<VariantProps<typeof sectionVariants>['variant']>;
 
 export interface SectionProps
   extends React.HTMLAttributes<HTMLElement>,
@@ -46,6 +53,7 @@ export interface SectionProps
   spacing?: SectionSpacing;
   maxWidth?: SectionMaxWidth;
   align?: SectionAlign;
+  variant?: SectionVariant;
 }
 
 function Section({
@@ -53,11 +61,12 @@ function Section({
   spacing,
   maxWidth,
   align,
+  variant,
   ...props
 }: SectionProps) {
   return (
     <section
-      className={cn(sectionVariants({ spacing, maxWidth, align }), className)}
+      className={cn(sectionVariants({ spacing, maxWidth, align, variant }), className)}
       {...props}
     />
   );

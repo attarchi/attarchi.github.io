@@ -12,32 +12,23 @@ import {
   Heading,
   Text,
 } from "@/components/ui";
+import { ThemeToggle } from '../components/ui/ThemeToggle'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      {/* Test colors */}
-      <div className="fixed top-4 left-4 flex flex-col gap-2">
-        <div className="w-20 h-20 bg-background border border-text"></div>
-        <div className="w-20 h-20 bg-accent"></div>
-        <div className="w-20 h-20 bg-muted"></div>
-        <div className="w-20 h-20 bg-surface"></div>
-      </div>
-     
-      <Section spacing="lg" maxWidth="4xl" align="center" className="row-start-2 w-full flex flex-col gap-12 items-center mt-8">
-        <Heading as="h2" size="h2" className="mb-2 text-accent">UI Component Showcase</Heading>
-        <div className="flex flex-wrap gap-8 justify-center w-full">
-          <div className="flex flex-col gap-2 items-center">
-            <Text weight="bold" className="text-accent">Badges</Text>
-            <div className="flex gap-2">
-              <Badge>Default</Badge>
-              <Badge variant="secondary">Secondary</Badge>
-              <Badge variant="outline">Outline</Badge>
-            </div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <Text weight="bold" className="text-accent">Buttons</Text>
-            <div className="flex gap-2 flex-wrap">
+    <div className="min-h-screen bg-background text-text">
+      <Section variant="surface" spacing="lg" className="border-b border-accent/20">
+        <div className="container mx-auto flex justify-between items-center">
+          <Heading as="h1" size="h2" className="text-accent">UI Component Showcase</Heading>
+          <ThemeToggle />
+        </div>
+      </Section>
+
+      <Section spacing="lg" maxWidth="4xl" align="center" className="container mx-auto">
+        <div className="grid gap-8 md:grid-cols-2">
+          <div className="space-y-4">
+            <Heading as="h2" size="h3" className="text-accent">Buttons</Heading>
+            <div className="flex flex-wrap gap-4">
               <Button>Default</Button>
               <Button variant="secondary">Secondary</Button>
               <Button variant="destructive">Destructive</Button>
@@ -47,34 +38,40 @@ export default function Home() {
               <Button isLoading>Loading</Button>
             </div>
           </div>
-        </div>
-        <div className="flex flex-wrap gap-8 justify-center w-full">
-          <div className="flex flex-col gap-2 items-center">
-            <Text weight="bold" className="text-accent">Card</Text>
-            <Card className="w-80 bg-surface">
-              <CardHeader>
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card description goes here.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Text>This is the card content area.</Text>
-              </CardContent>
-              <CardFooter>
-                <Button size="sm">Action</Button>
-              </CardFooter>
-            </Card>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <Text weight="bold" className="text-accent">Section</Text>
-            <Section spacing="md" maxWidth="md" align="center" className="bg-surface rounded-lg p-4 w-80">
-              <Heading as="h3" size="h4">Section Title</Heading>
-              <Text>This is a section container with spacing and alignment.</Text>
-            </Section>
+
+          <div className="space-y-4">
+            <Heading as="h2" size="h3" className="text-accent">Badges</Heading>
+            <div className="flex flex-wrap gap-4">
+              <Badge>Default</Badge>
+              <Badge variant="secondary">Secondary</Badge>
+              <Badge variant="outline">Outline</Badge>
+            </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2 items-center w-full">
-          <Text weight="bold" className="text-accent">Typography</Text>
-          <div className="flex flex-col gap-1 items-center w-full">
+
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <Card className="bg-surface">
+            <CardHeader>
+              <CardTitle>Card Title</CardTitle>
+              <CardDescription>Card description goes here.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Text>This is the card content area with some example text to demonstrate the theme integration.</Text>
+            </CardContent>
+            <CardFooter>
+              <Button size="sm">Action</Button>
+            </CardFooter>
+          </Card>
+
+          <Section variant="accent" spacing="md" maxWidth="md" align="center" className="rounded-lg">
+            <Heading as="h3" size="h4">Section Title</Heading>
+            <Text>This is a section container with accent background and centered text.</Text>
+          </Section>
+        </div>
+
+        <div className="mt-12">
+          <Heading as="h2" size="h3" className="text-accent mb-6">Typography</Heading>
+          <div className="space-y-4">
             <Heading as="h1" size="h1">Heading 1</Heading>
             <Heading as="h2" size="h2">Heading 2</Heading>
             <Heading as="h3" size="h3">Heading 3</Heading>
@@ -95,53 +92,55 @@ export default function Home() {
         </div>
       </Section>
 
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-accent"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-accent"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-accent"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Section variant="surface" spacing="md" className="border-t border-accent/20">
+        <div className="container mx-auto flex flex-wrap gap-6 items-center justify-center">
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-accent"
+            href="https://nextjs.org/learn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              src="/file.svg"
+              alt="File icon"
+              width={16}
+              height={16}
+            />
+            Learn
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-accent"
+            href="https://vercel.com/templates"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              src="/window.svg"
+              alt="Window icon"
+              width={16}
+              height={16}
+            />
+            Examples
+          </a>
+          <a
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-accent"
+            href="https://nextjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              src="/globe.svg"
+              alt="Globe icon"
+              width={16}
+              height={16}
+            />
+            Go to nextjs.org →
+          </a>
+        </div>
+      </Section>
     </div>
   );
 }
