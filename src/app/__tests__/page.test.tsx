@@ -12,8 +12,8 @@ describe('Home Page', () => {
     render(<Home />)
     expect(screen.getByText('Badges')).toBeInTheDocument()
     expect(screen.getByText('Buttons')).toBeInTheDocument()
-    expect(screen.getByText('Card')).toBeInTheDocument()
-    expect(screen.getByText('Section')).toBeInTheDocument()
+    expect(screen.getByText('Card Title')).toBeInTheDocument()
+    expect(screen.getByText('Section Title')).toBeInTheDocument()
     expect(screen.getByText('Typography')).toBeInTheDocument()
   })
 

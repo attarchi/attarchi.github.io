@@ -7,13 +7,13 @@ describe('Badge', () => {
     render(<Badge>Test Badge</Badge>);
     const badge = screen.getByText('Test Badge');
     expect(badge).toBeInTheDocument();
-    expect(badge).toHaveClass('bg-primary');
+    expect(badge).toHaveClass('bg-accent');
   });
 
   it('renders with secondary variant', () => {
     render(<Badge variant="secondary">Secondary Badge</Badge>);
     const badge = screen.getByText('Secondary Badge');
-    expect(badge).toHaveClass('bg-secondary');
+    expect(badge).toHaveClass('bg-surface');
   });
 
   it('renders with outline variant', () => {
@@ -32,7 +32,7 @@ describe('Badge', () => {
     render(<Badge>Hover Badge</Badge>);
     const badge = screen.getByText('Hover Badge');
     await userEvent.hover(badge);
-    expect(badge).toHaveClass('hover:bg-primary/80');
+    expect(badge).toHaveClass('hover:bg-accent/80');
   });
 
   it('maintains accessibility attributes', () => {

@@ -7,15 +7,15 @@ describe('Button', () => {
     render(<Button>Click me</Button>);
     const button = screen.getByRole('button', { name: 'Click me' });
     expect(button).toBeInTheDocument();
-    expect(button).toHaveClass('bg-primary');
+    expect(button).toHaveClass('bg-accent');
   });
 
   it('renders with different variants', () => {
     const { rerender } = render(<Button variant="secondary">Secondary</Button>);
-    expect(screen.getByRole('button')).toHaveClass('bg-secondary');
+    expect(screen.getByRole('button')).toHaveClass('bg-surface');
 
     rerender(<Button variant="destructive">Destructive</Button>);
-    expect(screen.getByRole('button')).toHaveClass('bg-destructive');
+    expect(screen.getByRole('button')).toHaveClass('bg-red-500');
 
     rerender(<Button variant="outline">Outline</Button>);
     expect(screen.getByRole('button')).toHaveClass('border');
@@ -33,7 +33,8 @@ describe('Button', () => {
     render(<Button isLoading>Loading</Button>);
     const button = screen.getByRole('button');
     expect(button).toBeDisabled();
-    expect(screen.getByTestId('loader')).toBeInTheDocument();
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+    expect(screen.getByRole('button').querySelector('svg')).toHaveClass('animate-spin');
   });
 
   it('handles click events', async () => {
