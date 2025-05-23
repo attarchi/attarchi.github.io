@@ -37,8 +37,14 @@ jobs:
       if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: yarn install --frozen-lockfile
     
-    - name: Run tests
-      run: yarn test
+    - name: Run tests with coverage
+      run: yarn test --coverage
+    
+    - name: List coverage files
+      run: |
+        ls -la coverage/
+        echo "Coverage files:"
+        find . -name "coverage-final.json" -o -name "lcov.info" -o -name "*.xml"
     
     - name: Upload coverage reports
       uses: codecov/codecov-action@v4
@@ -47,4 +53,5 @@ jobs:
         fail_ci_if_error: true
         flags: unittests
         name: codecov-umbrella
-        verbose: true 
+        verbose: true
+        directory: ./coverage/ 
