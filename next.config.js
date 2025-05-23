@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    images: {
-        unoptimized: true,
-    },
-    basePath: process.env.NODE_ENV === 'production' ? '/attarchi.github.io' : '',
-    trailingSlash: true,
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH ?
+    '/' + process.env.NEXT_PUBLIC_BASE_PATH : '',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 
