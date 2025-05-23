@@ -39,13 +39,7 @@ cd attarchi.github.io
 yarn install
 ```
 
-3. Set up environment variables:
-Create a `.env` file in the root directory with:
-```
-NEXT_PUBLIC_BASE_PATH=your-username.github.io
-```
-
-4. Run the development server:
+3. Run the development server:
 ```bash
 yarn dev
 ```
@@ -98,13 +92,13 @@ The site is automatically deployed to GitHub Pages using GitHub Actions. Each pu
    - Set the source to "GitHub Actions"
 
 2. **Environment Setup**
-   - Create a `.env` file with your GitHub Pages base path (<yourname>.github.io)
+   - Create a `.env` file with your GitHub Pages base path (folder settings)
    - For GitHub Actions, add the environment variable to your GitHub repository:
      1. Go to your repository settings
      2. Navigate to "Secrets and variables" → "Actions"
      3. Click "New repository secret"
      4. Name: `NEXT_PUBLIC_BASE_PATH`
-     5. Value: `<yourname>.github.io`
+     5. Value: `GitHub Pages base path`
      6. Click "Add secret"
 
 3. **Custom Domain (Optional)**

@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 permissions:
   contents: write
@@ -11,7 +11,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_PATH: attarchi.github.io
+      NEXT_PUBLIC_BASE_PATH:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -54,4 +54,4 @@ jobs:
         with:
           folder: out
           branch: gh-pages
-          clean: true 
+          clean: true
