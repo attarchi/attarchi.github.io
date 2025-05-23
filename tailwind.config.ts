@@ -10,11 +10,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "rgb(var(--background) / <alpha-value>)",
-        text: "rgb(var(--text) / <alpha-value>)",
-        accent: "rgb(var(--accent) / <alpha-value>)",
-        muted: "rgb(var(--muted) / <alpha-value>)",
-        surface: "rgb(var(--surface) / <alpha-value>)",
+        background: {
+          DEFAULT: "rgb(var(--background) / <alpha-value>)",
+          light: "rgb(var(--background-light) / <alpha-value>)",
+          dark: "rgb(var(--background-dark) / <alpha-value>)",
+        },
+        text: {
+          DEFAULT: "rgb(var(--text) / <alpha-value>)",
+          light: "rgb(var(--text-light) / <alpha-value>)",
+          dark: "rgb(var(--text-dark) / <alpha-value>)",
+        },
+        accent: {
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          light: "rgb(var(--accent-light) / <alpha-value>)",
+          dark: "rgb(var(--accent-dark) / <alpha-value>)",
+        },
+        muted: {
+          DEFAULT: "rgb(var(--muted) / <alpha-value>)",
+          light: "rgb(var(--muted-light) / <alpha-value>)",
+          dark: "rgb(var(--muted-dark) / <alpha-value>)",
+        },
+        surface: {
+          DEFAULT: "rgb(var(--surface) / <alpha-value>)",
+          light: "rgb(var(--surface-light) / <alpha-value>)",
+          dark: "rgb(var(--surface-dark) / <alpha-value>)",
+        },
       },
       fontFamily: {
         mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
