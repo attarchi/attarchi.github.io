@@ -10,7 +10,7 @@ export default function Home() {
           alt="Next.js logo"
           width={180}
           height={38}
-          priority
+          priority={true}
         />
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">

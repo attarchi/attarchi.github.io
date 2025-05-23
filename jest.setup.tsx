@@ -3,9 +3,9 @@ import '@testing-library/jest-dom';
 
 jest.mock('next/image', () => ({
     __esModule: true,
-    default: (props: any) => {
-        return <img {...props} />;
-    },
+    default: ({ src, alt, width, height, className }: { src: string; alt: string; width: number; height: number; className?: string }) => (
+        <img src={typeof src === 'string' ? src : ''} alt={alt} width={width} height={height} className={className} />
+    ),
 }));
 
 jest.mock('next/link', () => ({
