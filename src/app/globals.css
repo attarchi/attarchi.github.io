@@ -5,35 +5,33 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background-light: #ffffff;
-    --background-dark: #0d1117;
-    --text-light: #24292f;
-    --text-dark: #f0f6fc;
-    --accent-light: #0969da;
-    --accent-dark: #58a6ff;
-    --muted-light: #656d76;
-    --muted-dark: #8b949e;
-    --surface-light: #f6f8fa;
-    --surface-dark: #21262d;
-  }
+:root {
+  --background-light: 255 255 255;
+  --background-dark: 13 17 23;
+  --text-light: 36 41 47;
+  --text-dark: 240 246 252;
+  --accent-light: 9 105 218;
+  --accent-dark: 88 166 255;
+  --muted-light: 101 109 118;
+  --muted-dark: 139 148 158;
+  --surface-light: 246 248 250;
+  --surface-dark: 33 38 45;
+}
 
-  .light {
-    --background: var(--background-light);
-    --text: var(--text-light);
-    --accent: var(--accent-light);
-    --muted: var(--muted-light);
-    --surface: var(--surface-light);
-  }
+.light {
+  --background: var(--background-light);
+  --text: var(--text-light);
+  --accent: var(--accent-light);
+  --muted: var(--muted-light);
+  --surface: var(--surface-light);
+}
 
-  .dark {
-    --background: var(--background-dark);
-    --text: var(--text-dark);
-    --accent: var(--accent-dark);
-    --muted: var(--muted-dark);
-    --surface: var(--surface-dark);
-  }
+.dark {
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+  --accent: var(--accent-dark);
+  --muted: var(--muted-dark);
+  --surface: var(--surface-dark);
 }
 
 @layer base {

@@ -10,26 +10,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: {
-          light: "#ffffff",
-          dark: "#0d1117",
-        },
-        text: {
-          light: "#24292f",
-          dark: "#f0f6fc",
-        },
-        accent: {
-          light: "#0969da",
-          dark: "#58a6ff",
-        },
-        muted: {
-          light: "#656d76",
-          dark: "#8b949e",
-        },
-        surface: {
-          light: "#f6f8fa",
-          dark: "#21262d",
-        },
+        background: "rgb(var(--background) / <alpha-value>)",
+        text: "rgb(var(--text) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
       },
       fontFamily: {
         mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
