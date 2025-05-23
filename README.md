@@ -1,28 +1,30 @@
-# Professional Developer Portfolio
+# Professional Portfolio Website
 
-A modern, interactive portfolio website built with Next.js 14, featuring GitHub-style aesthetics and smooth scroll animations.
+A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS.
 
 [![codecov](https://codecov.io/gh/attarchi/attarchi.github.io/branch/master/graph/badge.svg)](https://codecov.io/gh/attarchi/attarchi.github.io)
 
-## Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Animations**: Framer Motion
-- **Content**: MDX/Markdown
-- **Deployment**: GitHub Pages
-- **CI/CD**: GitHub Actions
 
 ## Features
 
-- Interactive scroll-triggered animations
-- Professional GitHub-inspired design
-- Responsive layout for all devices
+- Modern, responsive design
+- TypeScript for type safety
 - Blog system with MDX support
-- Dark/Light theme support
+- Project showcase
+- Professional timeline
+- Contact section
+- Dark/light theme
 - SEO optimized
 - Performance focused
+
+## Technologies
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- MDX
+- GitHub Pages
 
 ## Getting Started
 
@@ -53,11 +55,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Project Structure
 
 ```
-/app              # Next.js app router pages
-/components       # Reusable React components
-/content/posts    # Blog posts in MDX format
-/lib             # Utility functions and hooks
-/public          # Static assets
+src/
+├── components/          # React components
+│   ├── ui/             # Reusable UI components
+│   ├── layout/         # Layout components
+│   ├── sections/       # Page sections
+│   └── shared/         # Shared components
+├── content/            # Content files
+│   ├── posts/         # Blog posts
+│   └── projects/      # Project data
+├── lib/               # Library code
+├── types/             # TypeScript interfaces
+├── utils/             # Utility functions
+└── constants/         # Configuration constants
 ```
 
 ## Development
@@ -75,7 +85,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **Colors**: GitHub-inspired palette with light/dark mode support
 - **Animations**: Scroll-triggered with Framer Motion
 - **Components**: Custom-built with shadcn/ui and Tailwind CSS
-
 
 ## Deployment
 
@@ -112,13 +121,11 @@ After deployment:
 4. Check that all animations and interactions work
 5. Test the site on different devices and browsers
 
-
 ### Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
 
 ## Contributing
 
