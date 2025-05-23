@@ -1,21 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background-light: #ffffff;
+    --background-dark: #0d1117;
+    --text-light: #24292f;
+    --text-dark: #f0f6fc;
+    --accent-light: #0969da;
+    --accent-dark: #58a6ff;
+    --muted-light: #656d76;
+    --muted-dark: #8b949e;
+    --surface-light: #f6f8fa;
+    --surface-dark: #21262d;
+  }
+
+  .light {
+    --background: var(--background-light);
+    --text: var(--text-light);
+    --accent: var(--accent-light);
+    --muted: var(--muted-light);
+    --surface: var(--surface-light);
+  }
+
+  .dark {
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --accent: var(--accent-dark);
+    --muted: var(--muted-dark);
+    --surface: var(--surface-dark);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-background text-text font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono;
+  }
+
+  code {
+    @apply font-mono text-code;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
