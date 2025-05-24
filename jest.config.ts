@@ -10,6 +10,8 @@ const config: Config = {
     testEnvironment: 'jest-environment-jsdom',
     moduleNameMapper: {
         '^@/(.*)$': '<rootDir>/src/$1',
+        '^react-syntax-highlighter$': '<rootDir>/__mocks__/react-syntax-highlighter.tsx',
+        '^react-syntax-highlighter/dist/esm/styles/prism$': '<rootDir>/__mocks__/react-syntax-highlighter.tsx',
     },
     testMatch: [
         '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
@@ -35,6 +37,9 @@ const config: Config = {
             tsconfig: 'tsconfig.json',
         }],
     },
+    transformIgnorePatterns: [
+        '/node_modules/(?!(react-syntax-highlighter)/)'
+    ],
 };
 
 export default createJestConfig(config); 

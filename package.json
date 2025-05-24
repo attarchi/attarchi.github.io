@@ -14,12 +14,16 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@types/react-syntax-highlighter": "^15.5.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.12.2",
     "lucide-react": "^0.511.0",
     "next": "14.1.0",
+    "next-themes": "^0.4.6",
     "react": "^18",
     "react-dom": "^18",
+    "react-syntax-highlighter": "^15.6.1",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
