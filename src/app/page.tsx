@@ -11,12 +11,29 @@ import {
   Section,
   Heading,
   Text,
+  Hero,
 } from "@/components/ui";
 import { ThemeToggle } from '../components/ui/ThemeToggle'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-text">
+      <Hero
+        title="Senior Full-Stack Developer"
+        description="Building modern web applications with React, Next.js, and TypeScript. Passionate about creating beautiful, performant, and accessible user experiences."
+        location="San Francisco, CA"
+        avatarSrc="/avatar.png"
+        avatarAlt="Profile picture"
+        ctaPrimary={{
+          text: "Contact Me",
+          link: "/contact",
+        }}
+        ctaSecondary={{
+          text: "View Work",
+          link: "/work",
+        }}
+      />
+
       <Section variant="surface" spacing="lg" className="border-b border-accent/20">
         <div className="container mx-auto flex justify-between items-center">
           <Heading as="h1" size="h2" className="text-accent">UI Component Showcase</Heading>

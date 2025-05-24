@@ -25,7 +25,6 @@ const mockLocalStorage = (initialValue: string | null = null) => ({
 
 const setupWindowMocks = (options: { matches?: boolean; localStorageValue?: string | null } = {}) => {
   const { matches = false, localStorageValue = null } = options
-  delete (window as any).matchMedia
   window.matchMedia = jest.fn().mockImplementation(() => mockMatchMedia(matches))
   window.localStorage = mockLocalStorage(localStorageValue)
 }
@@ -67,6 +66,13 @@ describe('ThemeContext', () => {
     cleanupWindowMocks()
   })
 
+  it('Handel if window does not support localStorage', () => {
+    setupWindowMocks()
+    delete (window as any).matchMedia
+    delete (window as any).localStorage
+    renderTestComponentWithThemeProvider()
+    expect(screen.getByTestId('theme').textContent).toBe('light')
+  })
 
   it('Handel if window does not support matchMedia', () => {
     setupWindowMocks()

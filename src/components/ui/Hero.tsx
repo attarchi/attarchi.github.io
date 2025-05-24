@@ -1,0 +1,133 @@
+import { Button } from "./Button";
+import { Heading, Text } from "./Typography";
+import { Section } from "./Section";
+import { Badge } from "./Badge";
+import Link from "next/link";
+import Image from "next/image";
+
+interface HeroProps {
+  title: string;
+  description: string;
+  location?: string;
+  avatarSrc?: string;
+  avatarAlt?: string;
+  ctaPrimary?: {
+    text: string;
+    link: string;
+  };
+  ctaSecondary?: {
+    text: string;
+    link: string;
+  };
+  className?: string;
+}
+
+export function Hero({
+  title,
+  description,
+  location,
+  avatarSrc,
+  avatarAlt = "Profile picture",
+  ctaPrimary,
+  ctaSecondary,
+  className = "",
+}: HeroProps) {
+  return (
+    <Section
+      variant="surface"
+      spacing="xl"
+      className={`relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden ${className}`}
+    >
+      <div className="container mx-auto max-w-4xl text-center">
+        {avatarSrc && (
+          <div className="mb-8 relative w-32 h-32 mx-auto">
+            <Image
+              src={avatarSrc}
+              alt={avatarAlt}
+              fill
+              className="rounded-full object-cover border-4 border-accent"
+              priority
+            />
+          </div>
+        )}
+        
+        <Heading
+          as="h1"
+          size="h1"
+          className="mb-4 bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent"
+        >
+          {title}
+        </Heading>
+
+        {location && (
+          <Badge variant="secondary" className="mb-6">
+            {location}
+          </Badge>
+        )}
+
+        <Text size="xl" className="mb-8 text-muted max-w-2xl mx-auto">
+          {description}
+        </Text>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {ctaPrimary && (
+            <Button
+              asChild
+              size="lg"
+              className="inline-flex items-center gap-2"
+            >
+              <Link href={ctaPrimary.link}>
+                {ctaPrimary.text}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </Link>
+            </Button>
+          )}
+
+          {ctaSecondary && (
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+            >
+              <Link href={ctaSecondary.link}>
+                {ctaSecondary.text}
+              </Link>
+            </Button>
+          )}
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg
+            data-testid="scroll-indicator"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-accent"
+          >
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </Section>
+  );
+} 
