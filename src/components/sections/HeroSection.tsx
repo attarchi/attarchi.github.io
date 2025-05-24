@@ -1,11 +1,11 @@
-import { Button } from "./Button";
-import { Heading, Text } from "./Typography";
-import { Section } from "./Section";
-import { Badge } from "./Badge";
+import { Button } from "../ui/Button";
+import { Heading, Text } from "../ui/Typography";
+import { Section } from "../ui/Section";
+import { Badge } from "../ui/Badge";
 import Link from "next/link";
 import Image from "next/image";
 
-interface HeroProps {
+interface HeroSectionProps {
   title: string;
   description: string;
   location?: string;
@@ -19,10 +19,14 @@ interface HeroProps {
     text: string;
     link: string;
   };
+  ctaTertiary?: {
+    text: string;
+    link: string;
+  };
   className?: string;
 }
 
-export function Hero({
+export function HeroSection({
   title,
   description,
   location,
@@ -30,13 +34,15 @@ export function Hero({
   avatarAlt = "Profile picture",
   ctaPrimary,
   ctaSecondary,
+  ctaTertiary,
   className = "",
-}: HeroProps) {
+}: HeroSectionProps) {
   return (
     <Section
       variant="surface"
       spacing="xl"
-      className={`relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden ${className}`}
+      maxWidth="none"
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
     >
       <div className="container mx-auto max-w-4xl text-center">
         {avatarSrc && (
@@ -54,7 +60,7 @@ export function Hero({
         <Heading
           as="h1"
           size="h1"
-          className="mb-4 bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent"
+          className="mb-4 font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
         >
           {title}
         </Heading>
@@ -65,7 +71,7 @@ export function Hero({
           </Badge>
         )}
 
-        <Text size="xl" className="mb-8 text-muted max-w-2xl mx-auto">
+        <Text size="base" className="mb-8 font-sans text-base font-normal text-text max-w-2xl mx-auto">
           {description}
         </Text>
 
@@ -104,6 +110,18 @@ export function Hero({
             >
               <Link href={ctaSecondary.link}>
                 {ctaSecondary.text}
+              </Link>
+            </Button>
+          )}
+
+          {ctaTertiary && (
+            <Button
+              asChild
+              variant="ghost"
+              size="lg"
+            >
+              <Link href={ctaTertiary.link}>
+                {ctaTertiary.text}
               </Link>
             </Button>
           )}

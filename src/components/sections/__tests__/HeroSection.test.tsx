@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Hero } from "../Hero";
+import { HeroSection } from "../HeroSection";
 
 // Mock next/image
 jest.mock("next/image", () => ({
@@ -13,7 +13,7 @@ jest.mock("next/image", () => ({
 describe("Hero", () => {
   it("renders with required props", () => {
     render(
-      <Hero
+      <HeroSection
         title="Test Title"
         description="Test Description"
       />
@@ -25,7 +25,7 @@ describe("Hero", () => {
 
   it("renders with location badge when provided", () => {
     render(
-      <Hero
+      <HeroSection
         title="Test Title"
         description="Test Description"
         location="San Francisco, CA"
@@ -37,7 +37,7 @@ describe("Hero", () => {
 
   it("renders with avatar when provided", () => {
     render(
-      <Hero
+      <HeroSection
         title="Test Title"
         description="Test Description"
         avatarSrc="/test-avatar.jpg"
@@ -52,7 +52,7 @@ describe("Hero", () => {
 
   it("renders with primary CTA button when provided", () => {
     render(
-      <Hero
+      <HeroSection
         title="Test Title"
         description="Test Description"
         ctaPrimary={{
@@ -69,7 +69,7 @@ describe("Hero", () => {
 
   it("renders with secondary CTA button when provided", () => {
     render(
-      <Hero
+      <HeroSection
         title="Test Title"
         description="Test Description"
         ctaSecondary={{
@@ -86,7 +86,7 @@ describe("Hero", () => {
 
   it("renders both CTA buttons when both are provided", () => {
     render(
-      <Hero
+      <HeroSection
         title="Test Title"
         description="Test Description"
         ctaPrimary={{
@@ -106,7 +106,7 @@ describe("Hero", () => {
 
   it("applies custom className", () => {
     render(
-      <Hero
+      <HeroSection
         title="Test Title"
         description="Test Description"
         className="custom-class"
@@ -119,7 +119,7 @@ describe("Hero", () => {
 
   it("renders scroll indicator", () => {
     render(
-      <Hero
+      <HeroSection
         title="Test Title"
         description="Test Description"
       />

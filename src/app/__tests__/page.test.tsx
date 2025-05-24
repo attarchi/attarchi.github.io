@@ -2,32 +2,28 @@ import { render, screen } from '@testing-library/react'
 import Home from '../page'
 
 describe('Home Page', () => {
-  it('renders UI Component Showcase heading', () => {
+  it('renders the main hero heading', () => {
     render(<Home />)
-    const heading = screen.getByText('UI Component Showcase')
+    const heading = screen.getByRole('heading', { level: 1 })
+    expect(heading).toHaveTextContent('Senior Full-Stack Developer & Problem Solver')
     expect(heading).toBeInTheDocument()
   })
 
-  it('renders component sections', () => {
+  it('renders the hero description', () => {
     render(<Home />)
-    expect(screen.getByText('Badges')).toBeInTheDocument()
-    expect(screen.getByText('Buttons')).toBeInTheDocument()
-    expect(screen.getByText('Card Title')).toBeInTheDocument()
-    expect(screen.getByText('Section Title')).toBeInTheDocument()
-    expect(screen.getByText('Typography')).toBeInTheDocument()
+    const description = screen.getByText(/20\+ years crafting scalable web applications with React, Node\.js, and modern architectures/)
+    expect(description).toBeInTheDocument()
   })
 
-  it('renders footer links', () => {
+  it('renders the theme toggle button', () => {
     render(<Home />)
-    expect(screen.getByText('Learn')).toBeInTheDocument()
-    expect(screen.getByText('Examples')).toBeInTheDocument()
-    expect(screen.getByText('Go to nextjs.org →')).toBeInTheDocument()
+    const themeToggle = screen.getByRole('button', { name: /switch to (light|dark) theme/i })
+    expect(themeToggle).toBeInTheDocument()
   })
 
-  it('renders footer icons', () => {
+  it('renders the scroll indicator', () => {
     render(<Home />)
-    expect(screen.getByAltText('File icon')).toBeInTheDocument()
-    expect(screen.getByAltText('Window icon')).toBeInTheDocument()
-    expect(screen.getByAltText('Globe icon')).toBeInTheDocument()
+    const scrollIndicator = screen.getByTestId('scroll-indicator')
+    expect(scrollIndicator).toBeInTheDocument()
   })
 }) 
