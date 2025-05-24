@@ -65,11 +65,9 @@ export function HeroSection({
           {title}
         </Heading>
 
-        {location && (
-          <Badge variant="secondary" className="mb-6">
-            {location}
-          </Badge>
-        )}
+        <div className="bg-[#f6f8fa] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] text-[#656d76] dark:text-[#8b949e] font-sans text-sm px-3 py-1 rounded-full inline-flex items-center">
+          📍 {location || "Available for remote opportunities"}
+        </div>
 
         <Text size="base" className="mb-8 font-sans text-base font-normal text-text max-w-2xl mx-auto">
           {description}

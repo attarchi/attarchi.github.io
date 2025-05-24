@@ -17,7 +17,7 @@ describe('Home Page Content Requirements', () => {
 
   it('renders the location badge', () => {
     render(<Home />)
-    const locationBadge = screen.getByText('Istanbul, Turkey • Remote Worldwide')
+    const locationBadge = screen.getByText('📍 Istanbul, Turkey • Remote Worldwide')
     expect(locationBadge).toBeInTheDocument()
   })
 

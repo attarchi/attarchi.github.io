@@ -32,7 +32,11 @@ describe("Hero", () => {
       />
     );
 
-    expect(screen.getByText("San Francisco, CA")).toBeInTheDocument();
+    // Location prop is ignored, old badge should not appear
+    expect(screen.queryByText("San Francisco, CA")).not.toBeInTheDocument();
+    
+    // New location badge should show the location prop value with emoji
+    expect(screen.getByText("📍 San Francisco, CA")).toBeInTheDocument();
   });
 
   it("renders with avatar when provided", () => {
