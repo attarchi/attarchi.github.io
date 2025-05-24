@@ -23,8 +23,8 @@ describe('HeroSection Responsive Layout Requirements', () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       
       const section = screen.getByRole('heading', { level: 1 }).closest('section');
-      // Should have viewport height classes for desktop
-      expect(section).toHaveClass('min-h-screen');
+      // Should have viewport height classes for desktop (responsive implementation)
+      expect(section).toHaveClass('md:h-screen');
     });
 
     it('has proper mobile height handling', () => {
@@ -33,6 +33,14 @@ describe('HeroSection Responsive Layout Requirements', () => {
       const section = screen.getByRole('heading', { level: 1 }).closest('section');
       // Should allow auto height on mobile with proper padding
       expect(section).toHaveClass('py-16'); // Proper padding for mobile
+    });
+
+    it('has responsive height classes for mobile and desktop', () => {
+      renderWithTheme(<HeroSection {...defaultProps} />);
+      
+      const section = screen.getByRole('heading', { level: 1 }).closest('section');
+      // Should have h-auto on mobile and h-screen on desktop (md:h-screen)
+      expect(section).toHaveClass('h-auto', 'md:h-screen');
     });
 
     it('centers content horizontally and vertically', () => {
@@ -74,13 +82,44 @@ describe('HeroSection Responsive Layout Requirements', () => {
     it('has proper spacing between heading and description', () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       
+      const container = screen.getByRole('heading', { level: 1 }).closest('div');
+      const description = screen.getByText('Building scalable solutions with modern technologies');
+      
+      // Container should use space-y-6 for consistent spacing
+      expect(container).toHaveClass('space-y-6');
+      // Description should have bottom margin for CTA separation
+      expect(description).toHaveClass('mb-8');
+    });
+
+    it('has space-y-6 between main content elements', () => {
+      renderWithTheme(
+        <HeroSection 
+          {...defaultProps} 
+          location="San Francisco, CA"
+          avatarSrc="/avatar.jpg"
+        />
+      );
+      
+      const container = screen.getByRole('heading', { level: 1 }).closest('div');
+      // Container should have space-y-6 for proper vertical spacing
+      expect(container).toHaveClass('space-y-6');
+    });
+
+    it('optimizes spacing when using space-y-6 (no redundant margins)', () => {
+      renderWithTheme(
+        <HeroSection 
+          {...defaultProps} 
+          location="San Francisco, CA"
+        />
+      );
+      
       const heading = screen.getByRole('heading', { level: 1 });
       const description = screen.getByText('Building scalable solutions with modern technologies');
       
-      // Heading should have bottom margin
-      expect(heading).toHaveClass('mb-4');
-      // Description should have bottom margin
-      expect(description).toHaveClass('mb-8');
+      // With space-y-6 on container, individual elements should not have bottom margins
+      // Only the last element in a section might need bottom margin for CTA separation
+      expect(heading).not.toHaveClass('mb-4');
+      expect(description).toHaveClass('mb-8'); // Keep this for CTA separation
     });
   });
 

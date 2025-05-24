@@ -13,11 +13,12 @@ describe('Home Page Layout Requirements', () => {
     expect(heroSection).not.toHaveClass('max-w-5xl')
   })
 
-  it('has proper full viewport height', () => {
+  it('has proper responsive viewport height', () => {
     render(<Home />)
     
     const heroSection = screen.getByRole('heading', { level: 1 }).closest('section')
-    expect(heroSection).toHaveClass('min-h-screen')
+    // Should use responsive height: auto on mobile, h-screen on desktop
+    expect(heroSection).toHaveClass('h-auto', 'md:h-screen')
   })
 
   it('has centered content container with reasonable max width', () => {

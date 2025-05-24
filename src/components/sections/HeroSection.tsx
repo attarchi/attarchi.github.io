@@ -42,9 +42,9 @@ export function HeroSection({
       variant="surface"
       spacing="xl"
       maxWidth="none"
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
+      className={`relative h-auto md:h-screen flex items-center justify-center overflow-hidden ${className}`}
     >
-      <div className="container mx-auto max-w-4xl text-center">
+      <div className="container mx-auto max-w-4xl text-center space-y-6">
         {avatarSrc && (
           <div className="mb-8 relative w-32 h-32 mx-auto">
             <Image
@@ -60,7 +60,7 @@ export function HeroSection({
         <Heading
           as="h1"
           size="h1"
-          className="mb-4 font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
+          className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
         >
           {title}
         </Heading>
