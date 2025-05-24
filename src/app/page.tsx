@@ -13,21 +13,10 @@ import {
   Text,
 } from "@/components/ui";
 import { ThemeToggle } from '../components/ui/ThemeToggle'
-import Hero from '@/components/ui/Hero'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-text">
-      <Hero
-        headline="Senior Full-Stack Developer & Problem Solver"
-        subtitle="20+ years crafting scalable web applications with React, Node.js, and modern architectures"
-        location="Istanbul, Turkey • Remote Worldwide"
-        avatarSrc="/avatar.png"
-        avatarAlt="Professional headshot"
-        ctaPrimary={{ label: 'View Projects', href: '/projects' }}
-        ctaSecondary={{ label: 'Contact Me', href: '/contact' }}
-      />
-
       <Section variant="surface" spacing="lg" className="border-b border-accent/20">
         <div className="container mx-auto flex justify-between items-center">
           <Heading as="h1" size="h2" className="text-accent">UI Component Showcase</Heading>
