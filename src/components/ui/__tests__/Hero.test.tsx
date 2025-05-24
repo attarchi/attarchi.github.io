@@ -5,8 +5,8 @@ import { Hero } from "../Hero";
 jest.mock("next/image", () => ({
   __esModule: true,
   default: (props: any) => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />;
+    const { src, alt, width, height, className } = props;
+    return <img src={src} alt={alt} width={width} height={height} className={className} />;
   },
 }));
 

@@ -3,9 +3,10 @@ import '@testing-library/jest-dom';
 
 jest.mock('next/image', () => ({
     __esModule: true,
-    default: ({ src, alt, width, height, className }: { src: string; alt: string; width: number; height: number; className?: string }) => (
-        <img src={typeof src === 'string' ? src : ''} alt={alt} width={width} height={height} className={className} />
-    ),
+    default: (props: any) => {
+        const { src, alt, width, height, className } = props;
+        return <img src={typeof src === 'string' ? src : ''} alt={alt} width={width} height={height} className={className} />;
+    },
 }));
 
 jest.mock('next/link', () => ({
