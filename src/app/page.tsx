@@ -1,4 +1,4 @@
-import { HeroSection, FeaturedProjects, TechnicalExpertise, ProfessionalJourney } from "@/components/sections";
+import { HeroSection, FeaturedProjects, TechnicalExpertise, ProfessionalJourney, ContactSection } from "@/components/sections";
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export default function Home() {
@@ -38,6 +38,9 @@ export default function Home() {
 
       {/* Professional Journey Section */}
       <ProfessionalJourney />
+
+      {/* Contact Section */}
+      <ContactSection />
     </div>
   );
 }
