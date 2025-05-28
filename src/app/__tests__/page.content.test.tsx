@@ -54,6 +54,18 @@ describe('Home Page Content Requirements', () => {
     expect(scrollIndicator).toBeInTheDocument()
   })
 
+  it('renders the Featured Projects section', () => {
+    render(<Home />)
+    const featuredProjectsHeading = screen.getByRole('heading', { name: /featured projects/i })
+    expect(featuredProjectsHeading).toBeInTheDocument()
+  })
+
+  it('renders the Technical Expertise section', () => {
+    render(<Home />)
+    const technicalExpertiseHeading = screen.getByRole('heading', { name: /technical expertise/i })
+    expect(technicalExpertiseHeading).toBeInTheDocument()
+  })
+
   describe('Theme Toggle Positioning', () => {
     it('has theme toggle positioned correctly in header', () => {
       render(<Home />)
