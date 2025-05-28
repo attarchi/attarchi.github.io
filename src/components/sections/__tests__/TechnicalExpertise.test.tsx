@@ -200,4 +200,141 @@ describe("TechnicalExpertise", () => {
       expect(grid).toHaveClass("md:grid-cols-2");
     });
   });
+
+  describe("Individual Skills with Proficiency Indicators", () => {
+    const mockCategoriesWithSkills = [
+      {
+        title: "Frontend Development",
+        skills: [
+          { name: "React", proficiency: 90 },
+          { name: "TypeScript", proficiency: 90 },
+          { name: "Next.js", proficiency: 75 }
+        ]
+      },
+      {
+        title: "Backend Development", 
+        skills: [
+          { name: "Node.js", proficiency: 90 },
+          { name: "PostgreSQL", proficiency: 75 },
+          { name: "GraphQL", proficiency: 60 }
+        ]
+      }
+    ];
+
+    it("renders skill names with correct typography", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      const skillNames = screen.getAllByTestId("skill-name");
+      skillNames.forEach(skillName => {
+        expect(skillName).toHaveClass("font-sans", "text-sm", "font-medium");
+      });
+    });
+
+    it("renders all skill names correctly", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      expect(screen.getByText("React")).toBeInTheDocument();
+      expect(screen.getByText("TypeScript")).toBeInTheDocument();
+      expect(screen.getByText("Next.js")).toBeInTheDocument();
+      expect(screen.getByText("Node.js")).toBeInTheDocument();
+      expect(screen.getByText("PostgreSQL")).toBeInTheDocument();
+      expect(screen.getByText("GraphQL")).toBeInTheDocument();
+    });
+
+    it("renders proficiency bars with correct background colors", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      const proficiencyBars = screen.getAllByTestId("proficiency-bar");
+      proficiencyBars.forEach(bar => {
+        expect(bar).toHaveClass("bg-[#e1e4e8]");
+      });
+    });
+
+    it("renders proficiency bars with dark theme background colors", () => {
+      document.documentElement.classList.add("dark");
+      
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      const proficiencyBars = screen.getAllByTestId("proficiency-bar");
+      proficiencyBars.forEach(bar => {
+        expect(bar).toHaveClass("dark:bg-[#30363d]");
+      });
+      
+      document.documentElement.classList.remove("dark");
+    });
+
+    it("renders proficiency fill with correct accent colors", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      const proficiencyFills = screen.getAllByTestId("proficiency-fill");
+      proficiencyFills.forEach(fill => {
+        expect(fill).toHaveClass("bg-[#0969da]");
+      });
+    });
+
+    it("renders proficiency fill with dark theme accent colors", () => {
+      document.documentElement.classList.add("dark");
+      
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      const proficiencyFills = screen.getAllByTestId("proficiency-fill");
+      proficiencyFills.forEach(fill => {
+        expect(fill).toHaveClass("dark:bg-[#58a6ff]");
+      });
+      
+      document.documentElement.classList.remove("dark");
+    });
+
+    it("renders proficiency bars with correct dimensions", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      const proficiencyBars = screen.getAllByTestId("proficiency-bar");
+      proficiencyBars.forEach(bar => {
+        expect(bar).toHaveClass("h-2", "rounded-full");
+      });
+    });
+
+    it("renders proficiency bars with correct positioning", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      const proficiencyBars = screen.getAllByTestId("proficiency-bar");
+      proficiencyBars.forEach(bar => {
+        expect(bar).toHaveClass("mt-1", "relative");
+      });
+    });
+
+    it("renders proficiency fill with correct width percentages", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      // Check React (90%)
+      const reactFill = screen.getAllByTestId("proficiency-fill").find(el => el.getAttribute("data-skill-name") === "React");
+      expect(reactFill).toHaveStyle("width: 90%");
+      
+      // Check Next.js (75%)
+      const nextjsFill = screen.getAllByTestId("proficiency-fill").find(el => el.getAttribute("data-skill-name") === "Next.js");
+      expect(nextjsFill).toHaveStyle("width: 75%");
+      
+      // Check GraphQL (60%)
+      const graphqlFill = screen.getAllByTestId("proficiency-fill").find(el => el.getAttribute("data-skill-name") === "GraphQL");
+      expect(graphqlFill).toHaveStyle("width: 60%");
+    });
+
+    it("renders skills with proper spacing within categories", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      const skillsLists = screen.getAllByTestId("skills-list");
+      skillsLists.forEach(list => {
+        expect(list).toHaveClass("space-y-3");
+      });
+    });
+
+    it("renders skills list with correct margin from category title", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      const skillsLists = screen.getAllByTestId("skills-list");
+      skillsLists.forEach(list => {
+        expect(list).toHaveClass("mt-4");
+      });
+    });
+  });
 }); 
