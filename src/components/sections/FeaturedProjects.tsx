@@ -3,15 +3,18 @@ import { ProjectCard } from '@/components/ui';
 const projects = [
   {
     title: "CCPTools Ecosystem",
-    description: "Comprehensive nutrition platform with meal planning, recipe management, and nutritional analysis tools built with React and Node.js."
+    description: "Comprehensive nutrition platform with meal planning, recipe management, and nutritional analysis tools built with React and Node.js.",
+    technologies: ["React Native", "Node.js", "PostgreSQL", "Express", "TypeScript"]
   },
   {
     title: "Portfolio Website", 
-    description: "Modern portfolio built with Next.js, TypeScript, and Tailwind CSS featuring responsive design and dark mode support."
+    description: "Modern portfolio built with Next.js, TypeScript, and Tailwind CSS featuring responsive design and dark mode support.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Vercel"]
   },
   {
     title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard using React and Express."
+    description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard using React and Express.",
+    technologies: ["React", "Express", "MongoDB", "Stripe", "Redux", "JWT"]
   }
 ];
 
@@ -38,6 +41,7 @@ export function FeaturedProjects() {
               key={index}
               title={project.title}
               description={project.description}
+              technologies={project.technologies}
             />
           ))}
         </div>

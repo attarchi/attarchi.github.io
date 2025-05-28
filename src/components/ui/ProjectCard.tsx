@@ -3,11 +3,13 @@ import { cn } from '@/lib/utils';
 export interface ProjectCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
+  technologies?: string[];
 }
 
 export function ProjectCard({ 
   title, 
   description, 
+  technologies,
   className, 
   ...props 
 }: ProjectCardProps) {
@@ -40,6 +42,37 @@ export function ProjectCard({
         <p className="font-sans text-base text-muted">
           {description}
         </p>
+
+        {/* Technology badges */}
+        {technologies && technologies.length > 0 && (
+          <div 
+            className="flex flex-wrap gap-2 mt-4"
+            data-testid="badges-container"
+          >
+            {technologies.map((tech, index) => (
+              <span
+                key={index}
+                data-testid="tech-badge"
+                className={cn(
+                  // Background: #0969da (light) / #58a6ff (dark) - accent color
+                  'bg-accent',
+                  // Text color: white
+                  'text-white',
+                  // Font: JetBrains Mono, text-xs, font-medium
+                  'font-mono text-xs font-medium',
+                  // Padding: px-2 py-1
+                  'px-2 py-1',
+                  // Border radius: rounded-md
+                  'rounded-md',
+                  // Hover effect: Slightly darker background
+                  'hover:bg-accent-dark transition-colors duration-200'
+                )}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

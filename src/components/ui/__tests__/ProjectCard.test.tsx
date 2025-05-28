@@ -116,4 +116,138 @@ describe('ProjectCard', () => {
     const description = screen.getByText('Comprehensive nutrition platform...');
     expect(description.tagName).toBe('P');
   });
+
+  describe('Technology Badges', () => {
+    const propsWithTechnologies = {
+      ...defaultProps,
+      technologies: ['React Native', 'Node.js', 'PostgreSQL'],
+    };
+
+    it('renders technology badges when technologies are provided', () => {
+      render(<ProjectCard {...propsWithTechnologies} />);
+      
+      expect(screen.getByText('React Native')).toBeInTheDocument();
+      expect(screen.getByText('Node.js')).toBeInTheDocument();
+      expect(screen.getByText('PostgreSQL')).toBeInTheDocument();
+    });
+
+    it('badges container has correct flex layout', () => {
+      const { container } = render(<ProjectCard {...propsWithTechnologies} />);
+      const badgesContainer = container.querySelector('[data-testid="badges-container"]');
+      
+      expect(badgesContainer).toBeInTheDocument();
+      expect(badgesContainer).toHaveClass('flex');
+      expect(badgesContainer).toHaveClass('flex-wrap');
+      expect(badgesContainer).toHaveClass('gap-2');
+    });
+
+    it('badges container has correct spacing from description', () => {
+      const { container } = render(<ProjectCard {...propsWithTechnologies} />);
+      const badgesContainer = container.querySelector('[data-testid="badges-container"]');
+      
+      expect(badgesContainer).toHaveClass('mt-4');
+    });
+
+    it('individual badges have correct styling', () => {
+      render(<ProjectCard {...propsWithTechnologies} />);
+      const badge = screen.getByText('React Native');
+      
+      // Background and text colors
+      expect(badge).toHaveClass('bg-accent');
+      expect(badge).toHaveClass('text-white');
+      
+      // Typography
+      expect(badge).toHaveClass('font-mono');
+      expect(badge).toHaveClass('text-xs');
+      expect(badge).toHaveClass('font-medium');
+      
+      // Padding and border radius
+      expect(badge).toHaveClass('px-2');
+      expect(badge).toHaveClass('py-1');
+      expect(badge).toHaveClass('rounded-md');
+    });
+
+    it('badges have hover effect classes', () => {
+      render(<ProjectCard {...propsWithTechnologies} />);
+      const badge = screen.getByText('React Native');
+      
+      expect(badge).toHaveClass('hover:bg-accent-dark');
+      expect(badge).toHaveClass('transition-colors');
+      expect(badge).toHaveClass('duration-200');
+    });
+
+    it('renders multiple badges correctly', () => {
+      render(<ProjectCard {...propsWithTechnologies} />);
+      
+      const badges = screen.getAllByTestId('tech-badge');
+      expect(badges).toHaveLength(3);
+      
+      expect(badges[0]).toHaveTextContent('React Native');
+      expect(badges[1]).toHaveTextContent('Node.js');
+      expect(badges[2]).toHaveTextContent('PostgreSQL');
+    });
+
+    it('does not render badges container when no technologies provided', () => {
+      const { container } = render(<ProjectCard {...defaultProps} />);
+      const badgesContainer = container.querySelector('[data-testid="badges-container"]');
+      
+      expect(badgesContainer).not.toBeInTheDocument();
+    });
+
+    it('does not render badges container when technologies array is empty', () => {
+      const { container } = render(<ProjectCard {...defaultProps} technologies={[]} />);
+      const badgesContainer = container.querySelector('[data-testid="badges-container"]');
+      
+      expect(badgesContainer).not.toBeInTheDocument();
+    });
+
+    it('badges use JetBrains Mono font', () => {
+      render(<ProjectCard {...propsWithTechnologies} />);
+      const badge = screen.getByText('React Native');
+      
+      expect(badge).toHaveClass('font-mono');
+    });
+
+    it('badges have correct colors in both themes', () => {
+      render(<ProjectCard {...propsWithTechnologies} />);
+      const badge = screen.getByText('React Native');
+      
+      // Should use accent color which maps to #0969da (light) / #58a6ff (dark)
+      expect(badge).toHaveClass('bg-accent');
+      expect(badge).toHaveClass('text-white');
+    });
+
+    it('works with the specified test data', () => {
+      const testProps = {
+        title: 'Test Project',
+        description: 'Test description',
+        technologies: ['React Native', 'Node.js', 'PostgreSQL'],
+      };
+      
+      render(<ProjectCard {...testProps} />);
+      
+      // Verify all specified technologies are rendered
+      expect(screen.getByText('React Native')).toBeInTheDocument();
+      expect(screen.getByText('Node.js')).toBeInTheDocument();
+      expect(screen.getByText('PostgreSQL')).toBeInTheDocument();
+      
+      // Verify badges have correct styling
+      const badges = screen.getAllByTestId('tech-badge');
+      expect(badges).toHaveLength(3);
+      
+      badges.forEach(badge => {
+        expect(badge).toHaveClass('bg-accent');
+        expect(badge).toHaveClass('text-white');
+        expect(badge).toHaveClass('font-mono');
+        expect(badge).toHaveClass('text-xs');
+        expect(badge).toHaveClass('font-medium');
+        expect(badge).toHaveClass('px-2');
+        expect(badge).toHaveClass('py-1');
+        expect(badge).toHaveClass('rounded-md');
+        expect(badge).toHaveClass('hover:bg-accent-dark');
+        expect(badge).toHaveClass('transition-colors');
+        expect(badge).toHaveClass('duration-200');
+      });
+    });
+  });
 }); 
