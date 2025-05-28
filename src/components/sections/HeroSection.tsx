@@ -119,23 +119,13 @@ export function HeroSection({
           )}
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg
+        <div>
+          <div
             data-testid="scroll-indicator"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-accent"
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-[#656d76] dark:text-[#8b949e] font-sans text-sm"
           >
-            <path d="M12 5v14" />
-            <path d="m19 12-7 7-7-7" />
-          </svg>
+            Scroll to explore ↓
+          </div>
         </div>
       </div>
     </Section>

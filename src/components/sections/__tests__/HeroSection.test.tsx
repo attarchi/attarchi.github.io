@@ -131,6 +131,6 @@ describe("Hero", () => {
 
     const scrollIndicator = screen.getByTestId("scroll-indicator");
     expect(scrollIndicator).toBeInTheDocument();
-    expect(scrollIndicator.parentElement).toHaveClass("animate-bounce");
+    expect(scrollIndicator).toHaveClass("animate-bounce");
   });
 }); 
