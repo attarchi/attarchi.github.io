@@ -75,41 +75,35 @@ export function HeroSection({
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           {ctaPrimary && (
-            <Button
-              asChild
-              size="lg"
-              className="inline-flex items-center gap-2"
+            <Link 
+              href={ctaPrimary.link}
+              className="bg-[#0969da] dark:bg-[#58a6ff] text-white font-sans font-medium px-4 py-2 rounded-md hover:bg-[#0860ca] dark:hover:bg-[#4493f8] inline-flex items-center gap-2 transition-colors"
             >
-              <Link href={ctaPrimary.link}>
-                {ctaPrimary.text}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </Link>
-            </Button>
+              {ctaPrimary.text}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </Link>
           )}
 
           {ctaSecondary && (
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
+            <Link 
+              href={ctaSecondary.link}
+              className="bg-transparent border border-[#d0d7de] dark:border-[#30363d] text-[#24292f] dark:text-[#f0f6fc] font-sans font-medium px-4 py-2 rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] inline-flex items-center transition-colors"
             >
-              <Link href={ctaSecondary.link}>
-                {ctaSecondary.text}
-              </Link>
-            </Button>
+              {ctaSecondary.text}
+            </Link>
           )}
 
           {ctaTertiary && (

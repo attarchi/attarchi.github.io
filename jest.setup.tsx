@@ -11,8 +11,8 @@ jest.mock('next/image', () => ({
 
 jest.mock('next/link', () => ({
     __esModule: true,
-    default: ({ children, href }: { children: React.ReactNode; href: string }) => {
-        return <a href={href}>{children}</a>;
+    default: ({ children, href, className, ...props }: { children: React.ReactNode; href: string; className?: string; [key: string]: any }) => {
+        return <a href={href} className={className} {...props}>{children}</a>;
     },
 }));
 

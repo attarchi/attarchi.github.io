@@ -17,16 +17,16 @@ export default function Home() {
         avatarSrc="/avatar.png"
         avatarAlt="Profile picture"
         ctaPrimary={{
+          text: "Contact Me",
+          link: "#contact"
+        }}
+        ctaSecondary={{
           text: "View Projects",
           link: "#projects"
         }}
-        ctaSecondary={{
+        ctaTertiary={{
           text: "Download CV",
           link: "/cv.pdf"
-        }}
-        ctaTertiary={{
-          text: "Contact Me",
-          link: "#contact"
         }}
       />
     </div>
