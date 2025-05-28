@@ -290,12 +290,11 @@ TEST FIRST: Write tests that verify:
 6. Content spacing is correct
 
 Props interface:
-```typescript
 interface ProjectCardProps {
   title: string;
   description: string;
 }
-```
+
 
 Test with sample data: title="CCPTools Ecosystem", description="Comprehensive nutrition platform..."
 ```
@@ -341,13 +340,12 @@ TEST FIRST: Write tests that verify:
 6. Multiple badges render correctly
 
 Update ProjectCard props:
-```typescript
 interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
 }
-```
+
 
 Test with: technologies={["React Native", "Node.js", "PostgreSQL"]}
 ```
