@@ -56,4 +56,13 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Timeline custom classes */
+  .timeline-vertical {
+    /* Vertical timeline styles for mobile */
+  }
+
+  .timeline-horizontal {
+    /* Horizontal timeline styles for desktop */
+  }
 }

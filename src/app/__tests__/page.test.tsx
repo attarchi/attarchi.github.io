@@ -26,4 +26,13 @@ describe('Home Page', () => {
     const scrollIndicator = screen.getByTestId('scroll-indicator')
     expect(scrollIndicator).toBeInTheDocument()
   })
+
+  it('renders the Professional Journey section', () => {
+    render(<Home />)
+    const professionalJourneySection = screen.getByRole('region', { name: /professional journey/i })
+    expect(professionalJourneySection).toBeInTheDocument()
+    
+    const professionalJourneyHeading = screen.getByRole('heading', { level: 2, name: /professional journey/i })
+    expect(professionalJourneyHeading).toBeInTheDocument()
+  })
 }) 
