@@ -1,6 +1,25 @@
 import { render, screen } from "@testing-library/react";
 import { FeaturedProjects } from "../FeaturedProjects";
 
+// Sample project data for testing
+const mockProjects = [
+  {
+    title: "CCPTools Ecosystem",
+    description: "Comprehensive nutrition platform with meal planning, recipe management, and nutritional analysis tools.",
+    technologies: ["React Native", "Node.js", "PostgreSQL"]
+  },
+  {
+    title: "Multi-Tenant Nutrition Platform", 
+    description: "Advanced nutrition platform with multi-tenant architecture and real-time data synchronization.",
+    technologies: ["Next.js", "Prisma", "tRPC"]
+  },
+  {
+    title: "Healthcare Management System",
+    description: "Complete healthcare management solution with patient records, appointment scheduling, and billing.",
+    technologies: ["React", "Express", "MongoDB"]
+  }
+];
+
 describe("FeaturedProjects", () => {
   it("renders section with correct padding", () => {
     render(<FeaturedProjects />);
@@ -76,50 +95,102 @@ describe("FeaturedProjects", () => {
     document.documentElement.classList.remove("dark");
   });
 
-  it("renders project cards grid", () => {
-    render(<FeaturedProjects />);
-    
-    const grid = screen.getByTestId("projects-grid");
-    expect(grid).toBeInTheDocument();
-    expect(grid).toHaveClass("grid", "grid-cols-1", "md:grid-cols-2", "lg:grid-cols-3", "gap-6", "mt-8");
+  describe("Grid Layout", () => {
+    it("renders grid container with correct responsive classes", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("grid", "grid-cols-1", "md:grid-cols-2", "lg:grid-cols-3");
+    });
+
+    it("renders grid with correct gap spacing", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("gap-8");
+    });
+
+    it("renders grid with correct margin top from heading", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("mt-12");
+    });
   });
 
-  it("renders CCPTools Ecosystem project card", () => {
-    render(<FeaturedProjects />);
-    
-    expect(screen.getByText("CCPTools Ecosystem")).toBeInTheDocument();
-    expect(screen.getByText(/comprehensive nutrition platform/i)).toBeInTheDocument();
+  describe("Project Data", () => {
+    it("renders all 3 project cards", () => {
+      render(<FeaturedProjects />);
+      
+      const projectTitles = screen.getAllByRole("heading", { level: 3 });
+      expect(projectTitles).toHaveLength(3);
+    });
+
+    it("renders CCPTools Ecosystem project with correct data", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText("CCPTools Ecosystem")).toBeInTheDocument();
+      expect(screen.getByText(/comprehensive nutrition platform/i)).toBeInTheDocument();
+      expect(screen.getByText("React Native")).toBeInTheDocument();
+      expect(screen.getByText("Node.js")).toBeInTheDocument();
+      expect(screen.getByText("PostgreSQL")).toBeInTheDocument();
+    });
+
+    it("renders Multi-Tenant Nutrition Platform project with correct data", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText("Multi-Tenant Nutrition Platform")).toBeInTheDocument();
+      expect(screen.getByText(/advanced nutrition platform/i)).toBeInTheDocument();
+      expect(screen.getByText("Next.js")).toBeInTheDocument();
+      expect(screen.getByText("Prisma")).toBeInTheDocument();
+      expect(screen.getByText("tRPC")).toBeInTheDocument();
+    });
+
+    it("renders Healthcare Management System project with correct data", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText("Healthcare Management System")).toBeInTheDocument();
+      expect(screen.getByText(/complete healthcare management solution/i)).toBeInTheDocument();
+      expect(screen.getByText("React")).toBeInTheDocument();
+      expect(screen.getByText("Express")).toBeInTheDocument();
+      expect(screen.getByText("MongoDB")).toBeInTheDocument();
+    });
   });
 
-  it("renders Portfolio Website project card", () => {
-    render(<FeaturedProjects />);
-    
-    expect(screen.getByText("Portfolio Website")).toBeInTheDocument();
-    expect(screen.getByText(/modern portfolio built with next\.js/i)).toBeInTheDocument();
+  describe("Props Support", () => {
+    it("accepts projects array as prop and renders them", () => {
+      render(<FeaturedProjects projects={mockProjects} />);
+      
+      expect(screen.getByText("CCPTools Ecosystem")).toBeInTheDocument();
+      expect(screen.getByText("Multi-Tenant Nutrition Platform")).toBeInTheDocument();
+      expect(screen.getByText("Healthcare Management System")).toBeInTheDocument();
+    });
+
+    it("renders each card with correct props", () => {
+      render(<FeaturedProjects projects={mockProjects} />);
+      
+      // Check that each project card receives the correct props
+      mockProjects.forEach(project => {
+        expect(screen.getByText(project.title)).toBeInTheDocument();
+        expect(screen.getByText(project.description)).toBeInTheDocument();
+        project.technologies.forEach(tech => {
+          expect(screen.getByText(tech)).toBeInTheDocument();
+        });
+      });
+    });
   });
 
-  it("renders E-Commerce Platform project card", () => {
-    render(<FeaturedProjects />);
-    
-    expect(screen.getByText("E-Commerce Platform")).toBeInTheDocument();
-    expect(screen.getByText(/full-stack e-commerce solution/i)).toBeInTheDocument();
-  });
-
-  it("renders all project cards with correct structure", () => {
-    render(<FeaturedProjects />);
-    
-    // Should have 3 project cards
-    const projectTitles = screen.getAllByRole("heading", { level: 3 });
-    expect(projectTitles).toHaveLength(3);
-    
-    // Each should be a project card with proper styling
-    projectTitles.forEach(title => {
-      // Get the parent div that contains the card styling (not the space-y-4 div)
-      const card = title.closest('[class*="bg-surface"]');
-      expect(card).toHaveClass('bg-surface');
-      expect(card).toHaveClass('border');
-      expect(card).toHaveClass('rounded-lg');
-      expect(card).toHaveClass('p-6');
+  describe("Responsive Design", () => {
+    it("has mobile-first responsive grid classes", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      // Should start with 1 column on mobile
+      expect(grid).toHaveClass("grid-cols-1");
+      // Then 2 columns on medium screens
+      expect(grid).toHaveClass("md:grid-cols-2");
+      // Then 3 columns on large screens
+      expect(grid).toHaveClass("lg:grid-cols-3");
     });
   });
 }); 

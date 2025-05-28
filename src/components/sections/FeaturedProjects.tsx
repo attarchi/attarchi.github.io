@@ -1,24 +1,35 @@
 import { ProjectCard } from '@/components/ui';
 
-const projects = [
+// Default project data
+const defaultProjects = [
   {
     title: "CCPTools Ecosystem",
-    description: "Comprehensive nutrition platform with meal planning, recipe management, and nutritional analysis tools built with React and Node.js.",
-    technologies: ["React Native", "Node.js", "PostgreSQL", "Express", "TypeScript"]
+    description: "Comprehensive nutrition platform with meal planning, recipe management, and nutritional analysis tools.",
+    technologies: ["React Native", "Node.js", "PostgreSQL"]
   },
   {
-    title: "Portfolio Website", 
-    description: "Modern portfolio built with Next.js, TypeScript, and Tailwind CSS featuring responsive design and dark mode support.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Vercel"]
+    title: "Multi-Tenant Nutrition Platform", 
+    description: "Advanced nutrition platform with multi-tenant architecture and real-time data synchronization.",
+    technologies: ["Next.js", "Prisma", "tRPC"]
   },
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard using React and Express.",
-    technologies: ["React", "Express", "MongoDB", "Stripe", "Redux", "JWT"]
+    title: "Healthcare Management System",
+    description: "Complete healthcare management solution with patient records, appointment scheduling, and billing.",
+    technologies: ["React", "Express", "MongoDB"]
   }
 ];
 
-export function FeaturedProjects() {
+export interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+}
+
+export interface FeaturedProjectsProps {
+  projects?: Project[];
+}
+
+export function FeaturedProjects({ projects = defaultProjects }: FeaturedProjectsProps) {
   return (
     <section 
       className="py-20 bg-[#ffffff] dark:bg-[#0d1117]"
@@ -33,7 +44,7 @@ export function FeaturedProjects() {
         </h2>
         
         <div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
           data-testid="projects-grid"
         >
           {projects.map((project, index) => (
