@@ -30,7 +30,7 @@ describe("ProfessionalJourney", () => {
       render(<ProfessionalJourney />);
       
       const section = screen.getByRole("region", { name: /professional journey/i });
-      expect(section).toHaveClass("dark:bg-[#0d1117]");
+      expect(section).toHaveClass("dark:bg-[#21262d]");
       
       document.documentElement.classList.remove("dark");
     });

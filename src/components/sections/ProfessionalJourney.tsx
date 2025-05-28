@@ -41,7 +41,7 @@ const milestones: Milestone[] = [
 export function ProfessionalJourney({}: ProfessionalJourneyProps = {}) {
   return (
     <section 
-      className="py-20 bg-[#fafbfc] dark:bg-[#0d1117]"
+      className="py-20 bg-[#fafbfc] dark:bg-[#21262d]"
       aria-label="Professional Journey"
     >
       <div 
