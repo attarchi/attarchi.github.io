@@ -175,4 +175,202 @@ describe("ProfessionalJourney", () => {
       expect(timelineLine).toHaveClass("md:left-0", "md:top-4", "md:w-full", "md:h-0.5");
     });
   });
+
+  describe("Milestone Cards", () => {
+    it("renders milestone cards with correct structure", () => {
+      render(<ProfessionalJourney />);
+      
+      const milestoneCards = screen.getAllByTestId("milestone-card");
+      expect(milestoneCards).toHaveLength(3);
+    });
+
+    it("renders milestone cards with correct background colors", () => {
+      render(<ProfessionalJourney />);
+      
+      const milestoneCards = screen.getAllByTestId("milestone-card");
+      milestoneCards.forEach(card => {
+        expect(card).toHaveClass("bg-[#ffffff]", "dark:bg-[#21262d]");
+      });
+    });
+
+    it("renders milestone cards with correct padding and shadow", () => {
+      render(<ProfessionalJourney />);
+      
+      const milestoneCards = screen.getAllByTestId("milestone-card");
+      milestoneCards.forEach(card => {
+        expect(card).toHaveClass("p-4", "shadow-md");
+      });
+    });
+
+    it("renders milestone cards with proper border styling", () => {
+      render(<ProfessionalJourney />);
+      
+      const milestoneCards = screen.getAllByTestId("milestone-card");
+      milestoneCards.forEach(card => {
+        expect(card).toHaveClass("border", "border-[#d0d7de]", "dark:border-[#30363d]");
+      });
+    });
+
+    it("renders milestone cards positioned relative to timeline", () => {
+      render(<ProfessionalJourney />);
+      
+      const milestoneCards = screen.getAllByTestId("milestone-card");
+      milestoneCards.forEach(card => {
+        expect(card).toHaveClass("relative");
+      });
+    });
+  });
+
+  describe("Milestone Content", () => {
+    it("renders milestone dates with correct typography", () => {
+      render(<ProfessionalJourney />);
+      
+      const dates = screen.getAllByTestId("milestone-date");
+      dates.forEach(date => {
+        expect(date).toHaveClass("font-mono", "text-sm", "text-[#656d76]", "dark:text-[#8b949e]");
+      });
+    });
+
+    it("renders milestone roles with correct typography", () => {
+      render(<ProfessionalJourney />);
+      
+      const roles = screen.getAllByTestId("milestone-role");
+      roles.forEach(role => {
+        expect(role).toHaveClass("font-sans", "text-lg", "font-semibold", "text-[#24292f]", "dark:text-[#f0f6fc]");
+      });
+    });
+
+    it("renders milestone companies with correct typography and accent color", () => {
+      render(<ProfessionalJourney />);
+      
+      const companies = screen.getAllByTestId("milestone-company");
+      companies.forEach(company => {
+        expect(company).toHaveClass("font-sans", "text-base", "text-[#0969da]", "dark:text-[#58a6ff]");
+      });
+    });
+
+    it("renders milestone descriptions with correct typography", () => {
+      render(<ProfessionalJourney />);
+      
+      const descriptions = screen.getAllByTestId("milestone-description");
+      descriptions.forEach(description => {
+        expect(description).toHaveClass("font-sans", "text-sm", "text-[#656d76]", "dark:text-[#8b949e]");
+      });
+    });
+
+    it("renders achievement badges with correct styling", () => {
+      render(<ProfessionalJourney />);
+      
+      const badges = screen.getAllByTestId("achievement-badge");
+      badges.forEach(badge => {
+        expect(badge).toHaveClass("inline-flex", "items-center", "px-2", "py-1", "rounded", "text-xs", "font-medium");
+        expect(badge).toHaveClass("bg-[#f6f8fa]", "dark:bg-[#21262d]", "text-[#24292f]", "dark:text-[#f0f6fc]");
+      });
+    });
+  });
+
+  describe("Milestone Data", () => {
+    it("displays correct milestone dates", () => {
+      render(<ProfessionalJourney />);
+      
+      expect(screen.getByText("2023-Present")).toBeInTheDocument();
+      expect(screen.getByText("2021-2023")).toBeInTheDocument();
+      expect(screen.getByText("2019-2021")).toBeInTheDocument();
+    });
+
+    it("displays correct milestone roles", () => {
+      render(<ProfessionalJourney />);
+      
+      expect(screen.getByText("Senior Full-Stack Developer")).toBeInTheDocument();
+      expect(screen.getByText("Full-Stack Developer")).toBeInTheDocument();
+      expect(screen.getByText("Frontend Developer")).toBeInTheDocument();
+    });
+
+    it("displays correct milestone companies", () => {
+      render(<ProfessionalJourney />);
+      
+      expect(screen.getByText("TechCorp")).toBeInTheDocument();
+      expect(screen.getByText("StartupXYZ")).toBeInTheDocument();
+      expect(screen.getByText("DevAgency")).toBeInTheDocument();
+    });
+
+    it("displays achievement badges with correct content", () => {
+      render(<ProfessionalJourney />);
+      
+      expect(screen.getByText("Team Lead")).toBeInTheDocument();
+      expect(screen.getByText("MVP Launch")).toBeInTheDocument();
+      expect(screen.getByText("UI Redesign")).toBeInTheDocument();
+    });
+  });
+
+  describe("Date Formatting", () => {
+    it("formats dates consistently across all milestones", () => {
+      render(<ProfessionalJourney />);
+      
+      const dates = screen.getAllByTestId("milestone-date");
+      
+      // Check that all dates follow the same format pattern
+      expect(dates[0]).toHaveTextContent(/^\d{4}-Present$/);
+      expect(dates[1]).toHaveTextContent(/^\d{4}-\d{4}$/);
+      expect(dates[2]).toHaveTextContent(/^\d{4}-\d{4}$/);
+    });
+  });
+
+  describe("Milestone Card Interactions", () => {
+    it("renders milestone cards with hover effects", () => {
+      render(<ProfessionalJourney />);
+      
+      const milestoneCards = screen.getAllByTestId("milestone-card");
+      milestoneCards.forEach(card => {
+        expect(card).toHaveClass("hover:shadow-lg", "transition-shadow", "duration-300");
+      });
+    });
+
+    it("renders milestone cards with rounded corners", () => {
+      render(<ProfessionalJourney />);
+      
+      const milestoneCards = screen.getAllByTestId("milestone-card");
+      milestoneCards.forEach(card => {
+        expect(card).toHaveClass("rounded-lg");
+      });
+    });
+  });
+
+  describe("Timeline Connection", () => {
+    it("renders timeline dots for each milestone", () => {
+      render(<ProfessionalJourney />);
+      
+      const timelineDots = screen.getAllByTestId("timeline-dot");
+      expect(timelineDots).toHaveLength(3);
+    });
+
+    it("renders timeline dots with correct styling", () => {
+      render(<ProfessionalJourney />);
+      
+      const timelineDots = screen.getAllByTestId("timeline-dot");
+      timelineDots.forEach(dot => {
+        expect(dot).toHaveClass("absolute", "w-3", "h-3", "rounded-full");
+        expect(dot).toHaveClass("bg-[#0969da]", "dark:bg-[#58a6ff]");
+        expect(dot).toHaveClass("border-2", "border-[#ffffff]", "dark:border-[#0d1117]");
+      });
+    });
+
+    it("positions timeline dots correctly for vertical layout", () => {
+      render(<ProfessionalJourney />);
+      
+      const timelineDots = screen.getAllByTestId("timeline-dot");
+      timelineDots.forEach(dot => {
+        expect(dot).toHaveClass("-left-1.5", "top-6");
+      });
+    });
+
+    it("positions timeline dots correctly for horizontal layout", () => {
+      render(<ProfessionalJourney />);
+      
+      const timelineDots = screen.getAllByTestId("timeline-dot");
+      timelineDots.forEach(dot => {
+        expect(dot).toHaveClass("md:-top-1.5", "md:left-1/2", "md:-ml-1.5");
+      });
+    });
+  });
 }); 
