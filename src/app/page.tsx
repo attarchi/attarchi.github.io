@@ -1,4 +1,4 @@
-import { HeroSection } from "@/components/sections";
+import { HeroSection, FeaturedProjects } from "@/components/sections";
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export default function Home() {
@@ -29,6 +29,9 @@ export default function Home() {
           link: "/cv.pdf"
         }}
       />
+
+      {/* Featured Projects Section */}
+      <FeaturedProjects />
     </div>
   );
 }
