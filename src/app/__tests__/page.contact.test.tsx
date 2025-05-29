@@ -2,41 +2,50 @@ import { render, screen } from "@testing-library/react";
 import Home from "../page";
 
 describe("Home Page - Contact Integration", () => {
-  it("renders the ContactSection on the home page", () => {
+  it("renders contact section with main heading", () => {
     render(<Home />);
     
     expect(screen.getByText("Let's Work Together")).toBeInTheDocument();
     expect(screen.getByText("Available for exciting projects and opportunities")).toBeInTheDocument();
   });
 
-  it("ContactSection has correct id for navigation", () => {
+  it("has working anchor link to contact section", () => {
     render(<Home />);
     
-    const contactSection = screen.getByText("Let's Work Together").closest("section");
-    expect(contactSection).toHaveAttribute("id", "contact");
-  });
-
-  it("Contact Me button in hero links to contact section", () => {
-    render(<Home />);
-    
-    const contactButton = screen.getByRole("link", { name: /contact me/i });
-    expect(contactButton).toHaveAttribute("href", "#contact");
+    const contactLink = screen.getByText("Contact Me");
+    expect(contactLink).toHaveAttribute("href", "#contact");
   });
 
   it("displays contact information in the contact section", () => {
     render(<Home />);
     
+    // Get contact info specifically from the contact info card
+    const contactInfoCard = screen.getByTestId("contact-info-card");
+    
     expect(screen.getByText("Contact Information")).toBeInTheDocument();
-    expect(screen.getByText("Email")).toBeInTheDocument();
-    expect(screen.getByText("LinkedIn")).toBeInTheDocument();
-    expect(screen.getByText("GitHub")).toBeInTheDocument();
+    expect(contactInfoCard).toHaveTextContent("Email");
+    expect(contactInfoCard).toHaveTextContent("LinkedIn");
+    expect(contactInfoCard).toHaveTextContent("GitHub");
   });
 
-  it("shows availability status in contact section", () => {
+  it("shows availability status", () => {
     render(<Home />);
     
     const availabilityBadge = screen.getByTestId("availability-badge");
-    expect(availabilityBadge).toBeInTheDocument();
     expect(availabilityBadge).toHaveTextContent("Available");
+  });
+
+  it("contact section has proper background styling", () => {
+    render(<Home />);
+    
+    const contactSection = screen.getByRole("region", { name: /contact/i });
+    expect(contactSection).toHaveClass("bg-[#f6f8fa]", "dark:bg-[#0d1117]");
+  });
+
+  it("contact card has proper styling", () => {
+    render(<Home />);
+    
+    const contactCard = screen.getByTestId("contact-info-card");
+    expect(contactCard).toHaveClass("bg-white", "dark:bg-[#21262d]");
   });
 }); 

@@ -42,11 +42,14 @@ describe("ContactSection", () => {
   it("displays contact information correctly", () => {
     render(<ContactSection />);
     
-    expect(screen.getByText("Email")).toBeInTheDocument();
+    // Get contact info specifically from the contact info card
+    const contactInfoCard = screen.getByTestId("contact-info-card");
+    
+    expect(contactInfoCard).toHaveTextContent("Email");
     expect(screen.getByText("contact@example.com")).toBeInTheDocument();
-    expect(screen.getByText("LinkedIn")).toBeInTheDocument();
+    expect(contactInfoCard).toHaveTextContent("LinkedIn");
     expect(screen.getByText("linkedin.com/in/profile")).toBeInTheDocument();
-    expect(screen.getByText("GitHub")).toBeInTheDocument();
+    expect(contactInfoCard).toHaveTextContent("GitHub");
     expect(screen.getByText("github.com/username")).toBeInTheDocument();
   });
 
