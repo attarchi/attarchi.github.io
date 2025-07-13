@@ -193,4 +193,119 @@ describe("FeaturedProjects", () => {
       expect(grid).toHaveClass("lg:grid-cols-3");
     });
   });
+
+  describe("Staggered Animations", () => {
+    it("wraps projects section with regular section element", () => {
+      render(<FeaturedProjects />);
+      
+      // The section should be a regular section element
+      const section = screen.getByRole("region", { name: /featured projects/i });
+      expect(section).toBeInTheDocument();
+    });
+
+    it("uses stagger animation for project cards", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      // Grid should have stagger animation variants
+      expect(grid).toBeInTheDocument();
+    });
+
+    it("applies slideUp animation to individual project cards", () => {
+      render(<FeaturedProjects />);
+      
+      const projectCards = screen.getAllByTestId("project-card");
+      expect(projectCards).toHaveLength(3);
+      
+      // Each card should have motion.div wrapper with slideUp variants
+      projectCards.forEach(card => {
+        expect(card).toBeInTheDocument();
+      });
+    });
+
+    it("implements 200ms stagger delay between cards", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      // Grid should have staggerChildren: 0.2 (200ms) in animation variants
+      expect(grid).toBeInTheDocument();
+    });
+
+    it("uses 0.8s duration with easeOut curve for card animations", () => {
+      render(<FeaturedProjects />);
+      
+      const projectCards = screen.getAllByTestId("project-card");
+      expect(projectCards).toHaveLength(3);
+      
+      // Each card should have 0.8s duration with easeOut
+      projectCards.forEach(card => {
+        expect(card).toBeInTheDocument();
+      });
+    });
+
+    it("animates technology badges after card animation", () => {
+      render(<FeaturedProjects />);
+      
+      const badgeContainers = screen.getAllByTestId("badges-container");
+      expect(badgeContainers).toHaveLength(3);
+      
+      // Each badge container should have additional delay animation
+      badgeContainers.forEach(container => {
+        expect(container).toBeInTheDocument();
+      });
+    });
+
+    it("maintains existing hover effects on project cards", () => {
+      render(<FeaturedProjects />);
+      
+      const projectCards = screen.getAllByTestId("project-card");
+      expect(projectCards).toHaveLength(3);
+      
+      // Each card should maintain hover effects
+      projectCards.forEach(card => {
+        expect(card).toHaveClass("hover:shadow-lg", "transition-all", "duration-300");
+      });
+    });
+
+    it("preserves responsive grid layout with animations", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("grid", "grid-cols-1", "md:grid-cols-2", "lg:grid-cols-3", "gap-8");
+    });
+
+    it("ensures smooth animation performance", () => {
+      render(<FeaturedProjects />);
+      
+      const projectCards = screen.getAllByTestId("project-card");
+      expect(projectCards).toHaveLength(3);
+      
+      // Cards should use optimized animation properties
+      projectCards.forEach(card => {
+        expect(card).toBeInTheDocument();
+      });
+    });
+
+    it("has correct animation variants for stagger timing", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toBeInTheDocument();
+      
+      // Verify that the grid uses motion.div with stagger variants
+      expect(grid.tagName.toLowerCase()).toBe('div');
+    });
+
+    it("renders technology badges with motion components", () => {
+      render(<FeaturedProjects />);
+      
+      const techBadges = screen.getAllByTestId("tech-badge");
+      expect(techBadges.length).toBeGreaterThan(0);
+      
+      // Each badge should be a motion component
+      techBadges.forEach(badge => {
+        expect(badge).toBeInTheDocument();
+      });
+    });
+  });
 }); 

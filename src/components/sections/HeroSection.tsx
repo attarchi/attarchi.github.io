@@ -47,7 +47,7 @@ export function HeroSection({
       variant="section"
       className={`relative min-h-screen flex items-center justify-center overflow-hidden pt-16 !max-w-none !text-center !py-0 ${className}`}
     >
-      <div className="container mx-auto max-w-4xl text-center space-y-6 px-4">
+      <div className="container mx-auto max-w-6xl text-center space-y-6 px-4">
         {avatarSrc && (
           <motion.div 
             className="mb-8 relative w-32 h-32 mx-auto"

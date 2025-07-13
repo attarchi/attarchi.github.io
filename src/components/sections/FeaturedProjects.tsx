@@ -1,4 +1,8 @@
+"use client";
+
+import { motion } from 'framer-motion';
 import { ProjectCard } from '@/components/ui';
+import { projectStaggerVariants } from '@/lib/animation-variants';
 
 // Default project data
 const defaultProjects = [
@@ -43,9 +47,13 @@ export function FeaturedProjects({ projects = defaultProjects }: FeaturedProject
           Featured Projects
         </h2>
         
-        <div 
+        <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
           data-testid="projects-grid"
+          variants={projectStaggerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
         >
           {projects.map((project, index) => (
             <ProjectCard
@@ -55,7 +63,7 @@ export function FeaturedProjects({ projects = defaultProjects }: FeaturedProject
               technologies={project.technologies}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

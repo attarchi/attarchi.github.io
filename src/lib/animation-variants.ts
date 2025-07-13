@@ -52,6 +52,57 @@ export const staggerVariants: Variants = {
     }
 };
 
+// Project cards stagger variants with 200ms delay between cards
+export const projectStaggerVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 50
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: 'easeOut',
+            staggerChildren: 0.2, // 200ms delay between cards
+            delayChildren: 0.1
+        }
+    }
+};
+
+// Individual project card slideUp variants
+export const projectCardVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 50
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: 'easeOut'
+        }
+    }
+};
+
+// Technology badges variants with additional delay
+export const techBadgeVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        scale: 0.8
+    },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 0.6,
+            ease: 'easeOut',
+            delay: 0.3 // Additional delay after card animation
+        }
+    }
+};
+
 // Slide up variants for elements sliding up from bottom
 export const slideUpVariants: Variants = {
     hidden: {

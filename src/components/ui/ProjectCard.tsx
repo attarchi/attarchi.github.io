@@ -1,6 +1,10 @@
-import { cn } from '@/lib/utils';
+"use client";
 
-export interface ProjectCardProps extends React.HTMLAttributes<HTMLDivElement> {
+import { motion, HTMLMotionProps } from 'framer-motion';
+import { cn } from '@/lib/utils';
+import { projectCardVariants, techBadgeVariants } from '@/lib/animation-variants';
+
+export interface ProjectCardProps extends Omit<HTMLMotionProps<"div">, "variants"> {
   title: string;
   description: string;
   technologies?: string[];
@@ -14,7 +18,9 @@ export function ProjectCard({
   ...props 
 }: ProjectCardProps) {
   return (
-    <div
+    <motion.div
+      variants={projectCardVariants}
+      data-testid="project-card"
       className={cn(
         // Background: #f6f8fa (light) / #21262d (dark)
         'bg-surface',
@@ -45,12 +51,13 @@ export function ProjectCard({
 
         {/* Technology badges */}
         {technologies && technologies.length > 0 && (
-          <div 
+          <motion.div 
             className="flex flex-wrap gap-2 mt-4"
             data-testid="badges-container"
+            variants={techBadgeVariants}
           >
             {technologies.map((tech, index) => (
-              <span
+              <motion.span
                 key={index}
                 data-testid="tech-badge"
                 className={cn(
@@ -69,11 +76,11 @@ export function ProjectCard({
                 )}
               >
                 {tech}
-              </span>
+              </motion.span>
             ))}
-          </div>
+          </motion.div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 } 

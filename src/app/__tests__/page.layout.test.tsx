@@ -26,7 +26,7 @@ describe('Home Page Layout Requirements', () => {
     const typewriter = screen.getByTestId('typewriter-container')
     const motionDiv = typewriter.parentElement
     const contentContainer = motionDiv?.parentElement?.parentElement
-    expect(contentContainer).toHaveClass('container', 'mx-auto', 'max-w-4xl', 'text-center')
+    expect(contentContainer).toHaveClass('container', 'mx-auto', 'max-w-6xl', 'text-center')
   })
 
   it('overrides AnimatedSection defaults for proper centering', () => {

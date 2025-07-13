@@ -60,7 +60,7 @@ describe('HeroSection Responsive Layout Requirements', () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       const heading = await screen.findByRole('heading', { level: 1 });
       const container = heading.parentElement?.parentElement;
-      expect(container).toHaveClass('max-w-4xl');
+      expect(container).toHaveClass('max-w-6xl');
     });
 
     it('centers the container', async () => {
