@@ -1,9 +1,14 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 import { Button } from "../ui/Button";
 import { Heading, Text } from "../ui/Typography";
 import { Section } from "../ui/Section";
 import { Badge } from "../ui/Badge";
-import Link from "next/link";
-import Image from "next/image";
+import { AnimatedSection } from "../ui/AnimatedSection";
+import { Typewriter } from "../ui/Typewriter";
 
 interface HeroSectionProps {
   title: string;
@@ -38,15 +43,18 @@ export function HeroSection({
   className = "",
 }: HeroSectionProps) {
   return (
-    <Section
-      variant="surface"
-      spacing="xl"
-      maxWidth="none"
+    <AnimatedSection
+      variant="section"
       className={`relative h-auto md:h-screen flex items-center justify-center overflow-hidden ${className}`}
     >
       <div className="container mx-auto max-w-4xl text-center space-y-6">
         {avatarSrc && (
-          <div className="mb-8 relative w-32 h-32 mx-auto">
+          <motion.div 
+            className="mb-8 relative w-32 h-32 mx-auto"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <Image
               src={avatarSrc}
               alt={avatarAlt}
@@ -54,26 +62,48 @@ export function HeroSection({
               className="rounded-full object-cover border-4 border-accent"
               priority
             />
-          </div>
+          </motion.div>
         )}
         
-        <Heading
-          as="h1"
-          size="h1"
-          className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
+        <motion.div
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
         >
-          {title}
-        </Heading>
+          <h1 className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text" data-testid="hero-heading">
+            <Typewriter
+              text={title}
+              speed={50}
+              className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
+            />
+          </h1>
+        </motion.div>
 
-        <div className="bg-[#f6f8fa] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] text-[#656d76] dark:text-[#8b949e] font-sans text-sm px-3 py-1 rounded-full inline-flex items-center">
+        <motion.div
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="bg-[#f6f8fa] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] text-[#656d76] dark:text-[#8b949e] font-sans text-sm px-3 py-1 rounded-full inline-flex items-center"
+        >
           📍 {location || "Available for remote opportunities"}
-        </div>
+        </motion.div>
 
-        <Text size="base" className="mb-8 font-sans text-base font-normal text-text max-w-2xl mx-auto">
-          {description}
-        </Text>
+        <motion.div
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <Text size="base" className="mb-8 font-sans text-base font-normal text-text max-w-2xl mx-auto">
+            {description}
+          </Text>
+        </motion.div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <motion.div 
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
           {ctaPrimary && (
             <Link 
               href={ctaPrimary.link}
@@ -117,17 +147,21 @@ export function HeroSection({
               </Link>
             </Button>
           )}
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
           <div
             data-testid="scroll-indicator"
             className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-[#656d76] dark:text-[#8b949e] font-sans text-sm"
           >
             Scroll to explore ↓
           </div>
-        </div>
+        </motion.div>
       </div>
-    </Section>
+    </AnimatedSection>
   );
 } 

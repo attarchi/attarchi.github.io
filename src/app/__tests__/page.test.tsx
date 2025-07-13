@@ -1,10 +1,25 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
+import { act } from 'react-dom/test-utils'
 import Home from '../page'
 
+jest.useFakeTimers();
+
+async function flushTypewriterUntilText(heading: HTMLElement, expected: string) {
+  for (let i = 0; i < 100; i++) {
+    act(() => {
+      jest.runOnlyPendingTimers();
+    });
+    if (heading.textContent === expected) return;
+    // Wait a tick for React to update
+    await Promise.resolve();
+  }
+}
+
 describe('Home Page', () => {
-  it('renders the main hero heading', () => {
+  it('renders the main hero heading', async () => {
     render(<Home />)
-    const heading = screen.getByRole('heading', { level: 1 })
+    const heading = await screen.findByRole('heading', { level: 1 })
+    await flushTypewriterUntilText(heading, 'Senior Full-Stack Developer & Problem Solver');
     expect(heading).toHaveTextContent('Senior Full-Stack Developer & Problem Solver')
     expect(heading).toBeInTheDocument()
   })

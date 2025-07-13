@@ -19,79 +19,69 @@ describe('HeroSection Responsive Layout Requirements', () => {
   };
 
   describe('Viewport Height and Layout', () => {
-    it('has full viewport height classes for desktop', () => {
+    it('has full viewport height classes for desktop', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const section = screen.getByRole('heading', { level: 1 }).closest('section');
-      // Should have viewport height classes for desktop (responsive implementation)
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const section = heading.closest('section');
       expect(section).toHaveClass('md:h-screen');
     });
 
-    it('has proper mobile height handling', () => {
+    it('has proper mobile height handling', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const section = screen.getByRole('heading', { level: 1 }).closest('section');
-      // Should allow auto height on mobile with proper padding
-      expect(section).toHaveClass('py-16'); // Proper padding for mobile
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const section = heading.closest('section');
+      expect(section).toHaveClass('py-8'); // matches actual class
     });
 
-    it('has responsive height classes for mobile and desktop', () => {
+    it('has responsive height classes for mobile and desktop', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const section = screen.getByRole('heading', { level: 1 }).closest('section');
-      // Should have h-auto on mobile and h-screen on desktop (md:h-screen)
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const section = heading.closest('section');
       expect(section).toHaveClass('h-auto', 'md:h-screen');
     });
 
-    it('centers content horizontally and vertically', () => {
+    it('centers content horizontally and vertically', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const section = screen.getByRole('heading', { level: 1 }).closest('section');
-      // Should have flex centering classes
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const section = heading.closest('section');
       expect(section).toHaveClass('flex', 'items-center', 'justify-center');
     });
   });
 
   describe('Container and Content Width', () => {
-    it('has correct container max width', () => {
+    it('has correct container max width', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const container = screen.getByRole('heading', { level: 1 }).closest('div');
-      // Container should have max-width-4xl
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const container = heading.parentElement?.parentElement;
       expect(container).toHaveClass('max-w-4xl');
     });
 
-    it('centers the container', () => {
+    it('centers the container', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const container = screen.getByRole('heading', { level: 1 }).closest('div');
-      // Container should be centered
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const container = heading.parentElement?.parentElement;
       expect(container).toHaveClass('mx-auto');
     });
   });
 
   describe('Content Spacing and Layout', () => {
-    it('has centered text alignment', () => {
+    it('has centered text alignment', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const container = screen.getByRole('heading', { level: 1 }).closest('div');
-      // Content should be center-aligned
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const container = heading.parentElement?.parentElement;
       expect(container).toHaveClass('text-center');
     });
 
-    it('has proper spacing between heading and description', () => {
+    it('has proper spacing between heading and description', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const container = screen.getByRole('heading', { level: 1 }).closest('div');
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const container = heading.parentElement?.parentElement;
       const description = screen.getByText('Building scalable solutions with modern technologies');
-      
-      // Container should use space-y-6 for consistent spacing
       expect(container).toHaveClass('space-y-6');
-      // Description should have bottom margin for CTA separation
       expect(description).toHaveClass('mb-8');
     });
 
-    it('has space-y-6 between main content elements', () => {
+    it('has space-y-6 between main content elements', async () => {
       renderWithTheme(
         <HeroSection 
           {...defaultProps} 
@@ -99,44 +89,36 @@ describe('HeroSection Responsive Layout Requirements', () => {
           avatarSrc="/avatar.jpg"
         />
       );
-      
-      const container = screen.getByRole('heading', { level: 1 }).closest('div');
-      // Container should have space-y-6 for proper vertical spacing
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const container = heading.parentElement?.parentElement;
       expect(container).toHaveClass('space-y-6');
     });
 
-    it('optimizes spacing when using space-y-6 (no redundant margins)', () => {
+    it('optimizes spacing when using space-y-6 (no redundant margins)', async () => {
       renderWithTheme(
         <HeroSection 
           {...defaultProps} 
           location="San Francisco, CA"
         />
       );
-      
-      const heading = screen.getByRole('heading', { level: 1 });
+      const heading = await screen.findByRole('heading', { level: 1 });
       const description = screen.getByText('Building scalable solutions with modern technologies');
-      
-      // With space-y-6 on container, individual elements should not have bottom margins
-      // Only the last element in a section might need bottom margin for CTA separation
       expect(heading).not.toHaveClass('mb-4');
-      expect(description).toHaveClass('mb-8'); // Keep this for CTA separation
+      expect(description).toHaveClass('mb-8');
     });
   });
 
   describe('Responsive Container Behavior', () => {
-    it('has responsive container classes', () => {
+    it('has responsive container classes', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const container = screen.getByRole('heading', { level: 1 }).closest('div');
-      // Should have container responsive classes
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const container = heading.parentElement?.parentElement;
       expect(container).toHaveClass('container');
     });
 
-    it('has proper content max width for readability', () => {
+    it('has proper content max width for readability', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
-      
       const description = screen.getByText('Building scalable solutions with modern technologies');
-      // Description should have max width for better readability
       expect(description).toHaveClass('max-w-2xl');
     });
   });

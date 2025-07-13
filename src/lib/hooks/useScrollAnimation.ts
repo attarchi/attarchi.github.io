@@ -70,17 +70,46 @@ export function useScrollAnimation(options: UseScrollAnimationOptions = {}): Use
         // Always disconnect previous observer
         cleanupObserver();
         nodeRef.current = node;
-        // Only reset state if not already triggered (for triggerOnce)
-        if (!(triggerOnce && hasTriggeredOnce.current)) {
-            setIsVisible(false);
-            setHasAnimated(false);
+
+        if (!node || disabled || typeof IntersectionObserver === 'undefined') {
+            // Reset state when node is null or disabled
+            if (!(triggerOnce && hasTriggeredOnce.current)) {
+                setIsVisible(false);
+                setHasAnimated(false);
+            }
+            return;
         }
-        if (!node || disabled || typeof IntersectionObserver === 'undefined') return;
+
+        // Check if element is already visible immediately
+        const checkInitialVisibility = () => {
+            const rect = node.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const thresholdPixels = windowHeight * threshold;
+
+            // Check if element is visible based on threshold
+            const isCurrentlyVisible = rect.top < windowHeight - thresholdPixels && rect.bottom > thresholdPixels;
+
+            if (isCurrentlyVisible && !(triggerOnce && hasTriggeredOnce.current)) {
+                setIsVisible(true);
+                setHasAnimated(true);
+                if (triggerOnce) {
+                    hasTriggeredOnce.current = true;
+                }
+            }
+        };
+
+        // Check immediately
+        checkInitialVisibility();
+
+        // Also check after a brief delay to handle any layout shifts
+        const timeoutId = setTimeout(checkInitialVisibility, 100);
+
         observerRef.current = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     // Only update state for this node
                     if (entry.target !== nodeRef.current) return;
+
                     if (triggerOnce) {
                         if (!hasTriggeredOnce.current && entry.isIntersecting) {
                             setIsVisible(true);
@@ -105,7 +134,11 @@ export function useScrollAnimation(options: UseScrollAnimationOptions = {}): Use
                 rootMargin,
             }
         );
+
         observerRef.current.observe(node);
+
+        // Cleanup timeout
+        return () => clearTimeout(timeoutId);
     }, [threshold, rootMargin, triggerOnce, disabled, cleanupObserver]);
 
     useEffect(() => {

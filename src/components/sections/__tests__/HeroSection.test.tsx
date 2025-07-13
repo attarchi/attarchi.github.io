@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { HeroSection } from "../HeroSection";
 
 // Mock next/image
@@ -11,19 +11,21 @@ jest.mock("next/image", () => ({
 }));
 
 describe("Hero", () => {
-  it("renders with required props", () => {
+  it("renders with required props", async () => {
     render(
       <HeroSection
         title="Test Title"
         description="Test Description"
       />
     );
-
-    expect(screen.getByText("Test Title")).toBeInTheDocument();
+    const heading = await screen.findByRole('heading', { level: 1 });
+    await waitFor(() => {
+      expect(heading).toHaveTextContent("Test Title");
+    });
     expect(screen.getByText("Test Description")).toBeInTheDocument();
   });
 
-  it("renders with location badge when provided", () => {
+  it("renders with location badge when provided", async () => {
     render(
       <HeroSection
         title="Test Title"
@@ -31,15 +33,12 @@ describe("Hero", () => {
         location="San Francisco, CA"
       />
     );
-
-    // Location prop is ignored, old badge should not appear
+    await screen.findByRole('heading', { level: 1 });
     expect(screen.queryByText("San Francisco, CA")).not.toBeInTheDocument();
-    
-    // New location badge should show the location prop value with emoji
     expect(screen.getByText("📍 San Francisco, CA")).toBeInTheDocument();
   });
 
-  it("renders with avatar when provided", () => {
+  it("renders with avatar when provided", async () => {
     render(
       <HeroSection
         title="Test Title"
@@ -48,13 +47,13 @@ describe("Hero", () => {
         avatarAlt="Test Avatar"
       />
     );
-
+    await screen.findByRole('heading', { level: 1 });
     const avatar = screen.getByAltText("Test Avatar");
     expect(avatar).toBeInTheDocument();
     expect(avatar).toHaveAttribute("src", "/test-avatar.jpg");
   });
 
-  it("renders with primary CTA button when provided", () => {
+  it("renders with primary CTA button when provided", async () => {
     render(
       <HeroSection
         title="Test Title"
@@ -65,13 +64,13 @@ describe("Hero", () => {
         }}
       />
     );
-
+    await screen.findByRole('heading', { level: 1 });
     const ctaButton = screen.getByRole("link", { name: /contact me/i });
     expect(ctaButton).toBeInTheDocument();
     expect(ctaButton).toHaveAttribute("href", "/contact");
   });
 
-  it("renders with secondary CTA button when provided", () => {
+  it("renders with secondary CTA button when provided", async () => {
     render(
       <HeroSection
         title="Test Title"
@@ -82,13 +81,13 @@ describe("Hero", () => {
         }}
       />
     );
-
+    await screen.findByRole('heading', { level: 1 });
     const ctaButton = screen.getByRole("link", { name: /view work/i });
     expect(ctaButton).toBeInTheDocument();
     expect(ctaButton).toHaveAttribute("href", "/work");
   });
 
-  it("renders both CTA buttons when both are provided", () => {
+  it("renders both CTA buttons when both are provided", async () => {
     render(
       <HeroSection
         title="Test Title"
@@ -103,12 +102,12 @@ describe("Hero", () => {
         }}
       />
     );
-
+    await screen.findByRole('heading', { level: 1 });
     expect(screen.getByRole("link", { name: /contact me/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /view work/i })).toBeInTheDocument();
   });
 
-  it("applies custom className", () => {
+  it("applies custom className", async () => {
     render(
       <HeroSection
         title="Test Title"
@@ -116,19 +115,19 @@ describe("Hero", () => {
         className="custom-class"
       />
     );
-
-    const section = screen.getByText("Test Title").closest("section");
+    const heading = await screen.findByRole('heading', { level: 1 });
+    const section = heading.closest("section");
     expect(section).toHaveClass("custom-class");
   });
 
-  it("renders scroll indicator", () => {
+  it("renders scroll indicator", async () => {
     render(
       <HeroSection
         title="Test Title"
         description="Test Description"
       />
     );
-
+    await screen.findByRole('heading', { level: 1 });
     const scrollIndicator = screen.getByTestId("scroll-indicator");
     expect(scrollIndicator).toBeInTheDocument();
     expect(scrollIndicator).toHaveClass("animate-bounce");
