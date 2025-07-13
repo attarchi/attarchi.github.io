@@ -15,8 +15,8 @@ describe('Home Page Layout Requirements', () => {
     render(<Home />)
     
     const heroSection = screen.getByTestId('typewriter-container').closest('section')
-    // Should use responsive height: auto on mobile, h-screen on desktop
-    expect(heroSection).toHaveClass('h-auto', 'md:h-screen')
+    // Should use min-h-screen with pt-16 to account for fixed header
+    expect(heroSection).toHaveClass('min-h-screen', 'pt-16')
   })
 
   it('has centered content container with reasonable max width', () => {
@@ -27,5 +27,12 @@ describe('Home Page Layout Requirements', () => {
     const motionDiv = typewriter.parentElement
     const contentContainer = motionDiv?.parentElement?.parentElement
     expect(contentContainer).toHaveClass('container', 'mx-auto', 'max-w-4xl', 'text-center')
+  })
+
+  it('overrides AnimatedSection defaults for proper centering', () => {
+    render(<Home />)
+    
+    const heroSection = screen.getByTestId('typewriter-container').closest('section')
+    expect(heroSection).toHaveClass('!max-w-none', '!text-center', '!py-0')
   })
 }) 

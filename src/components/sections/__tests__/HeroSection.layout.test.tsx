@@ -23,21 +23,21 @@ describe('HeroSection Responsive Layout Requirements', () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       const heading = await screen.findByRole('heading', { level: 1 });
       const section = heading.closest('section');
-      expect(section).toHaveClass('md:h-screen');
+      expect(section).toHaveClass('min-h-screen');
     });
 
     it('has proper mobile height handling', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       const heading = await screen.findByRole('heading', { level: 1 });
       const section = heading.closest('section');
-      expect(section).toHaveClass('py-8'); // matches actual class
+      expect(section).toHaveClass('pt-16'); // accounts for fixed header
     });
 
     it('has responsive height classes for mobile and desktop', async () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       const heading = await screen.findByRole('heading', { level: 1 });
       const section = heading.closest('section');
-      expect(section).toHaveClass('h-auto', 'md:h-screen');
+      expect(section).toHaveClass('min-h-screen', 'pt-16');
     });
 
     it('centers content horizontally and vertically', async () => {
@@ -45,6 +45,13 @@ describe('HeroSection Responsive Layout Requirements', () => {
       const heading = await screen.findByRole('heading', { level: 1 });
       const section = heading.closest('section');
       expect(section).toHaveClass('flex', 'items-center', 'justify-center');
+    });
+
+    it('overrides AnimatedSection default classes for proper centering', async () => {
+      renderWithTheme(<HeroSection {...defaultProps} />);
+      const heading = await screen.findByRole('heading', { level: 1 });
+      const section = heading.closest('section');
+      expect(section).toHaveClass('!max-w-none', '!text-center', '!py-0');
     });
   });
 

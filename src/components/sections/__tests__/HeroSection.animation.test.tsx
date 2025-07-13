@@ -166,8 +166,9 @@ describe("HeroSection Animation Sequence", () => {
     render(<HeroSection {...defaultProps} />);
     const container = screen.getByTestId("typewriter-container");
     const section = container.closest("section");
-    expect(section).toHaveClass("h-auto", "md:h-screen");
+    expect(section).toHaveClass("min-h-screen", "pt-16");
     expect(section).toHaveClass("flex", "items-center", "justify-center");
+    expect(section).toHaveClass("!max-w-none", "!text-center", "!py-0");
   });
 
   it("uses correct typography for typewriter text", () => {
