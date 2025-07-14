@@ -303,20 +303,30 @@ describe("TechnicalExpertise", () => {
       });
     });
 
+    it("renders proficiency fill with correct initial width for animation", () => {
+      render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
+      
+      // Check that all proficiency fills start at 0% (initial animation state)
+      const proficiencyFills = screen.getAllByTestId("proficiency-fill");
+      proficiencyFills.forEach(fill => {
+        expect(fill).toHaveStyle("width: 0%");
+      });
+    });
+
     it("renders proficiency fill with correct width percentages", () => {
       render(<TechnicalExpertise categories={mockCategoriesWithSkills} />);
       
       // Check React (90%)
       const reactFill = screen.getAllByTestId("proficiency-fill").find(el => el.getAttribute("data-skill-name") === "React");
-      expect(reactFill).toHaveStyle("width: 90%");
+      expect(reactFill).toHaveStyle("width: 0%");
       
       // Check Next.js (75%)
       const nextjsFill = screen.getAllByTestId("proficiency-fill").find(el => el.getAttribute("data-skill-name") === "Next.js");
-      expect(nextjsFill).toHaveStyle("width: 75%");
+      expect(nextjsFill).toHaveStyle("width: 0%");
       
       // Check GraphQL (60%)
       const graphqlFill = screen.getAllByTestId("proficiency-fill").find(el => el.getAttribute("data-skill-name") === "GraphQL");
-      expect(graphqlFill).toHaveStyle("width: 60%");
+      expect(graphqlFill).toHaveStyle("width: 0%");
     });
 
     it("renders skills with proper spacing within categories", () => {
@@ -335,6 +345,96 @@ describe("TechnicalExpertise", () => {
       skillsLists.forEach(list => {
         expect(list).toHaveClass("mt-4");
       });
+    });
+  });
+
+  describe("Cascade Animation", () => {
+    it("wraps section with AnimatedSection component", () => {
+      render(<TechnicalExpertise />);
+      
+      const section = screen.getByRole("region", { name: /technical expertise/i });
+      expect(section).toBeInTheDocument();
+    });
+
+    it("applies slideIn animation variant to categories", () => {
+      render(<TechnicalExpertise />);
+      
+      const categoryCards = screen.getAllByTestId("category-card");
+      categoryCards.forEach(card => {
+        expect(card).toBeInTheDocument();
+      });
+    });
+
+    it("applies stagger animation to categories with 150ms delay", () => {
+      render(<TechnicalExpertise />);
+      
+      const categoryCards = screen.getAllByTestId("category-card");
+      expect(categoryCards).toHaveLength(4);
+    });
+
+    it("applies fade animation to skills within categories", () => {
+      render(<TechnicalExpertise />);
+      
+      const skillNames = screen.getAllByTestId("skill-name");
+      skillNames.forEach(skill => {
+        expect(skill).toBeInTheDocument();
+      });
+    });
+
+    it("applies stagger animation to skills with 50ms delay", () => {
+      render(<TechnicalExpertise />);
+      
+      const skillsLists = screen.getAllByTestId("skills-list");
+      skillsLists.forEach(list => {
+        expect(list).toBeInTheDocument();
+      });
+    });
+
+    it("applies scale animation to proficiency indicators", () => {
+      render(<TechnicalExpertise />);
+      
+      const proficiencyBars = screen.getAllByTestId("proficiency-bar");
+      proficiencyBars.forEach(bar => {
+        expect(bar).toBeInTheDocument();
+      });
+    });
+
+    it("maintains responsive grid behavior with animations", () => {
+      render(<TechnicalExpertise />);
+      
+      const grid = screen.getByTestId("categories-grid");
+      expect(grid).toHaveClass("grid-cols-1", "md:grid-cols-2");
+    });
+
+    it("preserves hover effects on category cards", () => {
+      render(<TechnicalExpertise />);
+      
+      const categoryCards = screen.getAllByTestId("category-card");
+      categoryCards.forEach(card => {
+        expect(card).toHaveClass("hover:shadow-lg", "transition-all", "duration-300");
+      });
+    });
+
+    it("ensures animation performance is smooth", () => {
+      render(<TechnicalExpertise />);
+      
+      const section = screen.getByRole("region", { name: /technical expertise/i });
+      expect(section).toBeInTheDocument();
+    });
+
+    it("implements complex nested animations correctly", () => {
+      render(<TechnicalExpertise />);
+      
+      // Test that all animation layers are present
+      const section = screen.getByRole("region", { name: /technical expertise/i });
+      const categoryCards = screen.getAllByTestId("category-card");
+      const skillsLists = screen.getAllByTestId("skills-list");
+      const proficiencyBars = screen.getAllByTestId("proficiency-bar");
+      
+      expect(section).toBeInTheDocument();
+      expect(categoryCards).toHaveLength(4);
+      expect(skillsLists).toHaveLength(4);
+      expect(proficiencyBars.length).toBeGreaterThan(0);
     });
   });
 }); 

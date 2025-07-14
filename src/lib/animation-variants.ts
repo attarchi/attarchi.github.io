@@ -264,4 +264,100 @@ export function createStaggerVariants(
             }
         }
     };
-} 
+}
+
+// Cascade animation variants for technical expertise section
+export const categoryStaggerVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        x: -50
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.8,
+            ease: 'easeOut',
+            staggerChildren: 0.15, // 150ms stagger between categories
+            delayChildren: 0.2
+        }
+    }
+};
+
+export const categorySlideInVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        x: -50
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.8,
+            ease: 'easeOut'
+        }
+    }
+};
+
+export const skillStaggerVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 20
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: 'easeOut',
+            staggerChildren: 0.05, // 50ms stagger between skills
+            delayChildren: 0.1
+        }
+    }
+};
+
+export const skillFadeVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 20
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: 'easeOut'
+        }
+    }
+};
+
+export const proficiencyScaleVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        scale: 0.5,
+        transformOrigin: "left center"
+    },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut",
+            delay: 0.3 // Increased delay to make it more noticeable
+        }
+    }
+};
+
+export const proficiencyFillVariants: Variants = {
+    hidden: {
+        width: "0%"
+    },
+    visible: {
+        width: "100%",
+        transition: {
+            duration: 1.2,
+            ease: "easeOut",
+            delay: 0.8 // Delay after the bar container appears
+        }
+    }
+}; 

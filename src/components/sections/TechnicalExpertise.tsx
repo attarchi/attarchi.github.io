@@ -1,3 +1,15 @@
+"use client";
+
+import { motion } from "framer-motion";
+import {
+  categoryStaggerVariants,
+  categorySlideInVariants,
+  skillStaggerVariants,
+  skillFadeVariants,
+  proficiencyScaleVariants,
+  proficiencyFillVariants,
+  sectionVariants
+} from "@/lib/animation-variants";
 // Default skill categories with individual skills
 const defaultCategories = [
   {
@@ -53,9 +65,14 @@ export interface TechnicalExpertiseProps {
 
 export function TechnicalExpertise({ categories = defaultCategories }: TechnicalExpertiseProps) {
   return (
-    <section 
-      className="py-20 bg-[#ffffff] dark:bg-[#0d1117]"
+    <motion.section
       aria-label="Technical Expertise"
+      className="py-20 bg-[#ffffff] dark:bg-[#0d1117]"
+      data-testid="technical-expertise-section"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div 
         className="max-w-6xl mx-auto px-4"
@@ -64,53 +81,63 @@ export function TechnicalExpertise({ categories = defaultCategories }: Technical
         <h2 className="font-mono text-[2rem] md:text-[2.5rem] font-semibold text-[#24292f] dark:text-[#f0f6fc]">
           Technical Expertise
         </h2>
-        
-        <div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"
           data-testid="categories-grid"
+          variants={categoryStaggerVariants}
         >
           {categories.map((category, index) => (
-            <div
+            <motion.div
               key={index}
               data-testid="category-card"
               className="bg-[#f6f8fa] dark:bg-[#21262d] border border-muted/20 rounded-lg p-6 hover:shadow-lg transition-all duration-300"
+              variants={categorySlideInVariants}
+              whileHover="hover"
             >
               <h3 className="font-mono text-xl font-semibold text-[#24292f] dark:text-[#f0f6fc]">
                 {category.title}
               </h3>
-              
               {category.skills && category.skills.length > 0 && (
-                <div 
+                <motion.div
                   className="mt-4 space-y-3"
                   data-testid="skills-list"
+                  variants={skillStaggerVariants}
                 >
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
+                    <motion.div key={skillIndex} variants={skillFadeVariants}>
                       <div 
                         className="font-sans text-sm font-medium text-[#24292f] dark:text-[#f0f6fc]"
                         data-testid="skill-name"
                       >
                         {skill.name}
                       </div>
-                      <div 
+                      <motion.div
                         className="mt-1 relative h-2 bg-[#e1e4e8] dark:bg-[#30363d] rounded-full"
                         data-testid="proficiency-bar"
+                        variants={proficiencyScaleVariants}
                       >
-                        <div
+                        <motion.div
                           className="absolute top-0 left-0 h-full bg-[#0969da] dark:bg-[#58a6ff] rounded-full"
                           data-testid="proficiency-fill"
                           data-skill-name={skill.name}
-                          style={{ width: `${skill.proficiency}%` }}
+                          initial={{ width: "0%" }}
+                          whileInView={{ width: `${skill.proficiency}%` }}
+                          viewport={{ once: true }}
+                          transition={{
+                            duration: 1.2,
+                            ease: "easeOut",
+                            delay: 0.8
+                          }}
                         />
-                      </div>
-                    </div>
+                      </motion.div>
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               )}
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 } 
