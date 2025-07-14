@@ -350,10 +350,11 @@ export const proficiencyScaleVariants: Variants = {
 
 export const proficiencyFillVariants: Variants = {
     hidden: {
-        width: "0%"
+        scaleX: 0,
+        transformOrigin: "left center"
     },
     visible: {
-        width: "100%",
+        scaleX: 1,
         transition: {
             duration: 1.2,
             ease: "easeOut",
