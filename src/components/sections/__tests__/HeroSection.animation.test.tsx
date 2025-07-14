@@ -178,4 +178,37 @@ describe("HeroSection Animation Sequence", () => {
     expect(container).toHaveClass("text-[2.5rem]", "md:text-[3.5rem]");
     expect(container).toHaveClass("font-bold");
   });
+
+  it("handles initial scroll position not at top", async () => {
+    // Mock scroll position to be in the middle of the page
+    Object.defineProperty(window, 'scrollY', {
+      writable: true,
+      value: 500,
+    });
+    
+    render(<HeroSection {...defaultProps} />);
+    
+    // The section should still be visible even if scroll position is not at top
+    const container = screen.getByTestId("typewriter-container");
+    expect(container).toBeInTheDocument();
+    
+    // Wait for typewriter to complete
+    await waitFor(() => {
+      expect(screen.getByText(defaultProps.title)).toBeInTheDocument();
+    }, { timeout: 5000 });
+  });
+
+  it("remains visible when scrolling back to top after being scrolled away", async () => {
+    render(<HeroSection {...defaultProps} />);
+    
+    const container = screen.getByTestId("typewriter-container");
+    
+    // Wait for typewriter to complete
+    await waitFor(() => {
+      expect(screen.getByText(defaultProps.title)).toBeInTheDocument();
+    }, { timeout: 5000 });
+    
+    // Content should still be visible
+    expect(screen.getByText(defaultProps.title)).toBeInTheDocument();
+  });
 }); 

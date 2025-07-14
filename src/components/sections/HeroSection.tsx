@@ -43,9 +43,10 @@ export function HeroSection({
   className = "",
 }: HeroSectionProps) {
   return (
-    <AnimatedSection
-      variant="section"
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden pt-16 !max-w-none !text-center !py-0 ${className}`}
+    <motion.section
+      className={`w-full max-w-7xl relative min-h-screen flex items-center justify-center overflow-hidden pt-16 !max-w-none !text-center !py-0 ${className}`}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
     >
       <div className="container mx-auto max-w-6xl text-center space-y-6 px-4">
         {avatarSrc && (
@@ -162,6 +163,6 @@ export function HeroSection({
           </div>
         </motion.div>
       </div>
-    </AnimatedSection>
+    </motion.section>
   );
 } 
