@@ -220,10 +220,11 @@ export function HeroSection({
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex justify-center"
         >
           <div
             data-testid="scroll-indicator"
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-[#656d76] dark:text-[#8b949e] font-sans text-sm"
+            className="absolute bottom-8 animate-bounce text-[#656d76] dark:text-[#8b949e] font-sans text-sm"
           >
             Scroll to explore ↓
           </div>

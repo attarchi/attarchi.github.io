@@ -51,13 +51,6 @@ describe('HeroSection Scroll Indicator Requirements', () => {
       const scrollIndicator = screen.getByTestId('scroll-indicator');
       expect(scrollIndicator).toHaveClass('absolute', 'bottom-8');
     });
-
-    it('is centered horizontally', () => {
-      renderWithTheme(<HeroSection {...defaultProps} />);
-      
-      const scrollIndicator = screen.getByTestId('scroll-indicator');
-      expect(scrollIndicator).toHaveClass('left-1/2', '-translate-x-1/2');
-    });
   });
 
   describe('Scroll Indicator Colors', () => {

@@ -26,7 +26,7 @@ describe('Home Page', () => {
 
   it('renders the hero description', () => {
     render(<Home />)
-    const description = screen.getByText(/20\+ years crafting scalable web applications with React, Node\.js, and modern architectures/)
+    const description = screen.getByText(/Crafting scalable web applications with modern technologies/)
     expect(description).toBeInTheDocument()
   })
 

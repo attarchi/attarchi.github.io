@@ -26,7 +26,7 @@ describe('Home Page Content Requirements', () => {
 
   it('renders the correct hero description from portfolio specification', () => {
     render(<Home />)
-    const description = screen.getByText(/20\+ years crafting scalable web applications with React, Node\.js, and modern architectures/)
+    const description = screen.getByText(/Crafting scalable web applications with modern technologies/)
     expect(description).toBeInTheDocument()
   })
 
@@ -43,12 +43,7 @@ describe('Home Page Content Requirements', () => {
     expect(viewProjectsButton).toHaveAttribute('href', '#projects')
   })
 
-  it('renders the Download CV CTA button', () => {
-    render(<Home />)
-    const downloadCvButton = screen.getByRole('link', { name: /download cv/i })
-    expect(downloadCvButton).toBeInTheDocument()
-    expect(downloadCvButton).toHaveAttribute('href', '/cv.pdf')
-  })
+
 
   it('renders the Contact Me CTA button', () => {
     render(<Home />)

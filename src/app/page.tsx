@@ -12,7 +12,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection
         title="Senior Full-Stack Developer & Problem Solver"
-        description="20+ years crafting scalable web applications with React, Node.js, and modern architectures"
+        description="Crafting scalable web applications with modern technologies. Specializing in React, Node.js, and cloud-native architectures. Passionate about solving complex problems and delivering high-quality, maintainable code."
         location="Istanbul, Turkey • Remote Worldwide"
         avatarSrc="/avatar.png"
         avatarAlt="Profile picture"
@@ -23,10 +23,6 @@ export default function Home() {
         ctaSecondary={{
           text: "View Projects",
           link: "#projects"
-        }}
-        ctaTertiary={{
-          text: "Download CV",
-          link: "/cv.pdf"
         }}
       />
 

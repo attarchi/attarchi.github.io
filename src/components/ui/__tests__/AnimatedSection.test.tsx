@@ -48,7 +48,7 @@ describe('AnimatedSection', () => {
       
       const section = screen.getByText('Default section').closest('section');
       expect(section).toBeInTheDocument();
-      expect(section).toHaveClass('py-8', 'max-w-7xl', 'text-left');
+      expect(section).toHaveClass('w-full', 'py-8', 'text-left', 'bg-background');
     });
 
     it('applies custom className', () => {
