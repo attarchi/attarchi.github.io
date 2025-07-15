@@ -155,28 +155,28 @@ describe('HeroSection CTA Buttons - GitHub Style Design', () => {
     it('buttons are positioned side by side with gap-4', () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       
-      const buttonContainer = screen.getByRole('link', { name: /contact me/i }).parentElement;
+      const buttonContainer = screen.getByRole('link', { name: /contact me/i }).parentElement?.parentElement;
       expect(buttonContainer).toHaveClass('flex', 'gap-4');
     });
 
     it('buttons are centered horizontally', () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       
-      const buttonContainer = screen.getByRole('link', { name: /contact me/i }).parentElement;
+      const buttonContainer = screen.getByRole('link', { name: /contact me/i }).parentElement?.parentElement;
       expect(buttonContainer).toHaveClass('justify-center');
     });
 
     it('buttons are aligned in a row layout', () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       
-      const buttonContainer = screen.getByRole('link', { name: /contact me/i }).parentElement;
+      const buttonContainer = screen.getByRole('link', { name: /contact me/i }).parentElement?.parentElement;
       expect(buttonContainer).toHaveClass('flex');
     });
 
     it('buttons have proper responsive layout (flex-col on mobile, flex-row on desktop)', () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       
-      const buttonContainer = screen.getByRole('link', { name: /contact me/i }).parentElement;
+      const buttonContainer = screen.getByRole('link', { name: /contact me/i }).parentElement?.parentElement;
       expect(buttonContainer).toHaveClass('flex-col', 'sm:flex-row');
     });
   });

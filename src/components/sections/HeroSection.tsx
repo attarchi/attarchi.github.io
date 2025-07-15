@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { Button } from "../ui/Button";
 import { Heading, Text } from "../ui/Typography";
 import { Section } from "../ui/Section";
@@ -42,6 +43,17 @@ export function HeroSection({
   ctaTertiary,
   className = "",
 }: HeroSectionProps) {
+  const [typewriterComplete, setTypewriterComplete] = useState(false);
+
+  // Calculate the total duration of typewriter animation
+  const typewriterDuration = (title.length * 50) / 1000; // 50ms per character
+  const descriptionDelay = 0.4; // Start description 0.4s after location
+  const buttonDelay = descriptionDelay + 0.4; // Start buttons 0.4s after description
+
+  const handleTypewriterComplete = () => {
+    setTypewriterComplete(true);
+  };
+
   return (
     <motion.section
       className={`w-full max-w-7xl relative min-h-screen flex items-center justify-center overflow-hidden pt-16 !max-w-none !text-center !py-0 ${className}`}
@@ -76,23 +88,38 @@ export function HeroSection({
               text={title}
               speed={50}
               className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
+              onComplete={handleTypewriterComplete}
             />
           </h1>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: typewriterComplete ? 1 : 0, 
+            y: typewriterComplete ? 0 : 20 
+          }}
+          transition={{ 
+            duration: 0.6, 
+            delay: 0.1,
+            ease: "easeOut"
+          }}
           className="bg-[#f6f8fa] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] text-[#656d76] dark:text-[#8b949e] font-sans text-sm px-3 py-1 rounded-full inline-flex items-center"
         >
           📍 {location || "Available for remote opportunities"}
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ 
+            opacity: typewriterComplete ? 1 : 0, 
+            y: typewriterComplete ? 0 : 20 
+          }}
+          transition={{ 
+            duration: 0.6, 
+            delay: descriptionDelay,
+            ease: "easeOut"
+          }}
         >
           <Text size="base" className="mb-8 font-sans text-base font-normal text-text max-w-2xl mx-auto">
             {description}
@@ -101,52 +128,91 @@ export function HeroSection({
 
         <motion.div 
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          initial={{ opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: typewriterComplete ? 1 : 0 }}
+          transition={{ duration: 0.5, delay: buttonDelay }}
         >
           {ctaPrimary && (
-            <Link 
-              href={ctaPrimary.link}
-              className="bg-[#0969da] dark:bg-[#58a6ff] text-white font-sans font-medium px-4 py-2 rounded-md hover:bg-[#0860ca] dark:hover:bg-[#4493f8] inline-flex items-center gap-2 transition-colors"
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ 
+                opacity: typewriterComplete ? 1 : 0, 
+                x: typewriterComplete ? 0 : 100 
+              }}
+              transition={{ 
+                duration: 0.6, 
+                delay: buttonDelay + 0.1,
+                ease: "easeOut"
+              }}
             >
-              {ctaPrimary.text}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+              <Link 
+                href={ctaPrimary.link}
+                className="bg-[#0969da] dark:bg-[#58a6ff] text-white font-sans font-medium px-4 py-2 rounded-md hover:bg-[#0860ca] dark:hover:bg-[#4493f8] inline-flex items-center gap-2 transition-colors"
               >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </Link>
+                {ctaPrimary.text}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </Link>
+            </motion.div>
           )}
 
           {ctaSecondary && (
-            <Link 
-              href={ctaSecondary.link}
-              className="bg-transparent border border-[#d0d7de] dark:border-[#30363d] text-[#24292f] dark:text-[#f0f6fc] font-sans font-medium px-4 py-2 rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] inline-flex items-center transition-colors"
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ 
+                opacity: typewriterComplete ? 1 : 0, 
+                x: typewriterComplete ? 0 : 100 
+              }}
+              transition={{ 
+                duration: 0.6, 
+                delay: buttonDelay + 0.2,
+                ease: "easeOut"
+              }}
             >
-              {ctaSecondary.text}
-            </Link>
+              <Link 
+                href={ctaSecondary.link}
+                className="bg-transparent border border-[#d0d7de] dark:border-[#30363d] text-[#24292f] dark:text-[#f0f6fc] font-sans font-medium px-4 py-2 rounded-md hover:bg-[#f6f8fa] dark:hover:bg-[#21262d] inline-flex items-center transition-colors"
+              >
+                {ctaSecondary.text}
+              </Link>
+            </motion.div>
           )}
 
           {ctaTertiary && (
-            <Button
-              asChild
-              variant="ghost"
-              size="lg"
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ 
+                opacity: typewriterComplete ? 1 : 0, 
+                x: typewriterComplete ? 0 : 100 
+              }}
+              transition={{ 
+                duration: 0.6, 
+                delay: buttonDelay + 0.3,
+                ease: "easeOut"
+              }}
             >
-              <Link href={ctaTertiary.link}>
-                {ctaTertiary.text}
-              </Link>
-            </Button>
+              <Button
+                asChild
+                variant="ghost"
+                size="lg"
+              >
+                <Link href={ctaTertiary.link}>
+                  {ctaTertiary.text}
+                </Link>
+              </Button>
+            </motion.div>
           )}
         </motion.div>
 

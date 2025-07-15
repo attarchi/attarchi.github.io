@@ -71,7 +71,7 @@ describe('HeroSection CTA Buttons Requirements', () => {
     it('has proper responsive layout for CTA buttons', () => {
       renderWithTheme(<HeroSection {...defaultProps} />);
       
-      const buttonContainer = screen.getByRole('link', { name: /view projects/i }).parentElement;
+      const buttonContainer = screen.getByRole('link', { name: /view projects/i }).parentElement?.parentElement;
       expect(buttonContainer).toHaveClass('flex', 'gap-4', 'justify-center');
     });
   });

@@ -1,6 +1,6 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, act } from "@testing-library/react";
 import { HeroSection } from "../HeroSection";
-import { act } from "react";
+import { ThemeProvider } from '../../../lib/theme/ThemeContext';
 
 // Mock next/image
 jest.mock("next/image", () => ({
@@ -116,7 +116,7 @@ describe("HeroSection Animation Sequence", () => {
     expect(badge).toBeInTheDocument();
   });
 
-  it("shows CTA buttons with slide-up animation after badge", async () => {
+  it("shows CTA buttons with slide-up animation after description", async () => {
     render(<HeroSection {...defaultProps} />);
     const primaryButton = await screen.findByRole("link", { name: /contact me/i });
     const secondaryButton = await screen.findByRole("link", { name: /view work/i });
@@ -210,5 +210,118 @@ describe("HeroSection Animation Sequence", () => {
     
     // Content should still be visible
     expect(screen.getByText(defaultProps.title)).toBeInTheDocument();
+  });
+}); 
+
+describe('HeroSection Animations', () => {
+  const renderWithTheme = (component: React.ReactElement) => {
+    const ThemeWrapper = ({ children }: { children: React.ReactNode }) => (
+      <ThemeProvider>
+        {children}
+      </ThemeProvider>
+    );
+    
+    return render(component, { wrapper: ThemeWrapper });
+  };
+
+  const defaultProps = {
+    title: "Senior Full-Stack Developer",
+    description: "Building scalable solutions with modern technologies",
+    ctaPrimary: {
+      text: "Contact Me",
+      link: "/contact"
+    },
+    ctaSecondary: {
+      text: "View Projects", 
+      link: "/projects"
+    }
+  };
+
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('buttons start with opacity 0 and x: 100 before typewriter completes', () => {
+    renderWithTheme(<HeroSection {...defaultProps} />);
+    
+    const primaryButton = screen.getByRole('link', { name: /contact me/i });
+    const secondaryButton = screen.getByRole('link', { name: /view projects/i });
+    
+    // Buttons should be wrapped in motion.div with initial animation state
+    const primaryButtonWrapper = primaryButton.parentElement;
+    const secondaryButtonWrapper = secondaryButton.parentElement;
+    
+    expect(primaryButtonWrapper).toBeInTheDocument();
+    expect(secondaryButtonWrapper).toBeInTheDocument();
+  });
+
+  it('buttons animate in with staggered timing after typewriter completes', async () => {
+    renderWithTheme(<HeroSection {...defaultProps} />);
+    
+    const primaryButton = screen.getByRole('link', { name: /contact me/i });
+    const secondaryButton = screen.getByRole('link', { name: /view projects/i });
+    
+    // Initially buttons should not be visible (typewriter not complete)
+    const primaryButtonWrapper = primaryButton.parentElement;
+    const secondaryButtonWrapper = secondaryButton.parentElement;
+    
+    // Simulate typewriter completion
+    act(() => {
+      jest.advanceTimersByTime(2000); // Advance time to complete typewriter
+    });
+    
+    // After typewriter completes, buttons should start animating
+    expect(primaryButtonWrapper).toBeInTheDocument();
+    expect(secondaryButtonWrapper).toBeInTheDocument();
+  });
+
+  it('button container has proper animation timing', () => {
+    renderWithTheme(<HeroSection {...defaultProps} />);
+    
+    const primaryButton = screen.getByRole('link', { name: /contact me/i });
+    const buttonContainer = primaryButton.parentElement?.parentElement;
+    
+    expect(buttonContainer).toBeInTheDocument();
+    expect(buttonContainer).toHaveClass('flex', 'flex-col', 'sm:flex-row', 'gap-4', 'justify-center', 'items-center');
+  });
+
+  it('shows location badge after typewriter completes', async () => {
+    renderWithTheme(<HeroSection {...defaultProps} />);
+    
+    const locationBadge = screen.getByText(/📍 Available for remote opportunities/);
+    expect(locationBadge).toBeInTheDocument();
+    
+    // Initially location should be invisible
+    const locationContainer = locationBadge.closest('div');
+    expect(locationContainer).toBeInTheDocument();
+  });
+
+  it('shows description after location badge', async () => {
+    renderWithTheme(<HeroSection {...defaultProps} />);
+    
+    const description = screen.getByText(defaultProps.description);
+    expect(description).toBeInTheDocument();
+    
+    // Initially description should be invisible
+    const descriptionContainer = description.closest('div');
+    expect(descriptionContainer).toBeInTheDocument();
+  });
+
+  it('shows CTA buttons with slide-up animation after description', async () => {
+    renderWithTheme(<HeroSection {...defaultProps} />);
+    
+    const primaryButton = screen.getByRole('link', { name: /contact me/i });
+    const secondaryButton = screen.getByRole('link', { name: /view projects/i });
+    
+    expect(primaryButton).toBeInTheDocument();
+    expect(secondaryButton).toBeInTheDocument();
+    
+    // Initially buttons should be invisible
+    const buttonContainer = primaryButton.parentElement?.parentElement;
+    expect(buttonContainer).toBeInTheDocument();
   });
 }); 

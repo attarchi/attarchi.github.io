@@ -8,12 +8,14 @@ interface TypewriterProps {
   text: string;
   speed?: number;
   className?: string;
+  onComplete?: () => void;
 }
 
 export function Typewriter({ 
   text, 
   speed = 50, 
-  className 
+  className,
+  onComplete
 }: TypewriterProps) {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -38,12 +40,13 @@ export function Typewriter({
     if (prefersReducedMotion) {
       setDisplayText(text);
       setIsComplete(true);
+      onComplete?.();
       return;
     }
 
     // Start typing immediately
     setIsTyping(true);
-  }, [text, prefersReducedMotion]);
+  }, [text, prefersReducedMotion, onComplete]);
 
   // Typewriter animation effect
   useEffect(() => {
@@ -60,8 +63,9 @@ export function Typewriter({
     } else {
       setIsTyping(false);
       setIsComplete(true);
+      onComplete?.();
     }
-  }, [displayText, text, speed, isTyping, prefersReducedMotion]);
+  }, [displayText, text, speed, isTyping, prefersReducedMotion, onComplete]);
 
   // Show cursor only while typing, and not for reduced motion
   const showCursor = !prefersReducedMotion && !isComplete;
