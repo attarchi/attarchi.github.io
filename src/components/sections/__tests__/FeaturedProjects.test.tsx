@@ -130,10 +130,12 @@ describe("FeaturedProjects", () => {
       render(<FeaturedProjects />);
       
       expect(screen.getByText("CCPTools Ecosystem")).toBeInTheDocument();
-      expect(screen.getByText(/comprehensive nutrition platform/i)).toBeInTheDocument();
+      expect(screen.getByText(/microservices platform focused on construction cost planning/i)).toBeInTheDocument();
       expect(screen.getByText("React Native")).toBeInTheDocument();
       expect(screen.getByText("Node.js")).toBeInTheDocument();
       expect(screen.getByText("PostgreSQL")).toBeInTheDocument();
+      expect(screen.getByText("Docker")).toBeInTheDocument();
+      expect(screen.getByText("Redis")).toBeInTheDocument();
     });
 
     it("renders Multi-Tenant Nutrition Platform project with correct data", () => {
@@ -306,6 +308,40 @@ describe("FeaturedProjects", () => {
       techBadges.forEach(badge => {
         expect(badge).toBeInTheDocument();
       });
+    });
+  });
+
+  describe("CCPTools Project Content", () => {
+    it("renders CCPTools Ecosystem with correct title and description", () => {
+      render(<FeaturedProjects />);
+      
+      // Check for correct title
+      expect(screen.getByText("CCPTools Ecosystem")).toBeInTheDocument();
+      
+      // Check for correct description focusing on construction cost planning
+      expect(screen.getByText(/construction cost planning/i)).toBeInTheDocument();
+      expect(screen.getByText(/microservices platform/i)).toBeInTheDocument();
+      expect(screen.getByText(/scalability/i)).toBeInTheDocument();
+    });
+
+    it("displays CCPTools as a microservices platform type", () => {
+      render(<FeaturedProjects />);
+      
+      // Should indicate it's a microservices platform
+      expect(screen.getByText(/microservices platform/i)).toBeInTheDocument();
+    });
+
+    it("includes key features for CCPTools project", () => {
+      render(<FeaturedProjects />);
+      
+      // Should mention real-time calculations
+      expect(screen.getByText(/real-time calculations/i)).toBeInTheDocument();
+      
+      // Should mention mobile apps
+      expect(screen.getByText(/mobile apps/i)).toBeInTheDocument();
+      
+      // Should mention scalable backend
+      expect(screen.getByText(/scalable backend/i)).toBeInTheDocument();
     });
   });
 }); 

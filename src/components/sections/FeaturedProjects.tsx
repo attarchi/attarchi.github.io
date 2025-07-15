@@ -8,8 +8,8 @@ import { projectStaggerVariants } from '@/lib/animation-variants';
 const defaultProjects = [
   {
     title: "CCPTools Ecosystem",
-    description: "Comprehensive nutrition platform with meal planning, recipe management, and nutritional analysis tools.",
-    technologies: ["React Native", "Node.js", "PostgreSQL"]
+    description: "Microservices platform focused on construction cost planning and scalability. Features real-time calculations, mobile apps, and scalable backend architecture.",
+    technologies: ["React Native", "Node.js", "PostgreSQL", "Docker", "Redis"]
   },
   {
     title: "Multi-Tenant Nutrition Platform", 
