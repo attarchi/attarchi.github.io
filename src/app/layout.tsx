@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from '../lib/theme/ThemeContext'
+import { ProgressBar } from '@/components/ui/ProgressBar';
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${jetbrainsMono.variable} ${inter.variable} antialiased`}
         suppressHydrationWarning={true}
       >
+        <ProgressBar />
         <ThemeProvider>
           {children}
         </ThemeProvider>
