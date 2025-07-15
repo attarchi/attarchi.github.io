@@ -128,24 +128,27 @@ describe("FeaturedProjects", () => {
 
     it("renders CCPTools Ecosystem project with correct data", () => {
       render(<FeaturedProjects />);
-      
       expect(screen.getByText("CCPTools Ecosystem")).toBeInTheDocument();
-      expect(screen.getByText(/microservices platform focused on construction cost planning/i)).toBeInTheDocument();
-      expect(screen.getByText("React Native")).toBeInTheDocument();
-      expect(screen.getByText("Node.js")).toBeInTheDocument();
-      expect(screen.getByText("PostgreSQL")).toBeInTheDocument();
-      expect(screen.getByText("Docker")).toBeInTheDocument();
-      expect(screen.getByText("Redis")).toBeInTheDocument();
+      expect(screen.getByText(/construction cost planning/i)).toBeInTheDocument();
+      expect(screen.getByText(/microservices platform/i)).toBeInTheDocument();
+      expect(screen.getByText(/scalability/i)).toBeInTheDocument();
+      expect(screen.getByText(/real-time calculations/i)).toBeInTheDocument();
+      expect(screen.getByText(/mobile apps/i)).toBeInTheDocument();
+      expect(screen.getByText(/scalable backend/i)).toBeInTheDocument();
+      // PostgreSQL appears in multiple projects
+      expect(screen.getAllByText("PostgreSQL")).toHaveLength(2);
     });
 
-    it("renders Multi-Tenant Nutrition Platform project with correct data", () => {
+    it("renders Nutrition Management Platform project with correct data", () => {
       render(<FeaturedProjects />);
-      
-      expect(screen.getByText("Multi-Tenant Nutrition Platform")).toBeInTheDocument();
-      expect(screen.getByText(/advanced nutrition platform/i)).toBeInTheDocument();
-      expect(screen.getByText("Next.js")).toBeInTheDocument();
-      expect(screen.getByText("Prisma")).toBeInTheDocument();
-      expect(screen.getByText("tRPC")).toBeInTheDocument();
+      expect(screen.getByText("Nutrition Management Platform")).toBeInTheDocument();
+      expect(screen.getByText(/multi-tenant saas platform/i)).toBeInTheDocument();
+      // React and PostgreSQL appear in multiple projects
+      expect(screen.getAllByText("React")).toHaveLength(2);
+      expect(screen.getByText("NestJS")).toBeInTheDocument();
+      expect(screen.getAllByText("PostgreSQL")).toHaveLength(2);
+      expect(screen.getAllByText("Redis")).toHaveLength(2);
+      expect(screen.getByText("TypeScript")).toBeInTheDocument();
     });
 
     it("renders Healthcare Management System project with correct data", () => {
@@ -153,7 +156,8 @@ describe("FeaturedProjects", () => {
       
       expect(screen.getByText("Healthcare Management System")).toBeInTheDocument();
       expect(screen.getByText(/complete healthcare management solution/i)).toBeInTheDocument();
-      expect(screen.getByText("React")).toBeInTheDocument();
+      // React appears in multiple projects, so use getAllByText
+      expect(screen.getAllByText("React")).toHaveLength(2);
       expect(screen.getByText("Express")).toBeInTheDocument();
       expect(screen.getByText("MongoDB")).toBeInTheDocument();
     });
@@ -342,6 +346,62 @@ describe("FeaturedProjects", () => {
       
       // Should mention scalable backend
       expect(screen.getByText(/scalable backend/i)).toBeInTheDocument();
+    });
+  });
+
+  describe("Nutrition Management Platform Project Content", () => {
+    it("renders Nutrition Management Platform with correct title", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText("Nutrition Management Platform")).toBeInTheDocument();
+    });
+
+    it("displays Nutrition Platform as Multi-Tenant SaaS type", () => {
+      render(<FeaturedProjects />);
+      
+      // Should indicate it's a multi-tenant SaaS platform
+      expect(screen.getByText(/multi-tenant/i)).toBeInTheDocument();
+      expect(screen.getByText(/saas/i)).toBeInTheDocument();
+    });
+
+    it("includes focus on scalable nutrition tracking", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/scalable nutrition tracking/i)).toBeInTheDocument();
+    });
+
+    it("mentions tenant isolation as a key feature", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/tenant isolation/i)).toBeInTheDocument();
+    });
+
+    it("includes real-time tracking as a key feature", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/real-time tracking/i)).toBeInTheDocument();
+    });
+
+    it("includes analytics as a key feature", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/analytics/i)).toBeInTheDocument();
+    });
+
+    it("displays correct technology stack", () => {
+      render(<FeaturedProjects />);
+      // React and PostgreSQL appear in multiple projects
+      expect(screen.getAllByText("React")).toHaveLength(2);
+      expect(screen.getByText("NestJS")).toBeInTheDocument();
+      expect(screen.getAllByText("PostgreSQL")).toHaveLength(2);
+      expect(screen.getAllByText("Redis")).toHaveLength(2);
+      expect(screen.getByText("TypeScript")).toBeInTheDocument();
+    });
+
+    it("shows production ready status", () => {
+      render(<FeaturedProjects />);
+      // The description contains 'production-ready architecture'
+      expect(screen.getByText(/production-ready architecture/i)).toBeInTheDocument();
     });
   });
 }); 

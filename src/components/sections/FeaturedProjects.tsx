@@ -12,9 +12,9 @@ const defaultProjects = [
     technologies: ["React Native", "Node.js", "PostgreSQL", "Docker", "Redis"]
   },
   {
-    title: "Multi-Tenant Nutrition Platform", 
-    description: "Advanced nutrition platform with multi-tenant architecture and real-time data synchronization.",
-    technologies: ["Next.js", "Prisma", "tRPC"]
+    title: "Nutrition Management Platform",
+    description: "Multi-tenant SaaS platform focused on scalable nutrition tracking with tenant isolation. Features real-time tracking, analytics, and production-ready architecture.",
+    technologies: ["React", "NestJS", "PostgreSQL", "Redis", "TypeScript"]
   },
   {
     title: "Healthcare Management System",
