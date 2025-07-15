@@ -18,8 +18,8 @@ const defaultProjects = [
   },
   {
     title: "Healthcare Management System",
-    description: "Complete healthcare management solution with patient records, appointment scheduling, and billing.",
-    technologies: ["React", "Express", "MongoDB"]
+    description: "HIPAA-Compliant Platform focused on patient management and compliance. Features HIPAA compliance, real-time monitoring, secure auth, and case study available.",
+    technologies: ["Next.js", "Express", "MongoDB", "AWS", "TypeScript"]
   }
 ];
 

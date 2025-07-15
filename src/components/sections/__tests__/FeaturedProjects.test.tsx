@@ -143,23 +143,26 @@ describe("FeaturedProjects", () => {
       render(<FeaturedProjects />);
       expect(screen.getByText("Nutrition Management Platform")).toBeInTheDocument();
       expect(screen.getByText(/multi-tenant saas platform/i)).toBeInTheDocument();
-      // React and PostgreSQL appear in multiple projects
-      expect(screen.getAllByText("React")).toHaveLength(2);
+      // React appears in Nutrition project only now
+      expect(screen.getAllByText("React")).toHaveLength(1);
       expect(screen.getByText("NestJS")).toBeInTheDocument();
       expect(screen.getAllByText("PostgreSQL")).toHaveLength(2);
       expect(screen.getAllByText("Redis")).toHaveLength(2);
-      expect(screen.getByText("TypeScript")).toBeInTheDocument();
+      expect(screen.getAllByText("TypeScript")).toHaveLength(2);
     });
 
     it("renders Healthcare Management System project with correct data", () => {
       render(<FeaturedProjects />);
       
       expect(screen.getByText("Healthcare Management System")).toBeInTheDocument();
-      expect(screen.getByText(/complete healthcare management solution/i)).toBeInTheDocument();
-      // React appears in multiple projects, so use getAllByText
-      expect(screen.getAllByText("React")).toHaveLength(2);
+      expect(screen.getByText(/hipaa-compliant platform/i)).toBeInTheDocument();
+      expect(screen.getByText(/patient management/i)).toBeInTheDocument();
+      expect(screen.getByText(/compliance/i)).toBeInTheDocument();
+      expect(screen.getByText("Next.js")).toBeInTheDocument();
       expect(screen.getByText("Express")).toBeInTheDocument();
       expect(screen.getByText("MongoDB")).toBeInTheDocument();
+      expect(screen.getByText("AWS")).toBeInTheDocument();
+      expect(screen.getAllByText("TypeScript")).toHaveLength(2);
     });
   });
 
@@ -390,18 +393,157 @@ describe("FeaturedProjects", () => {
 
     it("displays correct technology stack", () => {
       render(<FeaturedProjects />);
-      // React and PostgreSQL appear in multiple projects
-      expect(screen.getAllByText("React")).toHaveLength(2);
+      // React appears in Nutrition project only now
+      expect(screen.getAllByText("React")).toHaveLength(1);
       expect(screen.getByText("NestJS")).toBeInTheDocument();
       expect(screen.getAllByText("PostgreSQL")).toHaveLength(2);
       expect(screen.getAllByText("Redis")).toHaveLength(2);
-      expect(screen.getByText("TypeScript")).toBeInTheDocument();
+      expect(screen.getAllByText("TypeScript")).toHaveLength(2);
     });
 
     it("shows production ready status", () => {
       render(<FeaturedProjects />);
       // The description contains 'production-ready architecture'
       expect(screen.getByText(/production-ready architecture/i)).toBeInTheDocument();
+    });
+  });
+
+  describe("Complete 3-Project Grid Layout", () => {
+    it("renders exactly 3 project cards in the grid", () => {
+      render(<FeaturedProjects />);
+      
+      const projectCards = screen.getAllByTestId("project-card");
+      expect(projectCards).toHaveLength(3);
+    });
+
+    it("renders all three projects with correct titles", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText("CCPTools Ecosystem")).toBeInTheDocument();
+      expect(screen.getByText("Nutrition Management Platform")).toBeInTheDocument();
+      expect(screen.getByText("Healthcare Management System")).toBeInTheDocument();
+    });
+
+    it("displays healthcare project as HIPAA-Compliant Platform", () => {
+      render(<FeaturedProjects />);
+      
+      // Should indicate it's a HIPAA-compliant platform
+      expect(screen.getByText(/hipaa-compliant platform/i)).toBeInTheDocument();
+    });
+
+    it("includes patient management focus in healthcare project", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/patient management/i)).toBeInTheDocument();
+    });
+
+    it("includes compliance focus in healthcare project", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/compliance/i)).toBeInTheDocument();
+    });
+
+    it("displays healthcare project with correct technology stack", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText("Next.js")).toBeInTheDocument();
+      expect(screen.getByText("Express")).toBeInTheDocument();
+      expect(screen.getByText("MongoDB")).toBeInTheDocument();
+      expect(screen.getByText("AWS")).toBeInTheDocument();
+      expect(screen.getAllByText("TypeScript")).toHaveLength(2);
+    });
+
+    it("includes HIPAA compliance as key feature", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/hipaa compliance/i)).toBeInTheDocument();
+    });
+
+    it("includes real-time monitoring as key feature", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/real-time monitoring/i)).toBeInTheDocument();
+    });
+
+    it("includes secure authentication as key feature", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/secure auth/i)).toBeInTheDocument();
+    });
+
+    it("shows case study available status", () => {
+      render(<FeaturedProjects />);
+      
+      expect(screen.getByText(/case study available/i)).toBeInTheDocument();
+    });
+
+    it("maintains consistent styling across all three project cards", () => {
+      render(<FeaturedProjects />);
+      
+      const projectCards = screen.getAllByTestId("project-card");
+      expect(projectCards).toHaveLength(3);
+      
+      // All cards should have the same base styling classes
+      projectCards.forEach(card => {
+        expect(card).toHaveClass("bg-surface", "border", "border-muted/20", "rounded-lg", "p-6", "hover:shadow-lg", "transition-all", "duration-300");
+      });
+    });
+
+    it("ensures proper spacing in 3-column desktop layout", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("lg:grid-cols-3", "gap-8");
+    });
+
+    it("ensures proper spacing in 2-column tablet layout", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("md:grid-cols-2", "gap-8");
+    });
+
+    it("ensures proper spacing in 1-column mobile layout", () => {
+      render(<FeaturedProjects />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("grid-cols-1", "gap-8");
+    });
+
+    it("applies hover effects to all three project cards", () => {
+      render(<FeaturedProjects />);
+      
+      const projectCards = screen.getAllByTestId("project-card");
+      expect(projectCards).toHaveLength(3);
+      
+      projectCards.forEach(card => {
+        expect(card).toHaveClass("hover:shadow-lg", "transition-all", "duration-300");
+      });
+    });
+
+    it("provides complete accessibility for all three projects", () => {
+      render(<FeaturedProjects />);
+      
+      // Each project should have proper heading structure
+      const projectHeadings = screen.getAllByRole("heading", { level: 3 });
+      expect(projectHeadings).toHaveLength(3);
+      
+      // Each project should have descriptive content
+      expect(screen.getByText(/construction cost planning/i)).toBeInTheDocument();
+      expect(screen.getByText(/multi-tenant saas platform/i)).toBeInTheDocument();
+      expect(screen.getByText(/hipaa-compliant platform/i)).toBeInTheDocument();
+    });
+
+    it("maintains performance with full project grid", () => {
+      render(<FeaturedProjects />);
+      
+      const projectCards = screen.getAllByTestId("project-card");
+      expect(projectCards).toHaveLength(3);
+      
+      // All cards should be rendered efficiently
+      projectCards.forEach(card => {
+        expect(card).toBeInTheDocument();
+      });
     });
   });
 }); 
