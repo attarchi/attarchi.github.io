@@ -10,41 +10,41 @@ import {
   proficiencyFillVariants,
   sectionVariants
 } from "@/lib/animation-variants";
-// Default skill categories with individual skills
+// Default skill categories with individual skills and years of experience
 const defaultCategories = [
   {
-    title: "Frontend Development",
+    title: "Frontend",
     skills: [
-      { name: "React", proficiency: 90 },
-      { name: "TypeScript", proficiency: 90 },
-      { name: "Next.js", proficiency: 75 },
-      { name: "Tailwind CSS", proficiency: 75 }
+      { name: "React", proficiency: 90, years: 5 },
+      { name: "TypeScript", proficiency: 85, years: 4 },
+      { name: "Next.js", proficiency: 80, years: 3 },
+      { name: "React Native", proficiency: 85, years: 4 }
     ]
   },
   {
-    title: "Backend Development",
+    title: "Backend",
     skills: [
-      { name: "Node.js", proficiency: 90 },
-      { name: "PostgreSQL", proficiency: 75 },
-      { name: "GraphQL", proficiency: 60 },
-      { name: "Express.js", proficiency: 75 }
+      { name: "Node.js", proficiency: 90, years: 5 },
+      { name: "Python", proficiency: 75, years: 3 },
+      { name: "PostgreSQL", proficiency: 80, years: 4 },
+      { name: "MongoDB", proficiency: 75, years: 3 }
     ]
   },
   {
-    title: "Mobile Development",
+    title: "DevOps",
     skills: [
-      { name: "React Native", proficiency: 75 },
-      { name: "Expo", proficiency: 60 },
-      { name: "iOS Development", proficiency: 60 }
+      { name: "Docker", proficiency: 80, years: 3 },
+      { name: "AWS", proficiency: 70, years: 2 },
+      { name: "Kubernetes", proficiency: 65, years: 2 },
+      { name: "CI/CD", proficiency: 80, years: 3 }
     ]
   },
   {
-    title: "DevOps & Tools",
+    title: "Mobile",
     skills: [
-      { name: "Docker", proficiency: 75 },
-      { name: "AWS", proficiency: 75 },
-      { name: "Redis", proficiency: 60 },
-      { name: "Kubernetes", proficiency: 60 }
+      { name: "React Native", proficiency: 85, years: 4 },
+      { name: "iOS/Android", proficiency: 75, years: 3 },
+      { name: "Expo", proficiency: 70, years: 2 }
     ]
   }
 ];
@@ -52,6 +52,7 @@ const defaultCategories = [
 export interface Skill {
   name: string;
   proficiency: number;
+  years?: number;
 }
 
 export interface SkillCategory {
@@ -82,7 +83,7 @@ export function TechnicalExpertise({ categories = defaultCategories }: Technical
           Technical Expertise
         </h2>
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12"
           data-testid="categories-grid"
           variants={categoryStaggerVariants}
         >
@@ -104,12 +105,23 @@ export function TechnicalExpertise({ categories = defaultCategories }: Technical
                   variants={skillStaggerVariants}
                 >
                   {category.skills.map((skill, skillIndex) => (
-                    <motion.div key={skillIndex} variants={skillFadeVariants}>
+                    <motion.div 
+                      key={skillIndex} 
+                      variants={skillFadeVariants}
+                      className="group relative"
+                      data-testid="skill-item"
+                    >
                       <div 
-                        className="font-sans text-sm font-medium text-[#24292f] dark:text-[#f0f6fc]"
+                        className="font-sans text-sm font-medium text-[#24292f] dark:text-[#f0f6fc] cursor-pointer"
                         data-testid="skill-name"
+                        title={skill.years ? `${skill.years} years of experience` : undefined}
                       >
                         {skill.name}
+                        {skill.years && (
+                          <span className="ml-2 text-xs text-[#656d76] dark:text-[#8b949e] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            ({skill.years} years)
+                          </span>
+                        )}
                       </div>
                       <motion.div
                         className="mt-1 relative h-2 bg-[#e1e4e8] dark:bg-[#30363d] rounded-full"
