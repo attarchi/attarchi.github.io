@@ -72,7 +72,7 @@ export function AnimatedSection({
       variants={getAnimationVariants()}
       initial="hidden"
       animate={isVisible ? 'visible' : 'hidden'}
-      className={cn('w-full py-8 max-w-7xl text-left bg-background', className)}
+      className={cn('w-full py-8 text-left bg-background', className)}
       {...props}
     >
       {children}
