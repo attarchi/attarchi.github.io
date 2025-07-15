@@ -69,6 +69,7 @@ export function ProfessionalJourney({ milestones = defaultMilestones }: Professi
   }));
   const { ref, progress, activeMilestones } = useTimelineProgress({
     milestones: milestoneThresholds.map(m => ({ id: m.id, progressThreshold: m.progressThreshold })),
+    triggerOnce: true,
   });
 
   // Calculate progress bar dimensions safely

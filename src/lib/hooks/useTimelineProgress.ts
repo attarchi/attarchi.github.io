@@ -9,6 +9,7 @@ export interface UseTimelineProgressOptions {
     milestones?: Milestone[];
     threshold?: number;
     rootMargin?: string;
+    triggerOnce?: boolean;
 }
 
 export interface UseTimelineProgressReturn {
@@ -26,6 +27,7 @@ export interface UseTimelineProgressReturn {
  * - Uses Intersection Observer for performance
  * - Handles responsive timeline behavior
  * - Respects prefers-reduced-motion setting
+ * - Supports triggerOnce to prevent re-animation
  *
  * @example
  * const { ref, progress, activeMilestones } = useTimelineProgress({
@@ -36,12 +38,14 @@ export interface UseTimelineProgressReturn {
  *   ],
  *   threshold: 0.1,
  *   rootMargin: '0px 0px -20% 0px',
+ *   triggerOnce: true,
  * });
  *
  * @param {UseTimelineProgressOptions} options - Configuration options
  * @param {Milestone[]} [options.milestones=[]] - Array of milestones with progress thresholds
  * @param {number} [options.threshold=0.1] - Intersection Observer threshold
  * @param {string} [options.rootMargin='0px'] - Root margin for Intersection Observer
+ * @param {boolean} [options.triggerOnce=false] - If true, animation triggers only once
  *
  * @returns {UseTimelineProgressReturn} Object with ref, progress, and activeMilestones
  */
@@ -50,6 +54,7 @@ export function useTimelineProgress(options: UseTimelineProgressOptions = {}): U
         milestones = [],
         threshold = 0.1,
         rootMargin = '0px',
+        triggerOnce = false,
     } = options;
 
     const [progress, setProgress] = useState(0);
@@ -57,6 +62,7 @@ export function useTimelineProgress(options: UseTimelineProgressOptions = {}): U
     const observerRef = useRef<IntersectionObserver | null>(null);
     const nodeRef = useRef<Element | null>(null);
     const isInitializedRef = useRef(false);
+    const hasTriggeredOnce = useRef(false);
 
     const cleanupObserver = useCallback(() => {
         if (observerRef.current) {
@@ -106,6 +112,7 @@ export function useTimelineProgress(options: UseTimelineProgressOptions = {}): U
                 setProgress(0);
                 setActiveMilestones([]);
                 isInitializedRef.current = false;
+                hasTriggeredOnce.current = false;
             }
             return;
         }
@@ -119,6 +126,17 @@ export function useTimelineProgress(options: UseTimelineProgressOptions = {}): U
                     if (entry.target !== nodeRef.current) return;
 
                     const currentProgress = calculateProgress(entry);
+
+                    // If triggerOnce is enabled and we've already completed the animation, don't update
+                    if (triggerOnce && hasTriggeredOnce.current && currentProgress < 1) {
+                        return;
+                    }
+
+                    // If triggerOnce is enabled and we've reached full progress, mark as triggered
+                    if (triggerOnce && currentProgress >= 1) {
+                        hasTriggeredOnce.current = true;
+                    }
+
                     setProgress(currentProgress);
                     updateActiveMilestones(currentProgress);
                 });
@@ -130,7 +148,7 @@ export function useTimelineProgress(options: UseTimelineProgressOptions = {}): U
         );
 
         observerRef.current.observe(node);
-    }, [calculateProgress, updateActiveMilestones, rootMargin, cleanupObserver]);
+    }, [calculateProgress, updateActiveMilestones, rootMargin, cleanupObserver, triggerOnce]);
 
     useEffect(() => {
         return () => {
