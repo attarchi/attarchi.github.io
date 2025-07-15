@@ -3,18 +3,19 @@ import { cn } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
 import React, { forwardRef } from 'react';
 import { Slot } from "@radix-ui/react-slot";
+import { motion } from 'framer-motion';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
-        default: 'bg-accent text-background hover:bg-accent/90',
-        destructive: 'bg-red-500 text-background hover:bg-red-600',
-        outline: 'border border-accent bg-background hover:bg-accent hover:text-background',
-        secondary: 'bg-surface text-text hover:bg-surface/80',
-        ghost: 'hover:bg-surface hover:text-accent',
-        link: 'text-accent underline-offset-4 hover:underline',
+        default: 'bg-accent text-background hover:bg-accent/90 hover:scale-[1.02] hover:shadow-lg',
+        destructive: 'bg-red-500 text-background hover:bg-red-600 hover:scale-[1.02] hover:shadow-lg',
+        outline: 'border border-accent bg-background hover:bg-accent hover:text-background hover:scale-[1.02] hover:shadow-lg',
+        secondary: 'bg-surface text-text hover:bg-surface/80 hover:scale-[1.02] hover:shadow-lg',
+        ghost: 'hover:bg-surface hover:text-accent hover:scale-[1.02]',
+        link: 'text-accent underline-offset-4 hover:underline hover:scale-[1.02]',
       },
       size: {
         default: 'h-10 px-4 py-2',
