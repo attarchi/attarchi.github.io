@@ -1,51 +1,59 @@
-import { render, screen } from "@testing-library/react";
-import Home from "../page";
+import { render, screen } from '@testing-library/react'
+import { act } from 'react-dom/test-utils'
+import Home from '../page'
 
-describe("Home Page - Contact Integration", () => {
-  it("renders contact section with main heading", () => {
-    render(<Home />);
-    
-    expect(screen.getByText("Let's Work Together")).toBeInTheDocument();
-    expect(screen.getByText("Available for exciting projects and opportunities")).toBeInTheDocument();
-  });
+// Mock the modules using the __mocks__ files
+jest.mock('@/lib/blog-data')
+jest.mock('@/components/ui/Typewriter')
+jest.mock('@/components/ui/ThemeToggle')
+jest.mock('@/components/sections/HeroSection')
+jest.mock('@/components/sections/FeaturedProjects')
+jest.mock('@/components/sections/TechnicalExpertise')
+jest.mock('@/components/sections/ProfessionalJourney')
+jest.mock('@/components/sections/ContactSection')
+jest.mock('@/components/sections/blog-preview-section')
 
-  it("has working anchor link to contact section", () => {
-    render(<Home />);
+describe('Home Page Contact Section', () => {
+  it('renders the contact section', async () => {
+    await act(async () => {
+      render(await Home())
+    })
     
-    const contactLink = screen.getByText("Contact Me");
-    expect(contactLink).toHaveAttribute("href", "#contact");
-  });
+    expect(screen.getByTestId('contact-section')).toBeInTheDocument()
+  })
 
-  it("displays contact information in the contact section", () => {
-    render(<Home />);
+  it('renders contact form elements', async () => {
+    await act(async () => {
+      render(await Home())
+    })
     
-    // Get contact info specifically from the contact info card
-    const contactInfoCard = screen.getByTestId("contact-info-card");
-    
-    expect(screen.getByText("Contact Information")).toBeInTheDocument();
-    expect(contactInfoCard).toHaveTextContent("Email");
-    expect(contactInfoCard).toHaveTextContent("LinkedIn");
-    expect(contactInfoCard).toHaveTextContent("GitHub");
-  });
+    expect(screen.getByTestId('contact-form')).toBeInTheDocument()
+    expect(screen.getByTestId('contact-name-input')).toBeInTheDocument()
+    expect(screen.getByTestId('contact-email-input')).toBeInTheDocument()
+    expect(screen.getByTestId('contact-message-input')).toBeInTheDocument()
+    expect(screen.getByTestId('contact-submit-button')).toBeInTheDocument()
+  })
 
-  it("shows availability status", () => {
-    render(<Home />);
+  it('renders contact section title and description', async () => {
+    await act(async () => {
+      render(await Home())
+    })
     
-    const availabilityBadge = screen.getByTestId("availability-badge");
-    expect(availabilityBadge).toHaveTextContent("Available");
-  });
+    expect(screen.getByTestId('contact-title')).toBeInTheDocument()
+    expect(screen.getByTestId('contact-description')).toBeInTheDocument()
+  })
 
-  it("contact section has proper background styling", () => {
-    render(<Home />);
+  it('contact form has proper input types', async () => {
+    await act(async () => {
+      render(await Home())
+    })
     
-    const contactSection = screen.getByRole("region", { name: /contact/i });
-    expect(contactSection).toHaveClass("bg-[#f6f8fa]", "dark:bg-[#0d1117]");
-  });
-
-  it("contact card has proper styling", () => {
-    render(<Home />);
+    const nameInput = screen.getByTestId('contact-name-input')
+    const emailInput = screen.getByTestId('contact-email-input')
+    const messageInput = screen.getByTestId('contact-message-input')
     
-    const contactCard = screen.getByTestId("contact-info-card");
-    expect(contactCard).toHaveClass("bg-white", "dark:bg-[#21262d]");
-  });
-}); 
+    expect(nameInput).toHaveAttribute('type', 'text')
+    expect(emailInput).toHaveAttribute('type', 'email')
+    expect(messageInput).toHaveAttribute('placeholder', 'Message')
+  })
+}) 

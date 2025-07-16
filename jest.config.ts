@@ -35,6 +35,10 @@ const config: Config = {
             tsconfig: 'tsconfig.json',
         }],
     },
+    // Enable automatic mocking of modules in __mocks__ folders
+    automock: false,
+    resetMocks: false,
+    restoreMocks: false,
 };
 
 export default createJestConfig(config); 
