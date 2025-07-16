@@ -21,8 +21,17 @@ jest.mock("@/lib/hooks/useScrollAnimation", () => ({
 
 describe("ContactSection Animations", () => {
   it("wraps contact section with AnimatedSection component", () => {
-    render(<ContactSection />);
-    
+    render(
+      <ContactSection
+        status="Available"
+        location="Test City"
+        email="test@example.com"
+        linkedinUrl="https://linkedin.com/in/test"
+        githubUrl="https://github.com/test"
+        responseTime="Within 1 day"
+        availabilityType="Full-time"
+      />
+    );
     const section = screen.getByRole("region", { name: /contact/i });
     expect(section).toBeInTheDocument();
     // The section should be wrapped with AnimatedSection which applies motion variants
@@ -76,8 +85,17 @@ describe("ContactSection Animations", () => {
   });
 
   it("availability status badge fades in last in sequence", () => {
-    render(<ContactSection />);
-    
+    render(
+      <ContactSection
+        status="Available"
+        location="Test City"
+        email="test@example.com"
+        linkedinUrl="https://linkedin.com/in/test"
+        githubUrl="https://github.com/test"
+        responseTime="Within 1 day"
+        availabilityType="Full-time"
+      />
+    );
     const availabilityBadge = screen.getByTestId("availability-badge");
     expect(availabilityBadge).toBeInTheDocument();
     expect(availabilityBadge).toHaveTextContent("Available");

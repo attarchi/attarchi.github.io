@@ -37,13 +37,22 @@ describe("ContactSection - Styling", () => {
   });
 
   it("has proper text color classes for contact details", () => {
-    render(<ContactSection />);
-    
-    // Get labels specifically from the contact info card
-    const contactInfoCard = screen.getByTestId("contact-info-card");
-    const emailLabel = contactInfoCard.querySelector("p");
-    expect(emailLabel).toHaveClass("text-[#656d76]", "dark:text-[#8b949e]");
-    
+    render(
+      <ContactSection
+        status="Available"
+        location="Test City"
+        email="contact@example.com"
+        linkedinUrl="https://linkedin.com/in/test"
+        githubUrl="https://github.com/test"
+        responseTime="Within 1 day"
+        availabilityType="Full-time"
+      />
+    );
+    // Find all 'Email' elements and pick the one inside the contact info card
+    const emailLabels = screen.getAllByText("Email");
+    // The contact info card label uses the color class, the form label does not
+    const infoLabel = emailLabels.find(el => el.className.includes("text-[#656d76]"));
+    expect(infoLabel).toHaveClass("text-[#656d76]", "dark:text-[#8b949e]");
     const emailValue = screen.getByText("contact@example.com");
     expect(emailValue).toHaveClass("text-text");
   });

@@ -6,13 +6,30 @@ import { Heading, Text } from "../ui/Typography";
 import { Badge } from "../ui/Badge";
 import { slideUpVariants, fadeVariants, staggerVariants, sectionVariants } from "@/lib/animation-variants";
 
-export function ContactSection() {
+export interface ContactSectionProps {
+  status: string;
+  location: string;
+  email: string;
+  linkedinUrl: string;
+  githubUrl: string;
+  responseTime: string;
+  availabilityType: string;
+}
+
+export function ContactSection({
+  status,
+  location,
+  email,
+  linkedinUrl,
+  githubUrl,
+  responseTime,
+  availabilityType,
+}: ContactSectionProps) {
   const [showMessage, setShowMessage] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setShowMessage(true);
-    // Reset message after 5 seconds
     setTimeout(() => setShowMessage(false), 5000);
   };
 
@@ -61,9 +78,9 @@ export function ContactSection() {
                   <Badge 
                     data-testid="availability-badge"
                     variant="outline"
-                    className="bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800"
+                    className="text-center bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800"
                   >
-                    Available
+                    {status}
                   </Badge>
                 </motion.div>
               </div>
@@ -86,7 +103,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <Text size="sm" className="font-sans text-[#656d76] dark:text-[#8b949e]">Email</Text>
-                    <Text size="base" className="font-sans text-text">contact@example.com</Text>
+                    <Text size="base" className="font-sans text-text">{email}</Text>
                   </div>
                 </motion.div>
 
@@ -102,7 +119,14 @@ export function ContactSection() {
                   </div>
                   <div>
                     <Text size="sm" className="font-sans text-[#656d76] dark:text-[#8b949e]">LinkedIn</Text>
-                    <Text size="base" className="font-sans text-text">linkedin.com/in/profile</Text>
+                    <a 
+                      href={linkedinUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-[#0969da] dark:hover:text-[#58a6ff] transition-colors"
+                    >
+                      <Text size="base" className="font-sans text-text">{linkedinUrl}</Text>
+                    </a>
                   </div>
                 </motion.div>
 
@@ -118,11 +142,66 @@ export function ContactSection() {
                   </div>
                   <div>
                     <Text size="sm" className="font-sans text-[#656d76] dark:text-[#8b949e]">GitHub</Text>
-                    <Text size="base" className="font-sans text-text">github.com/username</Text>
+                    <a 
+                      href={githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-[#0969da] dark:hover:text-[#58a6ff] transition-colors"
+                    >
+                      <Text size="base" className="font-sans text-text">{githubUrl}</Text>
+                    </a>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  className="flex items-center gap-3"
+                  variants={slideUpVariants}
+                  data-testid="location-contact"
+                >
+                  <div className="w-5 h-5 text-[#656d76] dark:text-[#8b949e]">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <Text size="sm" className="font-sans text-[#656d76] dark:text-[#8b949e]">Location</Text>
+                    <Text size="base" className="font-sans text-text">{location}</Text>
                   </div>
                 </motion.div>
               </motion.div>
             </div>
+
+            {/* Availability Details */}
+            <motion.div 
+              className="mt-6 p-4 bg-[#f6f8fa] dark:bg-[#0d1117] border border-[#d0d7de] dark:border-[#30363d] rounded-md"
+              variants={fadeVariants}
+              transition={{ delay: 1.0 }}
+            >
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 text-[#656d76] dark:text-[#8b949e]">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <Text size="sm" className="font-sans text-[#656d76] dark:text-[#8b949e]">Response Time</Text>
+                </div>
+                <Text size="base" className="font-sans text-text">{responseTime}</Text>
+              </div>
+
+              <div className="mt-4 space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 text-[#656d76] dark:text-[#8b949e]">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd" />
+                      <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                    </svg>
+                  </div>
+                  <Text size="sm" className="font-sans text-[#656d76] dark:text-[#8b949e]">Available for</Text>
+                </div>
+                <Text size="base" className="font-sans text-text">{availabilityType}</Text>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Contact Form */}

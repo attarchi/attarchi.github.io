@@ -36,7 +36,15 @@ export default function Home() {
       <ProfessionalJourney />
 
       {/* Contact Section */}
-      <ContactSection />
+      <ContactSection
+        status="Available for new opportunities"
+        location="Istanbul, Turkey (UTC+3)"
+        email="attarchi@me.com"
+        linkedinUrl="https://linkedin.com/in/attarchi"
+        githubUrl="https://github.com/attarchi"
+        responseTime="Usually within 24 hours"
+        availabilityType="Full-time, Contract, Consulting"
+      />
     </div>
   );
 }
