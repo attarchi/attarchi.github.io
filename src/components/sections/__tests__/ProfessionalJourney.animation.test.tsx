@@ -104,10 +104,23 @@ describe('ProfessionalJourney timeline animation', () => {
     render(<ProfessionalJourney milestones={milestones} />);
     const cards = screen.getAllByTestId('milestone-card');
     
-    // First two milestones should be visible, last should be hidden
-    expect(cards[0].getAttribute('data-motion-animate')).toBe('visible');
-    expect(cards[1].getAttribute('data-motion-animate')).toBe('visible');
-    expect(cards[2].getAttribute('data-motion-animate')).toBe('hidden');
+    // Check each card's id and assert visibility based on activeMilestones
+    cards.forEach(card => {
+      const id = card.getAttribute('key') || card.getAttribute('data-key') || card.dataset.testid;
+      const motionAnimate = card.getAttribute('data-motion-animate');
+      const cardId = card.getAttribute('key') || card.getAttribute('data-key') || undefined;
+      // Find the milestone id by checking the role text (since key is not available as attribute)
+      const role = card.querySelector('[data-testid="milestone-role"]')?.textContent;
+      let expectedId = '';
+      if (role === 'Senior Full-Stack Developer') expectedId = '1';
+      if (role === 'Full-Stack Developer') expectedId = '2';
+      if (role === 'Frontend Developer') expectedId = '3';
+      if (['1', '2'].includes(expectedId)) {
+        expect(motionAnimate).toBe('visible');
+      } else {
+        expect(motionAnimate).toBe('hidden');
+      }
+    });
   });
 
   it('progress bar fills according to scroll progress', () => {

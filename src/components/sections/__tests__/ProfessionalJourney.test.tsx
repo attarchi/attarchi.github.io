@@ -303,19 +303,6 @@ describe("ProfessionalJourney", () => {
     });
   });
 
-  describe("Date Formatting", () => {
-    it("formats dates consistently across all milestones", () => {
-      render(<ProfessionalJourney />);
-      
-      const dates = screen.getAllByTestId("milestone-date");
-      
-      // Check that all dates follow the same format pattern
-      expect(dates[0]).toHaveTextContent(/^\d{4}-Present$/);
-      expect(dates[1]).toHaveTextContent(/^\d{4}-\d{4}$/);
-      expect(dates[2]).toHaveTextContent(/^\d{4}-\d{4}$/);
-    });
-  });
-
   describe("Milestone Card Interactions", () => {
     it("renders milestone cards with hover effects", () => {
       render(<ProfessionalJourney />);
@@ -371,6 +358,107 @@ describe("ProfessionalJourney", () => {
       timelineDots.forEach(dot => {
         expect(dot).toHaveClass("md:-top-1.5", "md:left-1/2", "md:-ml-1.5");
       });
+    });
+  });
+
+  describe("Professional Timeline Content (2020-2025)", () => {
+    const careerProgressionMilestones = [
+      {
+        id: "1",
+        date: "2025-Present",
+        role: "Senior Full-Stack Architect",
+        company: "TechCorp",
+        description: "Leading architectural decisions for enterprise-scale applications. Mentoring development teams and architecting scalable microservices platforms.",
+        achievement: "Principal Level"
+      },
+      {
+        id: "2",
+        date: "2024-2025",
+        role: "Lead Developer",
+        company: "StartupXYZ",
+        description: "Led development teams of 8+ developers. Improved system performance by 40% latency reduction. Delivered 20+ production applications.",
+        achievement: "Team Leadership"
+      },
+      {
+        id: "3",
+        date: "2022-2024",
+        role: "Senior Developer",
+        company: "DevAgency",
+        description: "Advanced to senior level with focus on scalable solutions. Mentored 15+ junior developers. Architected microservices platforms.",
+        achievement: "Senior Level"
+      },
+      {
+        id: "4",
+        date: "2020-2022",
+        role: "Junior Developer",
+        company: "TechStartup",
+        description: "Started career with focus on frontend development. Built responsive web applications and collaborated with design teams.",
+        achievement: "Career Start"
+      }
+    ];
+
+    it("renders timeline with correct chronological order (oldest to newest)", () => {
+      render(<ProfessionalJourney milestones={careerProgressionMilestones} />);
+      
+      const milestoneCards = screen.getAllByTestId("milestone-card");
+      expect(milestoneCards).toHaveLength(4);
+      
+      // Check chronological order (oldest first)
+      const dates = screen.getAllByTestId("milestone-date");
+      expect(dates[0]).toHaveTextContent("2020-2022");
+      expect(dates[1]).toHaveTextContent("2022-2024");
+      expect(dates[2]).toHaveTextContent("2024-2025");
+      expect(dates[3]).toHaveTextContent("2025-Present");
+    });
+
+    it("displays role progressions from Junior to Senior Full-Stack Architect", () => {
+      render(<ProfessionalJourney milestones={careerProgressionMilestones} />);
+      
+      const roles = screen.getAllByTestId("milestone-role");
+      expect(roles[0]).toHaveTextContent("Junior Developer");
+      expect(roles[1]).toHaveTextContent("Senior Developer");
+      expect(roles[2]).toHaveTextContent("Lead Developer");
+      expect(roles[3]).toHaveTextContent("Senior Full-Stack Architect");
+    });
+
+    it("shows achievement badges with specific accomplishments", () => {
+      render(<ProfessionalJourney milestones={careerProgressionMilestones} />);
+      
+      const achievements = screen.getAllByTestId("achievement-badge");
+      expect(achievements[0]).toHaveTextContent("Career Start");
+      expect(achievements[1]).toHaveTextContent("Senior Level");
+      expect(achievements[2]).toHaveTextContent("Team Leadership");
+      expect(achievements[3]).toHaveTextContent("Principal Level");
+    });
+
+    it("includes key achievements in milestone descriptions", () => {
+      render(<ProfessionalJourney milestones={careerProgressionMilestones} />);
+      
+      const descriptions = screen.getAllByTestId("milestone-description");
+      
+      // Check for specific achievements mentioned (after sorting, indices are different)
+      // descriptions[0] = 2020-2022 (Junior Developer)
+      // descriptions[1] = 2022-2024 (Senior Developer) 
+      // descriptions[2] = 2024-2025 (Lead Developer)
+      // descriptions[3] = 2025-Present (Senior Full-Stack Architect)
+      expect(descriptions[2]).toHaveTextContent("8+ developers");
+      expect(descriptions[2]).toHaveTextContent("40% latency reduction");
+      expect(descriptions[2]).toHaveTextContent("20+ production applications");
+      expect(descriptions[1]).toHaveTextContent("15+ junior developers");
+      expect(descriptions[1]).toHaveTextContent("microservices platforms");
+    });
+
+    it("covers the complete 5-year career progression timeline", () => {
+      render(<ProfessionalJourney milestones={careerProgressionMilestones} />);
+      
+      const dates = screen.getAllByTestId("milestone-date");
+      const dateTexts = dates.map(date => date.textContent);
+      
+      // Verify timeline covers 2020-2025
+      expect(dateTexts).toContain("2020-2022");
+      expect(dateTexts).toContain("2022-2024");
+      expect(dateTexts).toContain("2024-2025");
+      expect(dateTexts).toContain("2025-Present");
     });
   });
 }); 

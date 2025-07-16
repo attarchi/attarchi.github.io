@@ -62,10 +62,19 @@ export function ProfessionalJourney({ milestones = defaultMilestones }: Professi
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Sort milestones chronologically (oldest first)
+  const sortedMilestones = [...milestones].sort((a, b) => {
+    const getYear = (date: string) => {
+      const year = date.split('-')[0];
+      return parseInt(year);
+    };
+    return getYear(a.date) - getYear(b.date);
+  });
+
   // For demo, assign progress thresholds evenly
-  const milestoneThresholds = milestones.map((m, i) => ({
+  const milestoneThresholds = sortedMilestones.map((m, i) => ({
     ...m,
-    progressThreshold: milestones.length === 1 ? 0 : i / (milestones.length - 1),
+    progressThreshold: sortedMilestones.length === 1 ? 0 : i / (sortedMilestones.length - 1),
   }));
   const { ref, progress, activeMilestones } = useTimelineProgress({
     milestones: milestoneThresholds.map(m => ({ id: m.id, progressThreshold: m.progressThreshold })),
