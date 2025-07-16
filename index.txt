@@ -1,15 +1,548 @@
-2:I[7604,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"ThemeToggle"]
-3:I[4508,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"HeroSection"]
-4:I[2022,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"FeaturedProjects"]
-5:I[9947,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"TechnicalExpertise"]
-6:I[7902,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"ProfessionalJourney"]
-7:I[7980,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"BlogPreviewSection"]
-8:I[3900,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"ContactSection"]
-9:I[9809,["185","static/chunks/app/layout-963158c050b23327.js"],"ProgressBar"]
-a:I[4279,["185","static/chunks/app/layout-963158c050b23327.js"],"ThemeProvider"]
-b:I[5613,[],""]
-c:I[1778,[],""]
-d:I[5250,["250","static/chunks/250-f9f2009f4af0cdf6.js","160","static/chunks/app/not-found-37c7da29025c29de.js"],""]
-0:["1mWUat4BLPxjEeA8dTQyJ",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},["$L1",["$","div",null,{"className":"min-h-screen bg-background text-text","children":[["$","header",null,{"className":"fixed top-0 right-0 z-50 p-4","children":["$","$L2",null,{}]}],["$","$L3",null,{"title":"Senior Full-Stack Developer & Problem Solver","description":"Crafting scalable web applications with modern technologies. Specializing in React, Node.js, and cloud-native architectures. Passionate about solving complex problems and delivering high-quality, maintainable code.","location":"Istanbul, Turkey • Remote Worldwide","avatarSrc":"/avatar.png","avatarAlt":"Profile picture","ctaPrimary":{"text":"Contact Me","link":"#contact"},"ctaSecondary":{"text":"View Projects","link":"#projects"}}],["$","$L4",null,{}],["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{"posts":[{"title":"Building Offline-First Apps","slug":"building-offline-first-apps","date":"$D2025-01-15T00:00:00.000Z","excerpt":"Real-time synchronization strategies for mobile applications","tags":["React Native","Offline","Sync"],"category":"Mobile Development","content":"","readingTime":8,"published":true},{"title":"Microservices Architecture Patterns","slug":"microservices-architecture-patterns","date":"$D2025-01-10T00:00:00.000Z","excerpt":"Best practices for designing scalable microservices","tags":["Microservices","Architecture","Scalability"],"category":"Backend Development","content":"","readingTime":12,"published":true},{"title":"Modern CSS Techniques","slug":"modern-css-techniques","date":"$D2025-01-05T00:00:00.000Z","excerpt":"Advanced CSS features for modern web development","tags":["CSS","Frontend","Web Development"],"category":"Frontend Development","content":"","readingTime":6,"published":true}]}],["$","$L8",null,{"status":"Available for new opportunities","location":"Istanbul, Turkey (UTC+3)","email":"attarchi@me.com","linkedinUrl":"https://linkedin.com/in/attarchi","githubUrl":"https://github.com/attarchi","responseTime":"Usually within 24 hours","availabilityType":"Full-time, Contract, Consulting"}]]}],null]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_3c557b __variable_e8ce0c antialiased","suppressHydrationWarning":true,"children":[["$","$L9",null,{}],["$","$La",null,{"children":["$","$Lb",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lc",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-600 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-500 mb-8","children":"The page you're looking for doesn't exist or has been moved."}],["$","$Ld",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"Return Home"}]]}]}],"notFoundStyles":[],"styles":null}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/cfd33ca019f2d719.css","precedence":"next","crossOrigin":""}]],"$Le"]]]]
-e:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","3",{"name":"description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies and offline-first architectures."}],["$","meta","4",{"name":"author","content":"Attarchi"}],["$","meta","5",{"name":"keywords","content":"Full-Stack Developer, React, Node.js, TypeScript, Mobile Apps, Turkey, JavaScript, Frontend, Backend, Web Development, Software Engineer"}],["$","meta","6",{"name":"creator","content":"Attarchi"}],["$","meta","7",{"name":"publisher","content":"Attarchi"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://attarchi.github.io/"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","13",{"property":"og:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","14",{"property":"og:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies."}],["$","meta","15",{"property":"og:url","content":"https://attarchi.github.io/"}],["$","meta","16",{"property":"og:site_name","content":"Attarchi Portfolio"}],["$","meta","17",{"property":"og:locale","content":"en_US"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:creator","content":"@attarchi"}],["$","meta","21",{"name":"twitter:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","22",{"name":"twitter:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development."}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","24",{"name":"next-size-adjust"}]]
+3:I[9809,["185","static/chunks/app/layout-963158c050b23327.js"],"ProgressBar"]
+4:I[4279,["185","static/chunks/app/layout-963158c050b23327.js"],"ThemeProvider"]
+5:I[5613,[],""]
+6:I[1778,[],""]
+7:I[5250,["250","static/chunks/250-f9f2009f4af0cdf6.js","160","static/chunks/app/not-found-37c7da29025c29de.js"],""]
+0:["ygKA4zNXOPvJzVNunPvQc",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},["$L1","$L2",null]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_3c557b __variable_e8ce0c antialiased","suppressHydrationWarning":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"children":["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-600 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-500 mb-8","children":"The page you're looking for doesn't exist or has been moved."}],["$","$L7",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"Return Home"}]]}]}],"notFoundStyles":[],"styles":null}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/cfd33ca019f2d719.css","precedence":"next","crossOrigin":""}]],"$L8"]]]]
+8:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","3",{"name":"description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies and offline-first architectures."}],["$","meta","4",{"name":"author","content":"Attarchi"}],["$","meta","5",{"name":"keywords","content":"Full-Stack Developer, React, Node.js, TypeScript, Mobile Apps, Turkey, JavaScript, Frontend, Backend, Web Development, Software Engineer"}],["$","meta","6",{"name":"creator","content":"Attarchi"}],["$","meta","7",{"name":"publisher","content":"Attarchi"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://attarchi.github.io/"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","13",{"property":"og:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","14",{"property":"og:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies."}],["$","meta","15",{"property":"og:url","content":"https://attarchi.github.io/"}],["$","meta","16",{"property":"og:site_name","content":"Attarchi Portfolio"}],["$","meta","17",{"property":"og:locale","content":"en_US"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:creator","content":"@attarchi"}],["$","meta","21",{"name":"twitter:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","22",{"name":"twitter:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development."}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","24",{"name":"next-size-adjust"}]]
 1:null
+9:I[7604,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"ThemeToggle"]
+a:I[4508,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"HeroSection"]
+b:I[2022,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"FeaturedProjects"]
+c:I[9947,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"TechnicalExpertise"]
+d:I[7902,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"ProfessionalJourney"]
+e:I[7980,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"BlogPreviewSection"]
+12:I[3900,["250","static/chunks/250-f9f2009f4af0cdf6.js","849","static/chunks/849-0715065569a133e2.js","433","static/chunks/433-bb28505d860120c5.js","931","static/chunks/app/page-82b28f310383cb50.js"],"ContactSection"]
+f:T2096,<hr>
+<h2>title: Next.js Static Optimization Techniques<br>date: 2025-01-25<br>excerpt: Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.<br>tags: [Next.js, Static Generation, Performance, Deployment, Web Development]<br>category: Web Development<br>readingTime: 6<br>published: true</h2>
+<h1>Next.js Static Optimization Techniques</h1>
+<p>Modern web applications demand both speed and scalability. Next.js, with its powerful static site generation (SSG) and hybrid rendering capabilities, enables developers to build high-performance sites that are easy to deploy and maintain. In this post, we’ll explore how to fully leverage Next.js static optimization, including practical code examples, performance tips, and deployment strategies.</p>
+<h2>Why Static Generation?</h2>
+<p>Static generation pre-renders pages at build time, resulting in HTML files that can be served instantly from a CDN. This approach offers:</p>
+<ul>
+<li><strong>Lightning-fast load times</strong></li>
+<li><strong>Improved SEO</strong></li>
+<li><strong>Reduced server costs</strong></li>
+<li><strong>Enhanced security (no server-side code at runtime)</strong></li>
+</ul>
+<h2>Core Concepts: SSG vs SSR vs ISR</h2>
+<ul>
+<li><strong>SSG (Static Site Generation):</strong> Pages are built at compile time and served as static assets.</li>
+<li><strong>SSR (Server-Side Rendering):</strong> Pages are rendered on each request, useful for dynamic data.</li>
+<li><strong>ISR (Incremental Static Regeneration):</strong> Combines SSG and SSR, allowing static pages to be updated after deployment.</li>
+</ul>
+<h2>Implementing Static Generation in Next.js</h2>
+<h3>1. Static Pages with <code>getStaticProps</code></h3>
+<pre><code class="language-javascript">// pages/blog/[slug].js
+export async function getStaticProps({ params }) {
+  const post = await getPostBySlug(params.slug);
+  return {
+    props: { post },
+  };
+}
+
+export async function getStaticPaths() {
+  const slugs = await getAllPostSlugs();
+  return {
+    paths: slugs.map(slug =&gt; ({ params: { slug } })),
+    fallback: false,
+  };
+}
+</code></pre>
+<h3>2. Incremental Static Regeneration (ISR)</h3>
+<p>ISR allows you to update static content without a full rebuild:</p>
+<pre><code class="language-javascript">export async function getStaticProps() {
+  const data = await fetchData();
+  return {
+    props: { data },
+    revalidate: 60, // Regenerate at most once per minute
+  };
+}
+</code></pre>
+<h3>3. Static Assets and Image Optimization</h3>
+<ul>
+<li>Place images in the <code>/public</code> directory for instant CDN delivery</li>
+<li>Use the Next.js <code>&lt;Image /&gt;</code> component for automatic resizing and lazy loading:</li>
+</ul>
+<pre><code class="language-javascript">import Image from &#39;next/image&#39;;
+
+&lt;Image src=&quot;/hero.png&quot; alt=&quot;Hero&quot; width={800} height={400} priority /&gt;
+</code></pre>
+<h2>Performance Optimization Strategies</h2>
+<h3>1. Bundle Analysis and Code Splitting</h3>
+<ul>
+<li>Use dynamic imports to split code and reduce initial bundle size:</li>
+</ul>
+<pre><code class="language-javascript">import dynamic from &#39;next/dynamic&#39;;
+const HeavyComponent = dynamic(() =&gt; import(&#39;../components/HeavyComponent&#39;));
+</code></pre>
+<ul>
+<li>Analyze your bundle with <code>next build &amp;&amp; npx next-bundle-analyzer</code></li>
+</ul>
+<h3>2. Prefetching and Link Optimization</h3>
+<ul>
+<li>Use the Next.js <code>&lt;Link /&gt;</code> component for client-side navigation and automatic prefetching:</li>
+</ul>
+<pre><code class="language-javascript">import Link from &#39;next/link&#39;;
+
+&lt;Link href=&quot;/about&quot; prefetch={true}&gt;About&lt;/Link&gt;
+</code></pre>
+<h3>3. Caching and CDN</h3>
+<ul>
+<li>Deploy your static site to a global CDN (Vercel, Netlify, GitHub Pages)</li>
+<li>Use HTTP cache headers for long-lived assets</li>
+<li>Leverage edge caching for dynamic routes with ISR</li>
+</ul>
+<h3>4. Environment Variables and Build Optimization</h3>
+<ul>
+<li>Use environment variables to control build-time behavior</li>
+<li>Remove unused code and dependencies</li>
+<li>Enable production optimizations with <code>next.config.js</code>:</li>
+</ul>
+<pre><code class="language-javascript">// next.config.js
+module.exports = {
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    formats: [&#39;image/avif&#39;, &#39;image/webp&#39;],
+  },
+};
+</code></pre>
+<h3>5. Advanced Optimization: Custom Head and SEO</h3>
+<ul>
+<li>Use the <code>&lt;Head /&gt;</code> component to set meta tags for SEO and social sharing</li>
+<li>Generate Open Graph and Twitter Card images at build time</li>
+<li>Use structured data (JSON-LD) for rich search results</li>
+</ul>
+<pre><code class="language-javascript">import Head from &#39;next/head&#39;;
+
+&lt;Head&gt;
+  &lt;title&gt;My Portfolio&lt;/title&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;Professional portfolio built with Next.js&quot; /&gt;
+  &lt;meta property=&quot;og:image&quot; content=&quot;/og-image.png&quot; /&gt;
+&lt;/Head&gt;
+</code></pre>
+<h2>Deployment Strategies</h2>
+<h3>1. Vercel (Recommended)</h3>
+<ul>
+<li>Push to GitHub, connect your repo to Vercel, and enjoy automatic deployments</li>
+<li>Built-in CDN, analytics, and preview deployments</li>
+<li>Rollback to previous deployments with a single click</li>
+</ul>
+<h3>2. GitHub Pages (Static Export)</h3>
+<ul>
+<li>Use <code>next export</code> to generate a static site:</li>
+</ul>
+<pre><code class="language-bash">next build &amp;&amp; next export
+</code></pre>
+<ul>
+<li>Deploy the <code>out/</code> directory to GitHub Pages</li>
+<li>Use a custom domain and HTTPS for production</li>
+</ul>
+<h3>3. Netlify/Other CDNs</h3>
+<ul>
+<li>Drag and drop your static output or connect your repo for CI/CD</li>
+<li>Set up redirects and custom headers for advanced use cases</li>
+</ul>
+<h2>Real-World Example: Optimizing a Portfolio Site</h2>
+<p>In my own portfolio project, I used SSG for all main pages and blog posts, ISR for the contact form (to allow updates without redeploying), and optimized images with the Next.js <code>&lt;Image /&gt;</code> component. The result was a site that loads in under 1 second globally, with perfect Lighthouse scores for performance and SEO.</p>
+<h3>Case Study: Migrating a Blog to Next.js SSG</h3>
+<p>A client’s blog was migrated from WordPress to Next.js SSG. By pre-rendering all posts and using ISR for the comments section, we reduced TTFB (Time to First Byte) from 1.2s to 0.2s and improved Google PageSpeed scores from 70 to 100. The migration also eliminated plugin security risks and reduced hosting costs by 80%.</p>
+<h2>Troubleshooting Common Issues</h2>
+<ul>
+<li><strong>Build Failures:</strong> Check for dynamic code or dependencies that require SSR</li>
+<li><strong>Large Bundles:</strong> Use bundle analyzer and dynamic imports</li>
+<li><strong>Image Optimization Errors:</strong> Ensure images are in <code>/public</code> and use correct props</li>
+<li><strong>404s on Static Export:</strong> Make sure all dynamic routes are included in <code>getStaticPaths</code></li>
+<li><strong>CDN Cache Stale:</strong> Use cache invalidation or revalidate with ISR</li>
+<li><strong>Environment Mismatches:</strong> Double-check environment variables for production builds</li>
+</ul>
+<h2>Best Practices and Takeaways</h2>
+<ul>
+<li>Prefer SSG for all non-user-specific pages</li>
+<li>Use ISR for content that changes frequently but doesn’t need real-time updates</li>
+<li>Optimize images and static assets</li>
+<li>Analyze and split bundles for faster loads</li>
+<li>Deploy to a global CDN for instant delivery</li>
+<li>Monitor performance and error analytics post-deployment</li>
+<li>Automate Lighthouse and accessibility checks in CI</li>
+<li>Document your build and deployment process for future maintainers</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Next.js static optimization unlocks the full potential of the JAMstack, delivering blazing-fast, scalable, and secure web applications. By following these techniques and best practices, you can ensure your Next.js projects are ready for production and delight users everywhere. Static optimization is not just a performance boost—it&#39;s a foundation for modern, maintainable, and future-proof web development. </p>
+10:T251c,<hr>
+<h2>title: React Native Cross-Platform Strategies<br>date: 2025-01-20<br>excerpt: Proven strategies and performance tips for building robust cross-platform apps with React Native, including real-world examples and code sharing techniques.<br>tags: [React Native, Cross-Platform, Performance, Mobile Development, Code Sharing]<br>category: Mobile Development<br>readingTime: 6<br>published: true</h2>
+<h1>React Native Cross-Platform Strategies</h1>
+<p>Building high-quality mobile applications for both iOS and Android can be challenging, especially when aiming for a consistent user experience and optimal performance. React Native offers a powerful solution for cross-platform development, but success requires careful planning, code organization, and performance optimization.</p>
+<h2>Introduction: The Cross-Platform Challenge</h2>
+<p>Mobile development teams often face the dilemma of maintaining two separate codebases for iOS and Android. This leads to duplicated effort, inconsistent features, and increased maintenance costs. React Native bridges this gap by enabling developers to write most of their code once and deploy it everywhere, while still allowing for platform-specific customizations where needed.</p>
+<p>However, achieving true cross-platform excellence is not just about code sharing. It requires a deep understanding of both platforms, a robust architecture, and a commitment to performance and user experience.</p>
+<h2>Why Choose React Native for Cross-Platform Apps?</h2>
+<ul>
+<li><strong>Single Codebase</strong>: Write once, deploy to both iOS and Android</li>
+<li><strong>Native Performance</strong>: Leverage native modules for critical paths</li>
+<li><strong>Rich Ecosystem</strong>: Access to a wide range of libraries and community support</li>
+<li><strong>Faster Iteration</strong>: Hot reloading and rapid prototyping</li>
+<li><strong>Community Support</strong>: Large, active community and frequent updates</li>
+</ul>
+<h2>Code Sharing Strategies</h2>
+<h3>1. Shared Business Logic</h3>
+<p>Keep business logic, API calls, and state management in shared files. For example, authentication, data fetching, and validation logic should live in a <code>shared</code> directory, making it easy to reuse across platforms:</p>
+<pre><code class="language-javascript">// src/shared/api.js
+export async function fetchUserProfile(userId) {
+  const response = await fetch(`/api/users/${userId}`);
+  return response.json();
+}
+</code></pre>
+<h3>2. Platform-Specific Components</h3>
+<p>Use platform extensions for UI differences. React Native allows you to create files like <code>Button.ios.js</code> and <code>Button.android.js</code> to handle platform-specific UI or behavior:</p>
+<pre><code class="language-javascript">// Button.ios.js
+import { TouchableOpacity } from &#39;react-native&#39;;
+export default function Button(props) {
+  return &lt;TouchableOpacity {...props} /&gt;;
+}
+
+// Button.android.js
+import { Pressable } from &#39;react-native&#39;;
+export default function Button(props) {
+  return &lt;Pressable {...props} /&gt;;
+}
+</code></pre>
+<h3>3. Conditional Logic with Platform Module</h3>
+<p>React Native&#39;s <code>Platform</code> module lets you write conditional logic for platform-specific code paths:</p>
+<pre><code class="language-javascript">import { Platform } from &#39;react-native&#39;;
+
+const instructions = Platform.select({
+  ios: &#39;Press Cmd+R to reload&#39;,
+  android: &#39;Double tap R on your keyboard to reload&#39;,
+});
+</code></pre>
+<h3>4. Real-World Case Study: Code Sharing in a Nutrition App</h3>
+<p>In a recent project, we built a nutrition tracking app for both iOS and Android. By isolating business logic and using platform-specific files for navigation and permissions, we achieved over 90% code reuse. The only major differences were in push notification handling and some UI nuances.</p>
+<h2>Performance Optimization Tips</h2>
+<h3>1. Minimize Re-renders</h3>
+<p>Use <code>React.memo</code> and <code>useCallback</code> to prevent unnecessary re-renders, especially in lists and frequently updated components:</p>
+<pre><code class="language-javascript">import React, { memo, useCallback } from &#39;react&#39;;
+
+const ListItem = memo(({ item, onPress }) =&gt; {
+  const handlePress = useCallback(() =&gt; onPress(item.id), [item.id, onPress]);
+  return &lt;ItemComponent item={item} onPress={handlePress} /&gt;;
+});
+</code></pre>
+<h3>2. Optimize Images</h3>
+<ul>
+<li>Use <code>react-native-fast-image</code> for better caching and performance</li>
+<li>Serve appropriately sized images from the backend to reduce memory usage</li>
+<li>Use lazy loading for image-heavy screens</li>
+</ul>
+<h3>3. Use FlatList for Large Data Sets</h3>
+<pre><code class="language-javascript">import { FlatList } from &#39;react-native&#39;;
+
+&lt;FlatList
+  data={data}
+  renderItem={({ item }) =&gt; &lt;ListItem item={item} /&gt;}
+  keyExtractor={item =&gt; item.id}
+  initialNumToRender={10}
+  windowSize={5}
+/&gt;
+</code></pre>
+<h3>4. Avoid Anonymous Functions in Render</h3>
+<p>Move functions outside the render method to avoid unnecessary re-creation. This is especially important in performance-critical components like lists.</p>
+<h3>5. Profile and Monitor Performance</h3>
+<ul>
+<li>Use the React Native Performance Monitor (<code>Cmd+D</code> or <code>Cmd+M</code>)</li>
+<li>Profile with Flipper and Chrome DevTools</li>
+<li>Monitor memory usage and frame rates</li>
+</ul>
+<h3>6. Native Modules for Heavy Lifting</h3>
+<p>For CPU-intensive tasks (e.g., image processing, encryption), consider writing native modules in Swift/Objective-C or Kotlin/Java and bridging them to React Native.</p>
+<h2>Real-World Example: Shared Navigation</h2>
+<p>Implementing navigation that works across platforms is crucial for a seamless user experience. React Navigation is the de facto standard:</p>
+<pre><code class="language-javascript">import { NavigationContainer } from &#39;@react-navigation/native&#39;;
+import { createStackNavigator } from &#39;@react-navigation/stack&#39;;
+
+const Stack = createStackNavigator();
+
+export default function App() {
+  return (
+    &lt;NavigationContainer&gt;
+      &lt;Stack.Navigator&gt;
+        &lt;Stack.Screen name=&quot;Home&quot; component={HomeScreen} /&gt;
+        &lt;Stack.Screen name=&quot;Profile&quot; component={ProfileScreen} /&gt;
+      &lt;/Stack.Navigator&gt;
+    &lt;/NavigationContainer&gt;
+  );
+}
+</code></pre>
+<p>In our nutrition app, we used a shared navigation configuration, but customized the tab bar and gestures for each platform to match native conventions.</p>
+<h2>CI/CD and Automated Testing</h2>
+<p>Automating your build and deployment process is essential for cross-platform teams. Tools like GitHub Actions, Bitrise, and Fastlane can automate builds, run tests, and deploy to both App Store and Google Play.</p>
+<ul>
+<li><strong>Unit Testing</strong>: Use Jest for business logic and component tests</li>
+<li><strong>E2E Testing</strong>: Use Detox for automated device testing</li>
+<li><strong>Continuous Integration</strong>: Run tests on every pull request to catch issues early</li>
+</ul>
+<h2>Troubleshooting Common Cross-Platform Issues</h2>
+<ul>
+<li><strong>Inconsistent UI</strong>: Use platform-specific styles and test on both platforms</li>
+<li><strong>Permission Handling</strong>: Always check and request permissions at runtime using <code>react-native-permissions</code></li>
+<li><strong>Third-Party Library Issues</strong>: Prefer well-maintained libraries with active support for both platforms</li>
+<li><strong>Navigation Bugs</strong>: Test deep linking and back navigation on both iOS and Android</li>
+<li><strong>Performance Bottlenecks</strong>: Profile regularly and optimize slow screens</li>
+</ul>
+<h2>Lessons Learned from Production Apps</h2>
+<ol>
+<li><strong>Test on Real Devices Early</strong>: Emulators are not enough—test on both iOS and Android hardware.</li>
+<li><strong>Modularize Your Codebase</strong>: Separate shared logic, platform-specific code, and UI components.</li>
+<li><strong>Automate CI/CD</strong>: Use tools like GitHub Actions and Fastlane for automated builds and deployments.</li>
+<li><strong>Handle Permissions Carefully</strong>: Use libraries like <code>react-native-permissions</code> for consistent permission handling.</li>
+<li><strong>Monitor Crashes and Performance</strong>: Integrate Sentry or Firebase Crashlytics for real-time monitoring.</li>
+<li><strong>Document Platform Differences</strong>: Keep a record of platform-specific workarounds and gotchas for future maintainers.</li>
+</ol>
+<h2>Practical Takeaways</h2>
+<ul>
+<li>Plan your code structure for maximum sharing and maintainability</li>
+<li>Profile and optimize performance from the start</li>
+<li>Leverage the React Native ecosystem for faster development</li>
+<li>Always test on both platforms before release</li>
+<li>Automate as much as possible to reduce manual errors</li>
+<li>Stay up to date with React Native releases and community best practices</li>
+</ul>
+<h2>Conclusion: Delivering Robust Cross-Platform Apps</h2>
+<p>React Native empowers teams to deliver high-quality apps to both iOS and Android users with less effort and faster iteration. By following the strategies, patterns, and lessons outlined above, you can avoid common pitfalls and build apps that feel truly native on every device. Remember, the key to cross-platform success is not just code sharing, but a relentless focus on user experience, performance, and maintainability. </p>
+11:T24b1,<hr>
+<h2>title: Building Offline-First Apps<br>date: 2025-01-15<br>excerpt: Real-time synchronization strategies for mobile applications that work seamlessly even when users have poor or no internet connectivity.<br>tags: [React Native, Offline, Sync, Mobile Development, PouchDB]<br>category: Mobile Development<br>readingTime: 5<br>published: true</h2>
+<h1>Building Offline-First Apps</h1>
+<p>In today&#39;s interconnected world, users expect applications to work seamlessly regardless of their network conditions. Whether they&#39;re commuting through tunnels, traveling in remote areas, or experiencing temporary connectivity issues, offline-first applications provide a superior user experience by ensuring functionality continues uninterrupted.</p>
+<h2>Why Offline-First Matters</h2>
+<p>Offline-first applications offer several key advantages that make them essential for modern mobile development:</p>
+<ul>
+<li><strong>Immediate Response</strong>: No waiting for network requests to complete</li>
+<li><strong>Reliability</strong>: Functions consistently in areas with poor connectivity</li>
+<li><strong>Performance</strong>: Faster response times for common operations</li>
+<li><strong>User Experience</strong>: Seamless transitions between online and offline states</li>
+<li><strong>Cost Efficiency</strong>: Reduced server load and bandwidth usage</li>
+</ul>
+<h2>Core Architecture Components</h2>
+<h3>1. Data Synchronization Strategy</h3>
+<p>The foundation of any offline-first app is a robust synchronization mechanism. Here&#39;s a basic implementation using React Native and AsyncStorage:</p>
+<pre><code class="language-javascript">class OfflineFirstSync {
+  constructor() {
+    this.syncQueue = [];
+    this.isOnline = navigator.onLine;
+  }
+
+  async syncData() {
+    try {
+      const offlineData = await this.getOfflineData();
+      const onlineData = await this.fetchOnlineData();
+      return this.mergeData(offlineData, onlineData);
+    } catch (error) {
+      console.error(&#39;Sync failed:&#39;, error);
+      return await this.getOfflineData();
+    }
+  }
+
+  async saveOffline(data) {
+    await AsyncStorage.setItem(&#39;offline_data&#39;, JSON.stringify(data));
+  }
+
+  async getOfflineData() {
+    const data = await AsyncStorage.getItem(&#39;offline_data&#39;);
+    return data ? JSON.parse(data) : [];
+  }
+}
+</code></pre>
+<h3>2. Conflict Resolution Strategies</h3>
+<p>When data changes occur both offline and online, you need a strategy to resolve conflicts:</p>
+<p><strong>Last Write Wins (Simple but Risky)</strong></p>
+<pre><code class="language-javascript">const resolveConflict = (localData, remoteData) =&gt; {
+  return localData.timestamp &gt; remoteData.timestamp ? localData : remoteData;
+};
+</code></pre>
+<p><strong>Merge Strategy (More Complex but Safer)</strong></p>
+<pre><code class="language-javascript">const mergeData = (localData, remoteData) =&gt; {
+  const merged = { ...remoteData };
+  
+  // Merge arrays by combining unique items
+  if (localData.items &amp;&amp; remoteData.items) {
+    const localItems = new Set(localData.items.map(item =&gt; item.id));
+    const remoteItems = new Set(remoteData.items.map(item =&gt; item.id));
+    
+    merged.items = [
+      ...remoteData.items,
+      ...localData.items.filter(item =&gt; !remoteItems.has(item.id))
+    ];
+  }
+  
+  return merged;
+};
+</code></pre>
+<h3>3. Storage Strategy Selection</h3>
+<p>Choose the right storage mechanism based on your application&#39;s needs:</p>
+<p><strong>IndexedDB for Complex Data Structures</strong></p>
+<pre><code class="language-javascript">const db = await idb.openDB(&#39;offline-store&#39;, 1, {
+  upgrade(db) {
+    db.createObjectStore(&#39;posts&#39;, { keyPath: &#39;id&#39; });
+    db.createObjectStore(&#39;comments&#39;, { keyPath: &#39;id&#39; });
+  }
+});
+</code></pre>
+<p><strong>SQLite for Relational Data (Mobile Apps)</strong></p>
+<pre><code class="language-javascript">import * as SQLite from &#39;expo-sqlite&#39;;
+
+const db = SQLite.openDatabase(&#39;offline.db&#39;);
+db.transaction(tx =&gt; {
+  tx.executeSql(
+    &#39;CREATE TABLE IF NOT EXISTS posts (id TEXT PRIMARY KEY, title TEXT, content TEXT)&#39;
+  );
+});
+</code></pre>
+<h2>Implementation Example: React Native with PouchDB</h2>
+<p>Here&#39;s a complete example using PouchDB for robust offline-first functionality:</p>
+<pre><code class="language-javascript">import PouchDB from &#39;pouchdb-react-native&#39;;
+
+class OfflineFirstApp {
+  constructor() {
+    this.localDB = new PouchDB(&#39;local-posts&#39;);
+    this.remoteDB = new PouchDB(&#39;https://your-couchdb-server.com/posts&#39;);
+    this.syncHandler = null;
+  }
+
+  async initializeSync() {
+    // Set up continuous sync
+    this.syncHandler = this.localDB.sync(this.remoteDB, {
+      live: true,
+      retry: true,
+      conflicts: true
+    }).on(&#39;change&#39;, (change) =&gt; {
+      console.log(&#39;Sync change:&#39;, change);
+    }).on(&#39;error&#39;, (err) =&gt; {
+      console.error(&#39;Sync error:&#39;, err);
+    });
+  }
+
+  async createPost(post) {
+    try {
+      // Always save locally first
+      const result = await this.localDB.post({
+        _id: `post_${Date.now()}`,
+        title: post.title,
+        content: post.content,
+        timestamp: new Date().toISOString(),
+        type: &#39;post&#39;
+      });
+      
+      return result;
+    } catch (error) {
+      console.error(&#39;Failed to create post:&#39;, error);
+      throw error;
+    }
+  }
+
+  async getPosts() {
+    try {
+      const result = await this.localDB.query(&#39;posts/by_date&#39;, {
+        include_docs: true,
+        descending: true
+      });
+      
+      return result.rows.map(row =&gt; row.doc);
+    } catch (error) {
+      console.error(&#39;Failed to get posts:&#39;, error);
+      return [];
+    }
+  }
+
+  async resolveConflicts() {
+    const conflicts = await this.localDB.query(&#39;posts/conflicts&#39;);
+    
+    for (const conflict of conflicts.rows) {
+      const doc = await this.localDB.get(conflict.id, { conflicts: true });
+      
+      if (doc._conflicts) {
+        // Choose the most recent version
+        const versions = [doc, ...doc._conflicts.map(rev =&gt; 
+          this.localDB.get(conflict.id, { rev }))
+        ];
+        
+        const latest = versions.reduce((latest, current) =&gt; 
+          current.timestamp &gt; latest.timestamp ? current : latest
+        );
+        
+        await this.localDB.put(latest);
+      }
+    }
+  }
+}
+</code></pre>
+<h2>Performance Optimization Techniques</h2>
+<h3>1. Incremental Sync</h3>
+<pre><code class="language-javascript">const syncIncremental = async (lastSyncTime) =&gt; {
+  const changes = await remoteDB.changes({
+    since: lastSyncTime,
+    include_docs: true
+  });
+  
+  for (const change of changes.results) {
+    await localDB.put(change.doc);
+  }
+};
+</code></pre>
+<h3>2. Selective Data Loading</h3>
+<pre><code class="language-javascript">const loadEssentialData = async () =&gt; {
+  // Load only critical data first
+  const essentialPosts = await localDB.query(&#39;posts/essential&#39;, {
+    limit: 10,
+    include_docs: true
+  });
+  
+  // Load remaining data in background
+  setTimeout(() =&gt; loadRemainingData(), 1000);
+};
+</code></pre>
+<h2>Testing Offline Functionality</h2>
+<p>Ensure your offline-first app works correctly with comprehensive testing:</p>
+<pre><code class="language-javascript">describe(&#39;Offline Functionality&#39;, () =&gt; {
+  beforeEach(async () =&gt; {
+    // Mock network offline
+    global.navigator.onLine = false;
+  });
+
+  it(&#39;should create posts when offline&#39;, async () =&gt; {
+    const app = new OfflineFirstApp();
+    const post = { title: &#39;Test Post&#39;, content: &#39;Test content&#39; };
+    
+    const result = await app.createPost(post);
+    expect(result.id).toBeDefined();
+    expect(result.title).toBe(&#39;Test Post&#39;);
+  });
+
+  it(&#39;should sync when coming back online&#39;, async () =&gt; {
+    const app = new OfflineFirstApp();
+    
+    // Create offline post
+    await app.createPost({ title: &#39;Offline Post&#39;, content: &#39;Content&#39; });
+    
+    // Simulate coming back online
+    global.navigator.onLine = true;
+    await app.initializeSync();
+    
+    // Verify sync occurred
+    const posts = await app.getPosts();
+    expect(posts.length).toBeGreaterThan(0);
+  });
+});
+</code></pre>
+<h2>Best Practices Summary</h2>
+<ol>
+<li><strong>Always Save Locally First</strong>: Ensure data is stored locally before attempting to sync</li>
+<li><strong>Implement Conflict Resolution</strong>: Have a clear strategy for handling data conflicts</li>
+<li><strong>Use Appropriate Storage</strong>: Choose storage based on data complexity and access patterns</li>
+<li><strong>Test Offline Scenarios</strong>: Comprehensive testing of offline functionality</li>
+<li><strong>Provide User Feedback</strong>: Clear indicators of sync status and offline state</li>
+<li><strong>Optimize for Performance</strong>: Implement incremental sync and selective loading</li>
+<li><strong>Handle Edge Cases</strong>: Plan for network transitions and data corruption scenarios</li>
+</ol>
+<p>Building offline-first applications requires careful planning and robust implementation, but the benefits in user experience and reliability make it well worth the effort. By following these patterns and best practices, you can create applications that work seamlessly regardless of network conditions. </p>
+2:["$","div",null,{"className":"min-h-screen bg-background text-text","children":[["$","header",null,{"className":"fixed top-0 right-0 z-50 p-4","children":["$","$L9",null,{}]}],["$","$La",null,{"title":"Senior Full-Stack Developer & Problem Solver","description":"Crafting scalable web applications with modern technologies. Specializing in React, Node.js, and cloud-native architectures. Passionate about solving complex problems and delivering high-quality, maintainable code.","location":"Istanbul, Turkey • Remote Worldwide","avatarSrc":"/avatar.png","avatarAlt":"Profile picture","ctaPrimary":{"text":"Contact Me","link":"#contact"},"ctaSecondary":{"text":"View Projects","link":"#projects"}}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{"posts":[{"title":"Next.js Static Optimization Techniques","slug":"nextjs_static_optimization","date":"$D2025-01-25T00:00:00.000Z","excerpt":"Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.","tags":["Next.js","Static Generation","Performance","Deployment","Web Development"],"category":"Web Development","content":"$f","readingTime":6,"published":true},{"title":"React Native Cross-Platform Strategies","slug":"react_native_cross_platform","date":"$D2025-01-20T00:00:00.000Z","excerpt":"Proven strategies and performance tips for building robust cross-platform apps with React Native, including real-world examples and code sharing techniques.","tags":["React Native","Cross-Platform","Performance","Mobile Development","Code Sharing"],"category":"Mobile Development","content":"$10","readingTime":6,"published":true},{"title":"Building Offline-First Apps","slug":"building_offline_first_apps","date":"$D2025-01-15T00:00:00.000Z","excerpt":"Real-time synchronization strategies for mobile applications that work seamlessly even when users have poor or no internet connectivity.","tags":["React Native","Offline","Sync","Mobile Development","PouchDB"],"category":"Mobile Development","content":"$11","readingTime":5,"published":true}]}],["$","$L12",null,{"status":"Available for new opportunities","location":"Istanbul, Turkey (UTC+3)","email":"attarchi@me.com","linkedinUrl":"https://linkedin.com/in/attarchi","githubUrl":"https://github.com/attarchi","responseTime":"Usually within 24 hours","availabilityType":"Full-time, Contract, Consulting"}]]}]
