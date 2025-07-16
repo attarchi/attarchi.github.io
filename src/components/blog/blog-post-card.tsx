@@ -1,0 +1,33 @@
+import { BlogPost } from '@/types';
+import { Card, CardHeader } from '@/components/ui/Card';
+import { Badge } from '@/components/ui/Badge';
+
+interface BlogPostCardProps {
+  post: BlogPost;
+}
+
+export function BlogPostCard({ post }: BlogPostCardProps) {
+  const formatDate = (date: Date) => {
+    return date.toISOString().split('T')[0];
+  };
+
+  const formatReadingTime = (minutes: number) => {
+    return `${minutes} min read`;
+  };
+
+  return (
+    <Card className="border-l-4 border-l-accent hover:border-l-8 transition-all" data-testid="blog-post-card">
+      <CardHeader>
+        <time className="text-muted text-sm font-mono">{formatDate(post.date)}</time>
+        <h4 className="font-mono font-medium">{post.title}</h4>
+        <p className="text-muted">{post.excerpt}</p>
+        <div className="flex items-center gap-2">
+          <Badge variant="outline" className="text-accent">
+            {post.category}
+          </Badge>
+          <span className="text-muted text-sm">{formatReadingTime(post.readingTime)}</span>
+        </div>
+      </CardHeader>
+    </Card>
+  );
+} 
