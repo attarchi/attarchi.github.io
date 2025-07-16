@@ -485,7 +485,7 @@ DESIGN REQUIREMENTS:
 CONTACT CONTENT:
 - Status: "Available for new opportunities"
 - Location: "Istanbul, Turkey (UTC+3)"
-- Email: "hello@attarchi.dev" (or appropriate email)
+- Email: "attarchi@me.com"
 - LinkedIn: "/in/attarchi" (or real LinkedIn)
 - GitHub: "/attarchi"
 - Response time: "Usually within 24 hours"
