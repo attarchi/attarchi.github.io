@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useMemo } from 'react';
 import { BlogPost } from '@/types';
 import { BlogPostCard } from './blog-post-card';

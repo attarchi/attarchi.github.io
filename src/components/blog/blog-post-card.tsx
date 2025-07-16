@@ -1,3 +1,5 @@
+"use client";
+
 import { BlogPost } from '@/types';
 import { Card, CardHeader } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
