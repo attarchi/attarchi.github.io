@@ -1,5 +1,7 @@
 "use client";
 
+import Link from 'next/link';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { BlogPost } from '@/types';
 import { parseMarkdown } from '@/lib/markdown-parser';
 import { Badge } from '@/components/ui/Badge';
@@ -25,6 +27,11 @@ export function BlogPostPage({ post, prev, next }: BlogPostPageProps) {
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 font-sans">
+      {/* Home link and theme toggle */}
+      <div className="flex justify-between items-center mb-8">
+        <Link href="/" className="text-accent font-mono text-base hover:underline transition-colors" aria-label="Home">← Home</Link>
+        <ThemeToggle />
+      </div>
       {/* Post Header */}
       <header className="mb-8">
         <h1 className="text-4xl font-bold font-mono mb-4 text-text">

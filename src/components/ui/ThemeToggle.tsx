@@ -14,7 +14,7 @@ export const ThemeToggle: React.FC = () => {
     <button
       onClick={toggleTheme}
       className="transition-colors duration-300 ease-in-out"
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+      aria-label="Toggle theme"
     >
       {theme === 'light' ? '🌙' : '☀️'}
     </button>

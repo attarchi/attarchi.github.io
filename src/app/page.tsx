@@ -1,5 +1,42 @@
-import { HeroSection, FeaturedProjects, TechnicalExpertise, ProfessionalJourney, ContactSection } from "@/components/sections";
+import { HeroSection, FeaturedProjects, TechnicalExpertise, ProfessionalJourney, ContactSection, BlogPreviewSection } from "@/components/sections";
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+
+// Mock blog posts data - in a real app, this would come from a CMS or markdown files
+const mockPosts = [
+  {
+    title: 'Building Offline-First Apps',
+    slug: 'building-offline-first-apps',
+    date: new Date('2025-01-15'),
+    excerpt: 'Real-time synchronization strategies for mobile applications',
+    tags: ['React Native', 'Offline', 'Sync'],
+    category: 'Mobile Development',
+    content: '',
+    readingTime: 8,
+    published: true
+  },
+  {
+    title: 'Microservices Architecture Patterns',
+    slug: 'microservices-architecture-patterns',
+    date: new Date('2025-01-10'),
+    excerpt: 'Best practices for designing scalable microservices',
+    tags: ['Microservices', 'Architecture', 'Scalability'],
+    category: 'Backend Development',
+    content: '',
+    readingTime: 12,
+    published: true
+  },
+  {
+    title: 'Modern CSS Techniques',
+    slug: 'modern-css-techniques',
+    date: new Date('2025-01-05'),
+    excerpt: 'Advanced CSS features for modern web development',
+    tags: ['CSS', 'Frontend', 'Web Development'],
+    category: 'Frontend Development',
+    content: '',
+    readingTime: 6,
+    published: true
+  }
+];
 
 export default function Home() {
   return (
@@ -34,6 +71,9 @@ export default function Home() {
 
       {/* Professional Journey Section */}
       <ProfessionalJourney />
+
+      {/* Latest Blog Posts Section */}
+      <BlogPreviewSection posts={mockPosts} />
 
       {/* Contact Section */}
       <ContactSection
