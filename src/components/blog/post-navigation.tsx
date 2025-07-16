@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { BlogPost } from '@/types';
 
 interface PostNavigationProps {
@@ -7,7 +8,7 @@ interface PostNavigationProps {
   next?: BlogPost;
 }
 
-export function PostNavigation({ prev, next }: PostNavigationProps) {
+export const PostNavigation = React.memo(function PostNavigation({ prev, next }: PostNavigationProps) {
   return (
     <nav className="flex flex-col md:flex-row justify-between items-stretch gap-4 mt-12 mb-4">
       {prev && (
@@ -42,4 +43,4 @@ export function PostNavigation({ prev, next }: PostNavigationProps) {
       <div data-testid="social-share-placeholder" className="hidden" />
     </nav>
   );
-} 
+}); 

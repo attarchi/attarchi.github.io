@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from 'react';
+import React, { useState, useMemo, Suspense } from 'react';
 import { BlogPost } from '@/types';
 import { BlogPostCard } from './blog-post-card';
 import { BlogFilters } from './blog-filters';
@@ -9,7 +9,25 @@ interface BlogPostListProps {
   posts: BlogPost[];
 }
 
-export function BlogPostList({ posts }: BlogPostListProps) {
+// Loading component for blog posts
+function BlogPostsLoading() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-testid="blog-posts-loading">
+      {Array.from({ length: 6 }).map((_, i) => (
+        <div key={i} className="animate-pulse">
+          <div className="bg-surface border border-border rounded-lg p-6">
+            <div className="h-4 bg-muted rounded mb-2"></div>
+            <div className="h-6 bg-muted rounded mb-2"></div>
+            <div className="h-4 bg-muted rounded mb-4"></div>
+            <div className="h-4 bg-muted rounded w-1/2"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export const BlogPostList = React.memo(function BlogPostList({ posts }: BlogPostListProps) {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -47,4 +65,4 @@ export function BlogPostList({ posts }: BlogPostListProps) {
       )}
     </div>
   );
-} 
+}); 

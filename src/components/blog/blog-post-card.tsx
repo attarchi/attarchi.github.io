@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import Link from 'next/link';
 import { BlogPost } from '@/types';
 import { Card, CardHeader } from '@/components/ui/Card';
@@ -9,7 +10,7 @@ interface BlogPostCardProps {
   post: BlogPost;
 }
 
-export function BlogPostCard({ post }: BlogPostCardProps) {
+export const BlogPostCard = React.memo(function BlogPostCard({ post }: BlogPostCardProps) {
   const formatDate = (date: Date) => {
     return date.toISOString().split('T')[0];
   };
@@ -39,4 +40,4 @@ export function BlogPostCard({ post }: BlogPostCardProps) {
       </Card>
     </Link>
   );
-} 
+}); 

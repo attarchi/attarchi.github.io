@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import Link from 'next/link';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { BlogPost } from '@/types';
@@ -14,7 +15,7 @@ interface BlogPostPageProps {
   next?: BlogPost;
 }
 
-export function BlogPostPage({ post, prev, next }: BlogPostPageProps) {
+export const BlogPostPage = React.memo(function BlogPostPage({ post, prev, next }: BlogPostPageProps) {
   const formatDate = (date: Date) => {
     return date.toISOString().split('T')[0];
   };
@@ -84,4 +85,4 @@ export function BlogPostPage({ post, prev, next }: BlogPostPageProps) {
       <PostNavigation prev={prev} next={next} />
     </article>
   );
-} 
+}); 

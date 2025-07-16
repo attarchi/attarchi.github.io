@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 
@@ -13,7 +14,7 @@ interface BlogFiltersProps {
   showClear: boolean;
 }
 
-export function BlogFilters({
+export const BlogFilters = React.memo(function BlogFilters({
   categories,
   selectedCategory,
   onCategoryChange,
@@ -50,4 +51,4 @@ export function BlogFilters({
       )}
     </div>
   );
-} 
+}); 
