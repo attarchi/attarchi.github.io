@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { useScrollProgress } from '@/lib/hooks';
 
-// GitHub accent colors
 const ACCENT_LIGHT = '#0969da';
 const ACCENT_DARK = '#58a6ff';
 
@@ -21,7 +20,6 @@ function useIsMobile() {
 }
 
 function useThemeAccent() {
-  // Use matchMedia to detect dark mode
   const [isDark, setIsDark] = useState(false);
   useEffect(() => {
     const mql = window.matchMedia('(prefers-color-scheme: dark)');
