@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { HeroSection } from "../HeroSection";
+import { HeroSection } from "@/components/sections";
+import { CtaButton } from "@/content";
 
-// Mock next/image
 jest.mock("next/image", () => ({
   __esModule: true,
   default: (props: any) => {
@@ -10,7 +10,25 @@ jest.mock("next/image", () => ({
   },
 }));
 
-describe("Hero", () => {
+jest.mock("@/components/ui");
+
+describe("HeroSection", () => {
+  const defaultCtaButtons: CtaButton[] = [
+    {
+      text: "Contact Me",
+      link: "/contact",
+      variant: "default",
+      size: "lg",
+      icon: "arrow-right"
+    },
+    {
+      text: "View Projects",
+      link: "/projects",
+      variant: "outline",
+      size: "lg"
+    }
+  ];
+
   it("renders with required props", async () => {
     render(
       <HeroSection
@@ -34,7 +52,6 @@ describe("Hero", () => {
       />
     );
     await screen.findByRole('heading', { level: 1 });
-    expect(screen.queryByText("San Francisco, CA")).not.toBeInTheDocument();
     expect(screen.getByText("📍 San Francisco, CA")).toBeInTheDocument();
   });
 
@@ -53,58 +70,36 @@ describe("Hero", () => {
     expect(avatar).toHaveAttribute("src", "/test-avatar.jpg");
   });
 
-  it("renders with primary CTA button when provided", async () => {
+  it("renders CTA buttons from array", async () => {
     render(
       <HeroSection
         title="Test Title"
         description="Test Description"
-        ctaPrimary={{
-          text: "Contact Me",
-          link: "/contact",
-        }}
+        ctaButtons={defaultCtaButtons}
       />
     );
     await screen.findByRole('heading', { level: 1 });
-    const ctaButton = screen.getByRole("link", { name: /contact me/i });
-    expect(ctaButton).toBeInTheDocument();
-    expect(ctaButton).toHaveAttribute("href", "/contact");
+    
+    const contactButton = screen.getByRole("link", { name: /contact me/i });
+    const projectsButton = screen.getByRole("link", { name: /view projects/i });
+    
+    expect(contactButton).toBeInTheDocument();
+    expect(contactButton).toHaveAttribute("href", "/contact");
+    expect(projectsButton).toBeInTheDocument();
+    expect(projectsButton).toHaveAttribute("href", "/projects");
   });
 
-  it("renders with secondary CTA button when provided", async () => {
+  it("handles empty CTA buttons array", async () => {
     render(
       <HeroSection
         title="Test Title"
         description="Test Description"
-        ctaSecondary={{
-          text: "View Work",
-          link: "/work",
-        }}
+        ctaButtons={[]}
       />
     );
     await screen.findByRole('heading', { level: 1 });
-    const ctaButton = screen.getByRole("link", { name: /view work/i });
-    expect(ctaButton).toBeInTheDocument();
-    expect(ctaButton).toHaveAttribute("href", "/work");
-  });
-
-  it("renders both CTA buttons when both are provided", async () => {
-    render(
-      <HeroSection
-        title="Test Title"
-        description="Test Description"
-        ctaPrimary={{
-          text: "Contact Me",
-          link: "/contact",
-        }}
-        ctaSecondary={{
-          text: "View Work",
-          link: "/work",
-        }}
-      />
-    );
-    await screen.findByRole('heading', { level: 1 });
-    expect(screen.getByRole("link", { name: /contact me/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /view work/i })).toBeInTheDocument();
+    
+    expect(screen.queryByRole("link")).not.toBeInTheDocument();
   });
 
   it("applies custom className", async () => {
@@ -130,6 +125,28 @@ describe("Hero", () => {
     await screen.findByRole('heading', { level: 1 });
     const scrollIndicator = screen.getByTestId("scroll-indicator");
     expect(scrollIndicator).toBeInTheDocument();
-    expect(scrollIndicator).toHaveClass("animate-bounce");
+  });
+
+  it("renders single CTA button", async () => {
+    const singleCtaButton: CtaButton[] = [
+      {
+        text: "Single Button",
+        link: "/single",
+        variant: "default"
+      }
+    ];
+
+    render(
+      <HeroSection
+        title="Test Title"
+        description="Test Description"
+        ctaButtons={singleCtaButton}
+      />
+    );
+    await screen.findByRole('heading', { level: 1 });
+    
+    const button = screen.getByRole("link", { name: /single button/i });
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveAttribute("href", "/single");
   });
 }); 

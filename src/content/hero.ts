@@ -1,21 +1,20 @@
+import { ButtonVariant, ButtonSize } from "@/components/ui";
+
+export interface CtaButton {
+    text: string;
+    link: string;
+    variant?: ButtonVariant;
+    size?: ButtonSize;
+    icon?: string;
+}
+
 export interface HeroContent {
-    title?: string | undefined;
-    description?: string | undefined;
-    location?: string | undefined;
-    avatarSrc?: string | undefined;
-    avatarAlt?: string | undefined;
-    ctaPrimary?: {
-        text: string;
-        link: string;
-    };
-    ctaSecondary?: {
-        text: string;
-        link: string;
-    };
-    ctaTertiary?: {
-        text: string;
-        link: string;
-    };
+    title?: string;
+    description?: string;
+    location?: string;
+    avatarSrc?: string;
+    avatarAlt?: string;
+    ctaButtons?: CtaButton[];
 }
 
 export const heroContent: HeroContent = {
@@ -24,12 +23,19 @@ export const heroContent: HeroContent = {
     location: "Istanbul, Turkey • Remote Worldwide",
     avatarSrc: "/avatar.png",
     avatarAlt: "Profile picture",
-    ctaPrimary: {
-        text: "Contact Me",
-        link: "#contact"
-    },
-    ctaSecondary: {
-        text: "View Projects",
-        link: "#projects"
-    }
+    ctaButtons: [
+        {
+            text: "Contact Me",
+            link: "#contact",
+            variant: "default",
+            size: "lg",
+            icon: "arrow-right"
+        },
+        {
+            text: "View Projects",
+            link: "#projects",
+            variant: "outline",
+            size: "lg"
+        }
+    ]
 }; 

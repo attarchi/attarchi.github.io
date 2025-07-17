@@ -61,7 +61,7 @@ describe('Home Page Content', () => {
     await act(async () => {
       render(await Home())
     })
-    expect(screen.getByTestId('cta-primary')).toBeInTheDocument()
-    expect(screen.getByTestId('cta-secondary')).toBeInTheDocument()
+    expect(screen.getByTestId('cta-button-0')).toBeInTheDocument()
+    expect(screen.getByTestId('cta-button-1')).toBeInTheDocument()
   })
 }) 

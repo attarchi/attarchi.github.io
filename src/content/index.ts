@@ -1,4 +1,4 @@
-export { heroContent, type HeroContent } from './hero';
+export { heroContent, type HeroContent, type CtaButton } from './hero';
 export { contactContent, type ContactContent } from './contact';
 export { themeConfig, type ThemeConfig } from './theme';
 export { professionalMilestones, type ProfessionalMilestone } from './professional-journey';

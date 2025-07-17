@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const HeroSection = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'hero-section' }, children);
+export { HeroSection } from './HeroSection';
 export const FeaturedProjects = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'featured-projects' }, children);
 export const TechnicalExpertise = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'technical-expertise' }, children);
 export const ProfessionalJourney = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'professional-journey' }, children);
