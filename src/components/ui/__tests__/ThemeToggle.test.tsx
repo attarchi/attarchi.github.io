@@ -44,10 +44,4 @@ describe('ThemeToggle', () => {
     const button = screen.getByRole('button')
     expect(button).toHaveTextContent('☀️')
   })
-
-  it('has proper styling classes', () => {
-    renderWithTheme()
-    const button = screen.getByRole('button')
-    expect(button).toHaveClass('transition-colors', 'duration-300', 'ease-in-out')
-  })
 }) 

@@ -26,5 +26,3 @@ export {
     createCustomVariants,
     createStaggerVariants
 } from './animation-variants';
-
-export { ThemeProvider, ThemeContext } from './theme';

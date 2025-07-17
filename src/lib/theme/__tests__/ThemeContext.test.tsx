@@ -1,7 +1,8 @@
 import { render, screen, act } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React, { useContext } from 'react'
-import { ThemeProvider, ThemeContext, Theme, ThemeContextType } from '../ThemeContext'
+import { ThemeProvider, ThemeContext } from '../ThemeContext'
+import { ThemeContextType } from '@/types'
 
 const mockMatchMedia = (matches: boolean) => ({
   matches,
@@ -66,7 +67,7 @@ describe('ThemeContext', () => {
     cleanupWindowMocks()
   })
 
-  it('Handel if window does not support localStorage', () => {
+  it('handles window without localStorage support', () => {
     setupWindowMocks()
     delete (window as any).matchMedia
     delete (window as any).localStorage
@@ -74,7 +75,7 @@ describe('ThemeContext', () => {
     expect(screen.getByTestId('theme').textContent).toBe('light')
   })
 
-  it('Handel if window does not support matchMedia', () => {
+  it('handles window without matchMedia support', () => {
     setupWindowMocks()
     delete (window as any).matchMedia
     renderTestComponentWithThemeProvider()
@@ -114,13 +115,13 @@ describe('ThemeContext', () => {
     expect(window.localStorage.setItem).toHaveBeenCalledWith('theme', 'dark')
   })
 
-  it('check default theme', () => {
+  it('uses default theme when no preference set', () => {
     setupWindowMocks({ matches: false })
     renderTestComponentWithThemeProvider()
     expect(screen.getByTestId('theme').textContent).toBe('light')
   })
 
-  it('get theme from local storage', () => {
+  it('retrieves theme from local storage', () => {
     setupWindowMocks({ localStorageValue: 'dark' })
     renderTestComponentWithThemeProvider()
     expect(screen.getByTestId('theme').textContent).toBe('dark')
