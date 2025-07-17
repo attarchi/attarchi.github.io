@@ -1,13 +1,8 @@
 import React from 'react';
 
-interface ThemeToggleProps {
-  className?: string;
-}
-
-export function ThemeToggle({ className = '' }: ThemeToggleProps) {
+export const ThemeToggle: React.FC = () => {
   return (
     <button 
-      className={className}
       data-testid="theme-toggle"
       aria-label="Toggle theme"
     >

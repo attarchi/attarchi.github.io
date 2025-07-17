@@ -1,5 +1,5 @@
 import React from 'react'
-import { Theme, ThemeContextType } from '@/types'
+import { Theme, ThemeContextType } from '../ThemeContext'
 
 export const ThemeContext = React.createContext<ThemeContextType>({
   theme: 'light',
