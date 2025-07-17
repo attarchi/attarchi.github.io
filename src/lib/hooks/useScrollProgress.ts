@@ -5,52 +5,24 @@ export interface UseScrollProgressReturn {
     isScrolling: boolean;
 }
 
-/**
- * useScrollProgress - React hook for tracking scroll progress through the page.
- *
- * Features:
- * - Calculates scroll progress as percentage (0-1)
- * - Throttled scroll events for performance (16ms intervals)
- * - Tracks scrolling state for UI feedback
- * - Handles edge cases (short pages, negative scroll)
- * - Automatic cleanup on unmount
- *
- * @example
- * const { progress, isScrolling } = useScrollProgress();
- * 
- * return (
- *   <div style={{ width: `${progress * 100}%` }}>
- *     Progress: {Math.round(progress * 100)}%
- *   </div>
- * );
- *
- * @returns {UseScrollProgressReturn} Object with progress and isScrolling state
- * @property {number} progress - Scroll progress as value between 0 and 1
- * @property {boolean} isScrolling - Whether user is currently scrolling
- */
 export function useScrollProgress(): UseScrollProgressReturn {
     const [progress, setProgress] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
-    const rafId = useRef<number | null>(null);
+    const animationFrameId = useRef<number | null>(null);
     const scrollTimeoutId = useRef<NodeJS.Timeout | null>(null);
 
-    const calculateProgress = useCallback(() => {
+    const calculateScrollProgress = useCallback(() => {
         const scrollY = window.scrollY || 0;
         const scrollHeight = document.documentElement.scrollHeight || 0;
         const clientHeight = document.documentElement.clientHeight || 0;
-
-        // Calculate scrollable distance
         const scrollableDistance = scrollHeight - clientHeight;
 
-        // Handle edge cases
         if (scrollableDistance <= 0) {
             return 0;
         }
 
-        // Calculate progress and clamp between 0 and 1
         const calculatedProgress = Math.max(0, Math.min(1, scrollY / scrollableDistance));
 
-        // Handle NaN values
         if (isNaN(calculatedProgress)) {
             return 0;
         }
@@ -58,60 +30,51 @@ export function useScrollProgress(): UseScrollProgressReturn {
         return calculatedProgress;
     }, []);
 
-    const updateProgress = useCallback(() => {
-        const newProgress = calculateProgress();
+    const updateProgressWithThrottling = useCallback(() => {
+        const newProgress = calculateScrollProgress();
         setProgress(newProgress);
 
-        // Clear any existing RAF
-        if (rafId.current) {
-            cancelAnimationFrame(rafId.current);
-            rafId.current = null;
+        if (animationFrameId.current) {
+            cancelAnimationFrame(animationFrameId.current);
+            animationFrameId.current = null;
         }
-    }, [calculateProgress]);
+    }, [calculateScrollProgress]);
 
-    const handleScroll = useCallback(() => {
-        // Set scrolling state
+    const handleScrollEvent = useCallback(() => {
         setIsScrolling(true);
 
-        // Clear existing scroll timeout
         if (scrollTimeoutId.current) {
             clearTimeout(scrollTimeoutId.current);
         }
 
-        // Set timeout to mark scrolling as ended
         scrollTimeoutId.current = setTimeout(() => {
             setIsScrolling(false);
         }, 150);
 
-        // Throttle progress updates using requestAnimationFrame
-        if (!rafId.current) {
-            rafId.current = requestAnimationFrame(() => {
-                updateProgress();
-                rafId.current = null;
+        if (!animationFrameId.current) {
+            animationFrameId.current = requestAnimationFrame(() => {
+                updateProgressWithThrottling();
+                animationFrameId.current = null;
             });
         }
-    }, [updateProgress]);
+    }, [updateProgressWithThrottling]);
 
     useEffect(() => {
-        // Calculate initial progress
-        updateProgress();
+        updateProgressWithThrottling();
+        window.addEventListener('scroll', handleScrollEvent, { passive: true });
 
-        // Add scroll event listener
-        window.addEventListener('scroll', handleScroll, { passive: true });
-
-        // Cleanup function
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScrollEvent);
 
-            if (rafId.current) {
-                cancelAnimationFrame(rafId.current);
+            if (animationFrameId.current) {
+                cancelAnimationFrame(animationFrameId.current);
             }
 
             if (scrollTimeoutId.current) {
                 clearTimeout(scrollTimeoutId.current);
             }
         };
-    }, [handleScroll, updateProgress]);
+    }, [handleScrollEvent, updateProgressWithThrottling]);
 
     return {
         progress,
