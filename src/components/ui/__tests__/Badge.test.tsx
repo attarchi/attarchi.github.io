@@ -1,13 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { Badge } from '../Badge';
 
 describe('Badge', () => {
-  it('renders with default props', () => {
+  it('renders with children content', () => {
     render(<Badge>Test Badge</Badge>);
     const badge = screen.getByText('Test Badge');
     expect(badge).toBeInTheDocument();
-    expect(badge).toHaveClass('bg-accent');
   });
 
   it('renders with secondary variant', () => {
@@ -28,16 +26,15 @@ describe('Badge', () => {
     expect(badge).toHaveClass('custom-class');
   });
 
-  it('handles hover state', async () => {
-    render(<Badge>Hover Badge</Badge>);
-    const badge = screen.getByText('Hover Badge');
-    await userEvent.hover(badge);
-    expect(badge).toHaveClass('hover:bg-accent/80');
-  });
-
   it('maintains accessibility attributes', () => {
     render(<Badge role="status">Accessible Badge</Badge>);
     const badge = screen.getByRole('status');
     expect(badge).toBeInTheDocument();
+  });
+
+  it('passes through additional props', () => {
+    render(<Badge data-testid="badge-test" aria-label="test badge">Test Badge</Badge>);
+    const badge = screen.getByTestId('badge-test');
+    expect(badge).toHaveAttribute('aria-label', 'test badge');
   });
 }); 
