@@ -20,7 +20,9 @@ describe('Typewriter', () => {
   });
 
   afterEach(() => {
-    jest.runOnlyPendingTimers();
+    act(() => {
+      jest.runOnlyPendingTimers();
+    });
     jest.useRealTimers();
   });
 
@@ -39,6 +41,10 @@ describe('Typewriter', () => {
     render(<Typewriter {...defaultProps} />);
     
     // Should start typing immediately
+    await act(async () => {
+      jest.advanceTimersByTime(50);
+    });
+    
     await waitFor(() => {
       expect(screen.getByTestId('typewriter-container')).toHaveTextContent('H|');
     });
@@ -48,12 +54,16 @@ describe('Typewriter', () => {
     render(<Typewriter {...defaultProps} />);
     
     // Wait for first character
+    await act(async () => {
+      jest.advanceTimersByTime(50);
+    });
+    
     await waitFor(() => {
       expect(screen.getByTestId('typewriter-container')).toHaveTextContent('H|');
     });
     
     // Advance timer and wait for next character
-    act(() => {
+    await act(async () => {
       jest.advanceTimersByTime(50);
     });
     
@@ -62,7 +72,7 @@ describe('Typewriter', () => {
     });
     
     // Advance timer and wait for more characters
-    act(() => {
+    await act(async () => {
       jest.advanceTimersByTime(100);
     });
     
@@ -75,7 +85,7 @@ describe('Typewriter', () => {
     render(<Typewriter {...defaultProps} />);
     
     // Advance timer to complete typing
-    act(() => {
+    await act(async () => {
       jest.advanceTimersByTime(600); // 11 characters * 50ms + buffer
     });
     
@@ -121,14 +131,18 @@ describe('Typewriter', () => {
     render(<Typewriter text="Hi" speed={200} />);
     
     // Wait for typing to start and show first character
+    await act(async () => {
+      jest.advanceTimersByTime(200);
+    });
+    
     await waitFor(() => {
       const text = screen.getByTestId('typewriter-container').textContent;
       expect(text).toMatch(/^H/);
     });
     
     // Advance timer to complete typing
-    act(() => {
-      jest.advanceTimersByTime(400); // 2 characters * 200ms
+    await act(async () => {
+      jest.advanceTimersByTime(200); // Second character
     });
     
     // Wait for final result

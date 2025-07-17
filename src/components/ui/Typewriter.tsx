@@ -21,7 +21,6 @@ export function Typewriter({
   const [isComplete, setIsComplete] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
-  // Check for reduced motion preference
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setPrefersReducedMotion(mediaQuery.matches);
@@ -34,7 +33,6 @@ export function Typewriter({
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  // Start typing immediately when component mounts
   useEffect(() => {
     if (prefersReducedMotion) {
       setDisplayText(text);
@@ -43,11 +41,8 @@ export function Typewriter({
       return;
     }
 
-    // Start typing immediately
     setIsTyping(true);
   }, [text, prefersReducedMotion, onComplete]);
-
-  // Typewriter animation effect
   useEffect(() => {
     if (!isTyping || prefersReducedMotion) {
       return;
@@ -66,7 +61,6 @@ export function Typewriter({
     }
   }, [displayText, text, speed, isTyping, prefersReducedMotion, onComplete]);
 
-  // Show cursor only while typing, and not for reduced motion
   const showCursor = !prefersReducedMotion && !isComplete;
 
   return (
