@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-jest.mock('../../../lib/hooks/useTimelineProgress');
+jest.mock('@/lib/hooks');
 jest.mock('framer-motion', () => {
   const actual = jest.requireActual('framer-motion');
   return {
@@ -21,7 +21,7 @@ jest.mock('framer-motion', () => {
     },
   };
 });
-import { useTimelineProgress } from '../../../lib/hooks/useTimelineProgress';
+import { useTimelineProgress } from '@/lib/hooks';
 import { ProfessionalJourney } from '../ProfessionalJourney';
 
 const milestones = [

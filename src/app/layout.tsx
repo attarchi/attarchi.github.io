@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from '../lib/theme/ThemeContext'
+import { ThemeProvider } from '../lib/theme'
 import { ProgressBar } from '@/components/ui';
 
 const jetbrainsMono = JetBrains_Mono({

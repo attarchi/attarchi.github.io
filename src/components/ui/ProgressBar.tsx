@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { useScrollProgress } from '@/lib/hooks/useScrollProgress';
+import { useScrollProgress } from '@/lib/hooks';
 
 // GitHub accent colors
 const ACCENT_LIGHT = '#0969da';

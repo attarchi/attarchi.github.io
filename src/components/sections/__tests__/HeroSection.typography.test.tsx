@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import { HeroSection } from '../HeroSection';
-import { ThemeProvider } from '../../../lib/theme/ThemeContext';
+import { ThemeProvider } from '@/lib/theme';
 
 jest.useFakeTimers();
 

@@ -9,7 +9,7 @@ import {
   proficiencyScaleVariants,
   proficiencyFillVariants,
   sectionVariants
-} from "@/lib/animation-variants";
+} from "@/lib";
 // Default skill categories with individual skills and years of experience
 const defaultCategories = [
   {

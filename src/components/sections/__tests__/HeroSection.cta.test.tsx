@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { HeroSection } from '../HeroSection';
-import { ThemeProvider } from '../../../lib/theme/ThemeContext';
+import { ThemeProvider } from '@/lib/theme';
 
 describe('HeroSection CTA Buttons Requirements', () => {
   const renderWithTheme = (component: React.ReactElement) => {

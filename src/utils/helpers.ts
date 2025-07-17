@@ -10,19 +10,9 @@ export const formatDate = (date: string): string => {
     });
 };
 
-export const generateSlug = (title: string): string => {
-    return title
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)/g, '');
-};
 
-export const calculateReadingTime = (content: string): number => {
-    if (!content.trim()) return 0;
-    const wordsPerMinute = 200;
-    const words = content.trim().split(/\s+/).length;
-    return Math.max(1, Math.ceil(words / wordsPerMinute));
-};
+
+
 
 export const sortByDate = (items: BlogPost[]): BlogPost[] => {
     return [...items].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

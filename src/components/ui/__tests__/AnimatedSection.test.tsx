@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { AnimatedSection } from '../AnimatedSection';
-import { useScrollAnimation } from '@/lib/hooks/useScrollAnimation';
+import { useScrollAnimation } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 
 // Mock the useScrollAnimation hook

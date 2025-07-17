@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useContext } from 'react'
-import { ThemeContext } from '../../lib/theme/ThemeContext'
+import { ThemeContext } from '@/lib/theme'
 
 export const ThemeToggle: React.FC = () => {
   const { theme, setTheme } = useContext(ThemeContext)

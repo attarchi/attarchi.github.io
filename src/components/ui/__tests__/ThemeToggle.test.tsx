@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ThemeToggle } from '../ThemeToggle'
-import { ThemeContext } from '../../../lib/theme/ThemeContext'
+import { ThemeContext } from '@/lib/theme'
 import React, { useState } from 'react'
 
 const renderWithTheme = (initialTheme: 'light' | 'dark' = 'light') => {

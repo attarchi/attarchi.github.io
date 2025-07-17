@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { useTimelineProgress } from '../../lib/hooks/useTimelineProgress';
-import { slideInVariants, scaleVariants } from '../../lib/animation-variants';
+import { slideInVariants, scaleVariants } from '@/lib';
+import { useTimelineProgress } from '@/lib/hooks';
 
 export interface ProfessionalJourneyProps {
   milestones?: Milestone[];

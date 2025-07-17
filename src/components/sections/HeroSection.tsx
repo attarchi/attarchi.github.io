@@ -10,26 +10,10 @@ import { Section } from "../ui/Section";
 import { Badge } from "../ui/Badge";
 import { AnimatedSection } from "../ui/AnimatedSection";
 import { Typewriter } from "../ui/Typewriter";
+import { HeroContent } from "@/content";
 
-interface HeroSectionProps {
-  title: string;
-  description: string;
-  location?: string;
-  avatarSrc?: string;
-  avatarAlt?: string;
-  ctaPrimary?: {
-    text: string;
-    link: string;
-  };
-  ctaSecondary?: {
-    text: string;
-    link: string;
-  };
-  ctaTertiary?: {
-    text: string;
-    link: string;
-  };
-  className?: string;
+interface HeroSectionProps extends HeroContent {
+  className?: string | undefined;
 }
 
 export function HeroSection({
@@ -46,7 +30,7 @@ export function HeroSection({
   const [typewriterComplete, setTypewriterComplete] = useState(false);
 
   // Calculate the total duration of typewriter animation
-  const typewriterDuration = (title.length * 50) / 1000; // 50ms per character
+  const typewriterDuration = (title?.length || 0 * 50) / 1000; // 50ms per character
   const descriptionDelay = 0.4; // Start description 0.4s after location
   const buttonDelay = descriptionDelay + 0.4; // Start buttons 0.4s after description
 
@@ -56,7 +40,7 @@ export function HeroSection({
 
   return (
     <motion.section
-      className={`w-full max-w-7xl relative min-h-screen flex items-center justify-center overflow-hidden pt-16 !max-w-none !text-center !py-0 ${className}`}
+      className={`w-full relative min-h-screen flex items-center justify-center overflow-hidden pt-16 !max-w-none !text-center !py-0 ${className}`}
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
     >
@@ -85,7 +69,7 @@ export function HeroSection({
         >
           <h1 className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text" data-testid="hero-heading">
             <Typewriter
-              text={title}
+              text={title || ""}
               speed={50}
               className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
               onComplete={handleTypewriterComplete}

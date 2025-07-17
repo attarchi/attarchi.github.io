@@ -1,6 +1,6 @@
 import { render, screen, waitFor, act } from "@testing-library/react";
 import { HeroSection } from "../HeroSection";
-import { ThemeProvider } from '../../../lib/theme/ThemeContext';
+import { ThemeProvider } from '@/lib/theme';
 
 // Mock next/image
 jest.mock("next/image", () => ({

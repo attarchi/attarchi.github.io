@@ -1,4 +1,5 @@
-import { formatDate, generateSlug, calculateReadingTime, sortByDate, filterByCategory, getUniqueTags } from '../helpers';
+import { formatDate, sortByDate, filterByCategory, getUniqueTags } from '../helpers';
+import { calculateReadingTime } from '../../lib';
 import { BlogPost, Project } from '../../types';
 
 describe('formatDate', () => {
@@ -9,25 +10,7 @@ describe('formatDate', () => {
     });
 });
 
-describe('generateSlug', () => {
-    it('generates slug from title', () => {
-        const title = 'Hello World!';
-        const slug = generateSlug(title);
-        expect(slug).toBe('hello-world');
-    });
 
-    it('handles special characters', () => {
-        const title = 'Test & More @ Special';
-        const slug = generateSlug(title);
-        expect(slug).toBe('test-more-special');
-    });
-
-    it('handles leading and trailing special characters', () => {
-        const title = '!@#$% Test @#$%!';
-        const slug = generateSlug(title);
-        expect(slug).toBe('test');
-    });
-});
 
 describe('calculateReadingTime', () => {
     it('calculates reading time correctly', () => {
@@ -55,42 +38,42 @@ describe('sortByDate', () => {
             {
                 slug: 'post-1',
                 title: 'Post 1',
-                date: '2024-03-15',
+                date: new Date('2024-03-15'),
                 excerpt: 'Excerpt 1',
                 content: '',
                 tags: [],
                 category: 'Technical Deep Dives',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             },
             {
                 slug: 'post-2',
                 title: 'Post 2',
-                date: '2024-03-20',
+                date: new Date('2024-03-20'),
                 excerpt: 'Excerpt 2',
                 content: '',
                 tags: [],
                 category: 'Technical Deep Dives',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             },
             {
                 slug: 'post-3',
                 title: 'Post 3',
-                date: '2024-03-10',
+                date: new Date('2024-03-10'),
                 excerpt: 'Excerpt 3',
                 content: '',
                 tags: [],
                 category: 'Technical Deep Dives',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             }
         ];
 
         const sorted = sortByDate(posts);
-        expect(sorted[0].date).toBe('2024-03-20');
-        expect(sorted[1].date).toBe('2024-03-15');
-        expect(sorted[2].date).toBe('2024-03-10');
+        expect(sorted[0].date).toEqual(new Date('2024-03-20'));
+        expect(sorted[1].date).toEqual(new Date('2024-03-15'));
+        expect(sorted[2].date).toEqual(new Date('2024-03-10'));
     });
 });
 
@@ -100,35 +83,35 @@ describe('filterByCategory', () => {
             {
                 slug: 'post-1',
                 title: 'Post 1',
-                date: '2024-03-15',
+                date: new Date('2024-03-15'),
                 excerpt: 'Excerpt 1',
                 content: '',
                 tags: [],
                 category: 'Technical Deep Dives',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             },
             {
                 slug: 'post-2',
                 title: 'Post 2',
-                date: '2024-03-20',
+                date: new Date('2024-03-20'),
                 excerpt: 'Excerpt 2',
                 content: '',
                 tags: [],
                 category: 'Problem-Solving Stories',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             },
             {
                 slug: 'post-3',
                 title: 'Post 3',
-                date: '2024-03-10',
+                date: new Date('2024-03-10'),
                 excerpt: 'Excerpt 3',
                 content: '',
                 tags: [],
                 category: 'Technical Deep Dives',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             }
         ];
 
@@ -204,35 +187,35 @@ describe('getUniqueTags', () => {
             {
                 slug: 'post-1',
                 title: 'Post 1',
-                date: '2024-03-15',
+                date: new Date('2024-03-15'),
                 excerpt: 'Excerpt 1',
                 content: '',
                 tags: ['react', 'typescript'],
                 category: 'Technical Deep Dives',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             },
             {
                 slug: 'post-2',
                 title: 'Post 2',
-                date: '2024-03-20',
+                date: new Date('2024-03-20'),
                 excerpt: 'Excerpt 2',
                 content: '',
                 tags: ['react', 'javascript'],
                 category: 'Technical Deep Dives',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             },
             {
                 slug: 'post-3',
                 title: 'Post 3',
-                date: '2024-03-10',
+                date: new Date('2024-03-10'),
                 excerpt: 'Excerpt 3',
                 content: '',
                 tags: ['node', 'typescript'],
                 category: 'Technical Deep Dives',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             }
         ];
 
@@ -249,13 +232,13 @@ describe('getUniqueTags', () => {
             {
                 slug: 'post-1',
                 title: 'Post 1',
-                date: '2024-03-15',
+                date: new Date('2024-03-15'),
                 excerpt: 'Excerpt 1',
                 content: '',
                 tags: [],
                 category: 'Technical Deep Dives',
                 readingTime: 5,
-                author: 'Author'
+                published: true
             }
         ];
 

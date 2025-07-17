@@ -4,17 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Heading, Text } from "../ui/Typography";
 import { Badge } from "../ui/Badge";
-import { slideUpVariants, fadeVariants, staggerVariants, sectionVariants } from "@/lib/animation-variants";
+import { slideUpVariants, fadeVariants, staggerVariants, sectionVariants } from "@/lib";
+import { ContactContent } from "@/content";
 
-export interface ContactSectionProps {
-  status: string;
-  location: string;
-  email: string;
-  linkedinUrl: string;
-  githubUrl: string;
-  responseTime: string;
-  availabilityType: string;
-}
+export interface ContactSectionProps extends ContactContent {}
 
 export function ContactSection({
   status,

@@ -6,8 +6,6 @@ export {
     calculateReadingTime
 } from './markdown-parser';
 
-export { generateSlug } from './slug-generator';
-
 export {
     sectionVariants,
     staggerVariants,
@@ -29,4 +27,4 @@ export {
     createStaggerVariants
 } from './animation-variants';
 
-export { ThemeProvider, ThemeContext } from './theme/ThemeContext'; 
+export { ThemeProvider, ThemeContext } from './theme';
