@@ -345,13 +345,6 @@ describe("TechnicalExpertise", () => {
   });
 
   describe("Cascade Animation", () => {
-    it("wraps section with AnimatedSection component", () => {
-      render(<TechnicalExpertise />);
-      
-      const section = screen.getByRole("region", { name: /technical expertise/i });
-      expect(section).toBeInTheDocument();
-    });
-
     it("applies slideIn animation variant to categories", () => {
       render(<TechnicalExpertise />);
       

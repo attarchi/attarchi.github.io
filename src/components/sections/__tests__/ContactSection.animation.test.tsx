@@ -13,33 +13,6 @@ jest.mock("framer-motion", () => ({
 }));
 
 describe("ContactSection Animations", () => {
-  it("wraps contact section with AnimatedSection component", () => {
-    render(
-      <ContactSection
-        status="Available"
-        location="Test City"
-        email="test@example.com"
-        linkedinUrl="https://linkedin.com/in/test"
-        githubUrl="https://github.com/test"
-        responseTime="Within 1 day"
-        availabilityType="Full-time"
-      />
-    );
-    const section = screen.getByRole("region", { name: /contact/i });
-    expect(section).toBeInTheDocument();
-    // The section should be wrapped with AnimatedSection which applies motion variants
-    expect(section.parentElement).toBeInTheDocument();
-  });
-
-  it("applies slide-up animation to contact section container", () => {
-    render(<ContactSection />);
-    
-    const animatedSection = screen.getByTestId("contact-section-animated");
-    expect(animatedSection).toBeInTheDocument();
-    // The AnimatedSection wrapper should apply slideUp variants
-    expect(animatedSection).toHaveAttribute("data-testid", "contact-section-animated");
-  });
-
   it("form fields have stagger animation with 100ms delays", () => {
     render(<ContactSection />);
     

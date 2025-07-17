@@ -74,13 +74,6 @@ describe("HeroSection Animation Sequence", () => {
     jest.clearAllTimers();
   });
 
-  it("renders with AnimatedSection wrapper", () => {
-    render(<HeroSection {...defaultProps} />);
-    const container = screen.getByTestId("typewriter-container");
-    const section = container.closest("section");
-    expect(section).toBeInTheDocument();
-  });
-
   it("shows typewriter animation for title", () => {
     render(<HeroSection {...defaultProps} />);
     expect(screen.getByTestId("typewriter-cursor")).toBeInTheDocument();

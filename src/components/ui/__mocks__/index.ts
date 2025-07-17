@@ -7,7 +7,6 @@ export const CardContent = ({ children, ...props }: any) => React.createElement(
 export const Badge = ({ children, ...props }: any) => React.createElement('span', { ...props, 'data-testid': 'badge' }, children);
 export const Typography = ({ children, ...props }: any) => React.createElement('div', { ...props, 'data-testid': 'typography' }, children);
 export const Section = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'section' }, children);
-export const AnimatedSection = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'animated-section' }, children);
 export const Typewriter = ({ children, ...props }: any) => React.createElement('div', { ...props, 'data-testid': 'typewriter' }, children);
 export const ThemeToggle = ({ ...props }: any) => React.createElement('button', { ...props, 'data-testid': 'theme-toggle' });
 export const ProgressBar = ({ ...props }: any) => React.createElement('div', { ...props, 'data-testid': 'progress-bar' });

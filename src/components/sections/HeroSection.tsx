@@ -6,9 +6,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../ui/Button";
 import { Heading, Text } from "../ui/Typography";
-import { Section } from "../ui/Section";
-import { Badge } from "../ui/Badge";
-import { AnimatedSection } from "../ui/AnimatedSection";
 import { Typewriter } from "../ui/Typewriter";
 import { HeroContent } from "@/content";
 

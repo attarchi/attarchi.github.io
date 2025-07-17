@@ -46,13 +46,6 @@ describe('HeroSection Responsive Layout Requirements', () => {
       const section = heading.closest('section');
       expect(section).toHaveClass('flex', 'items-center', 'justify-center');
     });
-
-    it('overrides AnimatedSection default classes for proper centering', async () => {
-      renderWithTheme(<HeroSection {...defaultProps} />);
-      const heading = await screen.findByRole('heading', { level: 1 });
-      const section = heading.closest('section');
-      expect(section).toHaveClass('!max-w-none', '!text-center', '!py-0');
-    });
   });
 
   describe('Container and Content Width', () => {
