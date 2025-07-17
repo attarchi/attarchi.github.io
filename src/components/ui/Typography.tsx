@@ -94,4 +94,4 @@ function Text({
   );
 }
 
-export { Heading, Text, headingVariants, textVariants }; 
+export { Heading, Text }; 

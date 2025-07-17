@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Heading, Text } from "../ui/Typography";
-import { Badge } from "../ui/Badge";
+import { Heading, Text, Badge } from "@/components/ui";
 import { slideUpVariants, fadeVariants, staggerVariants, sectionVariants } from "@/lib";
 import { ContactContent } from "@/content";
 
@@ -17,6 +16,11 @@ export function ContactSection({
   githubUrl,
   responseTime,
   availabilityType,
+  sectionTitle = "Let's Work Together",
+  sectionSubtitle = "Available for exciting projects and opportunities",
+  contactInfoTitle = "Contact Information",
+  formTitle = "Send Message",
+  formDescription = "Feature coming soon! This form will be available when the site goes live.",
 }: ContactSectionProps) {
   const [showMessage, setShowMessage] = useState(false);
 
@@ -44,10 +48,10 @@ export function ContactSection({
             size="h2"
             className="font-mono text-[2.5rem] md:text-[2.5rem] font-semibold text-text mb-4"
           >
-            Let's Work Together
+            {sectionTitle}
           </Heading>
           <Text size="base" className="font-sans text-base text-text">
-            Available for exciting projects and opportunities
+            {sectionSubtitle}
           </Text>
         </div>
 
@@ -62,7 +66,7 @@ export function ContactSection({
             <div className="space-y-6">
               <div className="flex items-center justify-between">
                 <Heading as="h3" size="h3" className="font-mono font-medium text-text">
-                  Contact Information
+                  {contactInfoTitle}
                 </Heading>
                 <motion.div
                   variants={fadeVariants}
@@ -207,13 +211,13 @@ export function ContactSection({
           >
             <div className="space-y-6">
               <Heading as="h3" size="h3" className="font-mono font-medium text-text">
-                Send Message
+                {formTitle}
               </Heading>
 
               {showMessage && (
                 <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-md">
                   <Text size="sm" className="font-sans text-blue-700 dark:text-blue-400">
-                    Feature coming soon! This form will be available when the site goes live.
+                    {formDescription}
                   </Text>
                 </div>
               )}

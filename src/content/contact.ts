@@ -6,6 +6,11 @@ export interface ContactContent {
     githubUrl?: string | undefined;
     responseTime?: string | undefined;
     availabilityType?: string | undefined;
+    sectionTitle?: string | undefined;
+    sectionSubtitle?: string | undefined;
+    contactInfoTitle?: string | undefined;
+    formTitle?: string | undefined;
+    formDescription?: string | undefined;
 }
 
 export const contactContent: ContactContent = {
@@ -15,5 +20,10 @@ export const contactContent: ContactContent = {
     linkedinUrl: "https://linkedin.com/in/attarchi",
     githubUrl: "https://github.com/attarchi",
     responseTime: "Usually within 24 hours",
-    availabilityType: "Full-time, Contract, Consulting"
+    availabilityType: "Full-time, Contract, Consulting",
+    sectionTitle: "Let's Work Together",
+    sectionSubtitle: "Available for exciting projects and opportunities",
+    contactInfoTitle: "Contact Information",
+    formTitle: "Send Message",
+    formDescription: "Feature coming soon! This form will be available when the site goes live."
 }; 
