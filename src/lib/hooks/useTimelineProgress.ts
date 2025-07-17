@@ -18,37 +18,6 @@ export interface UseTimelineProgressReturn {
     activeMilestones: string[];
 }
 
-/**
- * useTimelineProgress - React hook for timeline scroll progress and milestone reveal timing.
- *
- * Features:
- * - Calculates scroll progress through timeline section
- * - Reveals milestones progressively based on progress thresholds
- * - Uses Intersection Observer for performance
- * - Handles responsive timeline behavior
- * - Respects prefers-reduced-motion setting
- * - Supports triggerOnce to prevent re-animation
- *
- * @example
- * const { ref, progress, activeMilestones } = useTimelineProgress({
- *   milestones: [
- *     { id: '1', progressThreshold: 0.2 },
- *     { id: '2', progressThreshold: 0.5 },
- *     { id: '3', progressThreshold: 0.8 },
- *   ],
- *   threshold: 0.1,
- *   rootMargin: '0px 0px -20% 0px',
- *   triggerOnce: true,
- * });
- *
- * @param {UseTimelineProgressOptions} options - Configuration options
- * @param {Milestone[]} [options.milestones=[]] - Array of milestones with progress thresholds
- * @param {number} [options.threshold=0.1] - Intersection Observer threshold
- * @param {string} [options.rootMargin='0px'] - Root margin for Intersection Observer
- * @param {boolean} [options.triggerOnce=false] - If true, animation triggers only once
- *
- * @returns {UseTimelineProgressReturn} Object with ref, progress, and activeMilestones
- */
 export function useTimelineProgress(options: UseTimelineProgressOptions = {}): UseTimelineProgressReturn {
     const {
         milestones = [],
@@ -79,8 +48,6 @@ export function useTimelineProgress(options: UseTimelineProgressOptions = {}): U
 
         if (!rootRect) return 0;
 
-        // For testing purposes, use intersectionRatio as a simple progress indicator
-        // In real implementation, this would be more sophisticated
         const progress = Math.max(0, Math.min(1, entry.intersectionRatio));
 
         return progress;
@@ -95,19 +62,14 @@ export function useTimelineProgress(options: UseTimelineProgressOptions = {}): U
     }, [milestones]);
 
     const ref = useCallback((node: Element | null) => {
-        // Prevent infinite loops by checking if node actually changed
         if (nodeRef.current === node) {
             return;
         }
 
-        // Cleanup previous observer
         cleanupObserver();
-
-        // Update node reference
         nodeRef.current = node;
 
         if (!node || typeof IntersectionObserver === 'undefined') {
-            // Only update state if we haven't initialized or if we're actually changing from a valid node
             if (!isInitializedRef.current || nodeRef.current !== null) {
                 setProgress(0);
                 setActiveMilestones([]);
@@ -117,7 +79,6 @@ export function useTimelineProgress(options: UseTimelineProgressOptions = {}): U
             return;
         }
 
-        // Mark as initialized
         isInitializedRef.current = true;
 
         observerRef.current = new IntersectionObserver(
@@ -127,12 +88,10 @@ export function useTimelineProgress(options: UseTimelineProgressOptions = {}): U
 
                     const currentProgress = calculateProgress(entry);
 
-                    // If triggerOnce is enabled and we've already completed the animation, don't update
                     if (triggerOnce && hasTriggeredOnce.current && currentProgress < 1) {
                         return;
                     }
 
-                    // If triggerOnce is enabled and we've reached full progress, mark as triggered
                     if (triggerOnce && currentProgress >= 1) {
                         hasTriggeredOnce.current = true;
                     }

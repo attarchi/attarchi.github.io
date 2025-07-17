@@ -1,5 +1,5 @@
 import { renderHook, act, waitFor } from '@testing-library/react';
-import { useTimelineProgress } from '../useTimelineProgress';
+import { useTimelineProgress } from '@/lib/hooks/useTimelineProgress';
 
 // Mock Intersection Observer
 const mockIntersectionObserver = jest.fn();

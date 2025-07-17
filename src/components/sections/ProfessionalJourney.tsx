@@ -4,48 +4,13 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { slideInVariants, scaleVariants } from '@/lib';
 import { useTimelineProgress } from '@/lib/hooks';
+import { type ProfessionalMilestone } from '@/content';
 
 export interface ProfessionalJourneyProps {
-  milestones?: Milestone[];
+  milestones?: ProfessionalMilestone[];
 }
 
-interface Milestone {
-  id: string;
-  date: string;
-  role: string;
-  company: string;
-  description: string;
-  achievement: string;
-}
-
-const defaultMilestones: Milestone[] = [
-  {
-    id: "1",
-    date: "2023-Present",
-    role: "Senior Full-Stack Developer",
-    company: "TechCorp",
-    description: "Leading development of enterprise-scale applications with modern tech stack. Mentoring junior developers and architecting scalable solutions.",
-    achievement: "Team Lead"
-  },
-  {
-    id: "2", 
-    date: "2021-2023",
-    role: "Full-Stack Developer",
-    company: "StartupXYZ",
-    description: "Built MVP from ground up using React Native and Node.js. Implemented real-time features and optimized performance for mobile platforms.",
-    achievement: "MVP Launch"
-  },
-  {
-    id: "3",
-    date: "2019-2021", 
-    role: "Frontend Developer",
-    company: "DevAgency",
-    description: "Developed responsive web applications and collaborated with design teams. Focused on user experience and modern frontend frameworks.",
-    achievement: "UI Redesign"
-  }
-];
-
-export function ProfessionalJourney({ milestones = defaultMilestones }: ProfessionalJourneyProps = {}) {
+export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
