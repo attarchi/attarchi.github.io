@@ -3,37 +3,13 @@
 import { motion } from 'framer-motion';
 import { ProjectCard } from '@/components/ui';
 import { projectStaggerVariants } from '@/lib';
-
-// Default project data
-const defaultProjects = [
-  {
-    title: "CCPTools Ecosystem",
-    description: "Microservices platform focused on construction cost planning and scalability. Features real-time calculations, mobile apps, and scalable backend architecture.",
-    technologies: ["React Native", "Node.js", "PostgreSQL", "Docker", "Redis"]
-  },
-  {
-    title: "Nutrition Management Platform",
-    description: "Multi-tenant SaaS platform focused on scalable nutrition tracking with tenant isolation. Features real-time tracking, analytics, and production-ready architecture.",
-    technologies: ["React", "NestJS", "PostgreSQL", "Redis", "TypeScript"]
-  },
-  {
-    title: "Healthcare Management System",
-    description: "HIPAA-Compliant Platform focused on patient management and compliance. Features HIPAA compliance, real-time monitoring, secure auth, and case study available.",
-    technologies: ["Next.js", "Express", "MongoDB", "AWS", "TypeScript"]
-  }
-];
-
-export interface Project {
-  title: string;
-  description: string;
-  technologies: string[];
-}
+import { type Project } from '@/content';
 
 export interface FeaturedProjectsProps {
   projects?: Project[];
 }
 
-export function FeaturedProjects({ projects = defaultProjects }: FeaturedProjectsProps) {
+export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   return (
     <section 
       className="py-20 bg-[#ffffff] dark:bg-[#0d1117]"
@@ -55,7 +31,7 @@ export function FeaturedProjects({ projects = defaultProjects }: FeaturedProject
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          {projects.map((project, index) => (
+          {projects?.map((project, index) => (
             <ProjectCard
               key={index}
               title={project.title}
