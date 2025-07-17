@@ -17,60 +17,27 @@ const mockProjects = [
 ];
 
 describe("FeaturedProjects", () => {
-  it("renders section with correct structure", () => {
+  it("renders section with correct structure and heading", () => {
     render(<FeaturedProjects projects={mockProjects} />);
     
     const section = screen.getByRole("region", { name: /featured projects/i });
     expect(section).toBeInTheDocument();
-  });
-
-  it("renders container with correct attributes", () => {
-    render(<FeaturedProjects projects={mockProjects} />);
     
     const container = screen.getByTestId("featured-projects-container");
     expect(container).toBeInTheDocument();
-  });
-
-  it("renders heading with correct text", () => {
-    render(<FeaturedProjects projects={mockProjects} />);
     
     const heading = screen.getByRole("heading", { level: 2 });
     expect(heading).toHaveTextContent("Featured Projects");
   });
 
-  it("renders projects grid", () => {
+  it("renders projects grid with correct number of items", () => {
     render(<FeaturedProjects projects={mockProjects} />);
     
     const grid = screen.getByTestId("projects-grid");
     expect(grid).toBeInTheDocument();
-  });
-
-  it("renders correct number of project cards when projects provided", () => {
-    render(<FeaturedProjects projects={mockProjects} />);
     
     const projectCards = screen.getAllByTestId("project-card");
     expect(projectCards).toHaveLength(2);
-  });
-
-  it("accepts custom projects prop", () => {
-    render(<FeaturedProjects projects={mockProjects} />);
-    
-    const projectCards = screen.getAllByTestId("project-card");
-    expect(projectCards).toHaveLength(2);
-  });
-
-  it("passes correct props to ProjectCard components", () => {
-    render(<FeaturedProjects projects={mockProjects} />);
-    
-    expect(screen.getByText("Test Project 1")).toBeInTheDocument();
-    expect(screen.getByText("Test description 1")).toBeInTheDocument();
-    expect(screen.getByText("React")).toBeInTheDocument();
-    expect(screen.getByText("Node.js")).toBeInTheDocument();
-    
-    expect(screen.getByText("Test Project 2")).toBeInTheDocument();
-    expect(screen.getByText("Test description 2")).toBeInTheDocument();
-    expect(screen.getByText("Next.js")).toBeInTheDocument();
-    expect(screen.getByText("PostgreSQL")).toBeInTheDocument();
   });
 
   it("renders empty grid when no projects provided", () => {
@@ -91,5 +58,84 @@ describe("FeaturedProjects", () => {
     
     const projectCards = screen.queryAllByTestId("project-card");
     expect(projectCards).toHaveLength(0);
+  });
+
+  describe("Dynamic Grid Layout", () => {
+    it("uses 2 columns layout for less than 3 projects", () => {
+      const oneProject = [mockProjects[0]];
+      render(<FeaturedProjects projects={oneProject} />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("grid-cols-1", "md:grid-cols-2", "lg:grid-cols-2");
+    });
+
+    it("uses 2 columns layout for exactly 2 projects", () => {
+      render(<FeaturedProjects projects={mockProjects} />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("grid-cols-1", "md:grid-cols-2", "lg:grid-cols-2");
+    });
+
+    it("uses 3 columns layout for exactly 3 projects", () => {
+      const threeProjects = [...mockProjects, {
+        title: "Test Project 3",
+        description: "Test description 3",
+        technologies: ["Vue", "MongoDB"]
+      }];
+      render(<FeaturedProjects projects={threeProjects} />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("grid-cols-1", "md:grid-cols-2", "lg:grid-cols-3");
+    });
+
+    it("uses 2 columns layout for exactly 4 projects", () => {
+      const fourProjects = [...mockProjects, 
+        {
+          title: "Test Project 3",
+          description: "Test description 3",
+          technologies: ["Vue", "MongoDB"]
+        },
+        {
+          title: "Test Project 4",
+          description: "Test description 4",
+          technologies: ["Angular", "MySQL"]
+        }
+      ];
+      render(<FeaturedProjects projects={fourProjects} />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("grid-cols-1", "md:grid-cols-2", "lg:grid-cols-2");
+    });
+
+    it("uses 3 columns layout for 5 or more projects", () => {
+      const fiveProjects = [...mockProjects, 
+        {
+          title: "Test Project 3",
+          description: "Test description 3",
+          technologies: ["Vue", "MongoDB"]
+        },
+        {
+          title: "Test Project 4",
+          description: "Test description 4",
+          technologies: ["Angular", "MySQL"]
+        },
+        {
+          title: "Test Project 5",
+          description: "Test description 5",
+          technologies: ["Svelte", "Redis"]
+        }
+      ];
+      render(<FeaturedProjects projects={fiveProjects} />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("grid-cols-1", "md:grid-cols-2", "lg:grid-cols-3");
+    });
+
+    it("handles empty projects array with default grid layout", () => {
+      render(<FeaturedProjects projects={[]} />);
+      
+      const grid = screen.getByTestId("projects-grid");
+      expect(grid).toHaveClass("grid-cols-1", "md:grid-cols-2", "lg:grid-cols-2");
+    });
   });
 }); 

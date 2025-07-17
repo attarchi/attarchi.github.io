@@ -1,7 +1,7 @@
 import React from 'react';
 
 export { HeroSection } from './HeroSection';
-export const FeaturedProjects = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'featured-projects' }, children);
+export { FeaturedProjects } from './FeaturedProjects';
 export const TechnicalExpertise = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'technical-expertise' }, children);
 export const ProfessionalJourney = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'professional-journey' }, children);
 export const ContactSection = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'contact-section' }, children);

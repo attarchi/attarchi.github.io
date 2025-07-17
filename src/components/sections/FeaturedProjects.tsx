@@ -9,7 +9,20 @@ export interface FeaturedProjectsProps {
   projects?: Project[];
 }
 
+function getGridClasses(projectCount: number): string {
+  const baseClasses = "grid grid-cols-1 md:grid-cols-2";
+  
+  if (projectCount === 3 || projectCount >= 5) {
+    return `${baseClasses} lg:grid-cols-3`;
+  }
+  
+  return `${baseClasses} lg:grid-cols-2`;
+}
+
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
+  const projectCount = projects?.length || 0;
+  const gridClasses = getGridClasses(projectCount);
+
   return (
     <section 
       className="py-20 bg-[#ffffff] dark:bg-[#0d1117]"
@@ -24,7 +37,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
         </h2>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
+          className={`${gridClasses} gap-8 mt-12`}
           data-testid="projects-grid"
           variants={projectStaggerVariants}
           initial="hidden"
