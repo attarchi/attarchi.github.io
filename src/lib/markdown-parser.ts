@@ -1,6 +1,18 @@
 import { marked } from 'marked';
 import matter from 'gray-matter';
-import { MarkdownContent, MarkdownFrontmatter, ParsedMarkdown } from '@/types';
+
+export interface MarkdownContent {
+    content: string;
+}
+
+export interface MarkdownFrontmatter {
+    [key: string]: any;
+}
+
+export interface ParsedMarkdown {
+    content: string;
+    frontmatter: MarkdownFrontmatter;
+}
 
 // Configure marked for GitHub-style rendering
 marked.setOptions({

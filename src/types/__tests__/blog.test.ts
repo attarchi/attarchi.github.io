@@ -1,19 +1,18 @@
-import { BlogPost } from '../index';
+import { BlogPost } from '@/components/blog/types';
 
 describe('Blog Post Interfaces', () => {
     describe('BlogPost interface', () => {
         it('should have all required fields with correct types', () => {
-            // This test will fail initially as the interface needs to be updated
             const mockBlogPost: BlogPost = {
                 title: 'Test Blog Post',
                 slug: 'test_blog_post',
-                date: new Date('2024-01-01'), // This should be Date, not string
+                date: new Date('2024-01-01'),
                 excerpt: 'This is a test excerpt',
                 tags: ['typescript', 'react'],
                 category: 'Technical Deep Dives',
                 content: '# Test Content\n\nThis is test content.',
                 readingTime: 5,
-                published: true // This field doesn't exist yet
+                published: true
             };
 
             expect(mockBlogPost.title).toBe('Test Blog Post');
