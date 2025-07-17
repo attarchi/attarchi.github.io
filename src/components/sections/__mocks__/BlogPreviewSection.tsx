@@ -1,5 +1,5 @@
 import React from 'react';
-import { BlogPost } from '@/types';
+import { BlogPost } from '../../blog/types';
 
 interface BlogPreviewSectionProps {
   posts: BlogPost[];

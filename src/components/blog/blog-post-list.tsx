@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo, Suspense } from 'react';
-import { BlogPost } from '@/types';
+import { BlogPost } from './types';
 import { BlogPostCard } from './blog-post-card';
 import { BlogFilters } from './blog-filters';
 

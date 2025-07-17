@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BlogPostCard } from '../blog/blog-post-card';
-import { BlogPost } from '@/types';
+import { BlogPost } from '../blog/types';
 
 // Mock data for testing
 const mockBlogPost: BlogPost = {

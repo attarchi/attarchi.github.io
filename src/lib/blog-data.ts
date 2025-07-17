@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { BlogPost } from '@/types';
+import { BlogPost } from '@/components/blog/types';
 import { parseMarkdown, extractFrontmatter, calculateReadingTime } from './markdown-parser';
 
 // Cache for parsed markdown content

@@ -1,4 +1,5 @@
-import { BlogPost, Project } from '../types';
+import { Project } from '../types';
+import { BlogPost } from '@/components/blog/types';
 
 export const formatDate = (date: string): string => {
     const d = new Date(date);

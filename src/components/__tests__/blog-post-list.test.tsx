@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BlogPostList } from '../blog/blog-post-list';
-import { BlogPost } from '@/types';
+import { BlogPost } from '../blog/types';
 
 // Mock data for testing
 const mockPosts: BlogPost[] = [

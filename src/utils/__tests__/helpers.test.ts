@@ -1,6 +1,7 @@
 import { formatDate, sortByDate, filterByCategory, getUniqueTags } from '../helpers';
 import { calculateReadingTime } from '../../lib';
-import { BlogPost, Project } from '../../types';
+import { Project } from '../../types';
+import { BlogPost } from '@/components/blog/types';
 
 describe('formatDate', () => {
     it('formats date correctly', () => {

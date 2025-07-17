@@ -1,4 +1,4 @@
-import { BlogPost } from '@/types';
+import { BlogPost } from '@/components/blog/types';
 
 // Mock blog posts data
 const mockPosts: BlogPost[] = [

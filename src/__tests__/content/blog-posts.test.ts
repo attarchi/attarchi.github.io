@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { BlogPostFrontmatter } from '@/types';
+import { BlogPostFrontmatter } from '@/components/blog/types';
 
 describe('Blog Posts Content Validation', () => {
     const postsDirectory = path.join(process.cwd(), 'src/content/posts');
