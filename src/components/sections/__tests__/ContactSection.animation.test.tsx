@@ -1,6 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { ContactSection } from "../ContactSection";
 import { motion } from "framer-motion";
+jest.mock('@/lib/hooks');
 
 // Mock framer-motion for testing animations
 jest.mock("framer-motion", () => ({
@@ -9,14 +10,6 @@ jest.mock("framer-motion", () => ({
     div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
   },
   AnimatePresence: ({ children }: any) => <div>{children}</div>,
-}));
-
-// Mock the useScrollAnimation hook
-jest.mock("@/lib/hooks/useScrollAnimation", () => ({
-  useScrollAnimation: () => ({
-    ref: { current: null },
-    isVisible: true,
-  }),
 }));
 
 describe("ContactSection Animations", () => {
