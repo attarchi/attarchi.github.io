@@ -1,7 +1,7 @@
 import { HeroSection, FeaturedProjects, TechnicalExpertise, ProfessionalJourney, ContactSection, BlogPreviewSection } from "@/components/sections";
 import { ThemeToggle } from '@/components/ui';
 import { getPublishedBlogPosts } from '@/lib/blog-data';
-import { heroContent, contactContent, professionalMilestones, projectsContent } from '@/content';
+import { heroContent, contactContent, professionalMilestones, projectsContent, technicalExpertiseContent } from '@/content';
 
 export default async function Home() {
   // Get real blog posts instead of using mock data
@@ -21,7 +21,7 @@ export default async function Home() {
       <FeaturedProjects projects={projectsContent.featured} />
 
       {/* Technical Expertise Section */}
-      <TechnicalExpertise />
+      <TechnicalExpertise categories={technicalExpertiseContent.categories} />
 
       {/* Professional Journey Section */}
       <ProfessionalJourney milestones={professionalMilestones} />

@@ -7,64 +7,15 @@ import {
   skillStaggerVariants,
   skillFadeVariants,
   proficiencyScaleVariants,
-  proficiencyFillVariants,
   sectionVariants
 } from "@/lib";
-// Default skill categories with individual skills and years of experience
-const defaultCategories = [
-  {
-    title: "Frontend",
-    skills: [
-      { name: "React", proficiency: 90, years: 5 },
-      { name: "TypeScript", proficiency: 85, years: 4 },
-      { name: "Next.js", proficiency: 80, years: 3 },
-      { name: "React Native", proficiency: 85, years: 4 }
-    ]
-  },
-  {
-    title: "Backend",
-    skills: [
-      { name: "Node.js", proficiency: 90, years: 5 },
-      { name: "Python", proficiency: 75, years: 3 },
-      { name: "PostgreSQL", proficiency: 80, years: 4 },
-      { name: "MongoDB", proficiency: 75, years: 3 }
-    ]
-  },
-  {
-    title: "DevOps",
-    skills: [
-      { name: "Docker", proficiency: 80, years: 3 },
-      { name: "AWS", proficiency: 70, years: 2 },
-      { name: "Kubernetes", proficiency: 65, years: 2 },
-      { name: "CI/CD", proficiency: 80, years: 3 }
-    ]
-  },
-  {
-    title: "Mobile",
-    skills: [
-      { name: "React Native", proficiency: 85, years: 4 },
-      { name: "iOS/Android", proficiency: 75, years: 3 },
-      { name: "Expo", proficiency: 70, years: 2 }
-    ]
-  }
-];
-
-export interface Skill {
-  name: string;
-  proficiency: number;
-  years?: number;
-}
-
-export interface SkillCategory {
-  title: string;
-  skills?: Skill[];
-}
+import { type SkillCategory } from "@/content";
 
 export interface TechnicalExpertiseProps {
   categories?: SkillCategory[];
 }
 
-export function TechnicalExpertise({ categories = defaultCategories }: TechnicalExpertiseProps) {
+export function TechnicalExpertise({ categories }: TechnicalExpertiseProps) {
   return (
     <motion.section
       aria-label="Technical Expertise"
@@ -87,7 +38,7 @@ export function TechnicalExpertise({ categories = defaultCategories }: Technical
           data-testid="categories-grid"
           variants={categoryStaggerVariants}
         >
-          {categories.map((category, index) => (
+          {categories?.map((category, index) => (
             <motion.div
               key={index}
               data-testid="category-card"

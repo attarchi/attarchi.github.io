@@ -1,34 +1,63 @@
 import React from 'react';
+import { type SkillCategory } from '@/content';
 
-interface TechnicalExpertiseProps {
-  title?: string;
-  description?: string;
+export interface TechnicalExpertiseProps {
+  categories?: SkillCategory[];
 }
 
-export function TechnicalExpertise({ 
-  title = "Technical Expertise", 
-  description = "Technologies and skills I work with" 
-}: TechnicalExpertiseProps) {
+export function TechnicalExpertise({ categories }: TechnicalExpertiseProps) {
+  const defaultCategories: SkillCategory[] = [
+    {
+      title: "Frontend",
+      skills: [
+        { name: "React", proficiency: 90, years: 5 },
+        { name: "TypeScript", proficiency: 85, years: 4 }
+      ]
+    },
+    {
+      title: "Backend",
+      skills: [
+        { name: "Node.js", proficiency: 90, years: 5 },
+        { name: "Python", proficiency: 75, years: 3 }
+      ]
+    }
+  ];
+
+  const displayCategories = categories || defaultCategories;
+
   return (
-    <section data-testid="technical-expertise-section">
-      <h2 data-testid="technical-expertise-title">{title}</h2>
-      <p data-testid="technical-expertise-description">{description}</p>
-      <div data-testid="technical-expertise-grid">
-        <div data-testid="expertise-category-1">
-          <h3 data-testid="expertise-category-title-1">Frontend</h3>
-          <ul data-testid="expertise-skills-1">
-            <li data-testid="skill-react">React</li>
-            <li data-testid="skill-nextjs">Next.js</li>
-            <li data-testid="skill-typescript">TypeScript</li>
-          </ul>
-        </div>
-        <div data-testid="expertise-category-2">
-          <h3 data-testid="expertise-category-title-2">Backend</h3>
-          <ul data-testid="expertise-skills-2">
-            <li data-testid="skill-nodejs">Node.js</li>
-            <li data-testid="skill-python">Python</li>
-            <li data-testid="skill-postgresql">PostgreSQL</li>
-          </ul>
+    <section data-testid="technical-expertise-section" aria-label="Technical Expertise">
+      <div data-testid="technical-expertise-container">
+        <h2>Technical Expertise</h2>
+        <div data-testid="categories-grid">
+          {displayCategories.map((category, index) => (
+            <div key={index} data-testid="category-card">
+              <h3>{category.title}</h3>
+              {category.skills && category.skills.length > 0 && (
+                <div data-testid="skills-list">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div key={skillIndex} data-testid="skill-item">
+                      <div 
+                        data-testid="skill-name"
+                        title={skill.years ? `${skill.years} years of experience` : undefined}
+                      >
+                        {skill.name}
+                        {skill.years && (
+                          <span>({skill.years} years)</span>
+                        )}
+                      </div>
+                      <div data-testid="proficiency-bar">
+                        <div 
+                          data-testid="proficiency-fill"
+                          data-skill-name={skill.name}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
