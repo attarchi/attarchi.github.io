@@ -126,4 +126,21 @@ export interface SiteConfig {
         label: string;
         href: string;
     }[];
+}
+
+export interface AnimationVariants {
+    hidden: Record<string, any>;
+    visible: Record<string, any>;
+    hover?: Record<string, any>;
+    tap?: Record<string, any>;
+    exit?: Record<string, any>;
+}
+
+export interface SlideInVariants {
+    left: AnimationVariants;
+    right: AnimationVariants;
+}
+
+export interface TypewriterVariants extends AnimationVariants {
+    typing: Record<string, any>;
 } 

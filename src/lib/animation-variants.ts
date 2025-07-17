@@ -1,24 +1,6 @@
 import { Variants } from 'framer-motion';
+import { AnimationVariants, SlideInVariants, TypewriterVariants } from '@/types';
 
-// Type definitions for animation variants
-export interface AnimationVariants {
-    hidden: Record<string, any>;
-    visible: Record<string, any>;
-    hover?: Record<string, any>;
-    tap?: Record<string, any>;
-    exit?: Record<string, any>;
-}
-
-export interface SlideInVariants {
-    left: AnimationVariants;
-    right: AnimationVariants;
-}
-
-export interface TypewriterVariants extends AnimationVariants {
-    typing: Record<string, any>;
-}
-
-// Section variants for main sections (opacity 0→1, y: 50→0, duration: 0.8s, easeOut)
 export const sectionVariants: Variants = {
     hidden: {
         opacity: 0,
@@ -34,7 +16,6 @@ export const sectionVariants: Variants = {
     }
 };
 
-// Stagger variants for staggered children animations
 export const staggerVariants: Variants = {
     hidden: {
         opacity: 0,
@@ -52,7 +33,6 @@ export const staggerVariants: Variants = {
     }
 };
 
-// Project cards stagger variants with 200ms delay between cards
 export const projectStaggerVariants: Variants = {
     hidden: {
         opacity: 0,
@@ -64,13 +44,12 @@ export const projectStaggerVariants: Variants = {
         transition: {
             duration: 0.8,
             ease: 'easeOut',
-            staggerChildren: 0.2, // 200ms delay between cards
+            staggerChildren: 0.2,
             delayChildren: 0.1
         }
     }
 };
 
-// Individual project card slideUp variants
 export const projectCardVariants: Variants = {
     hidden: {
         opacity: 0,
@@ -86,7 +65,6 @@ export const projectCardVariants: Variants = {
     }
 };
 
-// Technology badges variants with additional delay
 export const techBadgeVariants: Variants = {
     hidden: {
         opacity: 0,
@@ -98,12 +76,11 @@ export const techBadgeVariants: Variants = {
         transition: {
             duration: 0.6,
             ease: 'easeOut',
-            delay: 0.3 // Additional delay after card animation
+            delay: 0.3
         }
     }
 };
 
-// Slide up variants for elements sliding up from bottom
 export const slideUpVariants: Variants = {
     hidden: {
         opacity: 0,
@@ -119,7 +96,6 @@ export const slideUpVariants: Variants = {
     }
 };
 
-// Slide in variants for elements sliding in from sides (left/right)
 export const slideInVariants: SlideInVariants = {
     left: {
         hidden: {
@@ -151,7 +127,6 @@ export const slideInVariants: SlideInVariants = {
     }
 };
 
-// Scale variants for elements that scale in (hover effects)
 export const scaleVariants: Variants = {
     hidden: {
         opacity: 0,
@@ -177,7 +152,6 @@ export const scaleVariants: Variants = {
     }
 };
 
-// Typewriter variants for typewriter text animation
 export const typewriterVariants: TypewriterVariants = {
     hidden: {
         opacity: 0,
@@ -200,7 +174,6 @@ export const typewriterVariants: TypewriterVariants = {
     }
 };
 
-// Fade variants for simple fade in/out
 export const fadeVariants: Variants = {
     hidden: {
         opacity: 0
@@ -221,7 +194,6 @@ export const fadeVariants: Variants = {
     }
 };
 
-// Utility function to create custom variants with custom timing
 export function createCustomVariants(
     baseVariants: Variants,
     customDuration?: number,
@@ -243,7 +215,6 @@ export function createCustomVariants(
     };
 }
 
-// Utility function to create stagger variants with custom timing
 export function createStaggerVariants(
     staggerDelay: number = 0.1,
     delayChildren: number = 0.2
@@ -266,7 +237,6 @@ export function createStaggerVariants(
     };
 }
 
-// Cascade animation variants for technical expertise section
 export const categoryStaggerVariants: Variants = {
     hidden: {
         opacity: 0,
@@ -278,7 +248,7 @@ export const categoryStaggerVariants: Variants = {
         transition: {
             duration: 0.8,
             ease: 'easeOut',
-            staggerChildren: 0.15, // 150ms stagger between categories
+            staggerChildren: 0.15,
             delayChildren: 0.2
         }
     }
@@ -310,7 +280,7 @@ export const skillStaggerVariants: Variants = {
         transition: {
             duration: 0.6,
             ease: 'easeOut',
-            staggerChildren: 0.05, // 50ms stagger between skills
+            staggerChildren: 0.05,
             delayChildren: 0.1
         }
     }
@@ -343,7 +313,7 @@ export const proficiencyScaleVariants: Variants = {
         transition: {
             duration: 0.6,
             ease: "easeOut",
-            delay: 0.3 // Increased delay to make it more noticeable
+            delay: 0.3
         }
     }
 };
@@ -358,7 +328,7 @@ export const proficiencyFillVariants: Variants = {
         transition: {
             duration: 1.2,
             ease: "easeOut",
-            delay: 0.8 // Delay after the bar container appears
+            delay: 0.8
         }
     }
 }; 
