@@ -8,30 +8,20 @@ const markdownCache = new Map<string, string>();
 const frontmatterCache = new Map<string, Record<string, any>>();
 const postsCache = new Map<string, BlogPost | BlogPost[]>();
 
-// Cache TTL (Time To Live) in milliseconds
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+const CACHE_TTL = 5 * 60 * 1000;
 const cacheTimestamps = new Map<string, number>();
 
-/**
- * Check if cache entry is still valid
- */
 function isCacheValid(key: string): boolean {
     const timestamp = cacheTimestamps.get(key);
     if (!timestamp) return false;
     return Date.now() - timestamp < CACHE_TTL;
 }
 
-/**
- * Set cache entry with timestamp
- */
 function setCacheWithTimestamp(key: string, value: any): void {
     markdownCache.set(key, value);
     cacheTimestamps.set(key, Date.now());
 }
 
-/**
- * Get cached markdown content or parse and cache it
- */
 function getCachedMarkdown(content: string): string {
     const cacheKey = Buffer.from(content).toString('base64');
 
@@ -44,9 +34,6 @@ function getCachedMarkdown(content: string): string {
     return parsed;
 }
 
-/**
- * Get cached frontmatter or parse and cache it
- */
 function getCachedFrontmatter(content: string): Record<string, any> {
     const cacheKey = Buffer.from(content).toString('base64');
 
@@ -60,9 +47,6 @@ function getCachedFrontmatter(content: string): Record<string, any> {
     return frontmatter;
 }
 
-/**
- * Read and parse a markdown file with caching
- */
 async function readMarkdownFile(filePath: string): Promise<{ content: string; frontmatter: Record<string, any> }> {
     try {
         const content = await fs.promises.readFile(filePath, 'utf-8');
@@ -79,9 +63,6 @@ async function readMarkdownFile(filePath: string): Promise<{ content: string; fr
     }
 }
 
-/**
- * Convert frontmatter to BlogPost object
- */
 function frontmatterToBlogPost(slug: string, frontmatter: Record<string, any>, content: string): BlogPost {
     return {
         title: frontmatter.title || 'Untitled',
@@ -96,13 +77,9 @@ function frontmatterToBlogPost(slug: string, frontmatter: Record<string, any>, c
     };
 }
 
-/**
- * Get all blog posts with lazy loading and caching
- */
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
     const cacheKey = 'all-posts';
 
-    // Check cache first
     if (postsCache.has(cacheKey) && isCacheValid(cacheKey)) {
         const cached = postsCache.get(cacheKey)!;
         return Array.isArray(cached) ? cached : [cached];
@@ -115,7 +92,6 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
         const markdownFiles = files.filter(file => file.endsWith('.md'));
         const posts: BlogPost[] = [];
 
-        // Process files in batches for better performance
         const batchSize = 5;
         for (let i = 0; i < markdownFiles.length; i += batchSize) {
             const batch = markdownFiles.slice(i, i + batchSize);
@@ -137,10 +113,8 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
             posts.push(...batchResults.filter(Boolean) as BlogPost[]);
         }
 
-        // Sort by date (newest first)
         const sortedPosts = posts.sort((a, b) => b.date.getTime() - a.date.getTime());
 
-        // Cache the result
         postsCache.set(cacheKey, sortedPosts);
         cacheTimestamps.set(cacheKey, Date.now());
 
@@ -151,13 +125,9 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     }
 }
 
-/**
- * Get a single blog post by slug with caching
- */
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
     const cacheKey = `post-${slug}`;
 
-    // Check cache first
     if (postsCache.has(cacheKey) && isCacheValid(cacheKey)) {
         const cached = postsCache.get(cacheKey)!;
         return Array.isArray(cached) ? cached[0] : cached;
@@ -168,7 +138,6 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
         const { content, frontmatter } = await readMarkdownFile(filePath);
         const post = frontmatterToBlogPost(slug, frontmatter, content);
 
-        // Cache the result
         postsCache.set(cacheKey, post);
         cacheTimestamps.set(cacheKey, Date.now());
 
@@ -179,25 +148,16 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     }
 }
 
-/**
- * Get published blog posts only
- */
 export async function getPublishedBlogPosts(): Promise<BlogPost[]> {
     const allPosts = await getAllBlogPosts();
     return allPosts.filter(post => post.published);
 }
 
-/**
- * Get blog posts by category with caching
- */
 export async function getBlogPostsByCategory(category: string): Promise<BlogPost[]> {
     const allPosts = await getAllBlogPosts();
     return allPosts.filter(post => post.category === category && post.published);
 }
 
-/**
- * Search blog posts with optimized filtering
- */
 export async function searchBlogPosts(query: string): Promise<BlogPost[]> {
     const allPosts = await getAllBlogPosts();
     const searchTerm = query.toLowerCase();
@@ -212,31 +172,22 @@ export async function searchBlogPosts(query: string): Promise<BlogPost[]> {
     );
 }
 
-/**
- * Get all unique categories
- */
 export async function getAllCategories(): Promise<string[]> {
     const allPosts = await getAllBlogPosts();
     const categories = new Set(allPosts.filter(post => post.published).map(post => post.category));
     return Array.from(categories).sort();
 }
 
-/**
- * Get related posts based on tags and category
- */
 export async function getRelatedPosts(currentPost: BlogPost, limit: number = 3): Promise<BlogPost[]> {
     const allPosts = await getAllBlogPosts();
 
-    // Score posts based on tag overlap and category match
     const scoredPosts = allPosts
         .filter(post => post.slug !== currentPost.slug && post.published)
         .map(post => {
             let score = 0;
 
-            // Category match
             if (post.category === currentPost.category) score += 3;
 
-            // Tag overlap
             const commonTags = post.tags.filter(tag => currentPost.tags.includes(tag));
             score += commonTags.length * 2;
 
@@ -249,9 +200,6 @@ export async function getRelatedPosts(currentPost: BlogPost, limit: number = 3):
     return scoredPosts;
 }
 
-/**
- * Clear all caches (useful for development)
- */
 export function clearBlogCache(): void {
     markdownCache.clear();
     frontmatterCache.clear();
@@ -259,9 +207,6 @@ export function clearBlogCache(): void {
     cacheTimestamps.clear();
 }
 
-/**
- * Get cache statistics for monitoring
- */
 export function getCacheStats(): {
     markdownCacheSize: number;
     frontmatterCacheSize: number;

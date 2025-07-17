@@ -16,6 +16,19 @@ export interface Project {
     architectureDiagram?: string;
 }
 
+export interface MarkdownContent {
+    content: string;
+}
+
+export interface MarkdownFrontmatter {
+    [key: string]: any;
+}
+
+export interface ParsedMarkdown {
+    content: string;
+    frontmatter: MarkdownFrontmatter;
+}
+
 /**
  * Represents a blog post with all required content and metadata fields.
  * @property {string} title - The title of the blog post.

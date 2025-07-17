@@ -1,17 +1,13 @@
-// Utility functions
 export { cn } from './utils';
 
-// Markdown parser functions
 export {
     parseMarkdown,
     extractFrontmatter,
     calculateReadingTime
 } from './markdown-parser';
 
-// Slug generator
 export { generateSlug } from './slug-generator';
 
-// Animation variants
 export {
     sectionVariants,
     staggerVariants,
@@ -33,5 +29,4 @@ export {
     createStaggerVariants
 } from './animation-variants';
 
-// Theme
 export { ThemeProvider, ThemeContext } from './theme/ThemeContext'; 

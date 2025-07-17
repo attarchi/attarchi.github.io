@@ -25,7 +25,7 @@ describe('markdown-parser', () => {
     });
 
     it('calculates reading time (200 wpm)', () => {
-        const text = 'word '.repeat(400); // 400 words
-        expect(calculateReadingTime(text)).toBe(2); // 2 minutes
+        const text = 'word '.repeat(400);
+        expect(calculateReadingTime(text)).toBe(2);
     });
 }); 
