@@ -1,6 +1,6 @@
 import { BlogPostList } from '@/components/blog/blog-post-list';
 import Link from 'next/link';
-import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { ThemeToggle } from '@/components/ui';
 import { getPublishedBlogPosts } from '@/lib/blog-data';
 
 export default async function BlogPage() {

@@ -1,5 +1,37 @@
+// Utility functions
 export { cn } from './utils';
-export { useScrollAnimation } from './hooks/useScrollAnimation';
-export { useScrollProgress } from './hooks/useScrollProgress';
-export { useTimelineProgress } from './hooks/useTimelineProgress';
-export { ThemeProvider, useTheme } from './theme/ThemeContext'; 
+
+// Markdown parser functions
+export {
+    parseMarkdown,
+    extractFrontmatter,
+    calculateReadingTime
+} from './markdown-parser';
+
+// Slug generator
+export { generateSlug } from './slug-generator';
+
+// Animation variants
+export {
+    sectionVariants,
+    staggerVariants,
+    projectStaggerVariants,
+    projectCardVariants,
+    techBadgeVariants,
+    slideUpVariants,
+    slideInVariants,
+    scaleVariants,
+    typewriterVariants,
+    fadeVariants,
+    categoryStaggerVariants,
+    categorySlideInVariants,
+    skillStaggerVariants,
+    skillFadeVariants,
+    proficiencyScaleVariants,
+    proficiencyFillVariants,
+    createCustomVariants,
+    createStaggerVariants
+} from './animation-variants';
+
+// Theme
+export { ThemeProvider, ThemeContext } from './theme/ThemeContext'; 

@@ -1,8 +1,7 @@
 "use client";
 
 import { motion, HTMLMotionProps } from 'framer-motion';
-import { cn } from '@/lib/utils';
-import { projectCardVariants, techBadgeVariants } from '@/lib/animation-variants';
+import { cn, projectCardVariants, techBadgeVariants } from '@/lib';
 
 export interface ProjectCardProps extends Omit<HTMLMotionProps<"div">, "variants"> {
   title: string;

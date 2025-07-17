@@ -3,8 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { BlogPost } from '@/types';
-import { Card, CardHeader } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
+import { Card, CardHeader, Badge } from '@/components/ui';
 
 interface BlogPostCardProps {
   post: BlogPost;

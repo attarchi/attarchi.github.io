@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BlogPost } from '@/types';
 import { BlogPostCard } from '@/components/blog/blog-post-card';
-import { projectStaggerVariants } from '@/lib/animation-variants';
+import { projectStaggerVariants } from '@/lib';
 
 export interface BlogPreviewSectionProps {
   posts: BlogPost[];

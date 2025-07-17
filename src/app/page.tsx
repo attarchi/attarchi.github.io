@@ -1,5 +1,5 @@
 import { HeroSection, FeaturedProjects, TechnicalExpertise, ProfessionalJourney, ContactSection, BlogPreviewSection } from "@/components/sections";
-import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { ThemeToggle } from '@/components/ui';
 import { getPublishedBlogPosts } from '@/lib/blog-data';
 
 export default async function Home() {

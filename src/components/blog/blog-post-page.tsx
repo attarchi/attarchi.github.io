@@ -2,11 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { ThemeToggle, Badge, Card, CardContent } from '@/components/ui';
 import { BlogPost } from '@/types';
-import { parseMarkdown } from '@/lib/markdown-parser';
-import { Badge } from '@/components/ui/Badge';
-import { Card, CardContent } from '@/components/ui/Card';
+import { parseMarkdown } from '@/lib';
 import { PostNavigation } from './post-navigation';
 
 interface BlogPostPageProps {

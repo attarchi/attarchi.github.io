@@ -3,13 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/lib/hooks/useScrollAnimation';
-import { cn } from '@/lib/utils';
-import {
-  sectionVariants,
-  slideUpVariants,
-  slideInVariants,
-  fadeVariants,
-} from '@/lib/animation-variants';
+import { cn, sectionVariants, slideUpVariants, slideInVariants, fadeVariants } from '@/lib';
 
 export interface AnimatedSectionProps {
   children: React.ReactNode;

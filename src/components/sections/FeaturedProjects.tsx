@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ProjectCard } from '@/components/ui';
-import { projectStaggerVariants } from '@/lib/animation-variants';
+import { projectStaggerVariants } from '@/lib';
 
 // Default project data
 const defaultProjects = [
