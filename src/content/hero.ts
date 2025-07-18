@@ -9,6 +9,7 @@ export interface CtaButton {
 }
 
 export interface HeroContent {
+    name?: string;
     title?: string;
     description?: string;
     location?: string;
@@ -17,6 +18,7 @@ export interface HeroContent {
 }
 
 export const heroContent: HeroContent = {
+    name: "Attarchi",
     title: "Senior Full-Stack Developer & Problem Solver",
     description: "Crafting scalable web applications with modern technologies. Specializing in React, Node.js, and cloud-native architectures. Passionate about solving complex problems and delivering high-quality, maintainable code.",
     location: "Istanbul, Turkey • Remote Worldwide",

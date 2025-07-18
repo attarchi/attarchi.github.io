@@ -38,6 +38,7 @@ const renderIcon = (iconName?: string) => {
 };
 
 export function HeroSection({
+  name,
   title,
   description,
   location,
@@ -45,13 +46,21 @@ export function HeroSection({
   ctaButtons = [],
   className = "",
 }: HeroSectionProps) {
-  const [typewriterComplete, setTypewriterComplete] = useState(false);
+  const [nameTypewriterComplete, setNameTypewriterComplete] = useState(false);
+  const [titleTypewriterComplete, setTitleTypewriterComplete] = useState(false);
 
-  const descriptionDelay = 0.4;
-  const buttonDelay = descriptionDelay + 0.4;
+  const nameDelay = 0.8; // Start after avatar appears
+  // Title now starts when name completes (conditional rendering)
+  const locationDelay = 0.1; // Small delay after title completes
+  const descriptionDelay = locationDelay + 0.4; // Start after location appears  
+  const buttonDelay = descriptionDelay + 0.4; // Start after description
 
-  const handleTypewriterComplete = () => {
-    setTypewriterComplete(true);
+  const handleNameTypewriterComplete = () => {
+    setNameTypewriterComplete(true);
+  };
+
+  const handleTitleTypewriterComplete = () => {
+    setTitleTypewriterComplete(true);
   };
 
   return (
@@ -71,49 +80,68 @@ export function HeroSection({
             <Image
               src={avatarSrc}
               alt={avatarAlt}
-              fill
+              width={128}
               className="rounded-full object-cover border-4 border-accent"
               priority
             />
           </motion.div>
         )}
+
+        {name && (
+          <motion.div
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: nameDelay }}
+          >
+            <h2 className="font-mono text-3xl md:text-4xl font-bold text-accent mb-4" data-testid="hero-name">
+              <Typewriter
+                text={name}
+                speed={80}
+                className="font-mono text-3xl md:text-4xl font-bold text-accent"
+                onComplete={handleNameTypewriterComplete}
+              />
+            </h2>
+          </motion.div>
+        )}
+
         
-        <motion.div
-          initial={{ opacity: 1, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-        >
-          <h1 className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text" data-testid="hero-heading">
-            <Typewriter
-              text={title || ""}
-              speed={50}
-              className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
-              onComplete={handleTypewriterComplete}
-            />
-          </h1>
-        </motion.div>
+        {(nameTypewriterComplete || !name) && (
+          <motion.div
+            initial={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            <h1 className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text" data-testid="hero-heading">
+              <Typewriter
+                text={title || ""}
+                speed={50}
+                className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
+                onComplete={handleTitleTypewriterComplete}
+              />
+            </h1>
+          </motion.div>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ 
-            opacity: typewriterComplete ? 1 : 0, 
-            y: typewriterComplete ? 0 : 20 
+            opacity: (titleTypewriterComplete || !name) ? 1 : 0, 
+            y: (titleTypewriterComplete || !name) ? 0 : 20 
           }}
           transition={{ 
             duration: 0.6, 
-            delay: 0.1,
+            delay: locationDelay,
             ease: "easeOut"
           }}
           className="bg-[#f6f8fa] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] text-[#656d76] dark:text-[#8b949e] font-sans text-sm px-3 py-1 rounded-full inline-flex items-center"
         >
           📍 {location || "Available for remote opportunities"}
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ 
-            opacity: typewriterComplete ? 1 : 0, 
-            y: typewriterComplete ? 0 : 20 
+            opacity: (titleTypewriterComplete || !name) ? 1 : 0, 
+            y: (titleTypewriterComplete || !name) ? 0 : 20 
           }}
           transition={{ 
             duration: 0.6, 
@@ -129,7 +157,7 @@ export function HeroSection({
         <motion.div 
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           initial={{ opacity: 0 }}
-          animate={{ opacity: typewriterComplete ? 1 : 0 }}
+          animate={{ opacity: (titleTypewriterComplete || !name) ? 1 : 0 }}
           transition={{ duration: 0.5, delay: buttonDelay }}
         >
           {ctaButtons.map((cta, index) => (
@@ -137,8 +165,8 @@ export function HeroSection({
               key={`${cta.link}-${index}`}
               initial={{ opacity: 0, x: 100 }}
               animate={{ 
-                opacity: typewriterComplete ? 1 : 0, 
-                x: typewriterComplete ? 0 : 100 
+                opacity: (titleTypewriterComplete || !name) ? 1 : 0, 
+                x: (titleTypewriterComplete || !name) ? 0 : 100 
               }}
               transition={{ 
                 duration: 0.6, 
