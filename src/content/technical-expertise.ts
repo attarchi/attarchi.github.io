@@ -5,9 +5,15 @@ export interface TechnicalSkill {
     icon?: string;
 }
 
+export interface OtherSkill {
+    name: string;
+    icon: string;
+}
+
 export interface SkillCategory {
     title: string;
     skills?: TechnicalSkill[];
+    others?: OtherSkill[];
 }
 
 export interface TechnicalExpertiseContent {
@@ -23,6 +29,10 @@ export const technicalExpertiseContent: TechnicalExpertiseContent = {
                 { name: "TypeScript", proficiency: 85, years: 4 },
                 { name: "Next.js", proficiency: 80, years: 3, icon: "nextjs" },
                 { name: "React Native", proficiency: 85, years: 4, icon: "react" }
+            ],
+            others: [
+                { name: "GitHub", icon: "github-mark" },
+                { name: "Prisma", icon: "prisma" }
             ]
         },
         {
@@ -32,6 +42,10 @@ export const technicalExpertiseContent: TechnicalExpertiseContent = {
                 { name: "Python", proficiency: 75, years: 3 },
                 { name: "PostgreSQL", proficiency: 80, years: 4, icon: "sql" },
                 { name: "MongoDB", proficiency: 75, years: 3, icon: "mongodb" }
+            ],
+            others: [
+                { name: "CouchDB", icon: "couchdb" },
+                { name: "PouchDB", icon: "pouchdb" }
             ]
         },
         {
@@ -41,6 +55,9 @@ export const technicalExpertiseContent: TechnicalExpertiseContent = {
                 { name: "AWS", proficiency: 70, years: 2 },
                 { name: "Kubernetes", proficiency: 65, years: 2 },
                 { name: "CI/CD", proficiency: 80, years: 3, icon: "git" }
+            ],
+            others: [
+                { name: "Git", icon: "git" }
             ]
         },
         {
@@ -49,6 +66,9 @@ export const technicalExpertiseContent: TechnicalExpertiseContent = {
                 { name: "React Native", proficiency: 85, years: 4, icon: "react" },
                 { name: "iOS/Android", proficiency: 75, years: 3, icon: "ios" },
                 { name: "Expo", proficiency: 70, years: 2 }
+            ],
+            others: [
+                { name: "Android", icon: "android" }
             ]
         }
     ]

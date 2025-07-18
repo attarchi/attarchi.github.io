@@ -17,6 +17,10 @@ const mockCategories = [
     skills: [
       { name: "React", proficiency: 90, years: 5, icon: "react" },
       { name: "TypeScript", proficiency: 85, years: 4 }
+    ],
+    others: [
+      { name: "GitHub", icon: "github-mark" },
+      { name: "Prisma", icon: "prisma" }
     ]
   },
   {
@@ -24,6 +28,9 @@ const mockCategories = [
     skills: [
       { name: "Node.js", proficiency: 90, years: 5, icon: "nodejs" },
       { name: "PostgreSQL", proficiency: 75, years: 3, icon: "sql" }
+    ],
+    others: [
+      { name: "CouchDB", icon: "couchdb" }
     ]
   }
 ];
@@ -148,5 +155,32 @@ describe("TechnicalExpertise", () => {
     const reactIcon = screen.getByRole("img", { name: /react icon/i });
     expect(reactIcon).toHaveAttribute("width", "32");
     expect(reactIcon).toHaveAttribute("height", "32");
+  });
+
+  it("renders others section for categories with others", () => {
+    render(<TechnicalExpertise categories={mockCategories} />);
+    
+    expect(screen.getAllByText("Others")).toHaveLength(2);
+  });
+
+  it("renders other skills as icons", () => {
+    render(<TechnicalExpertise categories={mockCategories} />);
+    
+    expect(screen.getByRole("img", { name: /github icon/i })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: /prisma icon/i })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: /couchdb icon/i })).toBeInTheDocument();
+  });
+
+  it("does not render others section for categories without others", () => {
+    const categoriesWithoutOthers = [
+      {
+        title: "Empty Category",
+        skills: []
+      }
+    ];
+    
+    render(<TechnicalExpertise categories={categoriesWithoutOthers} />);
+    
+    expect(screen.queryByText("Others")).not.toBeInTheDocument();
   });
 }); 

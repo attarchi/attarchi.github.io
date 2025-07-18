@@ -10,7 +10,7 @@ import {
   sectionVariants
 } from "@/lib";
 import { type SkillCategory } from "@/content";
-import { Icon } from "@/components/ui";
+import { Icon, OthersIconList } from "@/components/ui";
 
 export interface TechnicalExpertiseProps {
   categories?: SkillCategory[];
@@ -108,6 +108,7 @@ export function TechnicalExpertise({ categories }: TechnicalExpertiseProps) {
                   ))}
                 </motion.div>
               )}
+              <OthersIconList others={category.others} />
             </motion.div>
           ))}
         </motion.div>
