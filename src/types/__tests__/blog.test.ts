@@ -1,4 +1,4 @@
-import { BlogPost } from '@/components/blog/types';
+import { BlogPost } from '@/content';
 
 describe('Blog Post Interfaces', () => {
     describe('BlogPost interface', () => {

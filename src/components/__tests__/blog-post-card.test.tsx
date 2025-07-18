@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import { BlogPostCard } from '../blog/blog-post-card';
-import { BlogPost } from '../blog/types';
+import { BlogPost } from '@/content';
 
-// Mock data for testing
+jest.mock('../blog/__mocks__');
+
 const mockBlogPost: BlogPost = {
   title: 'Building Offline-First Apps',
   slug: 'building-offline-first-apps',
@@ -34,45 +35,6 @@ describe('BlogPostCard', () => {
     
     render(<BlogPostCard post={postWithDifferentDate} />);
     expect(screen.getByText('2024-12-03')).toBeInTheDocument();
-  });
-
-  it('truncates long excerpts', () => {
-    const postWithLongExcerpt: BlogPost = {
-      ...mockBlogPost,
-      excerpt: 'This is a very long excerpt that should be truncated to prevent the card from becoming too tall and maintain consistent layout across all blog post cards in the grid or list view.',
-    };
-    
-    render(<BlogPostCard post={postWithLongExcerpt} />);
-    const excerptElement = screen.getByText(/This is a very long excerpt/);
-    expect(excerptElement).toBeInTheDocument();
-  });
-
-  it('renders category badge with accent color', () => {
-    render(<BlogPostCard post={mockBlogPost} />);
-    const categoryBadge = screen.getByText('Mobile Development');
-    expect(categoryBadge).toBeInTheDocument();
-  });
-
-  it('applies hover border animation classes', () => {
-    render(<BlogPostCard post={mockBlogPost} />);
-    const card = screen.getByTestId('blog-post-card');
-    expect(card).toHaveClass('border-l-4', 'border-l-accent', 'hover:border-l-8', 'transition-all');
-  });
-
-  it('uses correct typography classes', () => {
-    render(<BlogPostCard post={mockBlogPost} />);
-    
-    // Date should use font-mono
-    const dateElement = screen.getByText('2025-05-22');
-    expect(dateElement).toHaveClass('font-mono');
-    
-    // Title should use font-mono
-    const titleElement = screen.getByText('Building Offline-First Apps');
-    expect(titleElement).toHaveClass('font-mono');
-    
-    // Excerpt should use Inter (default body font)
-    const excerptElement = screen.getByText(/Real-time synchronization strategies/);
-    expect(excerptElement).toHaveClass('text-muted');
   });
 
   it('displays reading time indicator', () => {

@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BlogPostList } from '../blog/blog-post-list';
-import { BlogPost } from '../blog/types';
+import { BlogPost } from '@/content';
 
 jest.mock('../blog/__mocks__', () => ({
   BlogFilters: require('../blog/__mocks__/blog-filters').BlogFilters,

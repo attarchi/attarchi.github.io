@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { PostNavigation } from '../blog/post-navigation';
-import { BlogPost } from '../blog/types';
+import { BlogPost } from '@/content';
 
 const prevPost: BlogPost = {
   title: 'Prev Post',

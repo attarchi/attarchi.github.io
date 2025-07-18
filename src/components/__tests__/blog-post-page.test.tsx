@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BlogPostPage } from '../blog/blog-post-page';
-import { BlogPost } from '../blog/types';
+import { BlogPost } from '@/content';
 
 // Mock the markdown parser
 jest.mock('@/lib/markdown-parser', () => ({
