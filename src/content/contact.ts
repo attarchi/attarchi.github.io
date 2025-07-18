@@ -2,7 +2,7 @@ export const contactContent = {
     status: "Available for new opportunities",
     location: "Istanbul, Turkey (UTC+3)",
     email: "attarchi@me.com",
-    linkedinUrl: "https://linkedin.com/in/attarchi",
+    linkedinUrl: "https://linkedin.com/in/ryan-attarchi",
     githubUrl: "https://github.com/attarchi",
     responseTime: "Usually within 24 hours",
     availabilityType: "Full-time, Contract, Consulting",
