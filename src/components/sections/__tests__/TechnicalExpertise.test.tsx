@@ -15,15 +15,15 @@ const mockCategories = [
   {
     title: "Frontend Development",
     skills: [
-      { name: "React", proficiency: 90, years: 5 },
+      { name: "React", proficiency: 90, years: 5, icon: "react" },
       { name: "TypeScript", proficiency: 85, years: 4 }
     ]
   },
   {
     title: "Backend Development", 
     skills: [
-      { name: "Node.js", proficiency: 90, years: 5 },
-      { name: "PostgreSQL", proficiency: 75, years: 3 }
+      { name: "Node.js", proficiency: 90, years: 5, icon: "nodejs" },
+      { name: "PostgreSQL", proficiency: 75, years: 3, icon: "sql" }
     ]
   }
 ];
@@ -116,5 +116,37 @@ describe("TechnicalExpertise", () => {
     
     const categoryCards = screen.queryAllByTestId("category-card");
     expect(categoryCards).toHaveLength(0);
+  });
+
+  it("renders icons for skills that have them", () => {
+    render(<TechnicalExpertise categories={mockCategories} />);
+    
+    const reactIcon = screen.getByRole("img", { name: /react icon/i });
+    expect(reactIcon).toBeInTheDocument();
+    expect(reactIcon).toHaveAttribute("src", "/icons/react.png");
+    
+    const nodejsIcon = screen.getByRole("img", { name: /node\.js icon/i });
+    expect(nodejsIcon).toBeInTheDocument();
+    expect(nodejsIcon).toHaveAttribute("src", "/icons/nodejs.png");
+    
+    const sqlIcon = screen.getByRole("img", { name: /postgresql icon/i });
+    expect(sqlIcon).toBeInTheDocument();
+    expect(sqlIcon).toHaveAttribute("src", "/icons/sql.png");
+  });
+
+  it("does not render icons for skills without them", () => {
+    render(<TechnicalExpertise categories={mockCategories} />);
+    
+    // TypeScript should not have an icon
+    const typescriptIcon = screen.queryByRole("img", { name: /typescript icon/i });
+    expect(typescriptIcon).not.toBeInTheDocument();
+  });
+
+  it("renders icons with proper size and spacing", () => {
+    render(<TechnicalExpertise categories={mockCategories} />);
+    
+    const reactIcon = screen.getByRole("img", { name: /react icon/i });
+    expect(reactIcon).toHaveAttribute("width", "32");
+    expect(reactIcon).toHaveAttribute("height", "32");
   });
 }); 

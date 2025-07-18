@@ -10,6 +10,7 @@ import {
   sectionVariants
 } from "@/lib";
 import { type SkillCategory } from "@/content";
+import { Icon } from "@/components/ui";
 
 export interface TechnicalExpertiseProps {
   categories?: SkillCategory[];
@@ -59,26 +60,35 @@ export function TechnicalExpertise({ categories }: TechnicalExpertiseProps) {
                     <motion.div 
                       key={skillIndex} 
                       variants={skillFadeVariants}
-                      className="group relative"
+                      className="group relative flex items-start gap-3"
                       data-testid="skill-item"
                     >
-                      <div 
-                        className="font-sans text-sm font-medium text-[#24292f] dark:text-[#f0f6fc] cursor-pointer"
-                        data-testid="skill-name"
-                        title={skill.years ? `${skill.years} years of experience` : undefined}
-                      >
-                        {skill.name}
-                        {skill.years && (
-                          <span className="ml-2 text-xs text-[#656d76] dark:text-[#8b949e] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            ({skill.years} years)
-                          </span>
-                        )}
-                      </div>
-                      <motion.div
-                        className="mt-1 relative h-2 bg-[#e1e4e8] dark:bg-[#30363d] rounded-full"
-                        data-testid="proficiency-bar"
-                        variants={proficiencyScaleVariants}
-                      >
+                      {skill.icon && (
+                        <Icon 
+                          name={skill.icon} 
+                          alt={`${skill.name} icon`} 
+                          size={32} 
+                          className="flex-shrink-0 mt-0.5"
+                        />
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <div 
+                          className="font-sans text-sm font-medium text-[#24292f] dark:text-[#f0f6fc] cursor-pointer"
+                          data-testid="skill-name"
+                          title={skill.years ? `${skill.years} years of experience` : undefined}
+                        >
+                          {skill.name}
+                          {skill.years && (
+                            <span className="ml-2 text-xs text-[#656d76] dark:text-[#8b949e] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                              ({skill.years} years)
+                            </span>
+                          )}
+                        </div>
+                        <motion.div
+                          className="mt-1 relative h-2 bg-[#e1e4e8] dark:bg-[#30363d] rounded-full"
+                          data-testid="proficiency-bar"
+                          variants={proficiencyScaleVariants}
+                        >
                         <motion.div
                           className="absolute top-0 left-0 h-full bg-[#0969da] dark:bg-[#58a6ff] rounded-full"
                           data-testid="proficiency-fill"
@@ -92,7 +102,8 @@ export function TechnicalExpertise({ categories }: TechnicalExpertiseProps) {
                             delay: 0.8
                           }}
                         />
-                      </motion.div>
+                        </motion.div>
+                      </div>
                     </motion.div>
                   ))}
                 </motion.div>
