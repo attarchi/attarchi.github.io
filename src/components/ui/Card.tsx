@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib';
 
 const cardVariants = cva(
-  'rounded-lg border bg-card text-card-foreground shadow-sm transition-all duration-200',
+  'rounded-lg border bg-surface text-text shadow-sm transition-all duration-200',
   {
     variants: {
       variant: {
@@ -19,7 +19,7 @@ const cardVariants = cva(
 
 const cardHeaderVariants = cva('flex flex-col space-y-1.5 p-6');
 const cardTitleVariants = cva('text-2xl font-semibold leading-none tracking-tight');
-const cardDescriptionVariants = cva('text-sm text-muted-foreground');
+const cardDescriptionVariants = cva('text-sm text-muted');
 const cardContentVariants = cva('p-6 pt-0');
 const cardFooterVariants = cva('flex items-center p-6 pt-0');
 
