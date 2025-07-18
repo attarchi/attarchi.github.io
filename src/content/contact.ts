@@ -10,5 +10,7 @@ export const contactContent = {
     sectionSubtitle: "Available for exciting projects and opportunities",
     contactInfoTitle: "Contact Information",
     formTitle: "Send Message",
-    formDescription: "Feature coming soon! This form will be available when the site goes live."
+    formDescription: "Feature coming soon! This form will be available when the site goes live.",
+    formspreeId: "mpwlwpnw",
+    successMessage: "Thanks for your message! I'll get back to you soon."
 }; 

@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Heading, Text, Badge } from "@/components/ui";
+import { Heading, Text, Badge, ContactForm } from "@/components/ui";
 import { slideUpVariants, fadeVariants, staggerVariants, sectionVariants } from "@/lib";
 
 export interface ContactSectionProps {
@@ -18,6 +17,8 @@ export interface ContactSectionProps {
   contactInfoTitle?: string;
   formTitle?: string;
   formDescription?: string;
+  formspreeId?: string;
+  successMessage?: string;
 }
 
 export function ContactSection({
@@ -33,15 +34,9 @@ export function ContactSection({
   contactInfoTitle,
   formTitle,
   formDescription,
+  formspreeId,
+  successMessage,
 }: ContactSectionProps = {}) {
-  const [showMessage, setShowMessage] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setShowMessage(true);
-    setTimeout(() => setShowMessage(false), 5000);
-  };
-
   return (
     <motion.section
       id="contact"
@@ -212,92 +207,11 @@ export function ContactSection({
             </motion.div>
           </motion.div>
 
-          <motion.div 
-            data-testid="contact-form"
-            className="bg-white dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] rounded-lg p-6 shadow-sm"
-            variants={staggerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <div className="space-y-6">
-              <Heading as="h3" size="h3" className="font-mono font-medium text-text">
-                {formTitle}
-              </Heading>
-
-              {showMessage && (
-                <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-md">
-                  <Text size="sm" className="font-sans text-blue-700 dark:text-blue-400">
-                    {formDescription}
-                  </Text>
-                </div>
-              )}
-
-              <motion.div
-                variants={staggerVariants}
-                transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
-              >
-                <form 
-                  onSubmit={handleSubmit} 
-                  className="space-y-4"
-                >
-                <motion.div variants={slideUpVariants}>
-                  <label htmlFor="name" className="block font-sans text-sm font-medium mb-2 text-text">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    data-testid="name-input"
-                    required
-                    className="w-full px-3 py-2 rounded-md font-sans bg-white dark:bg-[#0d1117] border border-[#d0d7de] dark:border-[#30363d] focus:outline-none focus:border-[#0969da] dark:focus:border-[#58a6ff] text-text placeholder:text-[#656d76] dark:placeholder:text-[#8b949e]"
-                    placeholder="Your name"
-                  />
-                </motion.div>
-
-                <motion.div variants={slideUpVariants}>
-                  <label htmlFor="email" className="block font-sans text-sm font-medium mb-2 text-text">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    data-testid="email-input"
-                    required
-                    className="w-full px-3 py-2 rounded-md font-sans bg-white dark:bg-[#0d1117] border border-[#d0d7de] dark:border-[#30363d] focus:outline-none focus:border-[#0969da] dark:focus:border-[#58a6ff] text-text placeholder:text-[#656d76] dark:placeholder:text-[#8b949e]"
-                    placeholder="your.email@example.com"
-                  />
-                </motion.div>
-
-                <motion.div variants={slideUpVariants}>
-                  <label htmlFor="message" className="block font-sans text-sm font-medium mb-2 text-text">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    data-testid="message-textarea"
-                    required
-                    rows={5}
-                    className="w-full px-3 py-2 rounded-md font-sans bg-white dark:bg-[#0d1117] border border-[#d0d7de] dark:border-[#30363d] focus:outline-none focus:border-[#0969da] dark:focus:border-[#58a6ff] text-text placeholder:text-[#656d76] dark:placeholder:text-[#8b949e] min-h-[120px] resize-vertical"
-                    placeholder="Tell me about your project..."
-                  />
-                </motion.div>
-
-                <motion.div variants={slideUpVariants}>
-                  <button
-                    type="submit"
-                    data-testid="submit-button"
-                    className="w-full bg-[#0969da] dark:bg-[#58a6ff] hover:bg-[#0550ae] dark:hover:bg-[#4493f8] text-white dark:text-[#0d1117] px-4 py-2 rounded-md font-medium font-sans transition-colors focus:outline-none focus:ring-2 focus:ring-[#0969da] dark:focus:ring-[#58a6ff] focus:ring-offset-2"
-                  >
-                    Send Message
-                  </button>
-                </motion.div>
-              </form>
-            </motion.div>
-            </div>
-          </motion.div>
+          <ContactForm
+            formTitle={formTitle}
+            formspreeId={formspreeId}
+            successMessage={successMessage}
+          />
         </div>
       </div>
     </motion.section>

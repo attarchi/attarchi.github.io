@@ -6,6 +6,20 @@ jest.mock("@/components/ui", () => ({
   Heading: ({ children, ...props }: any) => <h2 {...props}>{children}</h2>,
   Text: ({ children, ...props }: any) => <span {...props}>{children}</span>,
   Badge: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+  ContactForm: ({ formTitle, ...props }: any) => (
+    <div data-testid="contact-form" {...props}>
+      <h3>{formTitle}</h3>
+      <form>
+        <label htmlFor="name">Name</label>
+        <input data-testid="name-input" id="name" name="name" required />
+        <label htmlFor="email">Email Address</label>
+        <input data-testid="email-input" id="email" name="email" type="email" required />
+        <label htmlFor="message">Message</label>
+        <textarea data-testid="message-textarea" id="message" name="message" required />
+        <button data-testid="submit-button" type="submit">Send Message</button>
+      </form>
+    </div>
+  ),
 }));
 
 jest.mock("framer-motion", () => ({
@@ -92,7 +106,7 @@ describe("ContactSection", () => {
     expect(screen.getByTestId("submit-button")).toHaveTextContent("Send Message");
   });
 
-  it("displays form submission message when form is submitted", async () => {
+  it("renders contact form with proper structure", () => {
     render(<ContactSection {...defaultProps} />);
     
     const nameInput = screen.getByTestId("name-input");
@@ -100,36 +114,23 @@ describe("ContactSection", () => {
     const messageTextarea = screen.getByTestId("message-textarea");
     const form = screen.getByTestId("contact-form").querySelector("form");
     
-    fireEvent.change(nameInput, { target: { value: "Test User" } });
-    fireEvent.change(emailInput, { target: { value: "test@example.com" } });
-    fireEvent.change(messageTextarea, { target: { value: "Test message" } });
-    
+    expect(nameInput).toBeInTheDocument();
+    expect(emailInput).toBeInTheDocument();
+    expect(messageTextarea).toBeInTheDocument();
     expect(form).toBeInTheDocument();
-    fireEvent.submit(form!);
-    
-    await waitFor(() => {
-      expect(screen.getByText("Feature coming soon! This form will be available when the site goes live.")).toBeInTheDocument();
-    });
   });
 
-  it("message disappears after timeout", async () => {
-    jest.useFakeTimers();
-    render(<ContactSection {...defaultProps} />);
+  it("renders with custom form title", () => {
+    const customFormTitle = "Custom Form Title";
+    render(<ContactSection {...defaultProps} formTitle={customFormTitle} />);
     
-    const form = screen.getByTestId("contact-form").querySelector("form");
-    fireEvent.submit(form!);
+    const contactForm = screen.getByTestId("contact-form");
+    expect(contactForm).toBeInTheDocument();
     
-    await waitFor(() => {
-      expect(screen.getByText("Feature coming soon! This form will be available when the site goes live.")).toBeInTheDocument();
-    });
-    
-    jest.advanceTimersByTime(5000);
-    
-    await waitFor(() => {
-      expect(screen.queryByText("Feature coming soon! This form will be available when the site goes live.")).not.toBeInTheDocument();
-    });
-    
-    jest.useRealTimers();
+    // Check that the custom form title is rendered in the form
+    const formHeading = contactForm.querySelector("h3");
+    expect(formHeading).toBeInTheDocument();
+    expect(formHeading).toHaveTextContent(customFormTitle);
   });
 
   it("uses custom section titles when provided", () => {

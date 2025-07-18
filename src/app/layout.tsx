@@ -3,6 +3,7 @@ import { JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from '@/lib/theme'
 import { ProgressBar } from '@/components/ui';
+import { RecaptchaProvider } from '@/components/providers/RecaptchaProvider';
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -72,9 +73,11 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <ProgressBar />
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <RecaptchaProvider>
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
+        </RecaptchaProvider>
       </body>
     </html>
   );
