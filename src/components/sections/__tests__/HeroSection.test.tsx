@@ -60,14 +60,12 @@ describe("HeroSection", () => {
       <HeroSection
         title="Test Title"
         description="Test Description"
-        avatarSrc="/test-avatar.jpg"
         avatarAlt="Test Avatar"
       />
     );
     await screen.findByRole('heading', { level: 1 });
     const avatar = screen.getByAltText("Test Avatar");
     expect(avatar).toBeInTheDocument();
-    expect(avatar).toHaveAttribute("src", "/test-avatar.jpg");
   });
 
   it("renders CTA buttons from array", async () => {

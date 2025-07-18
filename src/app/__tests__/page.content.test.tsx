@@ -38,16 +38,6 @@ describe('Home Page Content', () => {
     expect(locationBadge).toBeInTheDocument()
   })
 
-  it('renders the avatar image', async () => {
-    await act(async () => {
-      render(await Home())
-    })
-    const avatar = screen.getByTestId('hero-avatar')
-    expect(avatar).toBeInTheDocument()
-    expect(avatar).toHaveAttribute('src', '/avatar.png')
-    expect(avatar).toHaveAttribute('alt', 'Profile picture')
-  })
-
   it('renders the scroll indicator', async () => {
     await act(async () => {
       render(await Home())

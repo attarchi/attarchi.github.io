@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button, Text, Typewriter } from "@/components/ui";
 import { HeroContent } from "@/content";
-
+import avatarSrc from "../../../public/avatar.png";
 interface HeroSectionProps extends HeroContent {
   className?: string;
 }
@@ -41,7 +41,6 @@ export function HeroSection({
   title,
   description,
   location,
-  avatarSrc,
   avatarAlt = "Profile picture",
   ctaButtons = [],
   className = "",

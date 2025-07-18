@@ -12,7 +12,6 @@ export interface HeroContent {
     title?: string;
     description?: string;
     location?: string;
-    avatarSrc?: string;
     avatarAlt?: string;
     ctaButtons?: CtaButton[];
 }
@@ -21,7 +20,6 @@ export const heroContent: HeroContent = {
     title: "Senior Full-Stack Developer & Problem Solver",
     description: "Crafting scalable web applications with modern technologies. Specializing in React, Node.js, and cloud-native architectures. Passionate about solving complex problems and delivering high-quality, maintainable code.",
     location: "Istanbul, Turkey • Remote Worldwide",
-    avatarSrc: "/avatar.png",
     avatarAlt: "Profile picture",
     ctaButtons: [
         {
