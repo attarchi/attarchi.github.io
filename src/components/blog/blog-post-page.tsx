@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ThemeToggle, Badge, Card, CardContent } from '@/components/ui';
 import { Footer } from '@/components/sections';
-import { BlogPost, footerContent } from '@/content';
+import { type BlogPost, footerContent } from '@/content';
 import { parseMarkdown } from '@/lib';
 import { PostNavigation } from './post-navigation';
 

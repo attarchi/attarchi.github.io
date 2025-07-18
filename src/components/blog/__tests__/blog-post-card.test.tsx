@@ -1,8 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { BlogPostCard } from '../blog/blog-post-card';
+import { BlogPostCard } from '../blog-post-card';
 import { BlogPost } from '@/content';
-
-jest.mock('../blog/__mocks__');
 
 const mockBlogPost: BlogPost = {
   title: 'Building Offline-First Apps',

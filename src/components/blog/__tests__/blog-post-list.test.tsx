@@ -1,11 +1,9 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { BlogPostList } from '../blog/blog-post-list';
+import { BlogPostList } from '../blog-post-list';
 import { BlogPost } from '@/content';
 
-jest.mock('../blog/__mocks__', () => ({
-  BlogFilters: require('../blog/__mocks__/blog-filters').BlogFilters,
-  BlogPostCard: require('../blog/__mocks__/blog-post-card').BlogPostCard,
-}));
+jest.mock('../blog-filters');
+jest.mock('../blog-post-card');
 
 const mockPosts: BlogPost[] = [
   {
@@ -42,6 +40,15 @@ const mockPosts: BlogPost[] = [
     published: true,
   },
 ];
+
+jest.mock('@/content', () => ({
+  blogFiltersContent: {
+    placeholder: 'Search posts...',
+    clearButtonText: 'Clear filters',
+    noResultsTitle: 'No posts found',
+    noResultsDescription: 'Try adjusting your search or filters',
+  },
+}));
 
 describe('BlogPostList', () => {
   it('renders list of blog posts', () => {

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from 'react';
-import { BlogPost, blogFiltersContent } from '@/content';
+import { type BlogPost, blogFiltersContent } from '@/content';
 import { BlogPostCard } from './blog-post-card';
 import { BlogFilters } from './blog-filters';
 

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { BlogPostPage } from '../blog/blog-post-page';
+import { BlogPostPage } from '../blog-post-page';
 import { BlogPost } from '@/content';
 
 // Mock the markdown parser

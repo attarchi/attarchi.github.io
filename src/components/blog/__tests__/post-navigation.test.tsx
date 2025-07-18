@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { PostNavigation } from '../blog';
+import { PostNavigation } from '../post-navigation';
 import { BlogPost } from '@/content';
 
 const prevPost: BlogPost = {

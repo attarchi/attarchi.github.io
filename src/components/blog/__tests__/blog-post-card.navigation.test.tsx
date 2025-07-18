@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { BlogPostCard } from '@/components/blog/blog-post-card';
+import { BlogPostCard } from '../blog-post-card';
 import { BlogPost } from '@/content';
 
 const mockPost: BlogPost = {
