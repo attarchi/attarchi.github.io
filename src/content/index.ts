@@ -5,5 +5,5 @@ export { professionalMilestones } from './professional-journey';
 export { type ProfessionalMilestone } from '@/components/sections/ProfessionalJourney';
 export { projectsContent, type Project, type ProjectsContent } from './projects';
 export { technicalExpertiseContent, type TechnicalExpertiseContent, type SkillCategory, type TechnicalSkill } from './technical-expertise';
-export { footerContent, type FooterContent } from './footer';
+export { footerContent } from './footer';
 export { iconConfig, type IconData, type IconConfig } from './icon'; 

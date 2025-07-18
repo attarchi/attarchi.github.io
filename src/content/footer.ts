@@ -1,23 +1,4 @@
-export interface FooterContent {
-    copyright: {
-        title: string;
-        companyName: string;
-        showcaseMessage: string;
-    };
-    repository: {
-        title: string;
-        url: string;
-        text: string;
-    };
-    license: {
-        title: string;
-        name: string;
-        description: string;
-    };
-    buildInfo: string;
-}
-
-export const footerContent: FooterContent = {
+export const footerContent = {
     copyright: {
         title: "Portfolio",
         companyName: "Attarchi",

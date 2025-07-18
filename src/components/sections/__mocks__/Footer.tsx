@@ -1,4 +1,4 @@
-import { type FooterContent } from "@/content";
+import { type FooterContent } from '../Footer';
 
 interface FooterProps {
   content: FooterContent;

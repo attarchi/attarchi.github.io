@@ -1,8 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { sectionVariants } from "@/lib";
-import { type FooterContent } from "@/content";
+
+export interface FooterContent {
+  copyright: {
+    title: string;
+    companyName: string;
+    showcaseMessage: string;
+  };
+  repository: {
+    title: string;
+    url: string;
+    text: string;
+  };
+  license: {
+    title: string;
+    name: string;
+    description: string;
+  };
+  buildInfo: string;
+}
+
+const footerVariants = {
+  hidden: {
+    opacity: 0,
+    transform: "translateY(20px)"
+  },
+  visible: {
+    opacity: 1,
+    transform: "translateY(0px)",
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut'
+    }
+  }
+};
 
 interface FooterProps {
   content: FooterContent;
@@ -13,12 +45,12 @@ export function Footer({ content }: FooterProps) {
 
   return (
     <motion.footer
-      className="py-12 bg-[#21262d] dark:bg-[#0d1117] text-white"
+      className="py-12 bg-[#21262d] dark:bg-[#0d1117] text-white relative"
       role="contentinfo"
-      variants={sectionVariants}
+      variants={footerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-50px" }}
     >
       <div 
         className="max-w-6xl mx-auto px-4"

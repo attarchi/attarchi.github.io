@@ -1,47 +1,25 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-
-// Mock @formspree/react
-jest.mock('@formspree/react', () => ({
-  useForm: jest.fn(),
-  ValidationError: jest.fn(() => null),
-}));
-
-// Mock react-google-recaptcha-v3
-jest.mock('react-google-recaptcha-v3', () => ({
-  useGoogleReCaptcha: jest.fn(),
-}));
-
-// Mock UI components - need to be before the import
-jest.mock('../Typography', () => ({
-  Heading: ({ children, as = 'h3', ...props }: any) => {
-    const Element = as;
-    return React.createElement(Element, props, children);
-  },
-  Text: ({ children, ...props }: any) => React.createElement('p', props, children),
-}));
-
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { ContactForm } from '../ContactForm';
 import { useForm } from '@formspree/react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-import { ContactForm } from '../ContactForm';
-const mockUseForm = useForm as jest.MockedFunction<typeof useForm>;
-const mockUseGoogleReCaptcha = useGoogleReCaptcha as jest.MockedFunction<typeof useGoogleReCaptcha>;
 
-// Mock framer-motion
+// Mock the dependencies
+jest.mock('@formspree/react');
+jest.mock('react-google-recaptcha-v3');
 jest.mock('framer-motion', () => ({
   motion: {
     div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    form: ({ children, ...props }: any) => <form {...props}>{children}</form>,
   },
 }));
 
-
+const mockUseForm = useForm as jest.MockedFunction<typeof useForm>;
+const mockUseGoogleReCaptcha = useGoogleReCaptcha as jest.MockedFunction<typeof useGoogleReCaptcha>;
 
 describe('ContactForm', () => {
   const mockHandleSubmit = jest.fn();
   const mockReset = jest.fn();
   
-  const defaultFormState: any = {
+  const defaultFormState = {
     submitting: false,
     succeeded: false,
     errors: null,
@@ -50,34 +28,40 @@ describe('ContactForm', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    mockUseForm.mockReturnValue([defaultFormState, mockHandleSubmit, mockReset]);
+    
+    // Default mock for useForm
+    mockUseForm.mockReturnValue([
+      defaultFormState,
+      mockHandleSubmit,
+      mockReset
+    ]);
+    
+    // Default mock for useGoogleReCaptcha
     mockUseGoogleReCaptcha.mockReturnValue({
-      executeRecaptcha: jest.fn().mockResolvedValue('mock-recaptcha-token'),
+      executeRecaptcha: jest.fn().mockResolvedValue('mock-token'),
     });
   });
 
   describe('Rendering', () => {
-    it('renders the contact form with default props', () => {
+    it('renders with default props', () => {
       render(<ContactForm />);
       
       expect(screen.getByTestId('contact-form')).toBeInTheDocument();
-      expect(screen.getByLabelText('Name')).toBeInTheDocument();
-      expect(screen.getByLabelText('Email Address')).toBeInTheDocument();
-      expect(screen.getByLabelText('Message')).toBeInTheDocument();
+      expect(screen.getByText('Send a Message')).toBeInTheDocument();
+      expect(screen.getByTestId('name-input')).toBeInTheDocument();
+      expect(screen.getByTestId('email-input')).toBeInTheDocument();
+      expect(screen.getByTestId('message-textarea')).toBeInTheDocument();
       expect(screen.getByTestId('submit-button')).toBeInTheDocument();
-      
-      // Check that form title heading is present
-      const heading = screen.getByTestId('contact-form').querySelector('h3');
-      expect(heading).toBeInTheDocument();
     });
 
     it('renders with custom props', () => {
-      const props = {
-        formTitle: 'Custom Form Title',
-        formspreeId: 'custom-id',
-      };
-      
-      render(<ContactForm {...props} />);
+      render(
+        <ContactForm 
+          formTitle="Custom Form Title"
+          formspreeId="custom-id"
+          successMessage="Custom success message"
+        />
+      );
       
       expect(screen.getByText('Custom Form Title')).toBeInTheDocument();
       expect(mockUseForm).toHaveBeenCalledWith('custom-id');
@@ -116,9 +100,9 @@ describe('ContactForm', () => {
       fireEvent.submit(form!);
       
       // Wait for async reCAPTCHA execution and useEffect to complete
-      await new Promise(resolve => setTimeout(resolve, 100));
-      
-      expect(mockHandleSubmit).toHaveBeenCalled();
+      await waitFor(() => {
+        expect(mockHandleSubmit).toHaveBeenCalled();
+      }, { timeout: 1000 });
     });
 
     it('shows loading state when submitting', () => {
@@ -168,7 +152,8 @@ describe('ContactForm', () => {
     it('renders custom success message', () => {
       mockUseForm.mockReturnValue([
         { ...defaultFormState, succeeded: true },
-        mockHandleSubmit
+        mockHandleSubmit,
+        mockReset
       ]);
       
       const customMessage = 'Custom success message';
@@ -187,7 +172,7 @@ describe('ContactForm', () => {
         ]
       };
       
-      mockUseForm.mockReturnValue([formStateWithErrors, mockHandleSubmit]);
+      mockUseForm.mockReturnValue([formStateWithErrors, mockHandleSubmit, mockReset]);
       
       render(<ContactForm />);
       
@@ -231,7 +216,8 @@ describe('ContactForm', () => {
     it('applies disabled styles when submitting', () => {
       mockUseForm.mockReturnValue([
         { ...defaultFormState, submitting: true },
-        mockHandleSubmit
+        mockHandleSubmit,
+        mockReset
       ]);
       
       render(<ContactForm />);
@@ -261,7 +247,9 @@ describe('ContactForm', () => {
       const form = screen.getByTestId('contact-form').querySelector('form');
       fireEvent.submit(form!);
 
-      expect(mockExecuteRecaptcha).toHaveBeenCalledWith('contact_form');
+      await waitFor(() => {
+        expect(mockExecuteRecaptcha).toHaveBeenCalledWith('contact_form');
+      });
     });
 
     it('handles form submission gracefully when executeRecaptcha is not available', () => {

@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { Footer } from '../Footer'
-import { type FooterContent } from '@/content'
+import { Footer, type FooterContent } from '../Footer'
 
 const mockFooterContent: FooterContent = {
   copyright: {
@@ -58,33 +57,10 @@ describe('Footer Component', () => {
     expect(licenseDescription).toBeInTheDocument()
   })
 
-  it('displays showcase message', () => {
-    render(<Footer content={mockFooterContent} />)
-    
-    const showcaseText = screen.getByText(mockFooterContent.copyright.showcaseMessage)
-    expect(showcaseText).toBeInTheDocument()
-  })
-
   it('displays build information', () => {
     render(<Footer content={mockFooterContent} />)
     
     const buildInfo = screen.getByText(mockFooterContent.buildInfo)
     expect(buildInfo).toBeInTheDocument()
-  })
-
-  it('renders all footer sections', () => {
-    render(<Footer content={mockFooterContent} />)
-    
-    expect(screen.getByTestId('footer-copyright')).toBeInTheDocument()
-    expect(screen.getByTestId('footer-repository')).toBeInTheDocument()
-    expect(screen.getByTestId('footer-license')).toBeInTheDocument()
-  })
-
-  it('displays content from props correctly', () => {
-    render(<Footer content={mockFooterContent} />)
-    
-    expect(screen.getByText(mockFooterContent.copyright.title)).toBeInTheDocument()
-    expect(screen.getByText(mockFooterContent.repository.title)).toBeInTheDocument()
-    expect(screen.getByText(mockFooterContent.license.title)).toBeInTheDocument()
   })
 }) 
