@@ -11,7 +11,6 @@ export interface BlogPreviewSectionProps {
 }
 
 export function BlogPreviewSection({ posts }: BlogPreviewSectionProps) {
-  // Get the 3 latest published posts
   const latestPosts = posts
     .filter(post => post.published)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())

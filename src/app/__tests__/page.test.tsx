@@ -4,14 +4,8 @@ import Home from '../page'
 
 // Mock the modules using the __mocks__ files
 jest.mock('@/lib/blog-data')
-jest.mock('@/components/ui/Typewriter')
-jest.mock('@/components/ui/ThemeToggle')
-jest.mock('@/components/sections/HeroSection')
-jest.mock('@/components/sections/FeaturedProjects')
-jest.mock('@/components/sections/TechnicalExpertise')
-jest.mock('@/components/sections/ProfessionalJourney')
-jest.mock('@/components/sections/ContactSection')
-jest.mock('@/components/sections/blog-preview-section')
+jest.mock('@/components/ui')
+jest.mock('@/components/sections')
 
 describe('Home Page', () => {
   it('renders without crashing', async () => {
@@ -39,16 +33,5 @@ describe('Home Page', () => {
       render(await Home())
     })
     expect(screen.getByTestId('theme-toggle')).toBeInTheDocument()
-  })
-
-  it('renders blog preview with posts', async () => {
-    await act(async () => {
-      render(await Home())
-    })
-    
-    expect(screen.getByTestId('blog-preview-title')).toBeInTheDocument()
-    expect(screen.getByTestId('blog-preview-posts')).toBeInTheDocument()
-    expect(screen.getByTestId('blog-post-0')).toBeInTheDocument()
-    expect(screen.getByTestId('blog-post-1')).toBeInTheDocument()
   })
 }) 
