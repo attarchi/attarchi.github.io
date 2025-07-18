@@ -39,7 +39,6 @@ export const PostNavigation = React.memo(function PostNavigation({ prev, next }:
           </a>
         </div>
       )}
-      {/* Social sharing placeholder */}
       <div data-testid="social-share-placeholder" className="hidden" />
     </nav>
   );

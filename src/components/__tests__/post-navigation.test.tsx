@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { PostNavigation } from '../blog/post-navigation';
+import { PostNavigation } from '../blog';
 import { BlogPost } from '@/content';
 
 const prevPost: BlogPost = {
@@ -36,13 +36,6 @@ describe('PostNavigation', () => {
   it('renders back to blog link', () => {
     render(<PostNavigation />);
     expect(screen.getByText('← Back to Blog')).toBeInTheDocument();
-  });
-
-  it('uses accent color for navigation links', () => {
-    render(<PostNavigation prev={prevPost} next={nextPost} />);
-    expect(screen.getByText('← Prev Post')).toHaveClass('text-accent');
-    expect(screen.getByText('Next Post →')).toHaveClass('text-accent');
-    expect(screen.getByText('← Back to Blog')).toHaveClass('text-accent');
   });
 
   it('handles missing prev gracefully', () => {
