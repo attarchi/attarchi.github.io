@@ -4,10 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import { ThemeToggle, Badge, Card, CardContent } from '@/components/ui';
 import { Footer } from '@/components/sections';
-import { BlogPost } from '@/content';
+import { BlogPost, footerContent } from '@/content';
 import { parseMarkdown } from '@/lib';
 import { PostNavigation } from './post-navigation';
-import { footerContent } from '@/content';
 
 interface BlogPostPageProps {
   post: BlogPost;
@@ -29,12 +28,10 @@ export const BlogPostPage = React.memo(function BlogPostPage({ post, prev, next 
   return (
     <div className="min-h-screen bg-background text-text flex flex-col">
       <article className="flex-1 max-w-4xl mx-auto px-4 py-8 font-sans w-full">
-        {/* Home link and theme toggle */}
         <div className="flex justify-between items-center mb-8">
           <Link href="/" className="text-accent font-mono text-base hover:underline transition-colors" aria-label="Home">← Home</Link>
           <ThemeToggle />
         </div>
-        {/* Post Header */}
         <header className="mb-8">
           <h1 className="text-4xl font-bold font-mono mb-4 text-text">
             {post.title}
@@ -71,7 +68,6 @@ export const BlogPostPage = React.memo(function BlogPostPage({ post, prev, next 
           )}
         </header>
 
-        {/* Post Content */}
         <Card className="bg-surface border-border">
           <CardContent className="p-8">
             <div 
@@ -82,7 +78,6 @@ export const BlogPostPage = React.memo(function BlogPostPage({ post, prev, next 
           </CardContent>
         </Card>
 
-        {/* Post Navigation */}
         <PostNavigation prev={prev} next={next} />
       </article>
       <Footer content={footerContent} />

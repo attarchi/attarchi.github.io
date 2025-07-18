@@ -7,6 +7,7 @@ import { footerContent } from '@/content';
 
 export default async function BlogPage() {
   const posts = await getPublishedBlogPosts();
+
   return (
     <div className="min-h-screen bg-background text-text flex flex-col">
       <div className="flex-1 max-w-6xl mx-auto px-4 py-8 w-full">

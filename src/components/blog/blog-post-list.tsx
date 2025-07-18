@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState, useMemo } from 'react';
-import { BlogPost } from '@/content';
+import { BlogPost, blogFiltersContent } from '@/content';
 import { BlogPostCard } from './blog-post-card';
 import { BlogFilters } from './blog-filters';
-import { blogFiltersContent } from '@/content';
 
 interface BlogPostListProps {
   posts: BlogPost[];

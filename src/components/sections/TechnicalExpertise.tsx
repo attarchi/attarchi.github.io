@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import {
   categoryStaggerVariants,
   categorySlideInVariants,
-  skillStaggerVariants,
-  skillFadeVariants,
-  proficiencyScaleVariants,
+  staggerVariants,
+  fadeVariants,
+  scaleVariants,
   sectionVariants
 } from "@/lib";
 import { type SkillCategory } from "@/content";
@@ -54,12 +54,12 @@ export function TechnicalExpertise({ categories }: TechnicalExpertiseProps) {
                 <motion.div
                   className="mt-4 space-y-3"
                   data-testid="skills-list"
-                  variants={skillStaggerVariants}
+                  variants={staggerVariants}
                 >
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div 
                       key={skillIndex} 
-                      variants={skillFadeVariants}
+                      variants={fadeVariants}
                       className="group relative flex items-start gap-3"
                       data-testid="skill-item"
                     >
@@ -87,7 +87,7 @@ export function TechnicalExpertise({ categories }: TechnicalExpertiseProps) {
                         <motion.div
                           className="mt-1 relative h-2 bg-[#e1e4e8] dark:bg-[#30363d] rounded-full"
                           data-testid="proficiency-bar"
-                          variants={proficiencyScaleVariants}
+                          variants={scaleVariants}
                         >
                         <motion.div
                           className="absolute top-0 left-0 h-full bg-[#0969da] dark:bg-[#58a6ff] rounded-full"

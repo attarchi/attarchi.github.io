@@ -1,5 +1,21 @@
 import { Variants } from 'framer-motion';
-import { AnimationVariants, SlideInVariants, TypewriterVariants } from '@/types';
+
+export interface AnimationVariants {
+    hidden: Record<string, any>;
+    visible: Record<string, any>;
+    hover?: Record<string, any>;
+    tap?: Record<string, any>;
+    exit?: Record<string, any>;
+}
+
+export interface SlideInVariants {
+    left: AnimationVariants;
+    right: AnimationVariants;
+}
+
+export interface TypewriterVariants extends AnimationVariants {
+    typing: Record<string, any>;
+}
 
 export const sectionVariants: Variants = {
     hidden: {
@@ -248,13 +264,41 @@ export const categoryStaggerVariants: Variants = {
         transition: {
             duration: 0.8,
             ease: 'easeOut',
-            staggerChildren: 0.15,
+            staggerChildren: 0.1,
             delayChildren: 0.2
         }
     }
 };
 
 export const categorySlideInVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        x: -30
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.6,
+            ease: 'easeOut'
+        }
+    }
+};
+
+export const skillProgressVariants: Variants = {
+    hidden: {
+        width: 0
+    },
+    visible: {
+        width: '100%',
+        transition: {
+            duration: 1.2,
+            ease: 'easeOut'
+        }
+    }
+};
+
+export const timelineVariants: Variants = {
     hidden: {
         opacity: 0,
         x: -50
@@ -264,29 +308,14 @@ export const categorySlideInVariants: Variants = {
         x: 0,
         transition: {
             duration: 0.8,
-            ease: 'easeOut'
-        }
-    }
-};
-
-export const skillStaggerVariants: Variants = {
-    hidden: {
-        opacity: 0,
-        y: 20
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.6,
             ease: 'easeOut',
-            staggerChildren: 0.05,
+            staggerChildren: 0.2,
             delayChildren: 0.1
         }
     }
 };
 
-export const skillFadeVariants: Variants = {
+export const timelineItemVariants: Variants = {
     hidden: {
         opacity: 0,
         y: 20
@@ -301,34 +330,168 @@ export const skillFadeVariants: Variants = {
     }
 };
 
-export const proficiencyScaleVariants: Variants = {
+export const contactFormVariants: Variants = {
     hidden: {
         opacity: 0,
-        scale: 0.5,
-        transformOrigin: "left center"
+        y: 30
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: 'easeOut'
+        }
+    }
+};
+
+export const buttonVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        scale: 0.9
     },
     visible: {
         opacity: 1,
         scale: 1,
         transition: {
             duration: 0.6,
-            ease: "easeOut",
-            delay: 0.3
+            ease: 'easeOut'
+        }
+    },
+    hover: {
+        scale: 1.05,
+        transition: {
+            duration: 0.2,
+            ease: 'easeOut'
+        }
+    },
+    tap: {
+        scale: 0.95
+    }
+};
+
+export const cardVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 20
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: 'easeOut'
+        }
+    },
+    hover: {
+        y: -5,
+        transition: {
+            duration: 0.2,
+            ease: 'easeOut'
         }
     }
 };
 
-export const proficiencyFillVariants: Variants = {
+export const badgeVariants: Variants = {
     hidden: {
-        scaleX: 0,
-        transformOrigin: "left center"
+        opacity: 0,
+        scale: 0.8
     },
     visible: {
-        scaleX: 1,
+        opacity: 1,
+        scale: 1,
         transition: {
-            duration: 1.2,
-            ease: "easeOut",
-            delay: 0.8
+            duration: 0.4,
+            ease: 'easeOut'
+        }
+    },
+    hover: {
+        scale: 1.1,
+        transition: {
+            duration: 0.2,
+            ease: 'easeOut'
+        }
+    }
+};
+
+export const iconVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        scale: 0.8
+    },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 0.5,
+            ease: 'easeOut'
+        }
+    },
+    hover: {
+        scale: 1.2,
+        transition: {
+            duration: 0.2,
+            ease: 'easeOut'
+        }
+    }
+};
+
+export const textVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 20
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: 'easeOut'
+        }
+    }
+};
+
+export const headingVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 30
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: 'easeOut'
+        }
+    }
+};
+
+export const listVariants: Variants = {
+    hidden: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.8,
+            ease: 'easeOut',
+            staggerChildren: 0.1,
+            delayChildren: 0.2
+        }
+    }
+};
+
+export const listItemVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        x: -20
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.5,
+            ease: 'easeOut'
         }
     }
 }; 

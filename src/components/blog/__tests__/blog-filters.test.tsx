@@ -3,6 +3,10 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { BlogFilters } from '../blog-filters';
 
 const mockCategories = ['Technology', 'Development', 'Mobile'];
+const mockContent = {
+  placeholder: 'Search posts...',
+  clearButtonText: 'Clear filters',
+};
 const mockProps = {
   categories: mockCategories,
   selectedCategory: '',
@@ -11,6 +15,7 @@ const mockProps = {
   onSearchChange: jest.fn(),
   onClear: jest.fn(),
   showClear: false,
+  content: mockContent,
 };
 
 describe('BlogFilters', () => {

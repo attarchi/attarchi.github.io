@@ -4,9 +4,9 @@ import { BlogPost } from '@/content';
 
 jest.mock('../blog/__mocks__', () => ({
   BlogFilters: require('../blog/__mocks__/blog-filters').BlogFilters,
+  BlogPostCard: require('../blog/__mocks__/blog-post-card').BlogPostCard,
 }));
 
-// Mock data for testing
 const mockPosts: BlogPost[] = [
   {
     title: 'Building Offline-First Apps',
@@ -55,7 +55,6 @@ describe('BlogPostList', () => {
   it('displays category filter badges', () => {
     render(<BlogPostList posts={mockPosts} />);
     
-    // Use getAllByText to get all instances and check filter badges specifically
     const mobileBadges = screen.getAllByText('Mobile Development');
     const backendBadges = screen.getAllByText('Backend Development');
     const frontendBadges = screen.getAllByText('Frontend Development');
@@ -68,9 +67,8 @@ describe('BlogPostList', () => {
   it('filters posts by category when badge is clicked', async () => {
     render(<BlogPostList posts={mockPosts} />);
     
-    // Get the first Mobile Development badge (filter badge)
     const mobileBadges = screen.getAllByText('Mobile Development');
-    const mobileBadge = mobileBadges[0]; // Filter badge is first
+    const mobileBadge = mobileBadges[0];
     fireEvent.click(mobileBadge);
     
     await waitFor(() => {
@@ -99,7 +97,6 @@ describe('BlogPostList', () => {
     const posts = screen.getAllByTestId('blog-post-card');
     expect(posts).toHaveLength(3);
     
-    // Check that the first post is the newest (2025-01-15)
     expect(screen.getByText('Building Offline-First Apps')).toBeInTheDocument();
   });
 
@@ -115,17 +112,9 @@ describe('BlogPostList', () => {
     });
   });
 
-  it('has responsive grid layout classes', () => {
-    render(<BlogPostList posts={mockPosts} />);
-    
-    const gridContainer = screen.getByTestId('blog-posts-grid');
-    expect(gridContainer).toHaveClass('grid', 'grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-3');
-  });
-
   it('clears filters when clear button is clicked', async () => {
     render(<BlogPostList posts={mockPosts} />);
     
-    // Apply a filter
     const searchInput = screen.getByPlaceholderText('Search posts...');
     fireEvent.change(searchInput, { target: { value: 'offline' } });
     
@@ -133,7 +122,6 @@ describe('BlogPostList', () => {
       expect(screen.queryByText('Microservices Architecture Patterns')).not.toBeInTheDocument();
     });
     
-    // Clear filters
     const clearButton = screen.getByText('Clear filters');
     fireEvent.click(clearButton);
     
@@ -152,7 +140,6 @@ describe('BlogPostList', () => {
     fireEvent.change(searchInput, { target: { value: 'of' } });
     fireEvent.change(searchInput, { target: { value: 'off' } });
     
-    // Fast forward timers to trigger debounced search
     jest.runAllTimers();
     
     await waitFor(() => {

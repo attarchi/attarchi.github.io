@@ -12,10 +12,18 @@ import {
     techBadgeVariants,
     categoryStaggerVariants,
     categorySlideInVariants,
-    skillStaggerVariants,
-    skillFadeVariants,
-    proficiencyScaleVariants,
-    proficiencyFillVariants,
+    skillProgressVariants,
+    timelineVariants,
+    timelineItemVariants,
+    contactFormVariants,
+    buttonVariants,
+    cardVariants,
+    badgeVariants,
+    iconVariants,
+    textVariants,
+    headingVariants,
+    listVariants,
+    listItemVariants,
     createCustomVariants,
     createStaggerVariants
 } from '../animation-variants';
@@ -35,10 +43,18 @@ describe('Animation Variants', () => {
                 techBadgeVariants,
                 categoryStaggerVariants,
                 categorySlideInVariants,
-                skillStaggerVariants,
-                skillFadeVariants,
-                proficiencyScaleVariants,
-                proficiencyFillVariants
+                skillProgressVariants,
+                timelineVariants,
+                timelineItemVariants,
+                contactFormVariants,
+                buttonVariants,
+                cardVariants,
+                badgeVariants,
+                iconVariants,
+                textVariants,
+                headingVariants,
+                listVariants,
+                listItemVariants
             ];
 
             variants.forEach(variant => {
@@ -64,30 +80,34 @@ describe('Animation Variants', () => {
             const variants = [sectionVariants, staggerVariants, slideUpVariants, scaleVariants, typewriterVariants, fadeVariants];
 
             variants.forEach(variant => {
-                if (variant.visible?.transition) {
-                    expect(variant.visible.transition.duration).toBe(0.8);
-                    expect(variant.visible.transition.ease).toBe('easeOut');
+                const visible = variant.visible as any;
+                if (visible?.transition) {
+                    expect(visible.transition.duration).toBe(0.8);
+                    expect(visible.transition.ease).toBe('easeOut');
                 }
             });
         });
 
         it('should have appropriate stagger timing', () => {
-            expect(staggerVariants.visible.transition.staggerChildren).toBe(0.1);
-            expect(staggerVariants.visible.transition.delayChildren).toBe(0.2);
+            const visible = staggerVariants.visible as any;
+            expect(visible.transition.staggerChildren).toBe(0.1);
+            expect(visible.transition.delayChildren).toBe(0.2);
         });
     });
 
     describe('Utility Functions', () => {
         it('should create custom variants with custom timing', () => {
             const customVariants = createCustomVariants(sectionVariants, 1.0, 0.5);
-            expect(customVariants.visible.transition.duration).toBe(1.0);
-            expect(customVariants.visible.transition.delay).toBe(0.5);
+            const visible = customVariants.visible as any;
+            expect(visible.transition.duration).toBe(1.0);
+            expect(visible.transition.delay).toBe(0.5);
         });
 
         it('should create stagger variants with custom timing', () => {
             const customStagger = createStaggerVariants(0.3, 0.4);
-            expect(customStagger.visible.transition.staggerChildren).toBe(0.3);
-            expect(customStagger.visible.transition.delayChildren).toBe(0.4);
+            const visible = customStagger.visible as any;
+            expect(visible.transition.staggerChildren).toBe(0.3);
+            expect(visible.transition.delayChildren).toBe(0.4);
         });
     });
 

@@ -1,5 +1,10 @@
 import React from 'react';
 
+interface BlogFiltersContent {
+  placeholder: string;
+  clearButtonText: string;
+}
+
 interface BlogFiltersProps {
   categories: string[];
   selectedCategory: string;
@@ -8,6 +13,7 @@ interface BlogFiltersProps {
   onSearchChange: (val: string) => void;
   onClear: () => void;
   showClear: boolean;
+  content: BlogFiltersContent;
 }
 
 export const BlogFilters: React.FC<BlogFiltersProps> = ({
@@ -18,12 +24,14 @@ export const BlogFilters: React.FC<BlogFiltersProps> = ({
   onSearchChange,
   onClear,
   showClear,
+  content,
 }) => {
   return (
     <div data-testid="blog-filters">
       <input
         data-testid="search-input"
         type="text"
+        placeholder={content.placeholder}
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
       />
@@ -40,7 +48,7 @@ export const BlogFilters: React.FC<BlogFiltersProps> = ({
       </div>
       {showClear && (
         <button data-testid="clear-filters" onClick={onClear}>
-          Clear filters
+          {content.clearButtonText}
         </button>
       )}
     </div>
