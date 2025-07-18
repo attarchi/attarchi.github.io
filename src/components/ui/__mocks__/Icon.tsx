@@ -1,4 +1,5 @@
 import React from 'react';
+import { iconConfig } from "@/content/icon";
 
 export interface IconProps {
   name: string;
@@ -7,7 +8,12 @@ export interface IconProps {
   className?: string;
 }
 
-export function Icon({ name, alt, size = 24, className = "" }: IconProps) {
+export function Icon({ 
+  name, 
+  alt, 
+  size = iconConfig.defaultSize, 
+  className = iconConfig.defaultClassName 
+}: IconProps) {
   return (
     <img 
       src={`/icons/${name}.png`} 

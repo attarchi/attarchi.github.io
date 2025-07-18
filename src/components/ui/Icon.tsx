@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { iconConfig } from "@/content/icon";
 
 export interface IconProps {
   name: string;
@@ -7,10 +8,13 @@ export interface IconProps {
   className?: string;
 }
 
-const SVG_ICONS = ['mongodb', 'github-mark'];
-
-export function Icon({ name, alt, size = 24, className = "" }: IconProps) {
-  const isSvg = SVG_ICONS.includes(name);
+export function Icon({ 
+  name, 
+  alt, 
+  size = iconConfig.defaultSize, 
+  className = iconConfig.defaultClassName 
+}: IconProps) {
+  const isSvg = iconConfig.svgIcons.includes(name);
   const extension = isSvg ? 'svg' : 'png';
   const src = `/icons/${name}.${extension}`;
   const altText = alt || name;

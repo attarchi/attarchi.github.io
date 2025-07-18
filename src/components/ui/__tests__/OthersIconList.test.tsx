@@ -1,6 +1,12 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { OthersIconList } from "../OthersIconList";
 
+jest.mock("../Icon", () => ({
+  Icon: jest.fn(({ name, alt, size }) => (
+    <img src={`/icons/${name}.png`} alt={alt} width={size} height={size} />
+  ))
+}));
+
 const mockOthers = [
   { name: "GitHub", icon: "github-mark" },
   { name: "Prisma", icon: "prisma" },
@@ -53,8 +59,9 @@ describe("OthersIconList", () => {
   });
 
   it("handles undefined others", () => {
-    render(<OthersIconList others={undefined} />);
+    render(<OthersIconList />);
     
     expect(screen.queryByText("Others")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("other-icon-container")).not.toBeInTheDocument();
   });
 }); 
