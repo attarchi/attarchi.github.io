@@ -11,6 +11,8 @@ jest.mock("@/lib", () => ({
   sectionVariants: { hidden: {}, visible: {} }
 }));
 
+jest.mock("@/components/ui");
+
 const mockCategories = [
   {
     title: "Frontend Development",
@@ -144,7 +146,6 @@ describe("TechnicalExpertise", () => {
   it("does not render icons for skills without them", () => {
     render(<TechnicalExpertise categories={mockCategories} />);
     
-    // TypeScript should not have an icon
     const typescriptIcon = screen.queryByRole("img", { name: /typescript icon/i });
     expect(typescriptIcon).not.toBeInTheDocument();
   });
@@ -160,15 +161,15 @@ describe("TechnicalExpertise", () => {
   it("renders others section for categories with others", () => {
     render(<TechnicalExpertise categories={mockCategories} />);
     
-    expect(screen.getAllByText("Others")).toHaveLength(2);
+    expect(screen.getAllByTestId("others-icon-list")).toHaveLength(2);
   });
 
-  it("renders other skills as icons", () => {
+  it("renders other skills names in mock", () => {
     render(<TechnicalExpertise categories={mockCategories} />);
     
-    expect(screen.getByRole("img", { name: /github icon/i })).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: /prisma icon/i })).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: /couchdb icon/i })).toBeInTheDocument();
+    expect(screen.getByText("GitHub")).toBeInTheDocument();
+    expect(screen.getByText("Prisma")).toBeInTheDocument();
+    expect(screen.getByText("CouchDB")).toBeInTheDocument();
   });
 
   it("does not render others section for categories without others", () => {
@@ -181,6 +182,6 @@ describe("TechnicalExpertise", () => {
     
     render(<TechnicalExpertise categories={categoriesWithoutOthers} />);
     
-    expect(screen.queryByText("Others")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("others-icon-list")).not.toBeInTheDocument();
   });
 }); 

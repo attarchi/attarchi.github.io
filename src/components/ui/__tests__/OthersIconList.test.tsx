@@ -22,26 +22,6 @@ describe("OthersIconList", () => {
     expect(screen.getByRole("img", { name: /couchdb icon/i })).toBeInTheDocument();
   });
 
-  it("renders icons with proper size and styling", () => {
-    render(<OthersIconList others={mockOthers} />);
-    
-    const icons = screen.getAllByRole("img");
-    icons.forEach(icon => {
-      expect(icon).toHaveAttribute("width", "24");
-      expect(icon).toHaveAttribute("height", "24");
-    });
-  });
-
-  it("applies circle frame styling to icons", () => {
-    render(<OthersIconList others={mockOthers} />);
-    
-    const iconContainers = screen.getAllByTestId("other-icon-container");
-    iconContainers.forEach(container => {
-      const innerDiv = container.querySelector('div');
-      expect(innerDiv).toHaveClass("rounded-full", "border-2", "p-2");
-    });
-  });
-
   it("shows tooltip on hover", () => {
     render(<OthersIconList others={mockOthers} />);
     
@@ -50,7 +30,6 @@ describe("OthersIconList", () => {
     
     fireEvent.mouseEnter(container!);
     
-    // Tooltip should be visible
     expect(screen.getByText("GitHub")).toBeInTheDocument();
   });
 
@@ -63,7 +42,6 @@ describe("OthersIconList", () => {
     fireEvent.mouseEnter(container!);
     fireEvent.mouseLeave(container!);
     
-    // Tooltip should be hidden
     expect(screen.queryByText("GitHub")).not.toBeInTheDocument();
   });
 

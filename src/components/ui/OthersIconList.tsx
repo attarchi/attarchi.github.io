@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 import { Icon } from "./Icon";
-import { type OtherSkill } from "@/content";
+
+export interface OtherSkill {
+  name: string;
+  icon: string;
+}
 
 export interface OthersIconListProps {
   others?: OtherSkill[];
@@ -37,7 +41,6 @@ export function OthersIconList({ others }: OthersIconListProps) {
               />
             </div>
             
-            {/* Tooltip */}
             {hoveredIcon === other.name && (
               <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-[#24292f] dark:bg-[#f0f6fc] text-[#f0f6fc] dark:text-[#24292f] text-xs rounded shadow-lg z-10 whitespace-nowrap">
                 {other.name}

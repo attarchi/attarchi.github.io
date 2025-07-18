@@ -5,15 +5,10 @@ export interface TechnicalSkill {
     icon?: string;
 }
 
-export interface OtherSkill {
-    name: string;
-    icon: string;
-}
-
 export interface SkillCategory {
     title: string;
     skills?: TechnicalSkill[];
-    others?: OtherSkill[];
+    others?: Array<{ name: string; icon: string }>;
 }
 
 export interface TechnicalExpertiseContent {
