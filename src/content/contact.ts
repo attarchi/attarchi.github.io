@@ -1,19 +1,4 @@
-export interface ContactContent {
-    status?: string | undefined;
-    location?: string | undefined;
-    email?: string | undefined;
-    linkedinUrl?: string | undefined;
-    githubUrl?: string | undefined;
-    responseTime?: string | undefined;
-    availabilityType?: string | undefined;
-    sectionTitle?: string | undefined;
-    sectionSubtitle?: string | undefined;
-    contactInfoTitle?: string | undefined;
-    formTitle?: string | undefined;
-    formDescription?: string | undefined;
-}
-
-export const contactContent: ContactContent = {
+export const contactContent = {
     status: "Available for new opportunities",
     location: "Istanbul, Turkey (UTC+3)",
     email: "attarchi@me.com",

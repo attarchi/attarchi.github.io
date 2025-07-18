@@ -1,5 +1,5 @@
 export { heroContent, type HeroContent, type CtaButton } from './hero';
-export { contactContent, type ContactContent } from './contact';
+export { contactContent } from './contact';
 export { themeConfig, type ThemeConfig } from './theme';
 export { professionalMilestones } from './professional-journey';
 export { type ProfessionalMilestone } from '@/components/sections/ProfessionalJourney';

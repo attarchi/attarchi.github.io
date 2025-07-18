@@ -4,9 +4,21 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Heading, Text, Badge } from "@/components/ui";
 import { slideUpVariants, fadeVariants, staggerVariants, sectionVariants } from "@/lib";
-import { ContactContent } from "@/content";
 
-export interface ContactSectionProps extends ContactContent {}
+export interface ContactSectionProps {
+  status?: string;
+  location?: string;
+  email?: string;
+  linkedinUrl?: string;
+  githubUrl?: string;
+  responseTime?: string;
+  availabilityType?: string;
+  sectionTitle?: string;
+  sectionSubtitle?: string;
+  contactInfoTitle?: string;
+  formTitle?: string;
+  formDescription?: string;
+}
 
 export function ContactSection({
   status,
@@ -16,12 +28,12 @@ export function ContactSection({
   githubUrl,
   responseTime,
   availabilityType,
-  sectionTitle = "Let's Work Together",
-  sectionSubtitle = "Available for exciting projects and opportunities",
-  contactInfoTitle = "Contact Information",
-  formTitle = "Send Message",
-  formDescription = "Feature coming soon! This form will be available when the site goes live.",
-}: ContactSectionProps) {
+  sectionTitle,
+  sectionSubtitle,
+  contactInfoTitle,
+  formTitle,
+  formDescription,
+}: ContactSectionProps = {}) {
   const [showMessage, setShowMessage] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -70,7 +82,7 @@ export function ContactSection({
                 </Heading>
                 <motion.div
                   variants={fadeVariants}
-                  transition={{ delay: 0.8 }} // Last in sequence
+                  transition={{ delay: 0.8 }}
                 >
                   <Badge 
                     data-testid="availability-badge"
@@ -168,7 +180,6 @@ export function ContactSection({
               </motion.div>
             </div>
 
-            {/* Availability Details */}
             <motion.div 
               className="mt-6 p-4 bg-[#f6f8fa] dark:bg-[#0d1117] border border-[#d0d7de] dark:border-[#30363d] rounded-md"
               variants={fadeVariants}
@@ -201,7 +212,6 @@ export function ContactSection({
             </motion.div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div 
             data-testid="contact-form"
             className="bg-white dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] rounded-lg p-6 shadow-sm"

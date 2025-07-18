@@ -4,5 +4,5 @@ export { HeroSection } from './HeroSection';
 export { FeaturedProjects } from './FeaturedProjects';
 export { TechnicalExpertise } from './TechnicalExpertise';
 export { ProfessionalJourney } from './ProfessionalJourney';
-export const ContactSection = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'contact-section' }, children);
+export { ContactSection } from './ContactSection';
 export const BlogPreviewSection = ({ children, ...props }: any) => React.createElement('section', { ...props, 'data-testid': 'blog-preview-section' }, children); 

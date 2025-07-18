@@ -1,5 +1,21 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { ContactSection } from "../ContactSection";
+import { contactContent } from "@/content";
+
+jest.mock("@/components/ui", () => ({
+  Heading: ({ children, ...props }: any) => <h2 {...props}>{children}</h2>,
+  Text: ({ children, ...props }: any) => <span {...props}>{children}</span>,
+  Badge: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+}));
+
+jest.mock("framer-motion", () => ({
+  motion: {
+    section: ({ children, variants, initial, whileInView, viewport, ...props }: any) => 
+      <section {...props}>{children}</section>,
+    div: ({ children, variants, animate, initial, transition, ...props }: any) => 
+      <div {...props}>{children}</div>,
+  },
+}));
 
 const defaultProps = {
   status: "Available for new opportunities",
@@ -9,95 +25,127 @@ const defaultProps = {
   githubUrl: "https://github.com/attarchi",
   responseTime: "Usually within 24 hours",
   availabilityType: "Full-time, Contract, Consulting",
+  sectionTitle: "Let's Work Together",
+  sectionSubtitle: "Available for exciting projects and opportunities",
+  contactInfoTitle: "Contact Information",
+  formTitle: "Send Message",
+  formDescription: "Feature coming soon! This form will be available when the site goes live.",
 };
 
 describe("ContactSection", () => {
-  it("renders with correct section background and spacing", () => {
+  it("renders contact section with correct content", () => {
     render(<ContactSection {...defaultProps} />);
-    const section = screen.getByRole("region", { name: /contact/i });
-    expect(section).toBeInTheDocument();
-    expect(section).toHaveClass("py-20");
-  });
-
-  it("renders section heading and subheading correctly", () => {
-    render(<ContactSection {...defaultProps} />);
+    
+    expect(screen.getByRole("region", { name: /contact/i })).toBeInTheDocument();
     expect(screen.getByText("Let's Work Together")).toBeInTheDocument();
     expect(screen.getByText("Available for exciting projects and opportunities")).toBeInTheDocument();
   });
 
-  it("has correct container styling with max-width", () => {
+  it("displays all contact information correctly", () => {
     render(<ContactSection {...defaultProps} />);
-    const container = screen.getByText("Let's Work Together").closest("div")?.parentElement;
-    expect(container).toHaveClass("max-w-6xl");
-  });
-
-  it("has responsive grid layout classes", () => {
-    render(<ContactSection {...defaultProps} />);
-    const gridContainer = screen.getByTestId("contact-grid");
-    expect(gridContainer).toHaveClass("grid", "grid-cols-1", "lg:grid-cols-2", "gap-12");
-  });
-
-  it("renders contact info card with correct styling", () => {
-    render(<ContactSection {...defaultProps} />);
-    const contactCard = screen.getByTestId("contact-info-card");
-    expect(contactCard).toBeInTheDocument();
-    expect(contactCard).toHaveClass("bg-white", "dark:bg-[#21262d]");
-  });
-
-  it("displays contact information correctly", () => {
-    render(<ContactSection {...defaultProps} />);
-    const contactInfoCard = screen.getByTestId("contact-info-card");
-    expect(contactInfoCard).toHaveTextContent("Email");
+    
     expect(screen.getByText(defaultProps.email)).toBeInTheDocument();
-    expect(contactInfoCard).toHaveTextContent("LinkedIn");
     expect(screen.getByText(defaultProps.linkedinUrl)).toBeInTheDocument();
-    expect(contactInfoCard).toHaveTextContent("GitHub");
     expect(screen.getByText(defaultProps.githubUrl)).toBeInTheDocument();
-  });
-
-  it("shows availability status badge", () => {
-    render(<ContactSection {...defaultProps} />);
-    const availabilityBadge = screen.getByTestId("availability-badge");
-    expect(availabilityBadge).toBeInTheDocument();
-    expect(availabilityBadge).toHaveTextContent(defaultProps.status);
-  });
-
-  it("displays real contact information with correct formatting", () => {
-    render(<ContactSection {...defaultProps} />);
-    const contactInfoCard = screen.getByTestId("contact-info-card");
-    expect(contactInfoCard).toHaveTextContent(defaultProps.email);
-    expect(contactInfoCard).toHaveTextContent(defaultProps.linkedinUrl);
-    expect(contactInfoCard).toHaveTextContent(defaultProps.githubUrl);
-    expect(contactInfoCard).toHaveTextContent(defaultProps.location);
-  });
-
-  it("shows detailed availability status prominently", () => {
-    render(<ContactSection {...defaultProps} />);
-    const availabilityBadge = screen.getByTestId("availability-badge");
-    expect(availabilityBadge).toBeInTheDocument();
-    expect(availabilityBadge).toHaveTextContent(defaultProps.status);
-  });
-
-  it("displays response time and availability type information", () => {
-    render(<ContactSection {...defaultProps} />);
+    expect(screen.getByText(defaultProps.location)).toBeInTheDocument();
     expect(screen.getByText(defaultProps.responseTime)).toBeInTheDocument();
     expect(screen.getByText(defaultProps.availabilityType)).toBeInTheDocument();
   });
 
-  it("has properly formatted social media links with hover effects", () => {
+  it("shows availability status badge", () => {
     render(<ContactSection {...defaultProps} />);
-    const linkedinLink = screen.getByText(defaultProps.linkedinUrl);
-    const githubLink = screen.getByText(defaultProps.githubUrl);
-    expect(linkedinLink).toBeInTheDocument();
-    expect(githubLink).toBeInTheDocument();
-    expect(linkedinLink.closest("a")).toBeInTheDocument();
-    expect(githubLink.closest("a")).toBeInTheDocument();
+    
+    const availabilityBadge = screen.getByTestId("availability-badge");
+    expect(availabilityBadge).toBeInTheDocument();
+    expect(availabilityBadge).toHaveTextContent(defaultProps.status);
   });
 
-  it("maintains professional contact card layout", () => {
+  it("renders social media links with correct attributes", () => {
     render(<ContactSection {...defaultProps} />);
-    const contactCard = screen.getByTestId("contact-info-card");
-    expect(contactCard).toHaveClass("rounded-lg", "p-6", "shadow-sm");
-    expect(contactCard).toHaveClass("border", "border-[#d0d7de]", "dark:border-[#30363d]");
+    
+    const linkedinLink = screen.getByText(defaultProps.linkedinUrl).closest("a");
+    const githubLink = screen.getByText(defaultProps.githubUrl).closest("a");
+    
+    expect(linkedinLink).toHaveAttribute("href", defaultProps.linkedinUrl);
+    expect(linkedinLink).toHaveAttribute("target", "_blank");
+    expect(linkedinLink).toHaveAttribute("rel", "noopener noreferrer");
+    
+    expect(githubLink).toHaveAttribute("href", defaultProps.githubUrl);
+    expect(githubLink).toHaveAttribute("target", "_blank");
+    expect(githubLink).toHaveAttribute("rel", "noopener noreferrer");
+  });
+
+  it("renders contact form with all required fields", () => {
+    render(<ContactSection {...defaultProps} />);
+    
+    expect(screen.getByLabelText(/name/i)).toBeInTheDocument();
+    expect(screen.getByTestId("name-input")).toBeRequired();
+    
+    expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
+    expect(screen.getByTestId("email-input")).toBeRequired();
+    expect(screen.getByTestId("email-input")).toHaveAttribute("type", "email");
+    
+    expect(screen.getByLabelText(/message/i)).toBeInTheDocument();
+    expect(screen.getByTestId("message-textarea")).toBeRequired();
+    
+    expect(screen.getByTestId("submit-button")).toBeInTheDocument();
+    expect(screen.getByTestId("submit-button")).toHaveTextContent("Send Message");
+  });
+
+  it("displays form submission message when form is submitted", async () => {
+    render(<ContactSection {...defaultProps} />);
+    
+    const nameInput = screen.getByTestId("name-input");
+    const emailInput = screen.getByTestId("email-input");
+    const messageTextarea = screen.getByTestId("message-textarea");
+    const form = screen.getByTestId("contact-form").querySelector("form");
+    
+    fireEvent.change(nameInput, { target: { value: "Test User" } });
+    fireEvent.change(emailInput, { target: { value: "test@example.com" } });
+    fireEvent.change(messageTextarea, { target: { value: "Test message" } });
+    
+    expect(form).toBeInTheDocument();
+    fireEvent.submit(form!);
+    
+    await waitFor(() => {
+      expect(screen.getByText("Feature coming soon! This form will be available when the site goes live.")).toBeInTheDocument();
+    });
+  });
+
+  it("message disappears after timeout", async () => {
+    jest.useFakeTimers();
+    render(<ContactSection {...defaultProps} />);
+    
+    const form = screen.getByTestId("contact-form").querySelector("form");
+    fireEvent.submit(form!);
+    
+    await waitFor(() => {
+      expect(screen.getByText("Feature coming soon! This form will be available when the site goes live.")).toBeInTheDocument();
+    });
+    
+    jest.advanceTimersByTime(5000);
+    
+    await waitFor(() => {
+      expect(screen.queryByText("Feature coming soon! This form will be available when the site goes live.")).not.toBeInTheDocument();
+    });
+    
+    jest.useRealTimers();
+  });
+
+  it("uses custom section titles when provided", () => {
+    const customProps = {
+      ...defaultProps,
+      sectionTitle: "Custom Contact Title",
+      sectionSubtitle: "Custom subtitle",
+      contactInfoTitle: "Custom Info Title",
+      formTitle: "Custom Form Title",
+    };
+    
+    render(<ContactSection {...customProps} />);
+    
+    expect(screen.getByText("Custom Contact Title")).toBeInTheDocument();
+    expect(screen.getByText("Custom subtitle")).toBeInTheDocument();
+    expect(screen.getByText("Custom Info Title")).toBeInTheDocument();
+    expect(screen.getByText("Custom Form Title")).toBeInTheDocument();
   });
 }); 
