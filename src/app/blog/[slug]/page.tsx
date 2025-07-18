@@ -1,4 +1,4 @@
-import { BlogPostPage } from '@/components/blog/blog-post-page';
+import { BlogPostPage } from '@/components/blog';
 import { notFound } from 'next/navigation';
 import { getBlogPostBySlug, getPublishedBlogPosts } from '@/lib/blog-data';
 

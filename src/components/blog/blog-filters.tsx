@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Badge, Button } from '@/components/ui';
+import { blogFiltersContent } from '@/content';
 
 interface BlogFiltersProps {
   categories: string[];
@@ -26,7 +27,7 @@ export const BlogFilters = React.memo(function BlogFilters({
     <div className="space-y-4">
       <input
         type="text"
-        placeholder="Search posts..."
+        placeholder={blogFiltersContent.placeholder}
         value={searchTerm}
         onChange={e => onSearchChange(e.target.value)}
         className="w-full px-4 py-2 border border-muted rounded-lg bg-surface text-text focus:outline-none focus:ring-2 focus:ring-accent"
@@ -45,7 +46,7 @@ export const BlogFilters = React.memo(function BlogFilters({
       </div>
       {showClear && (
         <Button variant="outline" size="sm" onClick={onClear} className="text-muted hover:text-text">
-          Clear filters
+          {blogFiltersContent.clearButtonText}
         </Button>
       )}
     </div>

@@ -1,4 +1,4 @@
-import { BlogPostList } from '@/components/blog/blog-post-list';
+import { BlogPostList } from '@/components/blog';
 import { Footer } from '@/components/sections';
 import Link from 'next/link';
 import { ThemeToggle } from '@/components/ui';

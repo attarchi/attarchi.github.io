@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { BlogPost } from '@/components/blog/types';
-import { BlogPostCard } from '@/components/blog/blog-post-card';
+import { BlogPost, BlogPostCard } from '@/components/blog';
 import { projectStaggerVariants } from '@/lib';
 
 export interface BlogPreviewSectionProps {
