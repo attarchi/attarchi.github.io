@@ -25,11 +25,9 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const projectCount = projects?.length || 0;
   const gridClasses = getGridClasses(projectCount);
   
-  // Show only first 3 projects initially, or all if less than 4
-  const initialProjects = projects?.slice(0, 3) || [];
-  const remainingProjects = projects?.slice(3) || [];
-  const shouldShowMoreButton = projectCount > 3;
-  const displayedProjects = showAllProjects ? projects : initialProjects;
+  const shouldShowInTwoRows = projectCount == 4;
+  const shouldShowMoreButton = !shouldShowInTwoRows && projectCount > 3;
+  const initialProjects = projects?.slice(0, shouldShowInTwoRows? 4: 3) || [];
 
   return (
     <section
