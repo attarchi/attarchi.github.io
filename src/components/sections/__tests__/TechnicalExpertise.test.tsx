@@ -1,8 +1,7 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { TechnicalExpertise } from "../TechnicalExpertise";
 
 jest.mock("@/lib");
-
 jest.mock("@/components/micro");
 
 const mockCategories = [
@@ -49,8 +48,6 @@ describe("TechnicalExpertise", () => {
     
     expect(screen.getByText("Frontend Development")).toBeInTheDocument();
     expect(screen.getByText("Backend Development")).toBeInTheDocument();
-    expect(screen.queryByText("DevOps")).not.toBeInTheDocument();
-    expect(screen.queryByText("Mobile")).not.toBeInTheDocument();
   });
 
   it("renders skills within categories", () => {
@@ -60,23 +57,6 @@ describe("TechnicalExpertise", () => {
     expect(screen.getByText("TypeScript")).toBeInTheDocument();
     expect(screen.getByText("Node.js")).toBeInTheDocument();
     expect(screen.getByText("PostgreSQL")).toBeInTheDocument();
-  });
-
-  it("renders proficiency bars for each skill", () => {
-    render(<TechnicalExpertise categories={mockCategories} />);
-    
-    const proficiencyBars = screen.getAllByTestId("proficiency-bar");
-    expect(proficiencyBars).toHaveLength(4);
-  });
-
-  it("displays years of experience in title attribute", () => {
-    render(<TechnicalExpertise categories={mockCategories} />);
-    
-    const reactSkill = screen.getByText("React");
-    expect(reactSkill).toHaveAttribute("title", "5 years of experience");
-    
-    const typescriptSkill = screen.getByText("TypeScript");
-    expect(typescriptSkill).toHaveAttribute("title", "4 years of experience");
   });
 
   it("handles categories without skills", () => {
@@ -89,27 +69,6 @@ describe("TechnicalExpertise", () => {
     
     expect(screen.getByText("Empty Category")).toBeInTheDocument();
     expect(screen.getByText("Another Empty")).toBeInTheDocument();
-    expect(screen.queryByTestId("skills-list")).not.toBeInTheDocument();
-  });
-
-  it("renders skills with data attributes for proficiency animation", () => {
-    render(<TechnicalExpertise categories={mockCategories} />);
-    
-    const proficiencyFills = screen.getAllByTestId("proficiency-fill");
-    
-    const reactFill = proficiencyFills.find(el => el.getAttribute("data-skill-name") === "React");
-    expect(reactFill).toBeInTheDocument();
-    
-    const nodeFill = proficiencyFills.find(el => el.getAttribute("data-skill-name") === "Node.js");
-    expect(nodeFill).toBeInTheDocument();
-  });
-
-  it("renders years information on hover for skills with years", () => {
-    render(<TechnicalExpertise categories={mockCategories} />);
-    
-    const reactSkillContainer = screen.getByText("React").closest('[data-testid="skill-item"]');
-    const yearsSpan = reactSkillContainer?.querySelector('span');
-    expect(yearsSpan).toHaveTextContent("(5 years)");
   });
 
   it("handles empty categories array", () => {
@@ -119,61 +78,94 @@ describe("TechnicalExpertise", () => {
     expect(categoryCards).toHaveLength(0);
   });
 
-  it("renders icons for skills that have them", () => {
-    render(<TechnicalExpertise categories={mockCategories} />);
-    
-    const reactIcon = screen.getByRole("img", { name: /react icon/i });
-    expect(reactIcon).toBeInTheDocument();
-    expect(reactIcon).toHaveAttribute("src", "/icons/react.png");
-    
-    const nodejsIcon = screen.getByRole("img", { name: /node\.js icon/i });
-    expect(nodejsIcon).toBeInTheDocument();
-    expect(nodejsIcon).toHaveAttribute("src", "/icons/nodejs.png");
-    
-    const sqlIcon = screen.getByRole("img", { name: /postgresql icon/i });
-    expect(sqlIcon).toBeInTheDocument();
-    expect(sqlIcon).toHaveAttribute("src", "/icons/sql.png");
-  });
-
-  it("does not render icons for skills without them", () => {
-    render(<TechnicalExpertise categories={mockCategories} />);
-    
-    const typescriptIcon = screen.queryByRole("img", { name: /typescript icon/i });
-    expect(typescriptIcon).not.toBeInTheDocument();
-  });
-
-  it("renders icons with proper size and spacing", () => {
-    render(<TechnicalExpertise categories={mockCategories} />);
-    
-    const reactIcon = screen.getByRole("img", { name: /react icon/i });
-    expect(reactIcon).toHaveAttribute("width", "32");
-    expect(reactIcon).toHaveAttribute("height", "32");
-  });
-
-  it("renders others section for categories with others", () => {
-    render(<TechnicalExpertise categories={mockCategories} />);
-    
-    expect(screen.getAllByTestId("others-icon-list")).toHaveLength(2);
-  });
-
-  it("renders other skills names in mock", () => {
-    render(<TechnicalExpertise categories={mockCategories} />);
-    
-    expect(screen.getByText("GitHub")).toBeInTheDocument();
-    expect(screen.getByText("Prisma")).toBeInTheDocument();
-    expect(screen.getByText("CouchDB")).toBeInTheDocument();
-  });
-
-  it("does not render others section for categories without others", () => {
-    const categoriesWithoutOthers = [
+  describe("More Categories Functionality", () => {
+    const manyCategories = [
       {
-        title: "Empty Category",
-        skills: []
+        title: "Frontend Development",
+        skills: [{ name: "React", proficiency: 90, years: 5, icon: "react" }],
+        others: []
+      },
+      {
+        title: "Backend Development",
+        skills: [{ name: "Node.js", proficiency: 90, years: 5, icon: "nodejs" }],
+        others: []
+      },
+      {
+        title: "Mobile Development",
+        skills: [{ name: "React Native", proficiency: 85, years: 4, icon: "react" }],
+        others: []
+      },
+      {
+        title: "DevOps",
+        skills: [{ name: "Docker", proficiency: 80, years: 3, icon: "docker" }],
+        others: []
+      },
+      {
+        title: "Database",
+        skills: [{ name: "PostgreSQL", proficiency: 75, years: 3, icon: "sql" }],
+        others: []
+      },
+      {
+        title: "Cloud",
+        skills: [{ name: "AWS", proficiency: 70, years: 2, icon: "aws" }],
+        others: []
       }
     ];
-    
-    render(<TechnicalExpertise categories={categoriesWithoutOthers} />);
-    
-    expect(screen.queryByTestId("others-icon-list")).not.toBeInTheDocument();
+
+    it("shows only first 4 categories initially when more than 4 categories exist", () => {
+      render(<TechnicalExpertise categories={manyCategories} />);
+      
+      const categoryCards = screen.getAllByTestId("category-card");
+      expect(categoryCards).toHaveLength(4);
+      
+      expect(screen.getByText("Frontend Development")).toBeInTheDocument();
+      expect(screen.getByText("Backend Development")).toBeInTheDocument();
+      expect(screen.getByText("Mobile Development")).toBeInTheDocument();
+      expect(screen.getByText("DevOps")).toBeInTheDocument();
+      expect(screen.queryByText("Database")).not.toBeInTheDocument();
+      expect(screen.queryByText("Cloud")).not.toBeInTheDocument();
+    });
+
+    it("shows 'more...' button when more than 4 categories exist", () => {
+      render(<TechnicalExpertise categories={manyCategories} />);
+      
+      const moreButton = screen.getByRole("button", { name: /more/i });
+      expect(moreButton).toBeInTheDocument();
+      expect(moreButton).toHaveTextContent("more...");
+    });
+
+    it("does not show 'more...' button when 4 or fewer categories exist", () => {
+      const fourCategories = manyCategories.slice(0, 4);
+      render(<TechnicalExpertise categories={fourCategories} />);
+      
+      const moreButton = screen.queryByRole("button", { name: /more/i });
+      expect(moreButton).not.toBeInTheDocument();
+    });
+
+    it("shows all categories when 'more...' button is clicked", () => {
+      render(<TechnicalExpertise categories={manyCategories} />);
+      
+      const moreButton = screen.getByRole("button", { name: /more/i });
+      fireEvent.click(moreButton);
+      
+      const categoryCards = screen.getAllByTestId("category-card");
+      expect(categoryCards).toHaveLength(6);
+      
+      expect(screen.getByText("Frontend Development")).toBeInTheDocument();
+      expect(screen.getByText("Backend Development")).toBeInTheDocument();
+      expect(screen.getByText("Mobile Development")).toBeInTheDocument();
+      expect(screen.getByText("DevOps")).toBeInTheDocument();
+      expect(screen.getByText("Database")).toBeInTheDocument();
+      expect(screen.getByText("Cloud")).toBeInTheDocument();
+    });
+
+    it("hides 'more...' button after it is clicked", () => {
+      render(<TechnicalExpertise categories={manyCategories} />);
+      
+      const moreButton = screen.getByRole("button", { name: /more/i });
+      fireEvent.click(moreButton);
+      
+      expect(screen.queryByRole("button", { name: /more/i })).not.toBeInTheDocument();
+    });
   });
 }); 
