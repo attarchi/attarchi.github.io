@@ -1,5 +1,5 @@
 ---
-title: AI-Assisted Development - A Developer's Guide to Responsible Code Generation
+title: AI-Assisted Development&colon; A Developer's Guide to Responsible Code Generation
 date: 2025-07-19
 excerpt: Learn how to leverage AI coding tools responsibly while maintaining code quality and ownership. A practical framework for integrating AI assistants into your development workflow without compromising standards.
 tags: ["AI", "development", "code-quality", "best-practices", "productivity", "copilot", "chatgpt", "software-engineering"]
