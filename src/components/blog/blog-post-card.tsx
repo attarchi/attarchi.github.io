@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { type BlogPost } from '@/content';
-import { Card, CardHeader, Badge } from '@/components/ui';
+import { type BlogPost } from '@/lib';
+import { Badge, Card, CardHeader } from '@/components/ui';
 
 interface BlogPostCardProps {
   post: BlogPost;

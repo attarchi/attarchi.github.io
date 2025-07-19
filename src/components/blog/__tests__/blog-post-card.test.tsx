@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BlogPostCard } from '../blog-post-card';
-import { BlogPost } from '@/content';
+import { type BlogPost } from '@/lib';
 
 const mockBlogPost: BlogPost = {
   title: 'Building Offline-First Apps',

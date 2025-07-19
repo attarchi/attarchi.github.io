@@ -1,5 +1,5 @@
 import React from 'react';
-import { BlogPost } from '@/content';
+import { type BlogPost } from '@/lib';
 
 interface BlogPostCardProps {
   post: BlogPost;

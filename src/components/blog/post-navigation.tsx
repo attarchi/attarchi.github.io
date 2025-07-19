@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { BlogPost } from '@/content';
+import { type BlogPost } from '@/lib';
 
 interface PostNavigationProps {
   prev?: BlogPost;

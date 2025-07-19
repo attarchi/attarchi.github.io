@@ -1,4 +1,4 @@
-import { BlogPost } from '@/content';
+import { type BlogPost } from '@/lib/blog-data.d';
 
 // Mock blog posts data
 const mockPosts: BlogPost[] = [

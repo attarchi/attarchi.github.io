@@ -7,5 +7,4 @@ export { technicalExpertiseContent, type TechnicalExpertiseContent, type SkillCa
 export { footerContent } from './footer';
 export { iconConfig, type IconData, type IconConfig } from './icon';
 export { blogFiltersContent, type BlogFiltersData } from './blog-filters';
-export { blogPosts, type BlogPost, type BlogPostFrontmatter, type BlogPostMetadata } from './blog';
 export { blogPageContent, type BlogPageContent } from './blog-page'; 

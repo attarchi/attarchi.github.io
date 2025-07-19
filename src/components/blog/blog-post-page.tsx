@@ -4,8 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ThemeToggle, Badge, Card, CardContent } from '@/components/ui';
 import { Footer } from '@/components/sections';
-import { type BlogPost, footerContent } from '@/content';
-import { parseMarkdown } from '@/lib';
+import { type BlogPost, parseMarkdown } from '@/lib';
+import { footerContent } from '@/content';
 import { PostNavigation } from './post-navigation';
 
 interface BlogPostPageProps {
@@ -15,23 +15,20 @@ interface BlogPostPageProps {
 }
 
 export const BlogPostPage = React.memo(function BlogPostPage({ post, prev, next }: BlogPostPageProps) {
-  const formatDate = (date: Date) => {
-    return date.toISOString().split('T')[0];
-  };
-
-  const formatReadingTime = (minutes: number) => {
-    return `${minutes} min read`;
-  };
-
+  const formatDate = (date: Date) => date.toISOString().split('T')[0];
+  const formatReadingTime = (minutes: number) => `${minutes} min read`;
   const { content: parsedContent } = parseMarkdown(post.content);
 
   return (
     <div className="min-h-screen bg-background text-text flex flex-col">
       <article className="flex-1 max-w-4xl mx-auto px-4 py-8 font-sans w-full">
         <div className="flex justify-between items-center mb-8">
-          <Link href="/" className="text-accent font-mono text-base hover:underline transition-colors" aria-label="Home">← Home</Link>
+          <Link href="/" className="text-accent font-mono text-base hover:underline transition-colors" aria-label="Home">
+            ← Home
+          </Link>
           <ThemeToggle />
         </div>
+        
         <header className="mb-8">
           <h1 className="text-4xl font-bold font-mono mb-4 text-text">
             {post.title}

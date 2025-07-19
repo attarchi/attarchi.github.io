@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import { BlogPost } from '@/content';
 import { parseMarkdown, extractFrontmatter, calculateReadingTime } from './markdown-parser';
+import { type BlogPost } from './blog-data.d';
 
-// Cache for parsed markdown content
 const markdownCache = new Map<string, string>();
 const frontmatterCache = new Map<string, Record<string, any>>();
 const postsCache = new Map<string, BlogPost | BlogPost[]>();

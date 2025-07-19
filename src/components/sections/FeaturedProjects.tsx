@@ -24,7 +24,8 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const gridClasses = getGridClasses(projectCount);
 
   return (
-    <section 
+    <section
+      id="projects"
       className="py-20 bg-[#ffffff] dark:bg-[#0d1117]"
       aria-label="Featured Projects"
     >

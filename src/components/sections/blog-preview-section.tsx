@@ -1,8 +1,9 @@
 "use client";
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { BlogPost } from '@/content';
+import { type BlogPost } from '@/lib';
 import { BlogPostCard } from '@/components/blog';
 import { projectStaggerVariants } from '@/lib';
 

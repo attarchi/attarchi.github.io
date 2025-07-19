@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { BlogPreviewSection } from '@/components/sections/blog-preview-section';
-import { BlogPost } from '@/content';
+import { BlogPreviewSection } from '../blog-preview-section';
+import { type BlogPost } from '@/lib';
 
 const mockPosts: BlogPost[] = [
   {
