@@ -1,23 +1,132 @@
-3:I[9002,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"ProgressBar"]
-4:I[6256,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","901","static/chunks/901-19db2be028a537f0.js","185","static/chunks/app/layout-63e280b6c09376f6.js"],"RecaptchaProvider"]
-5:I[4279,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","901","static/chunks/901-19db2be028a537f0.js","185","static/chunks/app/layout-63e280b6c09376f6.js"],"ThemeProvider"]
+3:I[9002,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"ProgressBar"]
+4:I[6256,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-d75edf1ee41bd648.js"],"RecaptchaProvider"]
+5:I[4279,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-d75edf1ee41bd648.js"],"ThemeProvider"]
 6:I[5613,[],""]
 7:I[1778,[],""]
 8:I[5250,["250","static/chunks/250-d3a06a1ce7d79364.js","160","static/chunks/app/not-found-e6af83db0603f4ba.js"],""]
-0:["AsShVEI4POdURZ38zmjZW",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},["$L1","$L2",null]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_3c557b __variable_e8ce0c antialiased","suppressHydrationWarning":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"children":["$","$L5",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-600 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-500 mb-8","children":"The page you're looking for doesn't exist or has been moved."}],["$","$L8",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"Return Home"}]]}]}],"notFoundStyles":[],"styles":null}]}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f71832e27646eb65.css","precedence":"next","crossOrigin":""}]],"$L9"]]]]
-9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","3",{"name":"description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies and offline-first architectures."}],["$","meta","4",{"name":"author","content":"Attarchi"}],["$","meta","5",{"name":"keywords","content":"Full-Stack Developer, React, Node.js, TypeScript, Mobile Apps, Turkey, JavaScript, Frontend, Backend, Web Development, Software Engineer"}],["$","meta","6",{"name":"creator","content":"Attarchi"}],["$","meta","7",{"name":"publisher","content":"Attarchi"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://attarchi.github.io/"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","13",{"property":"og:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","14",{"property":"og:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies."}],["$","meta","15",{"property":"og:url","content":"https://attarchi.github.io/"}],["$","meta","16",{"property":"og:site_name","content":"Attarchi Portfolio"}],["$","meta","17",{"property":"og:locale","content":"en_US"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:creator","content":"@attarchi"}],["$","meta","21",{"name":"twitter:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","22",{"name":"twitter:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development."}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","24",{"name":"next-size-adjust"}]]
-1:null
-a:I[5616,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"ThemeToggle"]
-b:I[3589,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"HeroSection"]
-c:I[5834,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"FeaturedProjects"]
-d:I[9947,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"TechnicalExpertise"]
-e:I[6057,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"ProfessionalJourney"]
-f:I[3904,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"BlogPreviewSection"]
-13:I[3900,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"ContactSection"]
-14:I[8557,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"Footer"]
-10:T2096,<hr>
-<h2>title: Next.js Static Optimization Techniques<br>date: 2025-01-25<br>excerpt: Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.<br>tags: [Next.js, Static Generation, Performance, Deployment, Web Development]<br>category: Web Development<br>readingTime: 6<br>published: true</h2>
-<h1>Next.js Static Optimization Techniques</h1>
+0:["PtF_mBOyVkmixFAksPyoM",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},["$L1","$L2",null]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_3c557b __variable_e8ce0c antialiased","suppressHydrationWarning":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"children":["$","$L5",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-600 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-500 mb-8","children":"The page you're looking for doesn't exist or has been moved."}],["$","$L8",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"Return Home"}]]}]}],"notFoundStyles":[],"styles":null}]}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/008de027747c38f3.css","precedence":"next","crossOrigin":""}]],"$L9"]]]]
+a:I[5616,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"ThemeToggle"]
+b:I[3589,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"HeroSection"]
+c:I[5834,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"FeaturedProjects"]
+d:I[9947,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"TechnicalExpertise"]
+e:I[6057,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"ProfessionalJourney"]
+f:I[3904,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"BlogPreviewSection"]
+13:I[3900,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"ContactSection"]
+14:I[8557,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","931","static/chunks/app/page-9aeece46d07f2df9.js"],"Footer"]
+10:T249a,<h1>AI-Assisted Development: A Developer&#39;s Guide to Responsible Code Generation</h1>
+<p>The rise of AI coding assistants has fundamentally changed how we write software. Tools like GitHub Copilot, ChatGPT, and Claude can generate entire functions, suggest completions, and even architect solutions in seconds. But with great power comes great responsibility—and the need for a disciplined approach to AI-generated code.</p>
+<p>After months of integrating AI tools into our development workflow, I&#39;ve learned that the key isn&#39;t just knowing how to prompt AI effectively, but understanding when to trust it, when to refactor it, and when to reject it entirely. Here&#39;s a practical framework for leveraging AI responsibly while maintaining code integrity and ownership.</p>
+<h2>The Foundation: You Own Every Line</h2>
+<p>The most critical mindset shift when working with AI is this: <strong>you own the code, not the AI.</strong> AI is a sophisticated tool, not a team member. Every line of code that makes it into your repository is your responsibility, regardless of its origin.</p>
+<p>This ownership principle extends beyond just fixing bugs. You&#39;re accountable for the code&#39;s security, performance, maintainability, and alignment with your team&#39;s standards. AI doesn&#39;t understand your business context, your technical debt, or your team&#39;s coding conventions—you do.</p>
+<h2>Core Principles for AI-Assisted Development</h2>
+<h3>1. Clarity and Quality Are Non-Negotiable</h3>
+<p>Just because AI generated it doesn&#39;t mean it gets a pass on quality standards. Code must meet your team&#39;s requirements for readability, performance, and security, regardless of whether it was written by a human or an AI. Treat AI-generated code with the same scrutiny you&#39;d apply to a junior developer&#39;s pull request.</p>
+<h3>2. Understand Before You Commit</h3>
+<p>Never deploy code you can&#39;t explain, modify, or debug. If you can&#39;t walk through the logic step-by-step or confidently make changes to it, the code isn&#39;t ready for production. This isn&#39;t just about avoiding bugs—it&#39;s about maintaining long-term code health and your ability to iterate on the solution.</p>
+<h2>Practical Guidelines for AI-Generated Code</h2>
+<h3>Clean Up the Noise</h3>
+<p>AI tools often generate verbose, over-commented code that feels like it&#39;s written for a tutorial rather than production. The first step in refining AI output is aggressive cleanup:</p>
+<p><strong>Remove redundant comments.</strong> AI loves to add obvious explanations like <code>// Loop through the array</code> or <code>// Check if user exists</code>. These add clutter without value. Keep only method-level or class-level documentation that provides meaningful context for future developers.</p>
+<p><strong>Eliminate dead code.</strong> AI often includes placeholder variables, unused imports, or defensive code patterns that aren&#39;t relevant to your specific use case. Strip these out before committing.</p>
+<p><strong>Simplify overcomplicated logic.</strong> AI sometimes generates nested conditionals or verbose patterns where simpler solutions exist. Refactor for clarity and conciseness.</p>
+<p>Here&#39;s an example of AI-generated code that needs cleanup:</p>
+<pre><code class="language-javascript">// AI-generated code (before cleanup)
+function processUserData(users) {
+    // Loop through the array of users
+    const processedUsers = [];
+    for (let i = 0; i &lt; users.length; i++) {
+        const user = users[i];
+        // Check if user exists and has required fields
+        if (user &amp;&amp; user.name &amp;&amp; user.email) {
+            // Create a new user object with processed data
+            const processedUser = {
+                id: user.id || generateId(),
+                name: user.name.trim(),
+                email: user.email.toLowerCase(),
+                // Add timestamp for tracking
+                processedAt: new Date().toISOString()
+            };
+            processedUsers.push(processedUser);
+        }
+    }
+    return processedUsers;
+}
+</code></pre>
+<p>After cleanup:</p>
+<pre><code class="language-javascript">// Clean, production-ready code
+function processUserData(users) {
+    return users
+        .filter(user =&gt; user?.name &amp;&amp; user?.email)
+        .map(user =&gt; ({
+            id: user.id || generateId(),
+            name: user.name.trim(),
+            email: user.email.toLowerCase(),
+            processedAt: new Date().toISOString()
+        }));
+}
+</code></pre>
+<h3>Reject Black Box Solutions</h3>
+<p>If you don&#39;t understand the algorithm or pattern AI suggests, don&#39;t use it. This is especially important for:</p>
+<ul>
+<li>Complex data structures or algorithms you&#39;re unfamiliar with</li>
+<li>Security-related code (authentication, input validation, cryptography)</li>
+<li>Performance-critical sections where you need to understand trade-offs</li>
+</ul>
+<p>When in doubt, ask the AI to explain its approach or generate a simpler alternative. Better yet, research the problem yourself and use AI to implement a solution you already understand.</p>
+<h3>Enforce Your Standards Rigorously</h3>
+<p>AI doesn&#39;t know your team&#39;s conventions, and it shouldn&#39;t. Manually verify that generated code follows your:</p>
+<ul>
+<li>Naming conventions and formatting rules</li>
+<li>Error handling patterns</li>
+<li>Security practices (input validation, API security)</li>
+<li>Performance requirements</li>
+</ul>
+<p>Use your existing toolchain to catch issues. Run ESLint, Prettier, and your test suite on AI-generated code just as you would on human-written code. Configure your IDE to auto-format on save and never commit code with unresolved linting errors.</p>
+<h3>Use AI for the Right Tasks</h3>
+<p>AI excels at certain types of work and struggles with others. Play to its strengths:</p>
+<p><strong>Great for AI:</strong></p>
+<ul>
+<li>Generating boilerplate (test templates, CRUD operations)</li>
+<li>Exploring new libraries or APIs</li>
+<li>Writing documentation drafts</li>
+<li>Refactoring repetitive code patterns</li>
+</ul>
+<p><strong>Avoid AI for:</strong></p>
+<ul>
+<li>Core business logic that requires domain expertise</li>
+<li>Security-critical implementations</li>
+<li>Architectural decisions</li>
+<li>Code that integrates deeply with your existing systems</li>
+</ul>
+<h3>Prioritize Security</h3>
+<p>AI models are trained on public code repositories, which means they&#39;ve learned from both good and bad security practices. Always verify that AI-generated code:</p>
+<ul>
+<li>Uses up-to-date dependencies and APIs</li>
+<li>Properly validates and sanitizes inputs</li>
+<li>Follows secure coding patterns for your language and framework</li>
+<li>Doesn&#39;t introduce common vulnerabilities (SQL injection, XSS, etc.)</li>
+</ul>
+<p>When working with authentication, authorization, or data handling, be especially cautious and consider having security-focused team members review AI-generated code.</p>
+<h2>Improving Your AI Collaboration</h2>
+<p>The quality of AI output is directly related to the quality of your prompts and your understanding of the tool&#39;s capabilities. Invest time in learning how to communicate effectively with your AI assistant:</p>
+<p><strong>Be specific in your requests.</strong> Instead of &quot;write a function to sort data,&quot; try &quot;write a JavaScript function that sorts an array of user objects by last name, returning a new array without modifying the original.&quot;</p>
+<p><strong>Request clean output.</strong> Add phrases like &quot;without comments,&quot; &quot;production-ready,&quot; or &quot;following modern best practices&quot; to get cleaner initial results.</p>
+<p><strong>Iterate and refine.</strong> Treat your first AI output as a draft. Ask for modifications, simplifications, or alternative approaches until you get something that meets your standards.</p>
+<h2>A Pre-Commit Checklist</h2>
+<p>Before any AI-generated code makes it into your repository, run through this checklist:</p>
+<ul>
+<li><strong>Understanding:</strong> Can I explain every line of this code to a colleague?</li>
+<li><strong>Cleanliness:</strong> Have I removed unnecessary comments, logs, and dead code?</li>
+<li><strong>Standards:</strong> Does this code follow our team&#39;s formatting, naming, and architectural conventions?</li>
+<li><strong>Testing:</strong> Have I tested the code myself and verified it works as expected?</li>
+<li><strong>Security:</strong> Have I reviewed this code for common vulnerabilities and secure practices?</li>
+</ul>
+<h2>The Bottom Line</h2>
+<p>AI coding assistants are powerful tools that can significantly boost productivity when used thoughtfully. The key is maintaining the same discipline and standards you&#39;d apply to any code, while leveraging AI&#39;s strengths in appropriate contexts.</p>
+<p>Remember: AI is here to make you a more productive developer, not to replace your judgment, expertise, or responsibility for the code you ship. Use it wisely, clean up its output rigorously, and never commit code you don&#39;t fully understand.</p>
+<p>The future of development isn&#39;t about AI writing perfect code—it&#39;s about developers who know how to collaborate with AI to write better code faster, while maintaining the quality and security standards our users depend on.</p>
+11:T1f09,<h1>Next.js Static Optimization Techniques</h1>
 <p>Modern web applications demand both speed and scalability. Next.js, with its powerful static site generation (SSG) and hybrid rendering capabilities, enables developers to build high-performance sites that are easy to deploy and maintain. In this post, we’ll explore how to fully leverage Next.js static optimization, including practical code examples, performance tips, and deployment strategies.</p>
 <h2>Why Static Generation?</h2>
 <p>Static generation pre-renders pages at build time, resulting in HTML files that can be served instantly from a CDN. This approach offers:</p>
@@ -172,9 +281,7 @@ module.exports = {
 </ul>
 <h2>Conclusion</h2>
 <p>Next.js static optimization unlocks the full potential of the JAMstack, delivering blazing-fast, scalable, and secure web applications. By following these techniques and best practices, you can ensure your Next.js projects are ready for production and delight users everywhere. Static optimization is not just a performance boost—it&#39;s a foundation for modern, maintainable, and future-proof web development. </p>
-11:T251c,<hr>
-<h2>title: React Native Cross-Platform Strategies<br>date: 2025-01-20<br>excerpt: Proven strategies and performance tips for building robust cross-platform apps with React Native, including real-world examples and code sharing techniques.<br>tags: [React Native, Cross-Platform, Performance, Mobile Development, Code Sharing]<br>category: Mobile Development<br>readingTime: 6<br>published: true</h2>
-<h1>React Native Cross-Platform Strategies</h1>
+12:T2387,<h1>React Native Cross-Platform Strategies</h1>
 <p>Building high-quality mobile applications for both iOS and Android can be challenging, especially when aiming for a consistent user experience and optimal performance. React Native offers a powerful solution for cross-platform development, but success requires careful planning, code organization, and performance optimization.</p>
 <h2>Introduction: The Cross-Platform Challenge</h2>
 <p>Mobile development teams often face the dilemma of maintaining two separate codebases for iOS and Android. This leads to duplicated effort, inconsistent features, and increased maintenance costs. React Native bridges this gap by enabling developers to write most of their code once and deploy it everywhere, while still allowing for platform-specific customizations where needed.</p>
@@ -312,239 +419,6 @@ export default function App() {
 </ul>
 <h2>Conclusion: Delivering Robust Cross-Platform Apps</h2>
 <p>React Native empowers teams to deliver high-quality apps to both iOS and Android users with less effort and faster iteration. By following the strategies, patterns, and lessons outlined above, you can avoid common pitfalls and build apps that feel truly native on every device. Remember, the key to cross-platform success is not just code sharing, but a relentless focus on user experience, performance, and maintainability. </p>
-12:T24b1,<hr>
-<h2>title: Building Offline-First Apps<br>date: 2025-01-15<br>excerpt: Real-time synchronization strategies for mobile applications that work seamlessly even when users have poor or no internet connectivity.<br>tags: [React Native, Offline, Sync, Mobile Development, PouchDB]<br>category: Mobile Development<br>readingTime: 5<br>published: true</h2>
-<h1>Building Offline-First Apps</h1>
-<p>In today&#39;s interconnected world, users expect applications to work seamlessly regardless of their network conditions. Whether they&#39;re commuting through tunnels, traveling in remote areas, or experiencing temporary connectivity issues, offline-first applications provide a superior user experience by ensuring functionality continues uninterrupted.</p>
-<h2>Why Offline-First Matters</h2>
-<p>Offline-first applications offer several key advantages that make them essential for modern mobile development:</p>
-<ul>
-<li><strong>Immediate Response</strong>: No waiting for network requests to complete</li>
-<li><strong>Reliability</strong>: Functions consistently in areas with poor connectivity</li>
-<li><strong>Performance</strong>: Faster response times for common operations</li>
-<li><strong>User Experience</strong>: Seamless transitions between online and offline states</li>
-<li><strong>Cost Efficiency</strong>: Reduced server load and bandwidth usage</li>
-</ul>
-<h2>Core Architecture Components</h2>
-<h3>1. Data Synchronization Strategy</h3>
-<p>The foundation of any offline-first app is a robust synchronization mechanism. Here&#39;s a basic implementation using React Native and AsyncStorage:</p>
-<pre><code class="language-javascript">class OfflineFirstSync {
-  constructor() {
-    this.syncQueue = [];
-    this.isOnline = navigator.onLine;
-  }
-
-  async syncData() {
-    try {
-      const offlineData = await this.getOfflineData();
-      const onlineData = await this.fetchOnlineData();
-      return this.mergeData(offlineData, onlineData);
-    } catch (error) {
-      console.error(&#39;Sync failed:&#39;, error);
-      return await this.getOfflineData();
-    }
-  }
-
-  async saveOffline(data) {
-    await AsyncStorage.setItem(&#39;offline_data&#39;, JSON.stringify(data));
-  }
-
-  async getOfflineData() {
-    const data = await AsyncStorage.getItem(&#39;offline_data&#39;);
-    return data ? JSON.parse(data) : [];
-  }
-}
-</code></pre>
-<h3>2. Conflict Resolution Strategies</h3>
-<p>When data changes occur both offline and online, you need a strategy to resolve conflicts:</p>
-<p><strong>Last Write Wins (Simple but Risky)</strong></p>
-<pre><code class="language-javascript">const resolveConflict = (localData, remoteData) =&gt; {
-  return localData.timestamp &gt; remoteData.timestamp ? localData : remoteData;
-};
-</code></pre>
-<p><strong>Merge Strategy (More Complex but Safer)</strong></p>
-<pre><code class="language-javascript">const mergeData = (localData, remoteData) =&gt; {
-  const merged = { ...remoteData };
-  
-  // Merge arrays by combining unique items
-  if (localData.items &amp;&amp; remoteData.items) {
-    const localItems = new Set(localData.items.map(item =&gt; item.id));
-    const remoteItems = new Set(remoteData.items.map(item =&gt; item.id));
-    
-    merged.items = [
-      ...remoteData.items,
-      ...localData.items.filter(item =&gt; !remoteItems.has(item.id))
-    ];
-  }
-  
-  return merged;
-};
-</code></pre>
-<h3>3. Storage Strategy Selection</h3>
-<p>Choose the right storage mechanism based on your application&#39;s needs:</p>
-<p><strong>IndexedDB for Complex Data Structures</strong></p>
-<pre><code class="language-javascript">const db = await idb.openDB(&#39;offline-store&#39;, 1, {
-  upgrade(db) {
-    db.createObjectStore(&#39;posts&#39;, { keyPath: &#39;id&#39; });
-    db.createObjectStore(&#39;comments&#39;, { keyPath: &#39;id&#39; });
-  }
-});
-</code></pre>
-<p><strong>SQLite for Relational Data (Mobile Apps)</strong></p>
-<pre><code class="language-javascript">import * as SQLite from &#39;expo-sqlite&#39;;
-
-const db = SQLite.openDatabase(&#39;offline.db&#39;);
-db.transaction(tx =&gt; {
-  tx.executeSql(
-    &#39;CREATE TABLE IF NOT EXISTS posts (id TEXT PRIMARY KEY, title TEXT, content TEXT)&#39;
-  );
-});
-</code></pre>
-<h2>Implementation Example: React Native with PouchDB</h2>
-<p>Here&#39;s a complete example using PouchDB for robust offline-first functionality:</p>
-<pre><code class="language-javascript">import PouchDB from &#39;pouchdb-react-native&#39;;
-
-class OfflineFirstApp {
-  constructor() {
-    this.localDB = new PouchDB(&#39;local-posts&#39;);
-    this.remoteDB = new PouchDB(&#39;https://your-couchdb-server.com/posts&#39;);
-    this.syncHandler = null;
-  }
-
-  async initializeSync() {
-    // Set up continuous sync
-    this.syncHandler = this.localDB.sync(this.remoteDB, {
-      live: true,
-      retry: true,
-      conflicts: true
-    }).on(&#39;change&#39;, (change) =&gt; {
-      console.log(&#39;Sync change:&#39;, change);
-    }).on(&#39;error&#39;, (err) =&gt; {
-      console.error(&#39;Sync error:&#39;, err);
-    });
-  }
-
-  async createPost(post) {
-    try {
-      // Always save locally first
-      const result = await this.localDB.post({
-        _id: `post_${Date.now()}`,
-        title: post.title,
-        content: post.content,
-        timestamp: new Date().toISOString(),
-        type: &#39;post&#39;
-      });
-      
-      return result;
-    } catch (error) {
-      console.error(&#39;Failed to create post:&#39;, error);
-      throw error;
-    }
-  }
-
-  async getPosts() {
-    try {
-      const result = await this.localDB.query(&#39;posts/by_date&#39;, {
-        include_docs: true,
-        descending: true
-      });
-      
-      return result.rows.map(row =&gt; row.doc);
-    } catch (error) {
-      console.error(&#39;Failed to get posts:&#39;, error);
-      return [];
-    }
-  }
-
-  async resolveConflicts() {
-    const conflicts = await this.localDB.query(&#39;posts/conflicts&#39;);
-    
-    for (const conflict of conflicts.rows) {
-      const doc = await this.localDB.get(conflict.id, { conflicts: true });
-      
-      if (doc._conflicts) {
-        // Choose the most recent version
-        const versions = [doc, ...doc._conflicts.map(rev =&gt; 
-          this.localDB.get(conflict.id, { rev }))
-        ];
-        
-        const latest = versions.reduce((latest, current) =&gt; 
-          current.timestamp &gt; latest.timestamp ? current : latest
-        );
-        
-        await this.localDB.put(latest);
-      }
-    }
-  }
-}
-</code></pre>
-<h2>Performance Optimization Techniques</h2>
-<h3>1. Incremental Sync</h3>
-<pre><code class="language-javascript">const syncIncremental = async (lastSyncTime) =&gt; {
-  const changes = await remoteDB.changes({
-    since: lastSyncTime,
-    include_docs: true
-  });
-  
-  for (const change of changes.results) {
-    await localDB.put(change.doc);
-  }
-};
-</code></pre>
-<h3>2. Selective Data Loading</h3>
-<pre><code class="language-javascript">const loadEssentialData = async () =&gt; {
-  // Load only critical data first
-  const essentialPosts = await localDB.query(&#39;posts/essential&#39;, {
-    limit: 10,
-    include_docs: true
-  });
-  
-  // Load remaining data in background
-  setTimeout(() =&gt; loadRemainingData(), 1000);
-};
-</code></pre>
-<h2>Testing Offline Functionality</h2>
-<p>Ensure your offline-first app works correctly with comprehensive testing:</p>
-<pre><code class="language-javascript">describe(&#39;Offline Functionality&#39;, () =&gt; {
-  beforeEach(async () =&gt; {
-    // Mock network offline
-    global.navigator.onLine = false;
-  });
-
-  it(&#39;should create posts when offline&#39;, async () =&gt; {
-    const app = new OfflineFirstApp();
-    const post = { title: &#39;Test Post&#39;, content: &#39;Test content&#39; };
-    
-    const result = await app.createPost(post);
-    expect(result.id).toBeDefined();
-    expect(result.title).toBe(&#39;Test Post&#39;);
-  });
-
-  it(&#39;should sync when coming back online&#39;, async () =&gt; {
-    const app = new OfflineFirstApp();
-    
-    // Create offline post
-    await app.createPost({ title: &#39;Offline Post&#39;, content: &#39;Content&#39; });
-    
-    // Simulate coming back online
-    global.navigator.onLine = true;
-    await app.initializeSync();
-    
-    // Verify sync occurred
-    const posts = await app.getPosts();
-    expect(posts.length).toBeGreaterThan(0);
-  });
-});
-</code></pre>
-<h2>Best Practices Summary</h2>
-<ol>
-<li><strong>Always Save Locally First</strong>: Ensure data is stored locally before attempting to sync</li>
-<li><strong>Implement Conflict Resolution</strong>: Have a clear strategy for handling data conflicts</li>
-<li><strong>Use Appropriate Storage</strong>: Choose storage based on data complexity and access patterns</li>
-<li><strong>Test Offline Scenarios</strong>: Comprehensive testing of offline functionality</li>
-<li><strong>Provide User Feedback</strong>: Clear indicators of sync status and offline state</li>
-<li><strong>Optimize for Performance</strong>: Implement incremental sync and selective loading</li>
-<li><strong>Handle Edge Cases</strong>: Plan for network transitions and data corruption scenarios</li>
-</ol>
-<p>Building offline-first applications requires careful planning and robust implementation, but the benefits in user experience and reliability make it well worth the effort. By following these patterns and best practices, you can create applications that work seamlessly regardless of network conditions. </p>
-2:["$","div",null,{"className":"min-h-screen bg-background text-text","children":[["$","header",null,{"className":"fixed top-0 right-0 z-50 p-4","children":["$","$La",null,{}]}],["$","$Lb",null,{"name":"This Is Ryan","title":"Senior Full-Stack Developer & Problem Solver","description":"20+ years crafting scalable web applications with React, Node.js, C#, and modern architectures. Specializing in offline-first solutions and complex problem solving.","location":"Istanbul, Turkey • Remote Worldwide","avatarAlt":"Profile picture","ctaButtons":[{"text":"Contact Me","link":"#contact","variant":"default","size":"lg","icon":"arrow-right"},{"text":"View Projects","link":"#projects","variant":"outline","size":"lg"}]}],["$","$Lc",null,{"projects":[{"title":"CCPTools Ecosystem","description":"Microservices platform with 6 interconnected projects serving 1000+ weekly active users. Features React Native mobile apps (iOS/Android) with offline-first PouchDB sync, and React admin panel with RJSF dynamic form generation.","technologies":["React Native","Node.js","Next.js","MongoDB","Docker","Kubernetes","PouchDB/CouchDB","RJSF"]},{"title":"Healthcare Management Platform","description":"Enterprise platform digitizing workflows for 500+ clinics with 2000+ concurrent users. Built offline-first PWAs using jQuery, Ajax, and IndexedDB for mission-critical operations in low-connectivity regions.","technologies":["ASP.NET","C#","jQuery","Express.js","SQL Server","IndexedDB","Ajax","PWA"]},{"title":"Telegram Bot Moderation System","description":"High-performance Windows Service handling 1,000 messages/second for 400+ group admins managing 500,000+ users. Features real-time content moderation, user management, and automated spam detection.","technologies":["C#/.NET","Windows Service","Telegram API","SQL Server","Real-time Processing"]},{"title":"ERP Form/Workflow Generator","description":"Dynamic form generation system enabling code-free customization for 6 organizations. Built form generators with runtime form creation, workflow automation, and database schema generation.","technologies":["VB6","C#","ASP.NET","Dynamic Form Generation","Workflow Engine"]},{"title":"GIS Digital Atlas Systems","description":"National mapping projects. Developed using MapObject2 with ArcGIS data models, featuring dynamic form generation for GIS data entry. First project to implement runtime form generation for complex geographical data management.","technologies":["VB6","MapObject2","ArcGIS","MS Access","GIS"]},{"title":"React Native Form Generator","description":"Formik-based form generator for React Native enabling dynamic form creation without coding. Integrates Yup validation, state management, and event handling.","technologies":["React Native","Formik","Yup","Preact","WebView","Quill Editor"]}]}],["$","$Ld",null,{"categories":[{"title":"Frontend","skills":[{"name":"React","proficiency":90,"years":7,"icon":"react"},{"name":"Next.js","proficiency":85,"years":4,"icon":"nextjs"},{"name":"TypeScript","proficiency":99,"years":7,"icon":"typescript"},{"name":"Blazor","proficiency":70,"years":4,"icon":"blazor"},{"name":"Formik","proficiency":90,"years":4,"icon":"formik"}],"others":[{"name":"JavaScript","icon":"javascript"},{"name":"Chakra UI","icon":"chakra-ui"},{"name":"Ant Design","icon":"antdesign"},{"name":"RJSF","icon":"json-schema"},{"name":"Preact Signals","icon":"preact"},{"name":"Tailwind CSS","icon":"tailwind"},{"name":"Bootstrap","icon":"bootstrap"}]},{"title":"Backend","skills":[{"name":"Node.js","proficiency":90,"years":8,"icon":"nodejs"},{"name":"C#/.NET","proficiency":95,"years":14,"icon":"csharp"},{"name":"SQL Server","proficiency":70,"years":15,"icon":"sql"},{"name":"MongoDB","proficiency":80,"years":6,"icon":"mongodb"},{"name":"CouchDB","proficiency":85,"years":3,"icon":"couchdb"}],"others":[{"name":"Prisma","icon":"prisma"},{"name":"PouchDB","icon":"pouchdb"},{"name":"PostgreSQL","icon":"postgresql"},{"name":"Entity Framework","icon":"dotnet"},{"name":"Express.js","icon":"express-js"},{"name":"AJV","icon":"ajv"}]},{"title":"DevOps","skills":[{"name":"Docker","proficiency":85,"years":4,"icon":"docker"},{"name":"Kubernetes","proficiency":30,"years":3,"icon":"kubernetes"},{"name":"CI/CD","proficiency":50,"years":5,"icon":"git"},{"name":"Linux/Windows Server","proficiency":90,"years":15,"icon":"linux"},{"name":"GitHub Actions","proficiency":90,"years":8,"icon":"github"}],"others":[{"name":"Azure Pipelines","icon":"azure"},{"name":"Sentry","icon":"sentry"},{"name":"Redis","icon":"redis"},{"name":"Vercel","icon":"vercel"},{"name":"Helm Charts","icon":"helm"}]},{"title":"Mobile","skills":[{"name":"React Native (Bare)","proficiency":90,"years":3,"icon":"react"},{"name":"Expo","proficiency":60,"years":1,"icon":"expo"},{"name":"React Navigation","proficiency":90,"years":3,"icon":"react-navigation"},{"name":"Kotlin","proficiency":20,"years":0.5,"icon":"kotlin"},{"name":"Swift","proficiency":10,"years":0.5,"icon":"swift"}],"others":[{"name":"Java","icon":"java"},{"name":"iOS","icon":"ios"},{"name":"Android","icon":"android"}]},{"title":"Testing & Analytics","skills":[{"name":"Jest","proficiency":95,"years":7,"icon":"jest"},{"name":"Cypress","proficiency":60,"years":2,"icon":"cypress"},{"name":"Google Analytics","proficiency":70,"years":8,"icon":"google-analytics"},{"name":"E2E Testing","proficiency":75,"years":3,"icon":"testing"},{"name":"Unit/Integration Testing","proficiency":90,"years":10},{"name":"TDD","proficiency":80,"years":5}],"others":[]},{"title":"Legacy & Other","skills":[{"name":"VB6","proficiency":95,"years":6},{"name":"ASP.NET","proficiency":85,"years":10},{"name":"jQuery","proficiency":90,"years":12},{"name":"GIS/MapObject2","proficiency":60,"years":3},{"name":"VBA","proficiency":60,"years":10},{"name":"Ajax","proficiency":75,"years":10}]}]}],["$","$Le",null,{"milestones":[{"id":"1","date":"2025-Present","role":"Cross-Platform SaaS Architect","company":"Nutritionist Platform (Side Project)","description":"Architecting multi-tenant SaaS platform with Next.js App Router and React Native (Expo Router). Implementing tRPC with Prisma ORM for type-safe API communication and real-time sync with WebSocket.","achievement":"Achieved 60% code sharing between web and mobile platforms. Built offline-first architecture with SQLite and conflict resolution."},{"id":"2","date":"2020-Present","role":"Technical Manager & Full-Stack Architect","company":"CCPTools Ecosystem","description":"Leading cross-functional team of 5 developers, architecting microservices ecosystem serving 1,000+ weekly active users. Managing 6-project portfolio including React Native apps, Node.js APIs, and Next.js applications.","achievement":"Implemented 10,000+ automated tests achieving 95% code coverage. Reduced development time by 40% through RJSF dynamic forms and improved team velocity."},{"id":"3","date":"2018-2020","role":"Freelance Full-Stack Developer","company":"Self-Employed","description":"Migrated 16+ legacy applications from jQuery/ASP.NET to React/Node.js. Rapidly mastered new frameworks including Angular and React for immediate client value.","achievement":"100% on-time delivery with 100% client satisfaction rate on Freelancer.com. Mastered Angular in 2 weeks and React in 1 week."},{"id":"4","date":"2015-2018","role":"Senior Full-Stack Developer & Solutions Architect","company":"Development Company","description":"Transitioned to modern web technologies, building Telegram bot serving 400+ admins and 500,000+ users. Developed offline-first ERP systems and pioneered real-time processing solutions.","achievement":"Scaled Telegram bot to 1,000 messages/second with 99% uptime. Reduced spam incidents by 95% through intelligent filtering algorithms."},{"id":"5","date":"2007-2015","role":"Founder & CEO","company":"Development Company","description":"Founded and ran development company. Built 30+ ASP.NET websites, healthcare management systems, and custom ERP solutions while managing all business operations.","achievement":"Won 2014 Best Entrepreneur Award for healthcare digitization. Served 500+ clinics with 2000+ users."},{"id":"6","date":"2005-2007","role":"Junior Software Developer","company":"Cotton Manufacturing Factory (Parjan)","description":"Started programming career at age 16, developing business-critical applications with VB6 and MS Access including weighbridge system, timesheet management, and vehicle monitoring.","achievement":"Built weighbridge system that operated successfully for 10+ years. Developed 4 Windows applications that digitized entire factory operations."},{"id":"7","date":"2003-2006","role":"Self-Taught Developer & GIS Specialist","company":"Independent Projects","description":"Self-taught VB6 and GIS development at age 16-19. Developed GIS applications with MapObject2 and ArcGIS, creating first form generator for dynamic GIS data entry.","achievement":"Completed 3 national GIS mapping projects. Pioneered dynamic form generation for complex geographical data management."}]}],["$","$Lf",null,{"posts":[{"title":"Next.js Static Optimization Techniques","slug":"nextjs_static_optimization","date":"$D2025-01-25T00:00:00.000Z","excerpt":"Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.","tags":["Next.js","Static Generation","Performance","Deployment","Web Development"],"category":"Web Development","content":"$10","readingTime":6,"published":true},{"title":"React Native Cross-Platform Strategies","slug":"react_native_cross_platform","date":"$D2025-01-20T00:00:00.000Z","excerpt":"Proven strategies and performance tips for building robust cross-platform apps with React Native, including real-world examples and code sharing techniques.","tags":["React Native","Cross-Platform","Performance","Mobile Development","Code Sharing"],"category":"Mobile Development","content":"$11","readingTime":6,"published":true},{"title":"Building Offline-First Apps","slug":"building_offline_first_apps","date":"$D2025-01-15T00:00:00.000Z","excerpt":"Real-time synchronization strategies for mobile applications that work seamlessly even when users have poor or no internet connectivity.","tags":["React Native","Offline","Sync","Mobile Development","PouchDB"],"category":"Mobile Development","content":"$12","readingTime":5,"published":true}]}],["$","$L13",null,{"status":"Available for new opportunities","location":"Istanbul, Turkey (UTC+3)","email":"attarchi@me.com","linkedinUrl":"https://linkedin.com/in/ryan-attarchi","githubUrl":"https://github.com/attarchi","responseTime":"Usually within 24 hours","availabilityType":"Full-time, Contract, Consulting","sectionTitle":"Let's Work Together","sectionSubtitle":"Available for exciting projects and opportunities","contactInfoTitle":"Contact Information","formTitle":"Send Message","formDescription":"Feature coming soon! This form will be available when the site goes live.","formspreeId":"mpwlwpnw","successMessage":"Thanks for your message! I'll get back to you soon."}],["$","$L14",null,{"content":{"copyright":{"title":"Portfolio","companyName":"Attarchi","showcaseMessage":"This is a showcase project - use it freely!"},"repository":{"title":"Source Code","url":"https://github.com/attarchi/attarchi.github.io","text":"View on GitHub"},"license":{"title":"License","name":"MIT License","description":"Free to use for educational and commercial purposes."},"buildInfo":"Built with Next.js, TypeScript, and Tailwind CSS. Deployed on GitHub Pages."}}]]}]
+2:["$","div",null,{"className":"min-h-screen bg-background text-text","children":[["$","header",null,{"className":"fixed top-0 right-0 z-50 p-4","children":["$","$La",null,{}]}],["$","$Lb",null,{"name":"This Is Ryan","title":"Senior Full-Stack Developer & Problem Solver","description":"20+ years crafting scalable web applications with React, Node.js, C#, and modern architectures. Specializing in offline-first solutions and complex problem solving.","location":"Istanbul, Turkey • Remote Worldwide","avatarAlt":"Profile picture","ctaButtons":[{"text":"Contact Me","link":"#contact","variant":"default","size":"lg","icon":"arrow-right"},{"text":"View Projects","link":"#projects","variant":"outline","size":"lg"}]}],["$","$Lc",null,{"projects":[{"title":"CCPTools Ecosystem","description":"Microservices platform with 6 interconnected projects serving 1000+ weekly active users. Features React Native mobile apps (iOS/Android) with offline-first PouchDB sync, and React admin panel with RJSF dynamic form generation.","technologies":["React Native","Node.js","Next.js","MongoDB","Docker","Kubernetes","PouchDB/CouchDB","RJSF"]},{"title":"Healthcare Management Platform","description":"Enterprise platform digitizing workflows for 500+ clinics with 2000+ concurrent users. Built offline-first PWAs using jQuery, Ajax, and IndexedDB for mission-critical operations in low-connectivity regions.","technologies":["ASP.NET","C#","jQuery","Express.js","SQL Server","IndexedDB","Ajax","PWA"]},{"title":"Telegram Bot Moderation System","description":"High-performance Windows Service handling 1,000 messages/second for 400+ group admins managing 500,000+ users. Features real-time content moderation, user management, and automated spam detection.","technologies":["C#/.NET","Windows Service","Telegram API","SQL Server","Real-time Processing"]},{"title":"ERP Form/Workflow Generator","description":"Dynamic form generation system enabling code-free customization for 6 organizations. Built form generators with runtime form creation, workflow automation, and database schema generation.","technologies":["VB6","C#","ASP.NET","Dynamic Form Generation","Workflow Engine"]},{"title":"GIS Digital Atlas Systems","description":"National mapping projects. Developed using MapObject2 with ArcGIS data models, featuring dynamic form generation for GIS data entry. First project to implement runtime form generation for complex geographical data management.","technologies":["VB6","MapObject2","ArcGIS","MS Access","GIS"]},{"title":"React Native Form Generator","description":"Formik-based form generator for React Native enabling dynamic form creation without coding. Integrates Yup validation, state management, and event handling.","technologies":["React Native","Formik","Yup","Preact","WebView","Quill Editor"]}]}],["$","$Ld",null,{"categories":[{"title":"Frontend","skills":[{"name":"React","proficiency":90,"years":7,"icon":"react"},{"name":"Next.js","proficiency":85,"years":4,"icon":"nextjs"},{"name":"TypeScript","proficiency":99,"years":7,"icon":"typescript"},{"name":"Blazor","proficiency":70,"years":4,"icon":"blazor"},{"name":"Formik","proficiency":90,"years":4,"icon":"formik"}],"others":[{"name":"JavaScript","icon":"javascript"},{"name":"Chakra UI","icon":"chakra-ui"},{"name":"Ant Design","icon":"antdesign"},{"name":"RJSF","icon":"json-schema"},{"name":"Preact Signals","icon":"preact"},{"name":"Tailwind CSS","icon":"tailwind"},{"name":"Bootstrap","icon":"bootstrap"}]},{"title":"Backend","skills":[{"name":"Node.js","proficiency":90,"years":8,"icon":"nodejs"},{"name":"C#/.NET","proficiency":95,"years":14,"icon":"csharp"},{"name":"SQL Server","proficiency":70,"years":15,"icon":"sql"},{"name":"MongoDB","proficiency":80,"years":6,"icon":"mongodb"},{"name":"CouchDB","proficiency":85,"years":3,"icon":"couchdb"}],"others":[{"name":"Prisma","icon":"prisma"},{"name":"PouchDB","icon":"pouchdb"},{"name":"PostgreSQL","icon":"postgresql"},{"name":"Entity Framework","icon":"dotnet"},{"name":"Express.js","icon":"express-js"},{"name":"AJV","icon":"ajv"}]},{"title":"DevOps","skills":[{"name":"Docker","proficiency":85,"years":4,"icon":"docker"},{"name":"Kubernetes","proficiency":30,"years":3,"icon":"kubernetes"},{"name":"CI/CD","proficiency":50,"years":5,"icon":"git"},{"name":"Linux/Windows Server","proficiency":90,"years":15,"icon":"linux"},{"name":"GitHub Actions","proficiency":90,"years":8,"icon":"github"}],"others":[{"name":"Azure Pipelines","icon":"azure"},{"name":"Sentry","icon":"sentry"},{"name":"Redis","icon":"redis"},{"name":"Vercel","icon":"vercel"},{"name":"Helm Charts","icon":"helm"}]},{"title":"Mobile","skills":[{"name":"React Native (Bare)","proficiency":90,"years":3,"icon":"react"},{"name":"Expo","proficiency":60,"years":1,"icon":"expo"},{"name":"React Navigation","proficiency":90,"years":3,"icon":"react-navigation"},{"name":"Kotlin","proficiency":20,"years":0.5,"icon":"kotlin"},{"name":"Swift","proficiency":10,"years":0.5,"icon":"swift"}],"others":[{"name":"Java","icon":"java"},{"name":"iOS","icon":"ios"},{"name":"Android","icon":"android"}]},{"title":"Testing & Analytics","skills":[{"name":"Jest","proficiency":95,"years":7,"icon":"jest"},{"name":"Cypress","proficiency":60,"years":2,"icon":"cypress"},{"name":"Google Analytics","proficiency":70,"years":8,"icon":"google-analytics"},{"name":"E2E Testing","proficiency":75,"years":3,"icon":"testing"},{"name":"Unit/Integration Testing","proficiency":90,"years":10},{"name":"TDD","proficiency":80,"years":5}],"others":[]},{"title":"Legacy & Other","skills":[{"name":"VB6","proficiency":95,"years":6},{"name":"ASP.NET","proficiency":85,"years":10},{"name":"jQuery","proficiency":90,"years":12},{"name":"GIS/MapObject2","proficiency":60,"years":3},{"name":"VBA","proficiency":60,"years":10},{"name":"Ajax","proficiency":75,"years":10}]}]}],["$","$Le",null,{"milestones":[{"id":"1","date":"2025-Present","role":"Cross-Platform SaaS Architect","company":"Nutritionist Platform (Side Project)","description":"Architecting multi-tenant SaaS platform with Next.js App Router and React Native (Expo Router). Implementing tRPC with Prisma ORM for type-safe API communication and real-time sync with WebSocket.","achievement":"Achieved 60% code sharing between web and mobile platforms. Built offline-first architecture with SQLite and conflict resolution."},{"id":"2","date":"2020-Present","role":"Technical Manager & Full-Stack Architect","company":"CCPTools Ecosystem","description":"Leading cross-functional team of 5 developers, architecting microservices ecosystem serving 1,000+ weekly active users. Managing 6-project portfolio including React Native apps, Node.js APIs, and Next.js applications.","achievement":"Implemented 10,000+ automated tests achieving 95% code coverage. Reduced development time by 40% through RJSF dynamic forms and improved team velocity."},{"id":"3","date":"2018-2020","role":"Freelance Full-Stack Developer","company":"Self-Employed","description":"Migrated 16+ legacy applications from jQuery/ASP.NET to React/Node.js. Rapidly mastered new frameworks including Angular and React for immediate client value.","achievement":"100% on-time delivery with 100% client satisfaction rate on Freelancer.com. Mastered Angular in 2 weeks and React in 1 week."},{"id":"4","date":"2015-2018","role":"Senior Full-Stack Developer & Solutions Architect","company":"Development Company","description":"Transitioned to modern web technologies, building Telegram bot serving 400+ admins and 500,000+ users. Developed offline-first ERP systems and pioneered real-time processing solutions.","achievement":"Scaled Telegram bot to 1,000 messages/second with 99% uptime. Reduced spam incidents by 95% through intelligent filtering algorithms."},{"id":"5","date":"2007-2015","role":"Founder & CEO","company":"Development Company","description":"Founded and ran development company. Built 30+ ASP.NET websites, healthcare management systems, and custom ERP solutions while managing all business operations.","achievement":"Won 2014 Best Entrepreneur Award for healthcare digitization. Served 500+ clinics with 2000+ users."},{"id":"6","date":"2005-2007","role":"Junior Software Developer","company":"Cotton Manufacturing Factory (Parjan)","description":"Started programming career at age 16, developing business-critical applications with VB6 and MS Access including weighbridge system, timesheet management, and vehicle monitoring.","achievement":"Built weighbridge system that operated successfully for 10+ years. Developed 4 Windows applications that digitized entire factory operations."},{"id":"7","date":"2003-2006","role":"Self-Taught Developer & GIS Specialist","company":"Independent Projects","description":"Self-taught VB6 and GIS development at age 16-19. Developed GIS applications with MapObject2 and ArcGIS, creating first form generator for dynamic GIS data entry.","achievement":"Completed 3 national GIS mapping projects. Pioneered dynamic form generation for complex geographical data management."}]}],["$","$Lf",null,{"posts":[{"title":"AI-Assisted Development - A Developer's Guide to Responsible Code Generation","slug":"a_developers_guide_to_responsible_code_generation","date":"$D2025-07-19T00:00:00.000Z","excerpt":"Learn how to leverage AI coding tools responsibly while maintaining code quality and ownership. A practical framework for integrating AI assistants into your development workflow without compromising standards.","tags":["AI","development","code-quality","best-practices","productivity","copilot","chatgpt","software-engineering"],"category":"Development","content":"$10","readingTime":6,"published":true},{"title":"Next.js Static Optimization Techniques","slug":"nextjs_static_optimization","date":"$D2025-01-25T00:00:00.000Z","excerpt":"Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.","tags":["Next.js","Static Generation","Performance","Deployment","Web Development"],"category":"Web Development","content":"$11","readingTime":6,"published":true},{"title":"React Native Cross-Platform Strategies","slug":"react_native_cross_platform","date":"$D2025-01-20T00:00:00.000Z","excerpt":"Proven strategies and performance tips for building robust cross-platform apps with React Native, including real-world examples and code sharing techniques.","tags":["React Native","Cross-Platform","Performance","Mobile Development","Code Sharing"],"category":"Mobile Development","content":"$12","readingTime":6,"published":true}]}],["$","$L13",null,{"status":"Available for new opportunities","location":"Istanbul, Turkey (UTC+3)","email":"attarchi@me.com","linkedinUrl":"https://linkedin.com/in/ryan-attarchi","githubUrl":"https://github.com/attarchi","responseTime":"Usually within 24 hours","availabilityType":"Full-time, Contract, Consulting","sectionTitle":"Let's Work Together","sectionSubtitle":"Available for exciting projects and opportunities","contactInfoTitle":"Contact Information","formTitle":"Send Message","formDescription":"Feature coming soon! This form will be available when the site goes live.","formspreeId":"mpwlwpnw","successMessage":"Thanks for your message! I'll get back to you soon."}],["$","$L14",null,{"content":{"copyright":{"title":"Portfolio","companyName":"Attarchi","showcaseMessage":"This is a showcase project - use it freely!"},"repository":{"title":"Source Code","url":"https://github.com/attarchi/attarchi.github.io","text":"View on GitHub"},"license":{"title":"License","name":"MIT License","description":"Free to use for educational and commercial purposes."},"buildInfo":"Built with Next.js, TypeScript, and Tailwind CSS. Deployed on GitHub Pages."}}]]}]
+9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","3",{"name":"description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies and offline-first architectures."}],["$","meta","4",{"name":"author","content":"Attarchi"}],["$","meta","5",{"name":"keywords","content":"Full-Stack Developer, React, Node.js, TypeScript, Mobile Apps, Turkey, JavaScript, Frontend, Backend, Web Development, Software Engineer"}],["$","meta","6",{"name":"creator","content":"Attarchi"}],["$","meta","7",{"name":"publisher","content":"Attarchi"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://attarchi.github.io/"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","13",{"property":"og:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","14",{"property":"og:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies."}],["$","meta","15",{"property":"og:url","content":"https://attarchi.github.io/"}],["$","meta","16",{"property":"og:site_name","content":"Attarchi Portfolio"}],["$","meta","17",{"property":"og:locale","content":"en_US"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:creator","content":"@attarchi"}],["$","meta","21",{"name":"twitter:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","22",{"name":"twitter:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development."}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","24",{"name":"next-size-adjust"}]]
+1:null

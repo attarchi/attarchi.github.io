@@ -1,17 +1,15 @@
 3:I[5613,[],""]
 5:I[1778,[],""]
-6:I[9002,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","404","static/chunks/app/blog/page-39be6368ee6f9011.js"],"ProgressBar"]
-7:I[6256,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","901","static/chunks/901-19db2be028a537f0.js","185","static/chunks/app/layout-63e280b6c09376f6.js"],"RecaptchaProvider"]
-8:I[4279,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","901","static/chunks/901-19db2be028a537f0.js","185","static/chunks/app/layout-63e280b6c09376f6.js"],"ThemeProvider"]
-9:I[5250,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","404","static/chunks/app/blog/page-39be6368ee6f9011.js"],""]
+6:I[9002,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","404","static/chunks/app/blog/page-39be6368ee6f9011.js"],"ProgressBar"]
+7:I[6256,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-d75edf1ee41bd648.js"],"RecaptchaProvider"]
+8:I[4279,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-d75edf1ee41bd648.js"],"ThemeProvider"]
+9:I[5250,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","404","static/chunks/app/blog/page-39be6368ee6f9011.js"],""]
 4:["slug","react_native_cross_platform","d"]
-0:["AsShVEI4POdURZ38zmjZW",[[["",{"children":["blog",{"children":[["slug","react_native_cross_platform","d"],{"children":["__PAGE__?{\"slug\":\"react_native_cross_platform\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["slug","react_native_cross_platform","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_3c557b __variable_e8ce0c antialiased","suppressHydrationWarning":true,"children":[["$","$L6",null,{}],["$","$L7",null,{"children":["$","$L8",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-600 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-500 mb-8","children":"The page you're looking for doesn't exist or has been moved."}],["$","$L9",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"Return Home"}]]}]}],"notFoundStyles":[],"styles":null}]}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f71832e27646eb65.css","precedence":"next","crossOrigin":""}]],"$La"]]]]
+0:["PtF_mBOyVkmixFAksPyoM",[[["",{"children":["blog",{"children":[["slug","react_native_cross_platform","d"],{"children":["__PAGE__?{\"slug\":\"react_native_cross_platform\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["slug","react_native_cross_platform","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_3c557b __variable_e8ce0c antialiased","suppressHydrationWarning":true,"children":[["$","$L6",null,{}],["$","$L7",null,{"children":["$","$L8",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-600 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-500 mb-8","children":"The page you're looking for doesn't exist or has been moved."}],["$","$L9",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"Return Home"}]]}]}],"notFoundStyles":[],"styles":null}]}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/008de027747c38f3.css","precedence":"next","crossOrigin":""}]],"$La"]]]]
 a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","3",{"name":"description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies and offline-first architectures."}],["$","meta","4",{"name":"author","content":"Attarchi"}],["$","meta","5",{"name":"keywords","content":"Full-Stack Developer, React, Node.js, TypeScript, Mobile Apps, Turkey, JavaScript, Frontend, Backend, Web Development, Software Engineer"}],["$","meta","6",{"name":"creator","content":"Attarchi"}],["$","meta","7",{"name":"publisher","content":"Attarchi"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://attarchi.github.io/"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","13",{"property":"og:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","14",{"property":"og:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies."}],["$","meta","15",{"property":"og:url","content":"https://attarchi.github.io/"}],["$","meta","16",{"property":"og:site_name","content":"Attarchi Portfolio"}],["$","meta","17",{"property":"og:locale","content":"en_US"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:creator","content":"@attarchi"}],["$","meta","21",{"name":"twitter:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","22",{"name":"twitter:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development."}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","24",{"name":"next-size-adjust"}]]
 1:null
-b:I[2327,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-ff4ce2f5a28d5729.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-19db2be028a537f0.js","603","static/chunks/603-8c1d45e8b0856123.js","308","static/chunks/app/blog/%5Bslug%5D/page-f0cfcaee6d21a740.js"],"BlogPostPage"]
-c:T251c,<hr>
-<h2>title: React Native Cross-Platform Strategies<br>date: 2025-01-20<br>excerpt: Proven strategies and performance tips for building robust cross-platform apps with React Native, including real-world examples and code sharing techniques.<br>tags: [React Native, Cross-Platform, Performance, Mobile Development, Code Sharing]<br>category: Mobile Development<br>readingTime: 6<br>published: true</h2>
-<h1>React Native Cross-Platform Strategies</h1>
+b:I[2327,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","308","static/chunks/app/blog/%5Bslug%5D/page-f0cfcaee6d21a740.js"],"BlogPostPage"]
+c:T2387,<h1>React Native Cross-Platform Strategies</h1>
 <p>Building high-quality mobile applications for both iOS and Android can be challenging, especially when aiming for a consistent user experience and optimal performance. React Native offers a powerful solution for cross-platform development, but success requires careful planning, code organization, and performance optimization.</p>
 <h2>Introduction: The Cross-Platform Challenge</h2>
 <p>Mobile development teams often face the dilemma of maintaining two separate codebases for iOS and Android. This leads to duplicated effort, inconsistent features, and increased maintenance costs. React Native bridges this gap by enabling developers to write most of their code once and deploy it everywhere, while still allowing for platform-specific customizations where needed.</p>
@@ -149,9 +147,7 @@ export default function App() {
 </ul>
 <h2>Conclusion: Delivering Robust Cross-Platform Apps</h2>
 <p>React Native empowers teams to deliver high-quality apps to both iOS and Android users with less effort and faster iteration. By following the strategies, patterns, and lessons outlined above, you can avoid common pitfalls and build apps that feel truly native on every device. Remember, the key to cross-platform success is not just code sharing, but a relentless focus on user experience, performance, and maintainability. </p>
-d:T2096,<hr>
-<h2>title: Next.js Static Optimization Techniques<br>date: 2025-01-25<br>excerpt: Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.<br>tags: [Next.js, Static Generation, Performance, Deployment, Web Development]<br>category: Web Development<br>readingTime: 6<br>published: true</h2>
-<h1>Next.js Static Optimization Techniques</h1>
+d:T1f09,<h1>Next.js Static Optimization Techniques</h1>
 <p>Modern web applications demand both speed and scalability. Next.js, with its powerful static site generation (SSG) and hybrid rendering capabilities, enables developers to build high-performance sites that are easy to deploy and maintain. In this post, we’ll explore how to fully leverage Next.js static optimization, including practical code examples, performance tips, and deployment strategies.</p>
 <h2>Why Static Generation?</h2>
 <p>Static generation pre-renders pages at build time, resulting in HTML files that can be served instantly from a CDN. This approach offers:</p>
@@ -306,239 +302,4 @@ module.exports = {
 </ul>
 <h2>Conclusion</h2>
 <p>Next.js static optimization unlocks the full potential of the JAMstack, delivering blazing-fast, scalable, and secure web applications. By following these techniques and best practices, you can ensure your Next.js projects are ready for production and delight users everywhere. Static optimization is not just a performance boost—it&#39;s a foundation for modern, maintainable, and future-proof web development. </p>
-e:T24b1,<hr>
-<h2>title: Building Offline-First Apps<br>date: 2025-01-15<br>excerpt: Real-time synchronization strategies for mobile applications that work seamlessly even when users have poor or no internet connectivity.<br>tags: [React Native, Offline, Sync, Mobile Development, PouchDB]<br>category: Mobile Development<br>readingTime: 5<br>published: true</h2>
-<h1>Building Offline-First Apps</h1>
-<p>In today&#39;s interconnected world, users expect applications to work seamlessly regardless of their network conditions. Whether they&#39;re commuting through tunnels, traveling in remote areas, or experiencing temporary connectivity issues, offline-first applications provide a superior user experience by ensuring functionality continues uninterrupted.</p>
-<h2>Why Offline-First Matters</h2>
-<p>Offline-first applications offer several key advantages that make them essential for modern mobile development:</p>
-<ul>
-<li><strong>Immediate Response</strong>: No waiting for network requests to complete</li>
-<li><strong>Reliability</strong>: Functions consistently in areas with poor connectivity</li>
-<li><strong>Performance</strong>: Faster response times for common operations</li>
-<li><strong>User Experience</strong>: Seamless transitions between online and offline states</li>
-<li><strong>Cost Efficiency</strong>: Reduced server load and bandwidth usage</li>
-</ul>
-<h2>Core Architecture Components</h2>
-<h3>1. Data Synchronization Strategy</h3>
-<p>The foundation of any offline-first app is a robust synchronization mechanism. Here&#39;s a basic implementation using React Native and AsyncStorage:</p>
-<pre><code class="language-javascript">class OfflineFirstSync {
-  constructor() {
-    this.syncQueue = [];
-    this.isOnline = navigator.onLine;
-  }
-
-  async syncData() {
-    try {
-      const offlineData = await this.getOfflineData();
-      const onlineData = await this.fetchOnlineData();
-      return this.mergeData(offlineData, onlineData);
-    } catch (error) {
-      console.error(&#39;Sync failed:&#39;, error);
-      return await this.getOfflineData();
-    }
-  }
-
-  async saveOffline(data) {
-    await AsyncStorage.setItem(&#39;offline_data&#39;, JSON.stringify(data));
-  }
-
-  async getOfflineData() {
-    const data = await AsyncStorage.getItem(&#39;offline_data&#39;);
-    return data ? JSON.parse(data) : [];
-  }
-}
-</code></pre>
-<h3>2. Conflict Resolution Strategies</h3>
-<p>When data changes occur both offline and online, you need a strategy to resolve conflicts:</p>
-<p><strong>Last Write Wins (Simple but Risky)</strong></p>
-<pre><code class="language-javascript">const resolveConflict = (localData, remoteData) =&gt; {
-  return localData.timestamp &gt; remoteData.timestamp ? localData : remoteData;
-};
-</code></pre>
-<p><strong>Merge Strategy (More Complex but Safer)</strong></p>
-<pre><code class="language-javascript">const mergeData = (localData, remoteData) =&gt; {
-  const merged = { ...remoteData };
-  
-  // Merge arrays by combining unique items
-  if (localData.items &amp;&amp; remoteData.items) {
-    const localItems = new Set(localData.items.map(item =&gt; item.id));
-    const remoteItems = new Set(remoteData.items.map(item =&gt; item.id));
-    
-    merged.items = [
-      ...remoteData.items,
-      ...localData.items.filter(item =&gt; !remoteItems.has(item.id))
-    ];
-  }
-  
-  return merged;
-};
-</code></pre>
-<h3>3. Storage Strategy Selection</h3>
-<p>Choose the right storage mechanism based on your application&#39;s needs:</p>
-<p><strong>IndexedDB for Complex Data Structures</strong></p>
-<pre><code class="language-javascript">const db = await idb.openDB(&#39;offline-store&#39;, 1, {
-  upgrade(db) {
-    db.createObjectStore(&#39;posts&#39;, { keyPath: &#39;id&#39; });
-    db.createObjectStore(&#39;comments&#39;, { keyPath: &#39;id&#39; });
-  }
-});
-</code></pre>
-<p><strong>SQLite for Relational Data (Mobile Apps)</strong></p>
-<pre><code class="language-javascript">import * as SQLite from &#39;expo-sqlite&#39;;
-
-const db = SQLite.openDatabase(&#39;offline.db&#39;);
-db.transaction(tx =&gt; {
-  tx.executeSql(
-    &#39;CREATE TABLE IF NOT EXISTS posts (id TEXT PRIMARY KEY, title TEXT, content TEXT)&#39;
-  );
-});
-</code></pre>
-<h2>Implementation Example: React Native with PouchDB</h2>
-<p>Here&#39;s a complete example using PouchDB for robust offline-first functionality:</p>
-<pre><code class="language-javascript">import PouchDB from &#39;pouchdb-react-native&#39;;
-
-class OfflineFirstApp {
-  constructor() {
-    this.localDB = new PouchDB(&#39;local-posts&#39;);
-    this.remoteDB = new PouchDB(&#39;https://your-couchdb-server.com/posts&#39;);
-    this.syncHandler = null;
-  }
-
-  async initializeSync() {
-    // Set up continuous sync
-    this.syncHandler = this.localDB.sync(this.remoteDB, {
-      live: true,
-      retry: true,
-      conflicts: true
-    }).on(&#39;change&#39;, (change) =&gt; {
-      console.log(&#39;Sync change:&#39;, change);
-    }).on(&#39;error&#39;, (err) =&gt; {
-      console.error(&#39;Sync error:&#39;, err);
-    });
-  }
-
-  async createPost(post) {
-    try {
-      // Always save locally first
-      const result = await this.localDB.post({
-        _id: `post_${Date.now()}`,
-        title: post.title,
-        content: post.content,
-        timestamp: new Date().toISOString(),
-        type: &#39;post&#39;
-      });
-      
-      return result;
-    } catch (error) {
-      console.error(&#39;Failed to create post:&#39;, error);
-      throw error;
-    }
-  }
-
-  async getPosts() {
-    try {
-      const result = await this.localDB.query(&#39;posts/by_date&#39;, {
-        include_docs: true,
-        descending: true
-      });
-      
-      return result.rows.map(row =&gt; row.doc);
-    } catch (error) {
-      console.error(&#39;Failed to get posts:&#39;, error);
-      return [];
-    }
-  }
-
-  async resolveConflicts() {
-    const conflicts = await this.localDB.query(&#39;posts/conflicts&#39;);
-    
-    for (const conflict of conflicts.rows) {
-      const doc = await this.localDB.get(conflict.id, { conflicts: true });
-      
-      if (doc._conflicts) {
-        // Choose the most recent version
-        const versions = [doc, ...doc._conflicts.map(rev =&gt; 
-          this.localDB.get(conflict.id, { rev }))
-        ];
-        
-        const latest = versions.reduce((latest, current) =&gt; 
-          current.timestamp &gt; latest.timestamp ? current : latest
-        );
-        
-        await this.localDB.put(latest);
-      }
-    }
-  }
-}
-</code></pre>
-<h2>Performance Optimization Techniques</h2>
-<h3>1. Incremental Sync</h3>
-<pre><code class="language-javascript">const syncIncremental = async (lastSyncTime) =&gt; {
-  const changes = await remoteDB.changes({
-    since: lastSyncTime,
-    include_docs: true
-  });
-  
-  for (const change of changes.results) {
-    await localDB.put(change.doc);
-  }
-};
-</code></pre>
-<h3>2. Selective Data Loading</h3>
-<pre><code class="language-javascript">const loadEssentialData = async () =&gt; {
-  // Load only critical data first
-  const essentialPosts = await localDB.query(&#39;posts/essential&#39;, {
-    limit: 10,
-    include_docs: true
-  });
-  
-  // Load remaining data in background
-  setTimeout(() =&gt; loadRemainingData(), 1000);
-};
-</code></pre>
-<h2>Testing Offline Functionality</h2>
-<p>Ensure your offline-first app works correctly with comprehensive testing:</p>
-<pre><code class="language-javascript">describe(&#39;Offline Functionality&#39;, () =&gt; {
-  beforeEach(async () =&gt; {
-    // Mock network offline
-    global.navigator.onLine = false;
-  });
-
-  it(&#39;should create posts when offline&#39;, async () =&gt; {
-    const app = new OfflineFirstApp();
-    const post = { title: &#39;Test Post&#39;, content: &#39;Test content&#39; };
-    
-    const result = await app.createPost(post);
-    expect(result.id).toBeDefined();
-    expect(result.title).toBe(&#39;Test Post&#39;);
-  });
-
-  it(&#39;should sync when coming back online&#39;, async () =&gt; {
-    const app = new OfflineFirstApp();
-    
-    // Create offline post
-    await app.createPost({ title: &#39;Offline Post&#39;, content: &#39;Content&#39; });
-    
-    // Simulate coming back online
-    global.navigator.onLine = true;
-    await app.initializeSync();
-    
-    // Verify sync occurred
-    const posts = await app.getPosts();
-    expect(posts.length).toBeGreaterThan(0);
-  });
-});
-</code></pre>
-<h2>Best Practices Summary</h2>
-<ol>
-<li><strong>Always Save Locally First</strong>: Ensure data is stored locally before attempting to sync</li>
-<li><strong>Implement Conflict Resolution</strong>: Have a clear strategy for handling data conflicts</li>
-<li><strong>Use Appropriate Storage</strong>: Choose storage based on data complexity and access patterns</li>
-<li><strong>Test Offline Scenarios</strong>: Comprehensive testing of offline functionality</li>
-<li><strong>Provide User Feedback</strong>: Clear indicators of sync status and offline state</li>
-<li><strong>Optimize for Performance</strong>: Implement incremental sync and selective loading</li>
-<li><strong>Handle Edge Cases</strong>: Plan for network transitions and data corruption scenarios</li>
-</ol>
-<p>Building offline-first applications requires careful planning and robust implementation, but the benefits in user experience and reliability make it well worth the effort. By following these patterns and best practices, you can create applications that work seamlessly regardless of network conditions. </p>
-2:["$","$Lb",null,{"post":{"title":"React Native Cross-Platform Strategies","slug":"react_native_cross_platform","date":"$D2025-01-20T00:00:00.000Z","excerpt":"Proven strategies and performance tips for building robust cross-platform apps with React Native, including real-world examples and code sharing techniques.","tags":["React Native","Cross-Platform","Performance","Mobile Development","Code Sharing"],"category":"Mobile Development","content":"$c","readingTime":6,"published":true},"prev":{"title":"Next.js Static Optimization Techniques","slug":"nextjs_static_optimization","date":"$D2025-01-25T00:00:00.000Z","excerpt":"Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.","tags":["Next.js","Static Generation","Performance","Deployment","Web Development"],"category":"Web Development","content":"$d","readingTime":6,"published":true},"next":{"title":"Building Offline-First Apps","slug":"building_offline_first_apps","date":"$D2025-01-15T00:00:00.000Z","excerpt":"Real-time synchronization strategies for mobile applications that work seamlessly even when users have poor or no internet connectivity.","tags":["React Native","Offline","Sync","Mobile Development","PouchDB"],"category":"Mobile Development","content":"$e","readingTime":5,"published":true}}]
+2:["$","$Lb",null,{"post":{"title":"React Native Cross-Platform Strategies","slug":"react_native_cross_platform","date":"$D2025-01-20T00:00:00.000Z","excerpt":"Proven strategies and performance tips for building robust cross-platform apps with React Native, including real-world examples and code sharing techniques.","tags":["React Native","Cross-Platform","Performance","Mobile Development","Code Sharing"],"category":"Mobile Development","content":"$c","readingTime":6,"published":true},"prev":{"title":"Next.js Static Optimization Techniques","slug":"nextjs_static_optimization","date":"$D2025-01-25T00:00:00.000Z","excerpt":"Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.","tags":["Next.js","Static Generation","Performance","Deployment","Web Development"],"category":"Web Development","content":"$d","readingTime":6,"published":true},"next":"$undefined"}]

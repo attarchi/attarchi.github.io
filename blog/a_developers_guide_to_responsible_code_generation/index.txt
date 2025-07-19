@@ -1,0 +1,280 @@
+3:I[5613,[],""]
+5:I[1778,[],""]
+6:I[9002,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","404","static/chunks/app/blog/page-39be6368ee6f9011.js"],"ProgressBar"]
+7:I[6256,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-d75edf1ee41bd648.js"],"RecaptchaProvider"]
+8:I[4279,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-d75edf1ee41bd648.js"],"ThemeProvider"]
+9:I[5250,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","404","static/chunks/app/blog/page-39be6368ee6f9011.js"],""]
+4:["slug","a_developers_guide_to_responsible_code_generation","d"]
+0:["PtF_mBOyVkmixFAksPyoM",[[["",{"children":["blog",{"children":[["slug","a_developers_guide_to_responsible_code_generation","d"],{"children":["__PAGE__?{\"slug\":\"a_developers_guide_to_responsible_code_generation\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["slug","a_developers_guide_to_responsible_code_generation","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_3c557b __variable_e8ce0c antialiased","suppressHydrationWarning":true,"children":[["$","$L6",null,{}],["$","$L7",null,{"children":["$","$L8",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-600 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-500 mb-8","children":"The page you're looking for doesn't exist or has been moved."}],["$","$L9",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"Return Home"}]]}]}],"notFoundStyles":[],"styles":null}]}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/008de027747c38f3.css","precedence":"next","crossOrigin":""}]],"$La"]]]]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","3",{"name":"description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies and offline-first architectures."}],["$","meta","4",{"name":"author","content":"Attarchi"}],["$","meta","5",{"name":"keywords","content":"Full-Stack Developer, React, Node.js, TypeScript, Mobile Apps, Turkey, JavaScript, Frontend, Backend, Web Development, Software Engineer"}],["$","meta","6",{"name":"creator","content":"Attarchi"}],["$","meta","7",{"name":"publisher","content":"Attarchi"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://attarchi.github.io/"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","13",{"property":"og:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","14",{"property":"og:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies."}],["$","meta","15",{"property":"og:url","content":"https://attarchi.github.io/"}],["$","meta","16",{"property":"og:site_name","content":"Attarchi Portfolio"}],["$","meta","17",{"property":"og:locale","content":"en_US"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:creator","content":"@attarchi"}],["$","meta","21",{"name":"twitter:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","22",{"name":"twitter:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development."}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","24",{"name":"next-size-adjust"}]]
+1:null
+b:I[2327,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","308","static/chunks/app/blog/%5Bslug%5D/page-f0cfcaee6d21a740.js"],"BlogPostPage"]
+c:T249a,<h1>AI-Assisted Development: A Developer&#39;s Guide to Responsible Code Generation</h1>
+<p>The rise of AI coding assistants has fundamentally changed how we write software. Tools like GitHub Copilot, ChatGPT, and Claude can generate entire functions, suggest completions, and even architect solutions in seconds. But with great power comes great responsibility—and the need for a disciplined approach to AI-generated code.</p>
+<p>After months of integrating AI tools into our development workflow, I&#39;ve learned that the key isn&#39;t just knowing how to prompt AI effectively, but understanding when to trust it, when to refactor it, and when to reject it entirely. Here&#39;s a practical framework for leveraging AI responsibly while maintaining code integrity and ownership.</p>
+<h2>The Foundation: You Own Every Line</h2>
+<p>The most critical mindset shift when working with AI is this: <strong>you own the code, not the AI.</strong> AI is a sophisticated tool, not a team member. Every line of code that makes it into your repository is your responsibility, regardless of its origin.</p>
+<p>This ownership principle extends beyond just fixing bugs. You&#39;re accountable for the code&#39;s security, performance, maintainability, and alignment with your team&#39;s standards. AI doesn&#39;t understand your business context, your technical debt, or your team&#39;s coding conventions—you do.</p>
+<h2>Core Principles for AI-Assisted Development</h2>
+<h3>1. Clarity and Quality Are Non-Negotiable</h3>
+<p>Just because AI generated it doesn&#39;t mean it gets a pass on quality standards. Code must meet your team&#39;s requirements for readability, performance, and security, regardless of whether it was written by a human or an AI. Treat AI-generated code with the same scrutiny you&#39;d apply to a junior developer&#39;s pull request.</p>
+<h3>2. Understand Before You Commit</h3>
+<p>Never deploy code you can&#39;t explain, modify, or debug. If you can&#39;t walk through the logic step-by-step or confidently make changes to it, the code isn&#39;t ready for production. This isn&#39;t just about avoiding bugs—it&#39;s about maintaining long-term code health and your ability to iterate on the solution.</p>
+<h2>Practical Guidelines for AI-Generated Code</h2>
+<h3>Clean Up the Noise</h3>
+<p>AI tools often generate verbose, over-commented code that feels like it&#39;s written for a tutorial rather than production. The first step in refining AI output is aggressive cleanup:</p>
+<p><strong>Remove redundant comments.</strong> AI loves to add obvious explanations like <code>// Loop through the array</code> or <code>// Check if user exists</code>. These add clutter without value. Keep only method-level or class-level documentation that provides meaningful context for future developers.</p>
+<p><strong>Eliminate dead code.</strong> AI often includes placeholder variables, unused imports, or defensive code patterns that aren&#39;t relevant to your specific use case. Strip these out before committing.</p>
+<p><strong>Simplify overcomplicated logic.</strong> AI sometimes generates nested conditionals or verbose patterns where simpler solutions exist. Refactor for clarity and conciseness.</p>
+<p>Here&#39;s an example of AI-generated code that needs cleanup:</p>
+<pre><code class="language-javascript">// AI-generated code (before cleanup)
+function processUserData(users) {
+    // Loop through the array of users
+    const processedUsers = [];
+    for (let i = 0; i &lt; users.length; i++) {
+        const user = users[i];
+        // Check if user exists and has required fields
+        if (user &amp;&amp; user.name &amp;&amp; user.email) {
+            // Create a new user object with processed data
+            const processedUser = {
+                id: user.id || generateId(),
+                name: user.name.trim(),
+                email: user.email.toLowerCase(),
+                // Add timestamp for tracking
+                processedAt: new Date().toISOString()
+            };
+            processedUsers.push(processedUser);
+        }
+    }
+    return processedUsers;
+}
+</code></pre>
+<p>After cleanup:</p>
+<pre><code class="language-javascript">// Clean, production-ready code
+function processUserData(users) {
+    return users
+        .filter(user =&gt; user?.name &amp;&amp; user?.email)
+        .map(user =&gt; ({
+            id: user.id || generateId(),
+            name: user.name.trim(),
+            email: user.email.toLowerCase(),
+            processedAt: new Date().toISOString()
+        }));
+}
+</code></pre>
+<h3>Reject Black Box Solutions</h3>
+<p>If you don&#39;t understand the algorithm or pattern AI suggests, don&#39;t use it. This is especially important for:</p>
+<ul>
+<li>Complex data structures or algorithms you&#39;re unfamiliar with</li>
+<li>Security-related code (authentication, input validation, cryptography)</li>
+<li>Performance-critical sections where you need to understand trade-offs</li>
+</ul>
+<p>When in doubt, ask the AI to explain its approach or generate a simpler alternative. Better yet, research the problem yourself and use AI to implement a solution you already understand.</p>
+<h3>Enforce Your Standards Rigorously</h3>
+<p>AI doesn&#39;t know your team&#39;s conventions, and it shouldn&#39;t. Manually verify that generated code follows your:</p>
+<ul>
+<li>Naming conventions and formatting rules</li>
+<li>Error handling patterns</li>
+<li>Security practices (input validation, API security)</li>
+<li>Performance requirements</li>
+</ul>
+<p>Use your existing toolchain to catch issues. Run ESLint, Prettier, and your test suite on AI-generated code just as you would on human-written code. Configure your IDE to auto-format on save and never commit code with unresolved linting errors.</p>
+<h3>Use AI for the Right Tasks</h3>
+<p>AI excels at certain types of work and struggles with others. Play to its strengths:</p>
+<p><strong>Great for AI:</strong></p>
+<ul>
+<li>Generating boilerplate (test templates, CRUD operations)</li>
+<li>Exploring new libraries or APIs</li>
+<li>Writing documentation drafts</li>
+<li>Refactoring repetitive code patterns</li>
+</ul>
+<p><strong>Avoid AI for:</strong></p>
+<ul>
+<li>Core business logic that requires domain expertise</li>
+<li>Security-critical implementations</li>
+<li>Architectural decisions</li>
+<li>Code that integrates deeply with your existing systems</li>
+</ul>
+<h3>Prioritize Security</h3>
+<p>AI models are trained on public code repositories, which means they&#39;ve learned from both good and bad security practices. Always verify that AI-generated code:</p>
+<ul>
+<li>Uses up-to-date dependencies and APIs</li>
+<li>Properly validates and sanitizes inputs</li>
+<li>Follows secure coding patterns for your language and framework</li>
+<li>Doesn&#39;t introduce common vulnerabilities (SQL injection, XSS, etc.)</li>
+</ul>
+<p>When working with authentication, authorization, or data handling, be especially cautious and consider having security-focused team members review AI-generated code.</p>
+<h2>Improving Your AI Collaboration</h2>
+<p>The quality of AI output is directly related to the quality of your prompts and your understanding of the tool&#39;s capabilities. Invest time in learning how to communicate effectively with your AI assistant:</p>
+<p><strong>Be specific in your requests.</strong> Instead of &quot;write a function to sort data,&quot; try &quot;write a JavaScript function that sorts an array of user objects by last name, returning a new array without modifying the original.&quot;</p>
+<p><strong>Request clean output.</strong> Add phrases like &quot;without comments,&quot; &quot;production-ready,&quot; or &quot;following modern best practices&quot; to get cleaner initial results.</p>
+<p><strong>Iterate and refine.</strong> Treat your first AI output as a draft. Ask for modifications, simplifications, or alternative approaches until you get something that meets your standards.</p>
+<h2>A Pre-Commit Checklist</h2>
+<p>Before any AI-generated code makes it into your repository, run through this checklist:</p>
+<ul>
+<li><strong>Understanding:</strong> Can I explain every line of this code to a colleague?</li>
+<li><strong>Cleanliness:</strong> Have I removed unnecessary comments, logs, and dead code?</li>
+<li><strong>Standards:</strong> Does this code follow our team&#39;s formatting, naming, and architectural conventions?</li>
+<li><strong>Testing:</strong> Have I tested the code myself and verified it works as expected?</li>
+<li><strong>Security:</strong> Have I reviewed this code for common vulnerabilities and secure practices?</li>
+</ul>
+<h2>The Bottom Line</h2>
+<p>AI coding assistants are powerful tools that can significantly boost productivity when used thoughtfully. The key is maintaining the same discipline and standards you&#39;d apply to any code, while leveraging AI&#39;s strengths in appropriate contexts.</p>
+<p>Remember: AI is here to make you a more productive developer, not to replace your judgment, expertise, or responsibility for the code you ship. Use it wisely, clean up its output rigorously, and never commit code you don&#39;t fully understand.</p>
+<p>The future of development isn&#39;t about AI writing perfect code—it&#39;s about developers who know how to collaborate with AI to write better code faster, while maintaining the quality and security standards our users depend on.</p>
+d:T1f09,<h1>Next.js Static Optimization Techniques</h1>
+<p>Modern web applications demand both speed and scalability. Next.js, with its powerful static site generation (SSG) and hybrid rendering capabilities, enables developers to build high-performance sites that are easy to deploy and maintain. In this post, we’ll explore how to fully leverage Next.js static optimization, including practical code examples, performance tips, and deployment strategies.</p>
+<h2>Why Static Generation?</h2>
+<p>Static generation pre-renders pages at build time, resulting in HTML files that can be served instantly from a CDN. This approach offers:</p>
+<ul>
+<li><strong>Lightning-fast load times</strong></li>
+<li><strong>Improved SEO</strong></li>
+<li><strong>Reduced server costs</strong></li>
+<li><strong>Enhanced security (no server-side code at runtime)</strong></li>
+</ul>
+<h2>Core Concepts: SSG vs SSR vs ISR</h2>
+<ul>
+<li><strong>SSG (Static Site Generation):</strong> Pages are built at compile time and served as static assets.</li>
+<li><strong>SSR (Server-Side Rendering):</strong> Pages are rendered on each request, useful for dynamic data.</li>
+<li><strong>ISR (Incremental Static Regeneration):</strong> Combines SSG and SSR, allowing static pages to be updated after deployment.</li>
+</ul>
+<h2>Implementing Static Generation in Next.js</h2>
+<h3>1. Static Pages with <code>getStaticProps</code></h3>
+<pre><code class="language-javascript">// pages/blog/[slug].js
+export async function getStaticProps({ params }) {
+  const post = await getPostBySlug(params.slug);
+  return {
+    props: { post },
+  };
+}
+
+export async function getStaticPaths() {
+  const slugs = await getAllPostSlugs();
+  return {
+    paths: slugs.map(slug =&gt; ({ params: { slug } })),
+    fallback: false,
+  };
+}
+</code></pre>
+<h3>2. Incremental Static Regeneration (ISR)</h3>
+<p>ISR allows you to update static content without a full rebuild:</p>
+<pre><code class="language-javascript">export async function getStaticProps() {
+  const data = await fetchData();
+  return {
+    props: { data },
+    revalidate: 60, // Regenerate at most once per minute
+  };
+}
+</code></pre>
+<h3>3. Static Assets and Image Optimization</h3>
+<ul>
+<li>Place images in the <code>/public</code> directory for instant CDN delivery</li>
+<li>Use the Next.js <code>&lt;Image /&gt;</code> component for automatic resizing and lazy loading:</li>
+</ul>
+<pre><code class="language-javascript">import Image from &#39;next/image&#39;;
+
+&lt;Image src=&quot;/hero.png&quot; alt=&quot;Hero&quot; width={800} height={400} priority /&gt;
+</code></pre>
+<h2>Performance Optimization Strategies</h2>
+<h3>1. Bundle Analysis and Code Splitting</h3>
+<ul>
+<li>Use dynamic imports to split code and reduce initial bundle size:</li>
+</ul>
+<pre><code class="language-javascript">import dynamic from &#39;next/dynamic&#39;;
+const HeavyComponent = dynamic(() =&gt; import(&#39;../components/HeavyComponent&#39;));
+</code></pre>
+<ul>
+<li>Analyze your bundle with <code>next build &amp;&amp; npx next-bundle-analyzer</code></li>
+</ul>
+<h3>2. Prefetching and Link Optimization</h3>
+<ul>
+<li>Use the Next.js <code>&lt;Link /&gt;</code> component for client-side navigation and automatic prefetching:</li>
+</ul>
+<pre><code class="language-javascript">import Link from &#39;next/link&#39;;
+
+&lt;Link href=&quot;/about&quot; prefetch={true}&gt;About&lt;/Link&gt;
+</code></pre>
+<h3>3. Caching and CDN</h3>
+<ul>
+<li>Deploy your static site to a global CDN (Vercel, Netlify, GitHub Pages)</li>
+<li>Use HTTP cache headers for long-lived assets</li>
+<li>Leverage edge caching for dynamic routes with ISR</li>
+</ul>
+<h3>4. Environment Variables and Build Optimization</h3>
+<ul>
+<li>Use environment variables to control build-time behavior</li>
+<li>Remove unused code and dependencies</li>
+<li>Enable production optimizations with <code>next.config.js</code>:</li>
+</ul>
+<pre><code class="language-javascript">// next.config.js
+module.exports = {
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    formats: [&#39;image/avif&#39;, &#39;image/webp&#39;],
+  },
+};
+</code></pre>
+<h3>5. Advanced Optimization: Custom Head and SEO</h3>
+<ul>
+<li>Use the <code>&lt;Head /&gt;</code> component to set meta tags for SEO and social sharing</li>
+<li>Generate Open Graph and Twitter Card images at build time</li>
+<li>Use structured data (JSON-LD) for rich search results</li>
+</ul>
+<pre><code class="language-javascript">import Head from &#39;next/head&#39;;
+
+&lt;Head&gt;
+  &lt;title&gt;My Portfolio&lt;/title&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;Professional portfolio built with Next.js&quot; /&gt;
+  &lt;meta property=&quot;og:image&quot; content=&quot;/og-image.png&quot; /&gt;
+&lt;/Head&gt;
+</code></pre>
+<h2>Deployment Strategies</h2>
+<h3>1. Vercel (Recommended)</h3>
+<ul>
+<li>Push to GitHub, connect your repo to Vercel, and enjoy automatic deployments</li>
+<li>Built-in CDN, analytics, and preview deployments</li>
+<li>Rollback to previous deployments with a single click</li>
+</ul>
+<h3>2. GitHub Pages (Static Export)</h3>
+<ul>
+<li>Use <code>next export</code> to generate a static site:</li>
+</ul>
+<pre><code class="language-bash">next build &amp;&amp; next export
+</code></pre>
+<ul>
+<li>Deploy the <code>out/</code> directory to GitHub Pages</li>
+<li>Use a custom domain and HTTPS for production</li>
+</ul>
+<h3>3. Netlify/Other CDNs</h3>
+<ul>
+<li>Drag and drop your static output or connect your repo for CI/CD</li>
+<li>Set up redirects and custom headers for advanced use cases</li>
+</ul>
+<h2>Real-World Example: Optimizing a Portfolio Site</h2>
+<p>In my own portfolio project, I used SSG for all main pages and blog posts, ISR for the contact form (to allow updates without redeploying), and optimized images with the Next.js <code>&lt;Image /&gt;</code> component. The result was a site that loads in under 1 second globally, with perfect Lighthouse scores for performance and SEO.</p>
+<h3>Case Study: Migrating a Blog to Next.js SSG</h3>
+<p>A client’s blog was migrated from WordPress to Next.js SSG. By pre-rendering all posts and using ISR for the comments section, we reduced TTFB (Time to First Byte) from 1.2s to 0.2s and improved Google PageSpeed scores from 70 to 100. The migration also eliminated plugin security risks and reduced hosting costs by 80%.</p>
+<h2>Troubleshooting Common Issues</h2>
+<ul>
+<li><strong>Build Failures:</strong> Check for dynamic code or dependencies that require SSR</li>
+<li><strong>Large Bundles:</strong> Use bundle analyzer and dynamic imports</li>
+<li><strong>Image Optimization Errors:</strong> Ensure images are in <code>/public</code> and use correct props</li>
+<li><strong>404s on Static Export:</strong> Make sure all dynamic routes are included in <code>getStaticPaths</code></li>
+<li><strong>CDN Cache Stale:</strong> Use cache invalidation or revalidate with ISR</li>
+<li><strong>Environment Mismatches:</strong> Double-check environment variables for production builds</li>
+</ul>
+<h2>Best Practices and Takeaways</h2>
+<ul>
+<li>Prefer SSG for all non-user-specific pages</li>
+<li>Use ISR for content that changes frequently but doesn’t need real-time updates</li>
+<li>Optimize images and static assets</li>
+<li>Analyze and split bundles for faster loads</li>
+<li>Deploy to a global CDN for instant delivery</li>
+<li>Monitor performance and error analytics post-deployment</li>
+<li>Automate Lighthouse and accessibility checks in CI</li>
+<li>Document your build and deployment process for future maintainers</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Next.js static optimization unlocks the full potential of the JAMstack, delivering blazing-fast, scalable, and secure web applications. By following these techniques and best practices, you can ensure your Next.js projects are ready for production and delight users everywhere. Static optimization is not just a performance boost—it&#39;s a foundation for modern, maintainable, and future-proof web development. </p>
+2:["$","$Lb",null,{"post":{"title":"AI-Assisted Development - A Developer's Guide to Responsible Code Generation","slug":"a_developers_guide_to_responsible_code_generation","date":"$D2025-07-19T00:00:00.000Z","excerpt":"Learn how to leverage AI coding tools responsibly while maintaining code quality and ownership. A practical framework for integrating AI assistants into your development workflow without compromising standards.","tags":["AI","development","code-quality","best-practices","productivity","copilot","chatgpt","software-engineering"],"category":"Development","content":"$c","readingTime":6,"published":true},"prev":"$undefined","next":{"title":"Next.js Static Optimization Techniques","slug":"nextjs_static_optimization","date":"$D2025-01-25T00:00:00.000Z","excerpt":"Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.","tags":["Next.js","Static Generation","Performance","Deployment","Web Development"],"category":"Web Development","content":"$d","readingTime":6,"published":true}}]
