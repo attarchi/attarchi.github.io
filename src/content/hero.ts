@@ -20,7 +20,7 @@ export interface HeroContent {
 export const heroContent: HeroContent = {
     name: "This Is Ryan",
     title: "Senior Full-Stack Developer & Problem Solver",
-    description: "Crafting scalable web applications with modern technologies. Specializing in React, Node.js, and cloud-native architectures. Passionate about solving complex problems and delivering high-quality, maintainable code.",
+    description: "20+ years crafting scalable web applications with React, Node.js, C#, and modern architectures. Specializing in offline-first solutions and complex problem solving.",
     location: "Istanbul, Turkey • Remote Worldwide",
     avatarAlt: "Profile picture",
     ctaButtons: [
