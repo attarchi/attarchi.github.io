@@ -62,14 +62,28 @@ async function readMarkdownFile(filePath: string): Promise<{ content: string; fr
     }
 }
 
+// Helper function to decode HTML entities
+function decodeHtmlEntities(text: string): string {
+    return text
+        .replace(/&colon;/g, ':')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#x27;/g, "'")
+        .replace(/&#x2F;/g, '/')
+        .replace(/&#x60;/g, '`')
+        .replace(/&#x3D;/g, '=');
+}
+
 function frontmatterToBlogPost(slug: string, frontmatter: Record<string, any>, content: string): BlogPost {
     return {
-        title: frontmatter.title || 'Untitled',
+        title: decodeHtmlEntities(frontmatter.title || 'Untitled'),
         slug,
         date: new Date(frontmatter.date || Date.now()),
-        excerpt: frontmatter.excerpt || '',
+        excerpt: decodeHtmlEntities(frontmatter.excerpt || ''),
         tags: frontmatter.tags || [],
-        category: frontmatter.category || 'Uncategorized',
+        category: decodeHtmlEntities(frontmatter.category || 'Uncategorized'),
         content,
         readingTime: frontmatter.readingTime || calculateReadingTime(content),
         published: frontmatter.published !== false
