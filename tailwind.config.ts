@@ -57,7 +57,6 @@ export default {
         "fade-in": "fadeIn 0.5s ease-out",
         "slide-up": "slideUp 0.5s ease-out",
         "slide-down": "slideDown 0.5s ease-out",
-        "typewriter": "typewriter 2s steps(40) forwards",
       },
       keyframes: {
         fadeIn: {
@@ -71,10 +70,6 @@ export default {
         slideDown: {
           "0%": { transform: "translateY(-20px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        typewriter: {
-          "0%": { width: "0" },
-          "100%": { width: "100%" },
         },
       },
       boxShadow: {

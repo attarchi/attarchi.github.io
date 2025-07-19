@@ -12,7 +12,6 @@ export const techBadgeVariants = { hidden: {}, visible: {} };
 export const slideUpVariants = { hidden: {}, visible: {} };
 export const slideInVariants = { left: { hidden: {}, visible: {} }, right: { hidden: {}, visible: {} } };
 export const scaleVariants = { hidden: {}, visible: {} };
-export const typewriterVariants = { hidden: {}, visible: {} };
 export const fadeVariants = { hidden: {}, visible: {} };
 export const categoryStaggerVariants = { hidden: {}, visible: {} };
 export const categorySlideInVariants = { hidden: {}, visible: {} };

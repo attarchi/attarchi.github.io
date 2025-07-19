@@ -9,3 +9,4 @@ export * from './ProgressBar';
 export * from './ThemeToggle';
 export * from './Typography';
 export * from './Typewriter';
+export * from './CenteredTypewriter';

@@ -5,7 +5,6 @@ import {
     slideUpVariants,
     slideInVariants,
     scaleVariants,
-    typewriterVariants,
     fadeVariants,
     projectStaggerVariants,
     projectCardVariants,
@@ -36,7 +35,6 @@ describe('Animation Variants', () => {
                 staggerVariants,
                 slideUpVariants,
                 scaleVariants,
-                typewriterVariants,
                 fadeVariants,
                 projectStaggerVariants,
                 projectCardVariants,
@@ -77,7 +75,7 @@ describe('Animation Variants', () => {
 
     describe('Animation Timing', () => {
         it('should use consistent timing for main animations', () => {
-            const variants = [sectionVariants, staggerVariants, slideUpVariants, scaleVariants, typewriterVariants, fadeVariants];
+            const variants = [sectionVariants, staggerVariants, slideUpVariants, scaleVariants, fadeVariants];
 
             variants.forEach(variant => {
                 const visible = variant.visible as any;
@@ -97,7 +95,7 @@ describe('Animation Variants', () => {
 
     describe('Utility Functions', () => {
         it('should create custom variants with custom timing', () => {
-            const customVariants = createCustomVariants(sectionVariants, 1.0, 0.5);
+            const customVariants = createCustomVariants(1.0, 0.5);
             const visible = customVariants.visible as any;
             expect(visible.transition.duration).toBe(1.0);
             expect(visible.transition.delay).toBe(0.5);
@@ -115,10 +113,6 @@ describe('Animation Variants', () => {
         it('should have hover and tap variants for scaleVariants', () => {
             expect(scaleVariants).toHaveProperty('hover');
             expect(scaleVariants).toHaveProperty('tap');
-        });
-
-        it('should have typing variant for typewriterVariants', () => {
-            expect(typewriterVariants).toHaveProperty('typing');
         });
 
         it('should have exit variant for fadeVariants', () => {

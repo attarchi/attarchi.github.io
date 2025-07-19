@@ -2,14 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib';
-import { TypewriterProps } from './typewriter.types';
+import { CenteredTypewriterProps } from './typewriter.types';
 
-export function Typewriter({ 
+export function CenteredTypewriter({ 
   text, 
   speed = 50, 
   className,
   onComplete
-}: TypewriterProps) {
+}: CenteredTypewriterProps) {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
@@ -67,6 +67,7 @@ export function Typewriter({
   }, [displayText, text, speed, isTyping, prefersReducedMotion, onComplete]);
 
   const showCursor = !prefersReducedMotion && !isComplete;
+  const visibleLength = prefersReducedMotion ? text.length : displayText.length;
 
   return (
     <div 
@@ -74,15 +75,28 @@ export function Typewriter({
       data-testid="typewriter-container"
     >
       <span className="font-mono">
-        {prefersReducedMotion ? text : displayText}
-        {showCursor && (
-          <span 
-            data-testid="typewriter-cursor"
-            className="animate-pulse"
-          >
-            |
-          </span>
-        )}
+        {text.split('').map((char, index) => (
+          <React.Fragment key={index}>
+            <span
+              className={cn(
+                "transition-colors duration-75",
+                index < visibleLength
+                  ? "text-current"
+                  : "text-transparent"
+              )}
+            >
+              {char}
+            </span>
+            {showCursor && index === visibleLength - 1 && (
+              <span 
+                data-testid="typewriter-cursor"
+                className="animate-pulse text-current"
+              >
+                |
+              </span>
+            )}
+          </React.Fragment>
+        ))}
       </span>
     </div>
   );

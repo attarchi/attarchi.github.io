@@ -1,10 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Link from "next/link";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Image from "next/image";
-import { useState } from "react";
-import { Button, Text, Typewriter } from "@/components/micro";
+import { Button, Text, Typewriter, CenteredTypewriter } from "@/components/micro";
 import { HeroContent } from "@/content";
 import avatarSrc from "../../../public/avatar.png";
 interface HeroSectionProps extends HeroContent {
@@ -112,11 +112,12 @@ export function HeroSection({
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <h1 className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text" data-testid="hero-heading">
-              <Typewriter
+              <CenteredTypewriter
                 text={title || ""}
                 speed={50}
                 className="font-mono text-[2.5rem] md:text-[3.5rem] font-bold text-text"
                 onComplete={handleTitleTypewriterComplete}
+                
               />
             </h1>
           </motion.div>

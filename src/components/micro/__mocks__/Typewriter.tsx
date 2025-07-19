@@ -1,18 +1,26 @@
 import React from 'react';
+import { TypewriterProps } from '../typewriter.types';
 
-interface TypewriterProps {
-  text: string;
-  className?: string;
-  speed?: number;
-  onComplete?: () => void;
-}
-
-export function Typewriter({ text, className = '', onComplete }: TypewriterProps) {
-  React.useEffect(() => {
-    if (onComplete) {
-      onComplete();
-    }
-  }, [onComplete]);
-  
-  return <span className={className}>{text}</span>;
+export function Typewriter({ 
+  text, 
+  speed = 50, 
+  className,
+  onComplete
+}: TypewriterProps) {
+  return (
+    <div 
+      className={className}
+      data-testid="typewriter-container"
+    >
+      <span className="font-mono">
+        {text}
+        <span 
+          data-testid="typewriter-cursor"
+          className="animate-pulse"
+        >
+          |
+        </span>
+      </span>
+    </div>
+  );
 } 

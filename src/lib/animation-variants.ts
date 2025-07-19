@@ -13,10 +13,6 @@ export interface SlideInVariants {
     right: AnimationVariants;
 }
 
-export interface TypewriterVariants extends AnimationVariants {
-    typing: Record<string, any>;
-}
-
 export const sectionVariants: Variants = {
     hidden: {
         opacity: 0,
@@ -168,28 +164,6 @@ export const scaleVariants: Variants = {
     }
 };
 
-export const typewriterVariants: TypewriterVariants = {
-    hidden: {
-        opacity: 0,
-        width: 0
-    },
-    visible: {
-        opacity: 1,
-        width: '100%',
-        transition: {
-            duration: 0.8,
-            ease: 'easeOut'
-        }
-    },
-    typing: {
-        width: '100%',
-        transition: {
-            duration: 2,
-            ease: 'linear'
-        }
-    }
-};
-
 export const fadeVariants: Variants = {
     hidden: {
         opacity: 0
@@ -211,21 +185,21 @@ export const fadeVariants: Variants = {
 };
 
 export function createCustomVariants(
-    baseVariants: Variants,
     customDuration?: number,
     customDelay?: number
 ): Variants {
-    const duration = customDuration ?? 0.8;
-    const delay = customDelay ?? 0;
-
     return {
-        ...baseVariants,
+        hidden: {
+            opacity: 0,
+            y: 50
+        },
         visible: {
-            ...baseVariants.visible,
+            opacity: 1,
+            y: 0,
             transition: {
-                ...(baseVariants.visible as any)?.transition,
-                duration,
-                delay
+                duration: customDuration || 0.8,
+                delay: customDelay || 0,
+                ease: 'easeOut'
             }
         }
     };
@@ -247,7 +221,7 @@ export function createStaggerVariants(
                 duration: 0.8,
                 ease: 'easeOut',
                 staggerChildren: staggerDelay,
-                delayChildren
+                delayChildren: delayChildren
             }
         }
     };
