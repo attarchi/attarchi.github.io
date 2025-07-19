@@ -366,7 +366,7 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
                       <motion.div
                         key={milestone.id}
                         layoutId={`milestone-${milestone.id}`}
-                        className="relative bg-[#ffffff] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] p-4 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg"
+                        className="relative bg-[#ffffff] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] p-4 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg flex flex-col h-full"
                         data-testid="milestone-card"
                         custom={slideDirection}
                         variants={slideshowItemVariants}
@@ -389,7 +389,7 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
                           }`}
                           data-testid="timeline-dot"
                         />
-                        <div className="space-y-2">
+                        <div className="flex flex-col h-full">
                           <div 
                             className="font-mono text-sm text-[#656d76] dark:text-[#8b949e]"
                             data-testid="milestone-date"
@@ -397,7 +397,7 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
                             {milestone.date}
                           </div>
                           <h3 
-                            className="font-sans text-lg font-semibold text-[#24292f] dark:text-[#f0f6fc]"
+                            className="font-sans text-lg font-semibold text-[#24292f] dark:text-[#f0f6fc] leading-tight h-12 flex items-start"
                             data-testid="milestone-role"
                           >
                             {milestone.role}
@@ -409,13 +409,13 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
                             {milestone.company}
                           </div>
                           <p 
-                            className="font-sans text-sm text-[#656d76] dark:text-[#8b949e]"
+                            className="font-sans text-sm text-[#656d76] dark:text-[#8b949e] flex-grow mt-4"
                             data-testid="milestone-description"
                           >
                             {milestone.description}
                           </p>
                           <motion.div 
-                            className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-[#f6f8fa] dark:bg-[#21262d] text-[#24292f] dark:text-[#f0f6fc]"
+                            className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-[#f6f8fa] dark:bg-[#21262d] text-[#24292f] dark:text-[#f0f6fc] mt-4"
                             data-testid="achievement-badge"
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -443,7 +443,7 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
                   return (
                     <motion.div
                       key={milestone.id}
-                      className="relative bg-[#ffffff] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] p-4 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg"
+                      className="relative bg-[#ffffff] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] p-4 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg flex flex-col h-full"
                       data-testid="milestone-card"
                       variants={slideVariants}
                       initial="hidden"
@@ -462,7 +462,7 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
                         }`}
                         data-testid="timeline-dot"
                       />
-                      <div className="space-y-2">
+                      <div className="flex flex-col h-full">
                         <div 
                           className="font-mono text-sm text-[#656d76] dark:text-[#8b949e]"
                           data-testid="milestone-date"
@@ -470,7 +470,7 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
                           {milestone.date}
                         </div>
                         <h3 
-                          className="font-sans text-lg font-semibold text-[#24292f] dark:text-[#f0f6fc]"
+                          className="font-sans text-lg font-semibold text-[#24292f] dark:text-[#f0f6fc] leading-tight h-12 flex items-start"
                           data-testid="milestone-role"
                         >
                           {milestone.role}
@@ -482,13 +482,13 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
                           {milestone.company}
                         </div>
                         <p 
-                          className="font-sans text-sm text-[#656d76] dark:text-[#8b949e]"
+                          className="font-sans text-sm text-[#656d76] dark:text-[#8b949e] flex-grow mt-4"
                           data-testid="milestone-description"
                         >
                           {milestone.description}
                         </p>
                         <motion.div 
-                          className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-[#f6f8fa] dark:bg-[#21262d] text-[#24292f] dark:text-[#f0f6fc]"
+                          className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-[#f6f8fa] dark:bg-[#21262d] text-[#24292f] dark:text-[#f0f6fc] mt-4"
                           data-testid="achievement-badge"
                           variants={scaleVariants}
                           initial="hidden"

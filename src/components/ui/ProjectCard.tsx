@@ -24,16 +24,17 @@ export function ProjectCard({
         'p-6',
         'hover:shadow-lg transition-all duration-300',
         'hover:bg-surface-light dark:hover:bg-surface-dark',
+        'flex flex-col h-full',
         className
       )}
       {...props}
     >
-      <div className="space-y-4">
-        <h3 className="font-mono text-xl font-semibold text-text">
+      <div className="flex flex-col h-full">
+        <h3 className="font-mono text-xl font-semibold text-text leading-tight h-12 flex items-start">
           {title}
         </h3>
         
-        <p className="font-sans text-base text-muted">
+        <p className="font-sans text-base text-muted flex-grow mt-4">
           {description}
         </p>
 
