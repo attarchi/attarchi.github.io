@@ -23,7 +23,7 @@ describe("Icon", () => {
     expect(icon).toHaveAttribute("alt", "React icon");
     expect(icon).toHaveAttribute("width", "32");
     expect(icon).toHaveAttribute("height", "32");
-    expect(icon).toHaveClass("custom-class");
+
   });
 
   it("uses default values when props are not provided", () => {

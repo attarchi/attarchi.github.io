@@ -1,44 +1,43 @@
-import { type ProfessionalMilestone } from '@/components/sections/ProfessionalJourney';
+export interface ProfessionalMilestone {
+    id: string;
+    date: string;
+    role: string;
+    company: string;
+    description: string;
+    achievement: string;
+}
 
 export const professionalMilestones: ProfessionalMilestone[] = [
     {
-        id: "1",
-        date: "2024-Present",
-        role: "Senior Frontend Developer",
-        company: "Innovative Tech Solutions",
-        description: "Leading the development of modern web applications using React, TypeScript, and Next.js. Architecting scalable solutions and mentoring junior developers.",
-        achievement: "Technical Lead"
+        id: '1',
+        date: '2023-Present',
+        role: 'Senior Software Engineer',
+        company: 'TechCorp',
+        description: 'Leading development of scalable web applications using React, Node.js, and cloud technologies.',
+        achievement: 'Improved application performance by 40% through optimization and caching strategies.'
     },
     {
-        id: "2",
-        date: "2022-2024",
-        role: "Full-Stack Developer",
-        company: "Digital Growth Agency",
-        description: "Built comprehensive web solutions from concept to deployment. Specialized in React ecosystem and backend services with Node.js and PostgreSQL.",
-        achievement: "Full-Stack Expertise"
+        id: '2',
+        date: '2021-2023',
+        role: 'Full Stack Developer',
+        company: 'StartupXYZ',
+        description: 'Built and maintained multiple client applications with focus on user experience and performance.',
+        achievement: 'Reduced page load times by 60% through code splitting and lazy loading implementation.'
     },
     {
-        id: "3",
-        date: "2020-2022",
-        role: "Frontend Developer",
-        company: "Creative Web Studio",
-        description: "Developed responsive, user-centric web applications with focus on performance optimization and accessibility. Collaborated closely with UX/UI teams.",
-        achievement: "Performance Optimization"
+        id: '3',
+        date: '2019-2021',
+        role: 'Frontend Developer',
+        company: 'DigitalAgency',
+        description: 'Developed responsive web applications and collaborated with design teams on user interface improvements.',
+        achievement: 'Implemented design system that increased development speed by 30% across the team.'
     },
     {
-        id: "4",
-        date: "2019-2020",
-        role: "Junior Frontend Developer",
-        company: "StartupTech",
-        description: "Started career building dynamic user interfaces with React and JavaScript. Learned modern development practices and agile methodologies.",
-        achievement: "Foundation Building"
-    },
-    {
-        id: "5",
-        date: "2018-2019",
-        role: "Web Developer Intern",
-        company: "LocalDev Agency",
-        description: "Gained hands-on experience with HTML, CSS, and JavaScript. Worked on client projects and learned version control with Git.",
-        achievement: "First Steps"
+        id: '4',
+        date: '2017-2019',
+        role: 'Junior Developer',
+        company: 'WebSolutions',
+        description: 'Started career building websites and learning modern web development practices.',
+        achievement: 'Successfully delivered 50+ client projects with 95% client satisfaction rate.'
     }
-]; 
+];

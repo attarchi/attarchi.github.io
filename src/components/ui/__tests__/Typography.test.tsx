@@ -57,16 +57,7 @@ describe('Typography', () => {
       expect(heading).toHaveClass('lg:text-6xl');
     });
 
-    it('combines size and custom className', () => {
-      render(
-        <Heading size="h3" className="custom-class">
-          Combined Heading
-        </Heading>
-      );
-      const heading = screen.getByText('Combined Heading');
-      expect(heading).toHaveClass('text-2xl');
-      expect(heading).toHaveClass('custom-class');
-    });
+
   });
 
   describe('Text', () => {

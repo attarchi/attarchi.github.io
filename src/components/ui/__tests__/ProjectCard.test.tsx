@@ -5,6 +5,7 @@ describe('ProjectCard', () => {
   const defaultProps = {
     title: 'CCPTools Ecosystem',
     description: 'Comprehensive nutrition platform...',
+    technologies: [],
   };
 
   it('renders with correct content', () => {

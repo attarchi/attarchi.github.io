@@ -4,15 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { slideInVariants, scaleVariants } from '@/lib';
 import { useTimelineProgress } from '@/lib/hooks';
-
-export interface ProfessionalMilestone {
-  id: string;
-  date: string;
-  role: string;
-  company: string;
-  description: string;
-  achievement: string;
-}
+import { type ProfessionalMilestone } from '@/content';
 
 export interface ProfessionalJourneyProps {
   milestones?: ProfessionalMilestone[];

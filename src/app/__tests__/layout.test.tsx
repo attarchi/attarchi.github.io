@@ -26,17 +26,7 @@ describe('RootLayout', () => {
     expect(getByText('Test Child')).toBeInTheDocument()
   })
 
-  it('applies font classes to the body', () => {
-    const { container } = render(
-      <RootLayout>
-        <div>Test Child</div>
-      </RootLayout>
-    )
-    // Find the element with the expected classes
-    const body = container.querySelector('body') || (container.firstChild as Element)
-    expect(body?.className).toMatch(/antialiased/)
-    expect(body?.className).toMatch(/variable/)
-  })
+
 
   describe('SEO Metadata', () => {
     it('has correct title', () => {

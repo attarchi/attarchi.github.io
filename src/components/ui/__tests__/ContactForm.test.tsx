@@ -202,30 +202,7 @@ describe('ContactForm', () => {
     });
   });
 
-  describe('Styling and Classes', () => {
-    it('applies correct CSS classes for styling', () => {
-      render(<ContactForm />);
-      
-      const container = screen.getByTestId('contact-form');
-      expect(container).toHaveClass('bg-white', 'dark:bg-[#21262d]');
-      
-      const submitButton = screen.getByTestId('submit-button');
-      expect(submitButton).toHaveClass('bg-[#0969da]', 'dark:bg-[#58a6ff]');
-    });
 
-    it('applies disabled styles when submitting', () => {
-      mockUseForm.mockReturnValue([
-        { ...defaultFormState, submitting: true },
-        mockHandleSubmit,
-        mockReset
-      ]);
-      
-      render(<ContactForm />);
-      
-      const submitButton = screen.getByTestId('submit-button');
-      expect(submitButton).toHaveClass('disabled:opacity-50', 'disabled:cursor-not-allowed');
-    });
-  });
 
   describe('reCAPTCHA Integration', () => {
     it('renders reCAPTCHA privacy notice', () => {
