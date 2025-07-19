@@ -3,7 +3,6 @@
 # Portfolio Showcase Project With NextJS + Cursor AI
 SSG rendering for GitHub pages. A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS.
 
-![Portfolio Screenshot](https://via.placeholder.com/800x400/0d1117/58a6ff?text=Portfolio+Showcase)
 
 ## Project Description
 
@@ -23,6 +22,12 @@ The portfolio features a **GitHub-style aesthetic** with **interactive scroll an
 - 🧪 **Comprehensive test suite** with Jest and Testing Library
 
 All development experiences and AI collaboration insights are documented in the published blog at [https://attarchi.github.io](https://attarchi.github.io)
+
+## Screenshots
+
+![Desktop Screenshot](https://raw.githubusercontent.com/attarchi/attarchi.github.io/refs/heads/master/docs/screenshots/desktop.gif)
+
+![Mobile Screenshot](https://raw.githubusercontent.com/attarchi/attarchi.github.io/refs/heads/master/docs/screenshots/mobile.gif)
 
 ## Technology Stack
 
