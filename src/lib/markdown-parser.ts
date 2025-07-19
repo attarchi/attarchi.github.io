@@ -21,7 +21,9 @@ marked.setOptions({
 });
 
 export function parseMarkdown(markdown: string): MarkdownContent {
-    const htmlContent = marked(markdown);
+    // Extract frontmatter and content separately
+    const { content: markdownContent } = matter(markdown);
+    const htmlContent = marked(markdownContent);
     return { content: htmlContent };
 }
 

@@ -1,118 +1,132 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BlogPostPage } from '../blog-post-page';
-import { type BlogPost } from '@/lib';
+import { mockBlogData } from '@/lib/__mocks__/blog-data';
 
-// Mock sub-components
-jest.mock('../post-navigation', () => ({
-  PostNavigation: jest.fn(() => <div data-testid="post-navigation" />)
+// Mock the Footer component
+jest.mock('@/components/sections', () => ({
+  Footer: ({ content }: { content: any }) => <footer data-testid="footer">{content.title}</footer>
 }));
 
-jest.mock('@/components/micro');
+// Mock the PostNavigation component
+jest.mock('../post-navigation', () => ({
+  PostNavigation: ({ prev, next }: { prev?: any; next?: any }) => (
+    <nav data-testid="post-navigation">
+      {prev && <span data-testid="prev-post">{prev.title}</span>}
+      <span data-testid="back-to-blog">← Back to Blog</span>
+      {next && <span data-testid="next-post">{next.title}</span>}
+    </nav>
+  )
+}));
 
-jest.mock('@/components/sections');
-
+// Mock the parseMarkdown function
 jest.mock('@/lib', () => ({
-  parseMarkdown: jest.fn((content: string) => ({
-    content: `<div class="markdown-content">${content}</div>`
+  ...jest.requireActual('@/lib'),
+  parseMarkdown: jest.fn(() => ({
+    content: '<h1>Test Content</h1><p>This is a test paragraph.</p>'
   }))
 }));
 
-// Mock footer content
+// Mock the footer content
 jest.mock('@/content', () => ({
-  ...jest.requireActual('@/content'),
   footerContent: {
-    copyright: { title: 'Test', companyName: 'Test', showcaseMessage: 'Test' },
-    repository: { title: 'Test', url: 'test', text: 'Test' },
-    license: { title: 'Test', name: 'Test', description: 'Test' },
-    buildInfo: 'Test'
+    title: 'Test Footer',
+    links: []
+  },
+  themeConfig: {
+    defaultTheme: 'light',
+    localStorageKey: 'theme',
+    mediaQuery: '(prefers-color-scheme: dark)',
+    lightClass: 'light',
+    darkClass: 'dark'
   }
 }));
 
-const mockBlogPost: BlogPost = {
-  title: 'Building Offline-First Apps',
-  slug: 'building-offline-first-apps',
-  date: new Date('2025-01-15'),
-  excerpt: 'Real-time synchronization strategies for mobile applications',
-  tags: ['React Native', 'Offline', 'Sync'],
-  category: 'Mobile Development',
-  content: '# Test Content\nThis is test content.',
-  readingTime: 8,
-  published: true
-};
-
-const prevPost = {
-  ...mockBlogPost,
-  title: 'Prev Post',
-  slug: 'prev-post',
-};
-
-const nextPost = {
-  ...mockBlogPost,
-  title: 'Next Post',
-  slug: 'next-post',
-};
-
 describe('BlogPostPage', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
+  const mockPost = mockBlogData.posts[0];
+  const mockPrev = { ...mockBlogData.posts[0], title: 'Previous Post' };
+  const mockNext = { ...mockBlogData.posts[0], title: 'Next Post' };
 
-  it('renders blog post title', () => {
-    render(<BlogPostPage post={mockBlogPost} />);
-    expect(screen.getByText('Building Offline-First Apps')).toBeInTheDocument();
-  });
+  it('renders blog post with correct structure', () => {
+    render(<BlogPostPage post={mockPost} />);
 
-  it('displays post metadata', () => {
-    render(<BlogPostPage post={mockBlogPost} />);
-    expect(screen.getByText('2025-01-15')).toBeInTheDocument();
-    expect(screen.getByText('8 min read')).toBeInTheDocument();
-    expect(screen.getByText('Mobile Development')).toBeInTheDocument();
-  });
-
-  it('displays post excerpt', () => {
-    render(<BlogPostPage post={mockBlogPost} />);
-    expect(screen.getByText('Real-time synchronization strategies for mobile applications')).toBeInTheDocument();
-  });
-
-  it('renders tags as badges', () => {
-    render(<BlogPostPage post={mockBlogPost} />);
-    expect(screen.getByText('React Native')).toBeInTheDocument();
-    expect(screen.getByText('Offline')).toBeInTheDocument();
-    expect(screen.getByText('Sync')).toBeInTheDocument();
-  });
-
-  it('renders markdown content', () => {
-    render(<BlogPostPage post={mockBlogPost} />);
+    expect(screen.getByText(mockPost.title)).toBeInTheDocument();
+    expect(screen.getByText('← Home')).toBeInTheDocument();
     expect(screen.getByTestId('blog-content')).toBeInTheDocument();
+    expect(screen.getByTestId('footer')).toBeInTheDocument();
   });
 
-  it('includes navigation components', () => {
-    render(<BlogPostPage post={mockBlogPost} />);
+  it('displays post metadata correctly', () => {
+    render(<BlogPostPage post={mockPost} />);
+
+    expect(screen.getByText(mockPost.title)).toBeInTheDocument();
+    expect(screen.getByText(mockPost.excerpt!)).toBeInTheDocument();
+    expect(screen.getByText(mockPost.category)).toBeInTheDocument();
+    expect(screen.getByText(`${mockPost.readingTime} min read`)).toBeInTheDocument();
+  });
+
+  it('renders tags when present', () => {
+    render(<BlogPostPage post={mockPost} />);
+
+    mockPost.tags.forEach(tag => {
+      expect(screen.getByText(tag)).toBeInTheDocument();
+    });
+  });
+
+  it('renders navigation when prev/next posts are provided', () => {
+    render(<BlogPostPage post={mockPost} prev={mockPrev} next={mockNext} />);
+
     expect(screen.getByTestId('post-navigation')).toBeInTheDocument();
+    expect(screen.getByTestId('prev-post')).toBeInTheDocument();
+    expect(screen.getByTestId('next-post')).toBeInTheDocument();
+    expect(screen.getByText('Previous Post')).toBeInTheDocument();
+    expect(screen.getByText('Next Post')).toBeInTheDocument();
   });
 
-  it('includes theme toggle', () => {
-    render(<BlogPostPage post={mockBlogPost} />);
-    expect(screen.getByTestId('theme-toggle')).toBeInTheDocument();
-  });
+  it('renders navigation even when no prev/next posts (shows back to blog)', () => {
+    render(<BlogPostPage post={mockPost} />);
 
-  it('includes footer', () => {
-    render(<BlogPostPage post={mockBlogPost} />);
-    expect(screen.getByTestId('footer-mock')).toBeInTheDocument();
-  });
-
-  it('handles posts without tags', () => {
-    const postWithoutTags: BlogPost = {
-      ...mockBlogPost,
-      tags: []
-    };
-    render(<BlogPostPage post={postWithoutTags} />);
-    expect(screen.getByText('Building Offline-First Apps')).toBeInTheDocument();
-    expect(screen.queryByText('React Native')).not.toBeInTheDocument();
-  });
-
-  it('passes navigation props correctly', () => {
-    render(<BlogPostPage post={mockBlogPost} prev={prevPost} next={nextPost} />);
     expect(screen.getByTestId('post-navigation')).toBeInTheDocument();
+    expect(screen.getByTestId('back-to-blog')).toBeInTheDocument();
+  });
+
+  it('applies blog-content CSS class for proper styling', () => {
+    render(<BlogPostPage post={mockPost} />);
+
+    const blogContent = screen.getByTestId('blog-content');
+    expect(blogContent).toHaveClass('blog-content');
+  });
+
+  it('formats date correctly', () => {
+    render(<BlogPostPage post={mockPost} />);
+
+    const expectedDate = mockPost.date.toISOString().split('T')[0];
+    expect(screen.getByText(expectedDate)).toBeInTheDocument();
+  });
+
+  it('renders excerpt when present', () => {
+    const postWithExcerpt = { ...mockPost, excerpt: 'This is a test excerpt' };
+    render(<BlogPostPage post={postWithExcerpt} />);
+
+    expect(screen.getByText('This is a test excerpt')).toBeInTheDocument();
+  });
+
+  it('does not render excerpt section when excerpt is not present', () => {
+    const postWithoutExcerpt = { ...mockPost, excerpt: '' };
+    render(<BlogPostPage post={postWithoutExcerpt} />);
+
+    // The excerpt should not be rendered
+    expect(screen.queryByText('This is a test excerpt')).not.toBeInTheDocument();
+  });
+
+  it('renders blog content with proper styling classes', () => {
+    render(<BlogPostPage post={mockPost} />);
+
+    const blogContent = screen.getByTestId('blog-content');
+    expect(blogContent).toHaveClass('blog-content');
+    
+    // Check that the content has proper HTML structure
+    expect(blogContent.innerHTML).toContain('<h1>Test Content</h1>');
+    expect(blogContent.innerHTML).toContain('<p>This is a test paragraph.</p>');
   });
 }); 

@@ -68,7 +68,7 @@ export const BlogPostPage = React.memo(function BlogPostPage({ post, prev, next 
         <Card className="bg-surface border-border">
           <CardContent className="p-8">
             <div 
-              className="prose prose-lg max-w-none font-sans"
+              className="blog-content"
               dangerouslySetInnerHTML={{ __html: parsedContent }}
               data-testid="blog-content"
             />
