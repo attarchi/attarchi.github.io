@@ -1,6 +1,16 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { ProfessionalJourney, type ProfessionalMilestone } from "../ProfessionalJourney";
+import { ProfessionalJourney } from "../ProfessionalJourney";
+import { type ProfessionalMilestone } from "@/content";
+
+// Mock window.innerWidth for mobile testing
+const mockWindowWidth = (width: number) => {
+  Object.defineProperty(window, 'innerWidth', {
+    writable: true,
+    configurable: true,
+    value: width,
+  });
+};
 
 jest.mock('@/lib/hooks', () => ({
   useTimelineProgress: jest.fn().mockReturnValue({
@@ -270,5 +280,57 @@ describe("ProfessionalJourney", () => {
     // Should not show the last 2 milestones initially
     expect(screen.queryByText("Tech Lead")).not.toBeInTheDocument();
     expect(screen.queryByText("Engineering Manager")).not.toBeInTheDocument();
+  });
+
+  it("shows mobile navigation buttons when in mobile view", () => {
+    // Mock mobile screen size
+    mockWindowWidth(375);
+    
+    render(<ProfessionalJourney milestones={manyMilestones} />);
+    
+    // Should show mobile navigation buttons
+    expect(screen.getByTestId("mobile-prev-slide-button")).toBeInTheDocument();
+    expect(screen.getByTestId("mobile-next-slide-button")).toBeInTheDocument();
+    expect(screen.getByTestId("mobile-slide-indicators")).toBeInTheDocument();
+    
+    // Should not show desktop navigation buttons
+    expect(screen.queryByTestId("prev-slide-button")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("next-slide-button")).not.toBeInTheDocument();
+  });
+
+  it("shows only 2 milestones in mobile view", () => {
+    // Mock mobile screen size
+    mockWindowWidth(375);
+    
+    render(<ProfessionalJourney milestones={manyMilestones} />);
+    
+    const slideCounter = screen.getByTestId("slide-counter");
+    expect(slideCounter).toHaveTextContent("Showing 1-2 of 5");
+  });
+
+  it("mobile navigation buttons work correctly", async () => {
+    // Mock mobile screen size
+    mockWindowWidth(375);
+    
+    const user = userEvent.setup();
+    render(<ProfessionalJourney milestones={manyMilestones} />);
+    
+    const mobileNextButton = screen.getByTestId("mobile-next-slide-button");
+    const mobilePrevButton = screen.getByTestId("mobile-prev-slide-button");
+    const slideCounter = screen.getByTestId("slide-counter");
+    
+    expect(slideCounter).toHaveTextContent("Showing 1-2 of 5");
+    
+    // Navigate forward
+    await user.click(mobileNextButton);
+    await waitFor(() => {
+      expect(slideCounter).toHaveTextContent("Showing 2-3 of 5");
+    });
+    
+    // Navigate back
+    await user.click(mobilePrevButton);
+    await waitFor(() => {
+      expect(slideCounter).toHaveTextContent("Showing 1-2 of 5");
+    });
   });
 }); 

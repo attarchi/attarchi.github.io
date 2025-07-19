@@ -5,6 +5,7 @@ import { useEffect, useState, useCallback, useRef } from 'react';
 import { slideInVariants, scaleVariants } from '@/lib';
 import { useTimelineProgress } from '@/lib/hooks';
 import { type ProfessionalMilestone } from '@/content';
+import { SlideNavigation } from '@/components/micro';
 
 export interface ProfessionalJourneyProps {
   milestones?: ProfessionalMilestone[];
@@ -32,7 +33,7 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
   
   const getVisibleCount = (size: ScreenSize) => {
     switch (size) {
-      case 'mobile': return 3;
+      case 'mobile': return 2;
       case 'medium': return 2;
       case 'large': return 3;
       default: return 3;
@@ -207,11 +208,6 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
 
   const visibleMilestones = getVisibleMilestones();
 
-  // Generate dots for navigation - one dot per possible starting position
-  const navigationDots = hasMultipleMilestones 
-    ? Array.from({ length: maxIndex + 1 }, (_, index) => index)
-    : [];
-
   // Animation variants for slideshow items
   const slideshowItemVariants = {
     enter: (direction: 'left' | 'right' | 'up' | 'down') => {
@@ -272,58 +268,15 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
             Professional Journey
           </h2>
           
-          {hasMultipleMilestones && (
-            <div className="flex items-center space-x-2">
-              <button
-                onClick={prevSlide}
-                disabled={currentIndex === 0}
-                className="p-2 rounded-full bg-[#f6f8fa] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] hover:bg-[#e9ecef] dark:hover:bg-[#30363d] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-                data-testid="prev-slide-button"
-                aria-label={screenSize === 'mobile' ? "Previous milestone (up)" : "Previous milestone"}
-              >
-                <svg className="w-5 h-5 text-[#24292f] dark:text-[#f0f6fc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d={screenSize === 'mobile' ? "M5 15l7-7 7 7" : "M15 19l-7-7 7-7"} 
-                  />
-                </svg>
-              </button>
-              
-              <div className="flex space-x-1" data-testid="slide-indicators">
-                {navigationDots.map((dotIndex) => (
-                  <button
-                    key={dotIndex}
-                    onClick={() => goToIndex(dotIndex)}
-                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                      currentIndex === dotIndex 
-                        ? 'bg-[#0969da] dark:bg-[#58a6ff]' 
-                        : 'bg-[#d0d7de] dark:bg-[#30363d] hover:bg-[#b1b8c0] dark:hover:bg-[#656d76]'
-                    }`}
-                    data-testid={`slide-indicator-${dotIndex}`}
-                    aria-label={`Show milestones starting from position ${dotIndex + 1}`}
-                  />
-                ))}
-              </div>
-              
-              <button
-                onClick={nextSlide}
-                disabled={currentIndex === maxIndex}
-                className="p-2 rounded-full bg-[#f6f8fa] dark:bg-[#21262d] border border-[#d0d7de] dark:border-[#30363d] hover:bg-[#e9ecef] dark:hover:bg-[#30363d] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-                data-testid="next-slide-button"
-                aria-label={screenSize === 'mobile' ? "Next milestone (down)" : "Next milestone"}
-              >
-                <svg className="w-5 h-5 text-[#24292f] dark:text-[#f0f6fc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d={screenSize === 'mobile' ? "M19 9l-7 7-7-7" : "M9 5l7 7-7 7"} 
-                  />
-                </svg>
-              </button>
-            </div>
+          {hasMultipleMilestones && screenSize !== 'mobile' && (
+            <SlideNavigation
+              currentIndex={currentIndex}
+              maxIndex={maxIndex}
+              onPrev={prevSlide}
+              onNext={nextSlide}
+              onGoToIndex={goToIndex}
+              variant="desktop"
+            />
           )}
         </div>
         
@@ -509,6 +462,19 @@ export function ProfessionalJourney({ milestones = [] }: ProfessionalJourneyProp
             )}
           </div>
         </div>
+        
+        {hasMultipleMilestones && screenSize === 'mobile' && (
+          <div className="mt-8">
+            <SlideNavigation
+              currentIndex={currentIndex}
+              maxIndex={maxIndex}
+              onPrev={prevSlide}
+              onNext={nextSlide}
+              onGoToIndex={goToIndex}
+              variant="mobile"
+            />
+          </div>
+        )}
         
         {hasMultipleMilestones && (
           <div className="mt-6 text-center">

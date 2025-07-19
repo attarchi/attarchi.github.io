@@ -6,6 +6,7 @@ export * from './Icon';
 export * from './OthersIconList';
 export * from './ProjectCard';
 export * from './ProgressBar';
+export * from './SlideNavigation';
 export * from './ThemeToggle';
 export * from './Typography';
 export * from './Typewriter';
