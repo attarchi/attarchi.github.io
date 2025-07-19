@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { ProjectCard } from '@/components/micro';
-import { projectStaggerVariants } from '@/lib';
+import { useState } from 'react';
+import { ProjectCard, Button } from '@/components/micro';
+import { projectStaggerVariants, projectCardVariants } from '@/lib';
 import { type Project } from '@/content';
 
 export interface FeaturedProjectsProps {
@@ -20,8 +21,15 @@ function getGridClasses(projectCount: number): string {
 }
 
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
+  const [showAllProjects, setShowAllProjects] = useState(false);
   const projectCount = projects?.length || 0;
   const gridClasses = getGridClasses(projectCount);
+  
+  // Show only first 3 projects initially, or all if less than 4
+  const initialProjects = projects?.slice(0, 3) || [];
+  const remainingProjects = projects?.slice(3) || [];
+  const shouldShowMoreButton = projectCount > 3;
+  const displayedProjects = showAllProjects ? projects : initialProjects;
 
   return (
     <section
@@ -37,23 +45,60 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
           Featured Projects
         </h2>
         
-        <motion.div 
-          className={`${gridClasses} gap-8 mt-12`}
-          data-testid="projects-grid"
-          variants={projectStaggerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          {projects?.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-            />
-          ))}
-        </motion.div>
+        {!showAllProjects ? (
+          <motion.div 
+            className={`${gridClasses} gap-8 mt-12`}
+            data-testid="projects-grid"
+            variants={projectStaggerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {initialProjects?.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+              />
+            ))}
+          </motion.div>
+        ) : (
+          <motion.div 
+            className={`${gridClasses} gap-8 mt-12`}
+            data-testid="projects-grid"
+            variants={projectStaggerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {projects?.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+              />
+            ))}
+          </motion.div>
+        )}
+
+        {shouldShowMoreButton && !showAllProjects && (
+          <motion.div
+            className="flex justify-end mt-8"
+            data-testid="more-button-container"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <Button
+              variant="link"
+              onClick={() => setShowAllProjects(true)}
+              data-testid="more-projects-button"
+            >
+              more...
+            </Button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
