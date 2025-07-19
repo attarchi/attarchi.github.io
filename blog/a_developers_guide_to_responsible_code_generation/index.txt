@@ -1,11 +1,11 @@
 3:I[5613,[],""]
 5:I[1778,[],""]
 6:I[9002,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","404","static/chunks/app/blog/page-39be6368ee6f9011.js"],"ProgressBar"]
-7:I[6256,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-d75edf1ee41bd648.js"],"RecaptchaProvider"]
-8:I[4279,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-d75edf1ee41bd648.js"],"ThemeProvider"]
+7:I[6256,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-fb2ce81c84da6247.js"],"RecaptchaProvider"]
+8:I[4279,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","901","static/chunks/901-6ac1b96019afde84.js","185","static/chunks/app/layout-fb2ce81c84da6247.js"],"ThemeProvider"]
 9:I[5250,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","404","static/chunks/app/blog/page-39be6368ee6f9011.js"],""]
 4:["slug","a_developers_guide_to_responsible_code_generation","d"]
-0:["PtF_mBOyVkmixFAksPyoM",[[["",{"children":["blog",{"children":[["slug","a_developers_guide_to_responsible_code_generation","d"],{"children":["__PAGE__?{\"slug\":\"a_developers_guide_to_responsible_code_generation\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["slug","a_developers_guide_to_responsible_code_generation","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_3c557b __variable_e8ce0c antialiased","suppressHydrationWarning":true,"children":[["$","$L6",null,{}],["$","$L7",null,{"children":["$","$L8",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-600 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-500 mb-8","children":"The page you're looking for doesn't exist or has been moved."}],["$","$L9",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"Return Home"}]]}]}],"notFoundStyles":[],"styles":null}]}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/008de027747c38f3.css","precedence":"next","crossOrigin":""}]],"$La"]]]]
+0:["isjdxPT-jai0VqNRYtq6d",[[["",{"children":["blog",{"children":[["slug","a_developers_guide_to_responsible_code_generation","d"],{"children":["__PAGE__?{\"slug\":\"a_developers_guide_to_responsible_code_generation\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["slug","a_developers_guide_to_responsible_code_generation","d"],{"children":["__PAGE__",{},["$L1","$L2",null]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}]]},[null,["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_3c557b __variable_e8ce0c antialiased","suppressHydrationWarning":true,"children":[["$","$L6",null,{}],["$","$L7",null,{"children":["$","$L8",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-gray-100","children":["$","div",null,{"className":"text-center","children":[["$","h1",null,{"className":"text-6xl font-bold text-gray-800 mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl font-semibold text-gray-600 mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-500 mb-8","children":"The page you're looking for doesn't exist or has been moved."}],["$","$L9",null,{"href":"/","className":"inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors","children":"Return Home"}]]}]}],"notFoundStyles":[],"styles":null}]}]}]]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/a8770fb0860d8881.css","precedence":"next","crossOrigin":""}]],"$La"]]]]
 a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","3",{"name":"description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies and offline-first architectures."}],["$","meta","4",{"name":"author","content":"Attarchi"}],["$","meta","5",{"name":"keywords","content":"Full-Stack Developer, React, Node.js, TypeScript, Mobile Apps, Turkey, JavaScript, Frontend, Backend, Web Development, Software Engineer"}],["$","meta","6",{"name":"creator","content":"Attarchi"}],["$","meta","7",{"name":"publisher","content":"Attarchi"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://attarchi.github.io/"}],["$","meta","11",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","12",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","13",{"property":"og:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","14",{"property":"og:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development. Based in Turkey with expertise in modern web technologies."}],["$","meta","15",{"property":"og:url","content":"https://attarchi.github.io/"}],["$","meta","16",{"property":"og:site_name","content":"Attarchi Portfolio"}],["$","meta","17",{"property":"og:locale","content":"en_US"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:creator","content":"@attarchi"}],["$","meta","21",{"name":"twitter:title","content":"Attarchi - Senior Full-Stack Developer | React, Node.js, Mobile"}],["$","meta","22",{"name":"twitter:description","content":"Professional portfolio of Attarchi, a Senior Full-Stack Developer specializing in React, Node.js, TypeScript, and mobile app development."}],["$","link","23",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","meta","24",{"name":"next-size-adjust"}]]
 1:null
 b:I[2327,["598","static/chunks/e58627ac-a1c8a46cffed1d4e.js","770","static/chunks/770-88f278ac6c147f64.js","250","static/chunks/250-d3a06a1ce7d79364.js","901","static/chunks/901-6ac1b96019afde84.js","603","static/chunks/603-3a2346f7690c70b1.js","308","static/chunks/app/blog/%5Bslug%5D/page-f0cfcaee6d21a740.js"],"BlogPostPage"]
@@ -122,159 +122,344 @@ function processUserData(users) {
 <p>AI coding assistants are powerful tools that can significantly boost productivity when used thoughtfully. The key is maintaining the same discipline and standards you&#39;d apply to any code, while leveraging AI&#39;s strengths in appropriate contexts.</p>
 <p>Remember: AI is here to make you a more productive developer, not to replace your judgment, expertise, or responsibility for the code you ship. Use it wisely, clean up its output rigorously, and never commit code you don&#39;t fully understand.</p>
 <p>The future of development isn&#39;t about AI writing perfect code—it&#39;s about developers who know how to collaborate with AI to write better code faster, while maintaining the quality and security standards our users depend on.</p>
-d:T1f09,<h1>Next.js Static Optimization Techniques</h1>
-<p>Modern web applications demand both speed and scalability. Next.js, with its powerful static site generation (SSG) and hybrid rendering capabilities, enables developers to build high-performance sites that are easy to deploy and maintain. In this post, we’ll explore how to fully leverage Next.js static optimization, including practical code examples, performance tips, and deployment strategies.</p>
-<h2>Why Static Generation?</h2>
-<p>Static generation pre-renders pages at build time, resulting in HTML files that can be served instantly from a CDN. This approach offers:</p>
+d:T4eae,<h1>Building a Portfolio Website from Scratch with AI: A Complete Development Workflow</h1>
+<p><em>How I leveraged Claude AI and Cursor AI to build a professional portfolio (current project) with complex animations, TDD principles, and automated deployment - and what I learned about AI-assisted development.</em></p>
+<hr>
+<h2>The Challenge: Building a Professional Portfolio in 7 Days</h2>
+<p>As a senior full-stack developer, I wanted to create a portfolio that would truly showcase my technical abilities - not just another template-based site. My requirements were ambitious:</p>
 <ul>
-<li><strong>Lightning-fast load times</strong></li>
-<li><strong>Improved SEO</strong></li>
-<li><strong>Reduced server costs</strong></li>
-<li><strong>Enhanced security (no server-side code at runtime)</strong></li>
+<li><strong>GitHub-style professional aesthetics</strong> with custom design system</li>
+<li><strong>Complex scroll-triggered animations</strong> using Framer Motion</li>
+<li><strong>TDD-driven development</strong> with comprehensive testing</li>
+<li><strong>Automated deployment</strong> to GitHub Pages</li>
+<li><strong>Blog system</strong> with markdown support</li>
+<li><strong>Performance-optimized</strong> with 90+ Lighthouse scores</li>
 </ul>
-<h2>Core Concepts: SSG vs SSR vs ISR</h2>
-<ul>
-<li><strong>SSG (Static Site Generation):</strong> Pages are built at compile time and served as static assets.</li>
-<li><strong>SSR (Server-Side Rendering):</strong> Pages are rendered on each request, useful for dynamic data.</li>
-<li><strong>ISR (Incremental Static Regeneration):</strong> Combines SSG and SSR, allowing static pages to be updated after deployment.</li>
-</ul>
-<h2>Implementing Static Generation in Next.js</h2>
-<h3>1. Static Pages with <code>getStaticProps</code></h3>
-<pre><code class="language-javascript">// pages/blog/[slug].js
-export async function getStaticProps({ params }) {
-  const post = await getPostBySlug(params.slug);
-  return {
-    props: { post },
-  };
-}
+<p>Instead of spending weeks on this project, I decided to experiment with AI-assisted development using Claude AI for planning and Cursor AI for implementation. The result? A complete, production-ready portfolio built in just 7 focused days.</p>
+<h2>The 5-Phase AI Development Strategy</h2>
+<h3>Phase 1: Technical Foundation with Claude AI</h3>
+<p><strong>The Prompt Strategy:</strong></p>
+<pre><code>I need to build a professional developer portfolio with these requirements:
+- Next.js 14 with static export for GitHub Pages
+- Interactive scroll animations
+- Professional GitHub-style design
+- Blog functionality
+- Automated deployment
 
-export async function getStaticPaths() {
-  const slugs = await getAllPostSlugs();
-  return {
-    paths: slugs.map(slug =&gt; ({ params: { slug } })),
-    fallback: false,
-  };
-}
+Create a comprehensive technical proposal with technology choices, 
+architecture decisions, and success criteria.
 </code></pre>
-<h3>2. Incremental Static Regeneration (ISR)</h3>
-<p>ISR allows you to update static content without a full rebuild:</p>
-<pre><code class="language-javascript">export async function getStaticProps() {
-  const data = await fetchData();
-  return {
-    props: { data },
-    revalidate: 60, // Regenerate at most once per minute
-  };
-}
-</code></pre>
-<h3>3. Static Assets and Image Optimization</h3>
+<p><strong>What Claude Delivered:</strong></p>
 <ul>
-<li>Place images in the <code>/public</code> directory for instant CDN delivery</li>
-<li>Use the Next.js <code>&lt;Image /&gt;</code> component for automatic resizing and lazy loading:</li>
+<li>Complete technology stack justification (Next.js 14, Framer Motion, Tailwind CSS)</li>
+<li>Deployment strategy for GitHub Pages static export</li>
+<li>Performance considerations for animation-heavy site</li>
+<li>Clear success criteria and measurable goals<br>You can see the <a href="https://github.com/attarchi/attarchi.github.io/blob/master/docs/technical-proposal.md">technical foundation here</a></li>
 </ul>
-<pre><code class="language-javascript">import Image from &#39;next/image&#39;;
+<p><strong>Key Insight:</strong> Starting with a detailed technical proposal prevents scope creep and ensures all stakeholders (even if it&#39;s just you) understand the project boundaries.</p>
+<h3>Phase 2: Design System Architecture</h3>
+<p><strong>The Approach:</strong><br>In a fresh conversation, I shared the technical proposal and asked Claude to create a comprehensive design outline:</p>
+<pre><code>Based on this technical proposal, create a detailed design system 
+with GitHub-inspired aesthetics. Include:
+- Color palette for light/dark themes
+- Typography hierarchy
+- Component design patterns
+- Animation specifications
+- Responsive behavior
+</code></pre>
+<p><strong>Claude&#39;s Output:</strong></p>
+<ul>
+<li><strong>Simplified 5-color palette</strong> inspired by GitHub&#39;s design</li>
+<li><strong>Typography system</strong> using JetBrains Mono + Inter fonts</li>
+<li><strong>Animation specifications</strong> (0.8s duration, easeOut curve)</li>
+<li><strong>7-section homepage layout</strong> with detailed component patterns</li>
+<li><strong>Responsive breakpoints</strong> and mobile-first approach</li>
+</ul>
+<p><strong>Result:</strong> A 40-page <a href="https://github.com/attarchi/attarchi.github.io/blob/master/docs/design-outline-proposal.md">design specification</a> that became my development bible.</p>
+<h3>Phase 3: Project Breakdown &amp; Task Planning</h3>
+<p><strong>The Strategy:</strong><br>I asked Claude to break down the project into manageable phases:</p>
+<pre><code>Create a detailed project breakdown for implementation with Cursor AI.
+Each phase should have:
+- Clear deliverables
+- Validation criteria  
+- Specific Cursor AI prompts
+- Time estimates
+</code></pre>
+<p><strong>The 8-Phase Breakdown:</strong></p>
+<ol>
+<li><strong>Project Foundation</strong> (Day 1) - Basic Next.js setup</li>
+<li><strong>Design System Implementation</strong> (Day 1-2) - UI components and styling</li>
+<li><strong>Homepage Layout</strong> (Day 2-3) - Static sections without animations</li>
+<li><strong>Create Step-by-Step TDD Prompts</strong> (Planning) - Detailed Cursor AI prompts</li>
+<li><strong>Animation System Implementation</strong> (Day 3-4) - Using the prepared prompts</li>
+<li><strong>Content Integration</strong> (Day 4-5) - Real content and blog system</li>
+<li><strong>GitHub Pages Deployment</strong> (Day 6) - Automated deployment</li>
+<li><strong>Optimization &amp; Polish</strong> (Day 7) - Performance and final touches</li>
+</ol>
+<p>The project break down is <a href="https://github.com/attarchi/attarchi.github.io/blob/master/docs/project-breakdown.md">here</a></p>
+<h3>Phase 4: Creating Step-by-Step TDD Prompts for Cursor AI</h3>
+<p>This was the most crucial phase - asking Claude to create detailed, step-by-step prompts that I could feed directly to Cursor AI. Each prompt needed a very specific structure:</p>
+<pre><code>Create step-by-step TDD prompts for the animation system implementation.
+Each step should include:
 
-&lt;Image src=&quot;/hero.png&quot; alt=&quot;Hero&quot; width={800} height={400} priority /&gt;
-</code></pre>
-<h2>Performance Optimization Strategies</h2>
-<h3>1. Bundle Analysis and Code Splitting</h3>
-<ul>
-<li>Use dynamic imports to split code and reduce initial bundle size:</li>
-</ul>
-<pre><code class="language-javascript">import dynamic from &#39;next/dynamic&#39;;
-const HeavyComponent = dynamic(() =&gt; import(&#39;../components/HeavyComponent&#39;));
-</code></pre>
-<ul>
-<li>Analyze your bundle with <code>next build &amp;&amp; npx next-bundle-analyzer</code></li>
-</ul>
-<h3>2. Prefetching and Link Optimization</h3>
-<ul>
-<li>Use the Next.js <code>&lt;Link /&gt;</code> component for client-side navigation and automatic prefetching:</li>
-</ul>
-<pre><code class="language-javascript">import Link from &#39;next/link&#39;;
+- Purpose: Clear objective of the step
+- Git commit message: Professional commit for the change  
+- CursorAI Prompt: Starting with TDD instruction
+- Validation Criteria: What I should check
+- Expected Output: What should be delivered
 
-&lt;Link href=&quot;/about&quot; prefetch={true}&gt;About&lt;/Link&gt;
+Each CursorAI prompt must start with:
+&quot;You should develop in TDD mode. Please prepare unit tests first, 
+then make your changes. Then confirm your changes with &#39;npm test&#39; 
+command, and then make the next change. Continue this cycle with 
+small changes until everything is correct.&quot;
 </code></pre>
-<h3>3. Caching and CDN</h3>
+<p><strong>Example Step Claude Generated:</strong></p>
+<p><strong>Step 4.2: Create Base Animation Hook with Tests</strong></p>
 <ul>
-<li>Deploy your static site to a global CDN (Vercel, Netlify, GitHub Pages)</li>
-<li>Use HTTP cache headers for long-lived assets</li>
-<li>Leverage edge caching for dynamic routes with ISR</li>
+<li><strong>Purpose:</strong> Build the core hook that handles scroll-triggered animations</li>
+<li><strong>Git Commit:</strong> <code>feat: implement useScrollAnimation hook with intersection observer</code>  </li>
+<li><strong>Time Estimate:</strong> 45 minutes</li>
 </ul>
-<h3>4. Environment Variables and Build Optimization</h3>
+<p><strong>CursorAI Prompt:</strong></p>
+<pre><code>You should develop in TDD mode. Please prepare unit tests first, then make your changes. Then confirm your changes with &#39;npm test&#39; command, and then make the next change. Continue this cycle with small changes until everything is correct.
+
+Create a custom hook `useScrollAnimation` that manages scroll-triggered animations with these specifications:
+
+Hook Requirements:
+1. Use Intersection Observer API for performance
+2. Return animation state (visible/hidden) and ref to attach to elements
+3. Support custom threshold values (default: 0.2 for 20% visibility)
+4. Handle cleanup properly to prevent memory leaks
+5. Respect prefers-reduced-motion setting
+
+Test Requirements:
+1. Hook returns correct initial state
+2. Intersection Observer is created with correct options
+3. Animation state updates when element becomes visible
+4. Cleanup happens on unmount
+5. prefers-reduced-motion is respected
+
+Start by writing comprehensive tests for all these behaviors, then implement the hook incrementally.
+</code></pre>
+<p><strong>Validation Criteria:</strong></p>
 <ul>
-<li>Use environment variables to control build-time behavior</li>
-<li>Remove unused code and dependencies</li>
-<li>Enable production optimizations with <code>next.config.js</code>:</li>
+<li><input disabled="" type="checkbox"> All hook tests pass with 100% coverage</li>
+<li><input disabled="" type="checkbox"> Hook properly creates/destroys Intersection Observer</li>
+<li><input disabled="" type="checkbox"> Animation state updates correctly on visibility changes</li>
+<li><input disabled="" type="checkbox"> prefers-reduced-motion setting is respected</li>
+<li><input disabled="" type="checkbox"> Memory leaks are prevented (cleanup works)</li>
 </ul>
-<pre><code class="language-javascript">// next.config.js
-module.exports = {
-  reactStrictMode: true,
-  swcMinify: true,
-  images: {
-    formats: [&#39;image/avif&#39;, &#39;image/webp&#39;],
-  },
+<p><strong>Expected Output:</strong></p>
+<ul>
+<li><code>hooks/useScrollAnimation.ts</code> with full implementation</li>
+<li><code>__tests__/hooks/useScrollAnimation.test.ts</code> with comprehensive tests</li>
+<li>Proper TypeScript interfaces exported</li>
+</ul>
+<p><strong>Why This Phase Was Critical:</strong><br>Claude generated 12 detailed steps like this for the entire animation system. Each step was perfectly structured for Cursor AI to understand and implement using TDD principles.</p>
+<p><strong>The Breakthrough Insight:</strong><br>Instead of improvising prompts during implementation, I had Claude create a complete &quot;prompt library&quot; that I could execute systematically. This approach had several advantages:</p>
+<ol>
+<li><strong>Consistency:</strong> Every prompt followed the same TDD structure</li>
+<li><strong>Completeness:</strong> Claude thought through all requirements upfront  </li>
+<li><strong>Quality:</strong> Each prompt included comprehensive validation criteria</li>
+<li><strong>Speed:</strong> No thinking required during implementation - just execute prompts</li>
+<li><strong>Repeatability:</strong> I could reuse this approach for future projects</li>
+</ol>
+<h3>Phase 5: Implementation with Cursor AI Using the Prepared Prompts</h3>
+<p><strong>Why Cursor AI Was Game-Changing:</strong></p>
+<p>Unlike chat-based AI tools, Cursor AI has several critical advantages:</p>
+<ol>
+<li><strong>Full Codebase Context:</strong> Understands your entire project structure</li>
+<li><strong>CLI Integration:</strong> Can run tests, builds, and linting automatically  </li>
+<li><strong>File-Level Edits:</strong> Makes precise changes across multiple files</li>
+<li><strong>Git Integration:</strong> Helps with commit messages and change tracking</li>
+</ol>
+<p><strong>My Cursor AI Workflow:</strong></p>
+<pre><code class="language-bash"># For each step, I used the pre-prepared prompts from Claude:
+1. Copy the exact CursorAI prompt from Claude&#39;s step-by-step plan
+2. Paste it into Cursor AI (starting with the TDD instruction)
+3. Let Cursor implement the feature using TDD approach
+4. Run validation: yarn test &amp;&amp; yarn lint &amp;&amp; yarn build &amp;&amp; yarn dev
+5. Review ALL changes line by line before committing
+6. Use the git commit message Claude provided
+7. Move to the next step
+</code></pre>
+<p><strong>Example in Action:</strong><br>When implementing the animation hook, I literally copied Claude&#39;s prompt that started with &quot;You should develop in TDD mode...&quot; and Cursor AI would:</p>
+<ol>
+<li>Write failing tests for <code>useScrollAnimation</code> </li>
+<li>Implement the hook to pass tests</li>
+<li>Run <code>npm test</code> to verify</li>
+<li>Refactor while keeping tests green</li>
+<li>Show me exactly what to validate</li>
+</ol>
+<h2>Key Lessons Learned</h2>
+<h3>1. The Power of Detailed Planning</h3>
+<p><strong>Before AI:</strong> I would start coding immediately and figure things out as I went.</p>
+<p><strong>With AI:</strong> The upfront planning phase with Claude was incredibly valuable. Having detailed specifications meant Cursor AI could implement exactly what I envisioned.</p>
+<h3>2. TDD is Essential with AI</h3>
+<p><strong>The Problem:</strong> AI can be &quot;lazy&quot; and skip edge cases or proper error handling.</p>
+<p><strong>The Solution:</strong> Test-Driven Development forces AI to think through requirements completely:</p>
+<pre><code class="language-typescript">// This prompt got much better results:
+&quot;Write a failing test for useScrollAnimation hook that handles 
+cleanup on unmount, then implement the hook to pass the test.&quot;
+
+// vs this generic prompt:
+&quot;Create a scroll animation hook&quot;
+</code></pre>
+<h3>3. Always Validate Everything</h3>
+<p><strong>My Validation Command:</strong></p>
+<pre><code class="language-bash">yarn test &amp;&amp; yarn lint &amp;&amp; yarn build &amp;&amp; yarn dev
+</code></pre>
+<p><strong>Why Each Step Matters:</strong></p>
+<ul>
+<li><strong><code>yarn test</code>:</strong> Catches logic errors and regressions</li>
+<li><strong><code>yarn lint</code>:</strong> Ensures code quality and consistency  </li>
+<li><strong><code>yarn build</code>:</strong> Verifies production build works</li>
+<li><strong><code>yarn dev</code>:</strong> Confirms development experience is smooth</li>
+</ul>
+<p><strong>Real Example:</strong> Cursor AI once implemented a beautiful animation system that passed tests but broke the production build due to a missing dependency. The validation cycle caught this immediately.</p>
+<h3>4. Review Every Line Before Committing</h3>
+<p><strong>AI Laziness is Real:</strong> Even with good prompts, AI sometimes:</p>
+<ul>
+<li>Uses outdated syntax</li>
+<li>Skips error boundaries</li>
+<li>Forgets accessibility attributes</li>
+<li>Misses edge cases</li>
+</ul>
+<p><strong>My Review Process:</strong></p>
+<ol>
+<li>Use Git diff to see every change</li>
+<li>Question any pattern that looks unfamiliar</li>
+<li>Test edge cases manually</li>
+<li>Verify responsive behavior on mobile</li>
+</ol>
+<h2>The Results: What We Built Together</h2>
+<h3>Technical Achievements</h3>
+<p><strong>Homepage Features:</strong></p>
+<ul>
+<li>Typewriter animation in hero section</li>
+<li>Staggered project card reveals (200ms delays)</li>
+<li>Left-to-right skills cascade animation</li>
+<li>Progressive timeline reveals</li>
+<li>Smooth micro-interactions throughout</li>
+</ul>
+<p><strong>Performance Metrics:</strong></p>
+<ul>
+<li>First Contentful Paint: 1.2s</li>
+<li>Animation frame rate: 60fps consistently</li>
+<li>Zero accessibility violations</li>
+</ul>
+<p><strong>Animation System:</strong></p>
+<pre><code class="language-typescript">// Custom hook with Intersection Observer
+const { ref, isVisible } = useScrollAnimation({
+  threshold: 0.2,
+  triggerOnce: true
+});
+
+// Framer Motion variants matching design specs
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.8, ease: &quot;easeOut&quot; }
+  }
 };
 </code></pre>
-<h3>5. Advanced Optimization: Custom Head and SEO</h3>
+<h3>Deployment Success</h3>
 <ul>
-<li>Use the <code>&lt;Head /&gt;</code> component to set meta tags for SEO and social sharing</li>
-<li>Generate Open Graph and Twitter Card images at build time</li>
-<li>Use structured data (JSON-LD) for rich search results</li>
+<li><strong>Automated GitHub Actions</strong> deployment</li>
+<li><strong>Static export</strong> optimized for GitHub Pages</li>
+<li><strong>Custom domain</strong> configuration</li>
+<li><strong>Zero-downtime</strong> deployments</li>
 </ul>
-<pre><code class="language-javascript">import Head from &#39;next/head&#39;;
+<h2>When AI Development Works Best</h2>
+<h3>Perfect Scenarios</h3>
+<p>✅ <strong>Well-defined requirements</strong> with clear success criteria<br>✅ <strong>Modular architecture</strong> where components can be built independently<br>✅ <strong>Established patterns</strong> (React hooks, Next.js conventions)<br>✅ <strong>Comprehensive testing</strong> to validate AI implementations  </p>
+<h3>Challenging Scenarios</h3>
+<p>❌ <strong>Vague requirements</strong> (&quot;make it look modern&quot;)<br>❌ <strong>Novel integrations</strong> between unfamiliar libraries<br>❌ <strong>Complex business logic</strong> requiring domain expertise<br>❌ <strong>Performance debugging</strong> of edge cases  </p>
+<h2>The Economics of AI-Assisted Development</h2>
+<h3>Time Investment Breakdown</h3>
+<ul>
+<li><strong>Planning Phase:</strong> 4 hours with Claude AI</li>
+<li><strong>Implementation:</strong> 3 days with Cursor AI (vs estimated 2 weeks manual)</li>
+<li><strong>Testing &amp; Polish:</strong> 1 day</li>
+<li><strong>Total:</strong> 4.5 days vs 2-3 weeks traditional development</li>
+</ul>
+<h3>Cost Analysis</h3>
+<ul>
+<li><strong>Claude AI Pro:</strong> $20/month</li>
+<li><strong>Cursor AI Pro:</strong> $20/month  </li>
+<li><strong>Time Saved:</strong> ~10-15 development days</li>
+<li><strong>ROI:</strong> Approximately 2000% on subscription costs</li>
+</ul>
+<h2>Best Practices for AI-Assisted Development</h2>
+<h3>1. Start with Strategic AI (Claude)</h3>
+<ul>
+<li>Use Claude for planning, architecture, and design decisions</li>
+<li>Get detailed specifications before touching code</li>
+<li>Create comprehensive task breakdowns</li>
+</ul>
+<h3>2. Create Detailed Step-by-Step Prompts</h3>
+<ul>
+<li>Have Claude generate complete prompt libraries for complex features</li>
+<li>Each prompt should include TDD instructions, validation criteria, and expected outputs</li>
+<li>Structure prompts to start with: &quot;You should develop in TDD mode...&quot;</li>
+<li>Include git commit messages and time estimates</li>
+<li>Test the prompts are comprehensive before implementation</li>
+</ul>
+<h3>3. Implement with Tactical AI (Cursor)</h3>
+<ul>
+<li>Execute the pre-prepared prompts systematically</li>
+<li>Follow the TDD cycle exactly as specified in each prompt</li>
+<li>Leverage Cursor&#39;s codebase understanding for complex refactors</li>
+<li>Don&#39;t improvise - stick to the planned prompt sequence</li>
+</ul>
+<h3>3. Maintain Quality Gates</h3>
+<ul>
+<li>Never skip the validation cycle</li>
+<li>Review every change before committing</li>
+<li>Test edge cases manually</li>
+<li>Run full test suite before each commit</li>
+</ul>
+<h3>4. Effective Prompting Strategies</h3>
+<p><strong>For Planning &amp; Prompt Creation (Claude):</strong></p>
+<pre><code>Create step-by-step TDD prompts for [complex feature] with:
+- Purpose and git commit message for each step
+- CursorAI prompts starting with TDD instructions
+- Validation criteria and expected outputs
+- Time estimates for each step
+</code></pre>
+<p><strong>For Implementation (Cursor - using prepared prompts):</strong></p>
+<pre><code>You should develop in TDD mode. Please prepare unit tests first, 
+then make your changes. Then confirm your changes with &#39;npm test&#39; 
+command, and then make the next change. Continue this cycle with 
+small changes until everything is correct.
 
-&lt;Head&gt;
-  &lt;title&gt;My Portfolio&lt;/title&gt;
-  &lt;meta name=&quot;description&quot; content=&quot;Professional portfolio built with Next.js&quot; /&gt;
-  &lt;meta property=&quot;og:image&quot; content=&quot;/og-image.png&quot; /&gt;
-&lt;/Head&gt;
+[Specific feature requirements and test specifications]
 </code></pre>
-<h2>Deployment Strategies</h2>
-<h3>1. Vercel (Recommended)</h3>
+<h2>The Future of AI-Assisted Development</h2>
+<p>Based on this experience, I believe we&#39;re entering a new era where:</p>
+<ol>
+<li><strong>AI handles the &quot;what&quot; and &quot;how&quot;</strong> - implementation details, boilerplate, testing</li>
+<li><strong>Developers focus on the &quot;why&quot;</strong> - requirements, architecture, user experience</li>
+<li><strong>Quality gates become critical</strong> - testing and validation are more important than ever</li>
+<li><strong>Planning skills are premium</strong> - the better your specifications, the better your AI output</li>
+</ol>
+<h2>Conclusion: A New Development Paradigm</h2>
+<p>Building this portfolio was my first serious experiment with AI-assisted development, and the results exceeded my expectations. The combination of Claude AI for strategic planning and step-by-step prompt creation, followed by Cursor AI for systematic TDD implementation, created a workflow that was both faster and higher quality than traditional development.</p>
+<p><strong>The Revolutionary Insight:</strong> The breakthrough was realizing that I could have Claude create a complete &quot;prompt library&quot; for complex features, then execute those prompts systematically with Cursor AI. This separated the creative planning phase from the mechanical implementation phase.</p>
+<p><strong>The key insight:</strong> AI doesn&#39;t replace developer skills - it amplifies them. The better developer you are, the better you can leverage AI tools.</p>
+<p><strong>What&#39;s Next?</strong><br>I&#39;m now applying this workflow to client projects and seeing similar results. The investment in learning AI-assisted development patterns pays dividends across every subsequent project.</p>
+<p>The portfolio website is live at <a href="https://attarchi.github.io">attarchi.github.io</a> - a testament to what&#39;s possible when human creativity meets AI capability.</p>
+<hr>
+<p><em>Want to try this approach on your next project? Start with the planning phase using Claude AI, then move to implementation with Cursor AI. Remember: validate everything, review every change, and never skip the testing cycle.</em></p>
+<p><strong>Tools Used:</strong></p>
 <ul>
-<li>Push to GitHub, connect your repo to Vercel, and enjoy automatic deployments</li>
-<li>Built-in CDN, analytics, and preview deployments</li>
-<li>Rollback to previous deployments with a single click</li>
+<li><a href="https://claude.ai">Claude AI</a> for strategic planning and design</li>
+<li><a href="https://cursor.sh">Cursor AI</a> for code implementation  </li>
+<li>Next.js 14, Framer Motion, Tailwind CSS</li>
+<li>GitHub Actions for automated deployment</li>
 </ul>
-<h3>2. GitHub Pages (Static Export)</h3>
-<ul>
-<li>Use <code>next export</code> to generate a static site:</li>
-</ul>
-<pre><code class="language-bash">next build &amp;&amp; next export
-</code></pre>
-<ul>
-<li>Deploy the <code>out/</code> directory to GitHub Pages</li>
-<li>Use a custom domain and HTTPS for production</li>
-</ul>
-<h3>3. Netlify/Other CDNs</h3>
-<ul>
-<li>Drag and drop your static output or connect your repo for CI/CD</li>
-<li>Set up redirects and custom headers for advanced use cases</li>
-</ul>
-<h2>Real-World Example: Optimizing a Portfolio Site</h2>
-<p>In my own portfolio project, I used SSG for all main pages and blog posts, ISR for the contact form (to allow updates without redeploying), and optimized images with the Next.js <code>&lt;Image /&gt;</code> component. The result was a site that loads in under 1 second globally, with perfect Lighthouse scores for performance and SEO.</p>
-<h3>Case Study: Migrating a Blog to Next.js SSG</h3>
-<p>A client’s blog was migrated from WordPress to Next.js SSG. By pre-rendering all posts and using ISR for the comments section, we reduced TTFB (Time to First Byte) from 1.2s to 0.2s and improved Google PageSpeed scores from 70 to 100. The migration also eliminated plugin security risks and reduced hosting costs by 80%.</p>
-<h2>Troubleshooting Common Issues</h2>
-<ul>
-<li><strong>Build Failures:</strong> Check for dynamic code or dependencies that require SSR</li>
-<li><strong>Large Bundles:</strong> Use bundle analyzer and dynamic imports</li>
-<li><strong>Image Optimization Errors:</strong> Ensure images are in <code>/public</code> and use correct props</li>
-<li><strong>404s on Static Export:</strong> Make sure all dynamic routes are included in <code>getStaticPaths</code></li>
-<li><strong>CDN Cache Stale:</strong> Use cache invalidation or revalidate with ISR</li>
-<li><strong>Environment Mismatches:</strong> Double-check environment variables for production builds</li>
-</ul>
-<h2>Best Practices and Takeaways</h2>
-<ul>
-<li>Prefer SSG for all non-user-specific pages</li>
-<li>Use ISR for content that changes frequently but doesn’t need real-time updates</li>
-<li>Optimize images and static assets</li>
-<li>Analyze and split bundles for faster loads</li>
-<li>Deploy to a global CDN for instant delivery</li>
-<li>Monitor performance and error analytics post-deployment</li>
-<li>Automate Lighthouse and accessibility checks in CI</li>
-<li>Document your build and deployment process for future maintainers</li>
-</ul>
-<h2>Conclusion</h2>
-<p>Next.js static optimization unlocks the full potential of the JAMstack, delivering blazing-fast, scalable, and secure web applications. By following these techniques and best practices, you can ensure your Next.js projects are ready for production and delight users everywhere. Static optimization is not just a performance boost—it&#39;s a foundation for modern, maintainable, and future-proof web development. </p>
-2:["$","$Lb",null,{"post":{"title":"AI-Assisted Development - A Developer's Guide to Responsible Code Generation","slug":"a_developers_guide_to_responsible_code_generation","date":"$D2025-07-19T00:00:00.000Z","excerpt":"Learn how to leverage AI coding tools responsibly while maintaining code quality and ownership. A practical framework for integrating AI assistants into your development workflow without compromising standards.","tags":["AI","development","code-quality","best-practices","productivity","copilot","chatgpt","software-engineering"],"category":"Development","content":"$c","readingTime":6,"published":true},"prev":"$undefined","next":{"title":"Next.js Static Optimization Techniques","slug":"nextjs_static_optimization","date":"$D2025-01-25T00:00:00.000Z","excerpt":"Learn how to leverage Next.js static site generation, optimize performance, and deploy blazing-fast web apps with real-world code examples and best practices.","tags":["Next.js","Static Generation","Performance","Deployment","Web Development"],"category":"Web Development","content":"$d","readingTime":6,"published":true}}]
+<p><strong>Repository:</strong> <a href="https://github.com/attarchi/attarchi.github.io">View the complete codebase and commit history</a></p>
+2:["$","$Lb",null,{"post":{"title":"AI-Assisted Development: A Developer's Guide to Responsible Code Generation","slug":"a_developers_guide_to_responsible_code_generation","date":"$D2025-07-19T00:00:00.000Z","excerpt":"Learn how to leverage AI coding tools responsibly while maintaining code quality and ownership. A practical framework for integrating AI assistants into your development workflow without compromising standards.","tags":["AI","development","code-quality","best-practices","productivity","copilot","chatgpt","software-engineering"],"category":"Development","content":"$c","readingTime":6,"published":true},"prev":"$undefined","next":{"title":"Building a Portfolio Website from Scratch with AI: A Complete Development Workflow","slug":"building_a_portfolio_website_from_scratch_with_ai","date":"$D2025-07-19T00:00:00.000Z","excerpt":"How I leveraged Claude AI and Cursor AI to build a professional portfolio with complex animations in just 7 days using TDD principles, step-by-step prompts, and systematic validation cycles.","tags":["AI Development","Claude AI","Cursor AI","TDD","Portfolio Development","Next.js","Framer Motion","Development Workflow"],"category":"AI-Assisted Development","content":"$d","readingTime":15,"published":true}}]
