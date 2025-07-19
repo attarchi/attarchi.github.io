@@ -4,14 +4,8 @@ import Home from '../page'
 
 // Mock the modules using the __mocks__ files
 jest.mock('@/lib/blog-data')
-jest.mock('@/components/ui/Typewriter')
-jest.mock('@/components/ui/ThemeToggle')
-jest.mock('@/components/sections/HeroSection')
-jest.mock('@/components/sections/FeaturedProjects')
-jest.mock('@/components/sections/TechnicalExpertise')
-jest.mock('@/components/sections/ProfessionalJourney')
-jest.mock('@/components/sections/ContactSection')
-jest.mock('@/components/sections/blog-preview-section')
+jest.mock('@/components/micro')
+jest.mock('@/components/sections')
 
 describe('Home Page Content', () => {
   it('renders the main hero heading', async () => {

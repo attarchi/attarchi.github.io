@@ -10,7 +10,7 @@ jest.mock("next/image", () => ({
   },
 }));
 
-jest.mock("@/components/ui");
+jest.mock("@/components/micro");
 
 describe("HeroSection", () => {
   const defaultCtaButtons: CtaButton[] = [

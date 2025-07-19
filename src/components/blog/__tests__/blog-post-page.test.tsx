@@ -7,16 +7,9 @@ jest.mock('../post-navigation', () => ({
   PostNavigation: jest.fn(() => <div data-testid="post-navigation" />)
 }));
 
-jest.mock('@/components/ui', () => ({
-  ThemeToggle: jest.fn(() => <div data-testid="theme-toggle" />),
-  Badge: jest.fn(({ children, ...props }) => <span data-testid="badge" {...props}>{children}</span>),
-  Card: jest.fn(({ children, ...props }) => <div data-testid="card" {...props}>{children}</div>),
-  CardContent: jest.fn(({ children, ...props }) => <div data-testid="card-content" {...props}>{children}</div>)
-}));
+jest.mock('@/components/micro');
 
-jest.mock('@/components/sections', () => ({
-  Footer: jest.fn(({ content }) => <footer data-testid="footer">{JSON.stringify(content)}</footer>)
-}));
+jest.mock('@/components/sections');
 
 jest.mock('@/lib', () => ({
   parseMarkdown: jest.fn((content: string) => ({
@@ -105,7 +98,7 @@ describe('BlogPostPage', () => {
 
   it('includes footer', () => {
     render(<BlogPostPage post={mockBlogPost} />);
-    expect(screen.getByTestId('footer')).toBeInTheDocument();
+    expect(screen.getByTestId('footer-mock')).toBeInTheDocument();
   });
 
   it('handles posts without tags', () => {

@@ -10,7 +10,7 @@ import {
   sectionVariants
 } from "@/lib";
 import { type SkillCategory } from "@/content";
-import { Icon, OthersIconList } from "@/components/ui";
+import { Icon, OthersIconList } from "@/components/micro";
 
 export interface TechnicalExpertiseProps {
   categories?: SkillCategory[];

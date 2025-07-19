@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ThemeToggle, Badge, Card, CardContent } from '@/components/ui';
+import { ThemeToggle, Badge, Card, CardContent } from '@/components/micro';
 import { Footer } from '@/components/sections';
 import { type BlogPost, parseMarkdown } from '@/lib';
 import { footerContent } from '@/content';

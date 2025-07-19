@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Badge, Button } from '@/components/ui';
+import { Badge, Button } from '@/components/micro';
 import { blogFiltersContent } from '@/content';
 
 interface BlogFiltersProps {

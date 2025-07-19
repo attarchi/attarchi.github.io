@@ -1,4 +1,4 @@
-import { ButtonVariant, ButtonSize } from "@/components/ui";
+import { ButtonVariant, ButtonSize } from "@/components/micro";
 
 export interface CtaButton {
     text: string;

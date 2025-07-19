@@ -1,5 +1,5 @@
 import { HeroSection, FeaturedProjects, TechnicalExpertise, ProfessionalJourney, ContactSection, BlogPreviewSection, Footer } from "@/components/sections";
-import { ThemeToggle } from '@/components/ui';
+import { ThemeToggle } from '@/components/micro';
 import { getPublishedBlogPosts } from '@/lib/blog-data';
 import { heroContent, contactContent, professionalMilestones, projectsContent, technicalExpertiseContent, footerContent } from '@/content';
 

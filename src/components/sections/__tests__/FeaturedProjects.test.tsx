@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { FeaturedProjects } from "../FeaturedProjects";
 
-jest.mock("@/components/ui");
+jest.mock("@/components/micro");
 
 const mockProjects = [
   {

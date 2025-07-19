@@ -1,17 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { TechnicalExpertise } from "../TechnicalExpertise";
 
-jest.mock("@/lib", () => ({
-  categoryStaggerVariants: { hidden: {}, visible: {} },
-  categorySlideInVariants: { hidden: {}, visible: {} },
-  skillStaggerVariants: { hidden: {}, visible: {} },
-  skillFadeVariants: { hidden: {}, visible: {} },
-  proficiencyScaleVariants: { hidden: {}, visible: {} },
-  proficiencyFillVariants: { hidden: {}, visible: {} },
-  sectionVariants: { hidden: {}, visible: {} }
-}));
+jest.mock("@/lib");
 
-jest.mock("@/components/ui");
+jest.mock("@/components/micro");
 
 const mockCategories = [
   {

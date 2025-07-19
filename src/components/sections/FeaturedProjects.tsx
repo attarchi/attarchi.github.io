@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { ProjectCard } from '@/components/ui';
+import { ProjectCard } from '@/components/micro';
 import { projectStaggerVariants } from '@/lib';
 import { type Project } from '@/content';
 

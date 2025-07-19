@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Heading, Text, Badge, ContactForm } from "@/components/ui";
+import { Heading, Text, Badge, ContactForm } from "@/components/micro";
 import { slideUpVariants, fadeVariants, staggerVariants, sectionVariants } from "@/lib";
 
 export interface ContactSectionProps {

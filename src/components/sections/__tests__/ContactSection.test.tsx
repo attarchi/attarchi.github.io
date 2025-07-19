@@ -2,25 +2,7 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { ContactSection } from "../ContactSection";
 import { contactContent } from "@/content";
 
-jest.mock("@/components/ui", () => ({
-  Heading: ({ children, ...props }: any) => <h2 {...props}>{children}</h2>,
-  Text: ({ children, ...props }: any) => <span {...props}>{children}</span>,
-  Badge: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-  ContactForm: ({ formTitle, ...props }: any) => (
-    <div data-testid="contact-form" {...props}>
-      <h3>{formTitle}</h3>
-      <form>
-        <label htmlFor="name">Name</label>
-        <input data-testid="name-input" id="name" name="name" required />
-        <label htmlFor="email">Email Address</label>
-        <input data-testid="email-input" id="email" name="email" type="email" required />
-        <label htmlFor="message">Message</label>
-        <textarea data-testid="message-textarea" id="message" name="message" required />
-        <button data-testid="submit-button" type="submit">Send Message</button>
-      </form>
-    </div>
-  ),
-}));
+jest.mock("@/components/micro");
 
 jest.mock("framer-motion", () => ({
   motion: {

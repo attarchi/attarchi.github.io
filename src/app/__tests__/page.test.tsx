@@ -4,7 +4,7 @@ import Home from '../page'
 
 // Mock the modules using the __mocks__ files
 jest.mock('@/lib/blog-data')
-jest.mock('@/components/ui')
+jest.mock('@/components/micro')
 jest.mock('@/components/sections')
 
 describe('Home Page', () => {

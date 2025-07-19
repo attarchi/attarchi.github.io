@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui';
-import { Card, CardContent, CardHeader } from '@/components/ui/Card';
+import { Button, Card, CardContent, CardHeader } from '@/components/micro';
 
 // Animation variants for the success checkmark
 const checkmarkVariants = {

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-import { Heading, Text } from "@/components/ui";
+import { Heading, Text } from "@/components/micro";
 import { slideUpVariants, staggerVariants } from "@/lib";
 import { useState, useRef, useEffect } from "react";
 

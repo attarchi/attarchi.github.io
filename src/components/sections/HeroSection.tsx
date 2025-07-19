@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Button, Text, Typewriter } from "@/components/ui";
+import { Button, Text, Typewriter } from "@/components/micro";
 import { HeroContent } from "@/content";
 import avatarSrc from "../../../public/avatar.png";
 interface HeroSectionProps extends HeroContent {

@@ -1,7 +1,7 @@
 import { BlogPostList } from '@/components/blog';
 import { Footer } from '@/components/sections';
 import Link from 'next/link';
-import { ThemeToggle } from '@/components/ui';
+import { ThemeToggle } from '@/components/micro';
 import { getPublishedBlogPosts } from '@/lib/blog-data';
 import { footerContent, blogPageContent } from '@/content';
 
