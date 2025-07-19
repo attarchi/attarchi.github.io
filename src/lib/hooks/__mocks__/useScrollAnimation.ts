@@ -1,7 +1,7 @@
-import { UseScrollAnimationReturn } from '@/types';
+import { UseScrollAnimationReturn } from '../useScrollAnimation';
 
-export const useScrollAnimation = jest.fn().mockReturnValue({
+export const useScrollAnimation = jest.fn(() => ({
     ref: jest.fn(),
     isVisible: true,
-    hasAnimated: false,
-} as UseScrollAnimationReturn); 
+    hasAnimated: true,
+} as UseScrollAnimationReturn)); 
