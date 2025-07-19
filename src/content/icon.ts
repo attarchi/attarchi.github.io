@@ -5,14 +5,16 @@ export interface IconData {
     className?: string;
 }
 
+import iconManifest from './icon-manifest.json';
+
 export interface IconConfig {
-    svgIcons: string[];
+    iconManifest: Record<string, string>;
     defaultSize: number;
     defaultClassName: string;
 }
 
 export const iconConfig: IconConfig = {
-    svgIcons: ['mongodb', 'github-mark'],
+    iconManifest,
     defaultSize: 24,
     defaultClassName: ""
 }; 

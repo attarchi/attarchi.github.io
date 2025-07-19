@@ -1,3 +1,6 @@
+const { generateIconManifest } = require('./src/content/generateIconManifest');
+generateIconManifest();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',

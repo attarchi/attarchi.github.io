@@ -14,8 +14,7 @@ export function Icon({
   size = iconConfig.defaultSize, 
   className = iconConfig.defaultClassName 
 }: IconProps) {
-  const isSvg = iconConfig.svgIcons.includes(name);
-  const extension = isSvg ? 'svg' : 'png';
+  const extension = iconConfig.iconManifest[name] || 'png';
   const src = `/icons/${name}.${extension}`;
   const altText = alt || name;
 
