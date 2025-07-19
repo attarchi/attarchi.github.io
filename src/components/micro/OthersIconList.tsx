@@ -33,7 +33,7 @@ export function OthersIconList({ others }: OthersIconListProps) {
             onMouseEnter={() => setHoveredIcon(other.name)}
             onMouseLeave={() => setHoveredIcon(null)}
           >
-            <div className="rounded-full border-2 border-[#d0d7de] dark:border-[#30363d] p-2 bg-[#f6f8fa] dark:bg-[#21262d] hover:border-[#0969da] dark:hover:border-[#58a6ff] transition-colors duration-200">
+            <div className="w-11 h-11 text-center content-center rounded-full border-2 border-[#d0d7de] dark:border-[#30363d] p-2 bg-[#f6f8fa] dark:bg-[#21262d] hover:border-[#0969da] dark:hover:border-[#58a6ff] transition-colors duration-200">
               <Icon
                 name={other.icon}
                 alt={`${other.name} icon`}

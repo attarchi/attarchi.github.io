@@ -29,11 +29,11 @@ export const technicalExpertiseContent: TechnicalExpertiseContent = {
             others: [
                 { name: "JavaScript", icon: "javascript" },
                 { name: "Chakra UI", icon: "chakra-ui" },
-                { name: "Shadcn UI", icon: "shadcn" },
                 { name: "Ant Design", icon: "antdesign" },
-                { name: "RJSF", icon: "jsonschema" },
+                { name: "RJSF", icon: "json-schema" },
                 { name: "Preact Signals", icon: "preact" },
-                { name: "Tailwind CSS", icon: "tailwind" }
+                { name: "Tailwind CSS", icon: "tailwind" },
+                { name: "Bootstrap", icon: "bootstrap" }
             ]
         },
         {
@@ -50,7 +50,8 @@ export const technicalExpertiseContent: TechnicalExpertiseContent = {
                 { name: "PouchDB", icon: "pouchdb" },
                 { name: "PostgreSQL", icon: "postgresql" },
                 { name: "Entity Framework", icon: "dotnet" },
-                { name: "Express.js", icon: "expressjs" }
+                { name: "Express.js", icon: "express-js" },
+                { name: "AJV", icon: "ajv" }
             ]
         },
         {
@@ -89,14 +90,13 @@ export const technicalExpertiseContent: TechnicalExpertiseContent = {
             title: "Testing & Analytics",
             skills: [
                 { name: "Jest", proficiency: 95, years: 7, icon: "jest" },
+                { name: "Cypress", proficiency: 60, years: 2, icon: "cypress" },
+                { name: "Google Analytics", proficiency: 70, years: 8, icon: "google-analytics" },
+                { name: "E2E Testing", proficiency: 75, years: 3, icon: "testing" },
                 { name: "Unit/Integration Testing", proficiency: 90, years: 10 },
-                { name: "TDD", proficiency: 80, years: 5 },
-                { name: "Google Analytics", proficiency: 70, years: 8, icon: "google-analytics" }
+                { name: "TDD", proficiency: 80, years: 5 }
             ],
-            others: [
-                { name: "Cypress", icon: "cypress" },
-                { name: "E2E Testing", icon: "testing" },
-            ]
+            others: []
         },
         {
             title: "Legacy & Other",
@@ -104,12 +104,10 @@ export const technicalExpertiseContent: TechnicalExpertiseContent = {
                 { name: "VB6", proficiency: 95, years: 6 },
                 { name: "ASP.NET", proficiency: 85, years: 10 },
                 { name: "jQuery", proficiency: 90, years: 12 },
-                { name: "GIS/MapObject2", proficiency: 60, years: 3 }
+                { name: "GIS/MapObject2", proficiency: 60, years: 3 },
+                { name: "VBA", proficiency: 60, years: 10 },
+                { name: "Ajax", proficiency: 75, years: 10 }
             ],
-            others: [
-                { name: "VBA", icon: "vba" },
-                { name: "Ajax", icon: "ajax" }
-            ]
         }
     ]
 };
